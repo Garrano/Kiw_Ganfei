@@ -29,38 +29,50 @@ diferente, 441 cenas, reproduzidas da C1 à terceira casa.
 *No foco oriental o radar NÃO distingue*, e sabe-se porquê: metade dele é chão,
 e chão já era baixo no radar nos dez Invernos.
 
-**A3 · Entre as unidades com linha de base contínua, os dois focos são o pior e
-o segundo pior da região — e a ordenação tem 7 a 25 % de probabilidade de estar
-errada.**
+**A3 · Entre as unidades com linha de base contínua, os dois focos estão no
+fundo da região — mas «o pior e o segundo pior» depende de duas escolhas de
+análise, e numa delas cai.**
 REG-01 refeita a 01-09 depois da triagem de descontinuidade: **8 dos 37 blocos
-saem.** Cinco do ENT 297313, **desmatados em 2024**, com ortofoto a datá-lo. Três
-do ENT 472062 que **não têm cultura na linha de base** — campo aberto em 2012,
-2018 e 2021, pérgola nova em 2025; um deles, o 8845731, vai de 97,3 % sem coberto
-em 2021 a 23,7 % em 2025, ou seja **ganhou** coberto. *(Descrição corrigida pelo
-Controlo 3 a 03-09: a versão anterior dizia «caem e recuperam, com forma de
-replantação», e estava invertida.)*
-Dos 29 que ficam, na ordenação conjunta de 31 unidades: foco **OCIDENTAL
-−0,0839 (1.º, percentil 3,2 %)** e **ORIENTAL −0,0869 (2.º, 6,5 %)**, contra
-−0,0638 do melhor bloco sobrevivente.
-**A margem que sustenta a frase é 0,0200** — a do ocidental, que é o menos mau
-dos dois e portanto quem a governa. E há **dois** blocos dentro de 0,0212.
+saem** — cinco do ENT 297313, desmatados em 2024 com ortofoto a datá-lo, e três
+do ENT 472062 que **não têm cultura na linha de base** (campo aberto em 2012,
+2018 e 2021; pérgola nova em 2025; o 8845731 *ganhou* coberto, de 97,3 % sem
+copado em 2021 para 23,7 % em 2025).
+Dos 29 que ficam, na ordenação conjunta de 31: foco **OCIDENTAL −0,0839
+(1.º, percentil 3,2 %)** e **ORIENTAL −0,0869 (2.º, 6,5 %)**, contra −0,0638 do
+melhor bloco sobrevivente. Margem **0,0200** — a do ocidental, que é quem a
+governa.
 
-> **O INTERVALO, que vai ao lado e não em rodapé.** Bootstrap sobre as cenas:
-> os focos são 1.º e 2.º em **91,4 %**, IC95 da margem [−0,0023 · +0,0468],
-> **P(margem ≤ 0) = 0,072**. Bootstrap sobre os **anos** — o correcto, porque o
-> pós tem 29 cenas mas **dois anos** — **74,6 %**, **P = 0,252**. Jackknife:
-> **retirado 2026, o foco ocidental sai do topo** (margem −0,0211).
-> **A conclusão assenta nas dez cenas de 2026**, e o B4 já regista que Julho de
-> 2026 não é estável. **As duas observações são a mesma.**
+> ### **AS DUAS INCERTEZAS, e vão ao lado da frase, nunca em rodapé**
+>
+> **1 · amostragem.** Bootstrap de cenas: 1.º e 2.º em **91,4 %**, P(margem ≤ 0)
+> = **0,072**. Bootstrap de **anos** — o correcto, porque o pós tem 29 cenas mas
+> **dois anos** — **74,6 %**, **P = 0,252**. Jackknife: **retirado 2026, o foco
+> ocidental sai do topo**. A conclusão assenta nas dez cenas de 2026, e o **B4**
+> já regista que Julho de 2026 não é estável. **São o mesmo facto.**
+>
+> **2 · agregação — eixo novo, achado a 03-09 pelo Controlo 3.** O degrau
+> publicado é **média**(2025-26) − **média**(2017-24). A **mediana** é tão
+> defensável — é o que esta cadeia usa em todo o lado — e a janela de base é uma
+> escolha, não um dado. Em **oito corridas** (4 janelas × 2 estatísticas) os dois
+> focos são 1.º e 2.º em **quatro**. Margem: mínimo **−0,0245**, **mediana
+> −0,0003**, máximo +0,0218.
+> Quem entra pelo meio é sempre **6705424** (ENT 297313): maduro desde 2017
+> (0,851), declive −0,004/ano, passa todos os rastreios. **Não é um bloco
+> suspeito a entrar por uma porta lateral — é um competidor legítimo que a
+> escolha da média estava a esconder.**
+
+**O que sobrevive às oito corridas:** os dois focos estão sempre no fundo da
+distribuição. **O que não sobrevive:** a ordinalidade exacta. A frase defensável
+é «entre as piores da região», não «o pior e o segundo pior».
 
 *Confirmado por:* ortofoto DGT — **cinco** blocos datados a 01-09, **três** a
 03-09 com outra leitura — e série anual do Landsat. Critério de exclusão fixado
-antes da corrida, **aplicado uniformemente aos 37** e robusto num planalto de
-limiares de 0,15 a 0,40 (queda) × 0,51 a 0,80 (chão). *(Não se escreve «aplicado
-cego»: os cinco já tinham sido identificados pela ortofoto antes de o critério
-correr.)*
-*A magnitude não é reportável:* o mesmo degrau dá −0,0730 a −0,1526 conforme a
-definição da mediana — **82 % de amplitude**. **A ordem é invariante; o número
+antes da corrida e aplicado uniformemente aos 37, robusto num planalto de
+limiares de 0,15–0,40 (queda) × 0,51–0,80 (chão). *(Não se escreve «aplicado
+cego»: a forense de datas NTFS mostra que o critério foi escrito **123 s depois**
+de a ortofoto já ter identificado os cinco blocos.)*
+*A magnitude não é reportável:* −0,0730 a −0,1526 conforme a definição da
+mediana — **82 % de amplitude**. **A ordem é grosseiramente estável; o número
 não.**
 *A forma separa:* os cinco caem 0,43 **num ano**, do valor mais alto da sua série
 (0,854-0,877 em 2023 → 0,42 em 2024) e param no domínio do solo. Os focos descem

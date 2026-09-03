@@ -229,10 +229,31 @@ class Facto:
             self._identidade = (False, "rastreio ilegivel (%s)" % type(e).__name__)
             return self
 
-        cobertas = set(R.get("nivel", {}) or R.get("nivel_anual", {}))
-        alerta = {a[0] if isinstance(a, (list, tuple)) else a
+        # ── CORRIGIDO a 03-09-2026, segundo line-stop do Controlo 3 sobre o B1.
+        #
+        # A versao de hoje de manha lia `R.get("alerta", [])`. O rastreio
+        # regional (`reg01_triagem.json`) NAO escreve essa chave — escreve
+        # `excluidos` e `mantidos` — por isso a lista de alerta vinha VAZIA e o
+        # portao **certificava os oito blocos que a triagem existe para
+        # excluir**, incluindo os cinco desmatados em 2024 que retiraram o A3.
+        #
+        # E a MESMA falha pela terceira vez neste aparelho: **ausencia tratada
+        # como aprovacao**. A condicao 5 foi escrita para a matar e reintroduziu-a
+        # noutro campo. A regra passa a ser positiva, nao negativa: uma unidade
+        # so esta verificada se o rastreio a LISTAR como continua. Nao chega
+        # estar coberta, e o silencio nunca conta como aprovacao.
+        cobertas = set(map(str, R.get("nivel", {}) or R.get("nivel_anual", {})))
+        alerta = {str(a[0] if isinstance(a, (list, tuple)) else a)
                   for a in R.get("alerta", [])}
-        pedidas = set(unidades or [])
+        if "mantidos" in R or "excluidos" in R:
+            # esquema da triagem regional: a aprovacao e explicita
+            mantidas = set(map(str, R.get("mantidos", [])))
+            alerta |= set(map(str, R.get("excluidos", [])))
+        else:
+            # esquema do rastreio denso: aprovada = coberta e sem alerta
+            mantidas = cobertas - alerta
+        pedidas = set(map(str, unidades or []))
+        naoaprovadas = pedidas - mantidas - alerta
 
         # 2 · uma unidade que o rastreio nao cobre NAO esta verificada
         fora = pedidas - cobertas
@@ -245,8 +266,12 @@ class Facto:
             self._identidade = (False, "%s — NAO cobre: %s"
                                 % (det, ", ".join(sorted(fora))))
         elif maus:
-            self._identidade = (False, "%s — com descontinuidade: %s"
+            self._identidade = (False, "%s — EXCLUIDA pelo rastreio: %s"
                                 % (det, ", ".join(sorted(maus))))
+        elif naoaprovadas:
+            self._identidade = (False, "%s — coberta mas NAO listada como "
+                                "continua: %s (o silencio nao aprova)"
+                                % (det, ", ".join(sorted(naoaprovadas))))
         elif not pedidas:
             self._identidade = (False, "%s — nenhuma unidade declarada; a "
                                 "condicao 5 precisa de saber o que verificar" % det)
@@ -263,6 +288,25 @@ class Facto:
 
         concordantes = [i for i in self._independentes if i[1]]
         discordantes = [i for i in self._independentes if not i[1]]
+
+        # ── O MESMO INDICE NAO CONFIRMA O MESMO INDICE.
+        # A CLAUDE.md diz em letra: «Um NDVI nao se confirma com outro calculo
+        # de NDVI». O portao aceitava-o na mesma — bastava o confirmador ter
+        # outro nome de satelite. Apanhado pelo Controlo 3 sobre o B1, onde
+        # «NDVI Landsat» era dado como confirmado por «NDVI Sentinel-2».
+        # Trocar de constelacao muda a agencia e a calibracao; NAO muda a
+        # grandeza. Continua a ser luz vermelha contra infravermelho proximo.
+        INDICES = ("NDVI", "NDMI", "NDRE", "EVI", "SAVI", "NDWI")
+        meu = {k for k in INDICES if k in (self.instrumento or "").upper()}
+        if meu:
+            iguais = [i[0] for i in concordantes
+                      if meu & {k for k in INDICES if k in i[0].upper()}]
+            if iguais and len(iguais) == len(concordantes):
+                faltas.append(
+                    "o unico confirmador usa o MESMO indice (%s): %s. "
+                    "Trocar de satelite nao troca de grandeza — declara-o como "
+                    "reproducao com reproduz(), ou usa nao_testavel()"
+                    % ("/".join(sorted(meu)), "; ".join(iguais)))
         if discordantes:
             faltas.append("instrumento independente DISCORDA: %s"
                           % "; ".join("%s%s" % (i[0], (" — " + i[2]) if i[2] else "")
@@ -379,6 +423,22 @@ if __name__ == "__main__":
     f5.fronteira("pomar := nd2026 > 0,78", derivada_do_sinal=True)
     casos.append(("fazer_masks_v2 · mascara derivada do sinal que se mede",
                   f5, "o pomar perdeu vigor"))
+
+    # 2f · O SILENCIO COMO APROVACAO. Um bloco que o rastreio EXCLUIU, aceite
+    #      pelo portao porque a chave que ele lia («alerta») nao existe naquele
+    #      ficheiro — que usa «excluidos»/«mantidos». Apanhado pelo Controlo 3
+    #      a 03-09, no mesmo dia em que a condicao 5 foi escrita para matar
+    #      exactamente esta classe de falha.
+    import os as _os
+    _T = _os.path.join(r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO",
+                       "reg01_triagem.json")
+    if _os.path.exists(_T):
+        f6 = Facto("os cinco blocos desmatados tem identidade continua",
+                   instrumento="NDVI Landsat", ficheiro="reg01_triagem.json")
+        f6.confirmar_com("ortofoto DGT", concorda=True)
+        f6.identidade_no_tempo(_T, nota=["6705427", "6705429"])
+        casos.append(("silencio como aprovacao · bloco EXCLUIDO pelo rastreio",
+                      f6, "os desmatados de 2024 sao comparadores validos"))
 
     # 3 · o lóbulo B1 original — AOI aceite pelo nome da pasta
     f = Facto("o lóbulo oeste é um bloco de controlo são",

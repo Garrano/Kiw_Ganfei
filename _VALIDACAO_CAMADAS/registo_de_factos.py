@@ -117,7 +117,11 @@ reg(temporal(
     .confirmar_com("ortofoto DGT 2007-2025 e 03-09", True,
                    "cinco datados a 01-09; três a 03-09, com outra leitura")
     .fronteira("parcelário do IFAP (outra entidade) e discos pré-registados"),
-    ("foco OCIDENTAL", "foco ORIENTAL"), PROVA_REG),
+    # A prova de identidade dos FOCOS e o rastreio denso de Ganfei, que os
+    # cobre e os lista como continuos. Apontava para o rastreio REGIONAL, que
+    # enumera blocos por CUL_ID e nao contem os focos — e so passava porque a
+    # condicao 5 tratava ausencia como aprovacao. Apanhado pelo Controlo 3.
+    ("foco OCIDENTAL", "foco ORIENTAL"), PROVA),
     "ocidental −0,0839 (1.º) e oriental −0,0869 (2.º) de 31; margem 0,0200; "
     "P(ordenação errada) = 0,07 por cenas e 0,25 por anos")
 
