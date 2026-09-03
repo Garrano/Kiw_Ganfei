@@ -1,0 +1,13 @@
+saudavel     259 px = 2.59 ha  NDVI 0.8858 +- 0.0168
+saudavel_2   117 px = 1.17 ha  NDVI 0.8893 +- 0.0172
+saudavel_3    70 px = 0.70 ha  NDVI 0.8877 +- 0.0216
+UNIAO        446 px = 4.46 ha  NDVI 0.8870 +- 0.0178
+pomar       2906 px = 29.06 ha
+manchaW      423 px =  4.23 ha
+zona0        219 px =  2.19 ha
+/home/claude/cega/work_masks/../scripts/fazer_masks_v2.py:94: ResourceWarning: unclosed file <_io.TextIOWrapper name='sentinel/masks.json' mode='w' encoding='utf-8'>
+  json.dump(masks, open("sentinel/masks.json", "w"), indent=1)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+
+-> sentinel/masks.json  (chaves: pomar, saudavel, saudavel_2, saudavel_3, manchaW, zona0 )
+exit=0

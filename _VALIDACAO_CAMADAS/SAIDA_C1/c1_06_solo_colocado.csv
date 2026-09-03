@@ -1,0 +1,10 @@
+amostra,bloco,valvulas,confianca,nota,E,N,raio_incerteza_m,dist_foco_oeste_m,dist_foco_este_m,pH,CaO,CaO_censurado,MgO,P2O5,K2O,MO_pct,CN,textura,cota_mdt_m
+Erica 2016 R (2026-03-03),Erica Novo,10|11,INFERIDA,'Erica 2016' identificado com o bloco 'Erica Novo' da tabela de valvulas; sub-bloco R sem posicao,530695.2,4655091.6,43.0,214.0,283.0,7.2,1200.0,False,97.4,206.0,80.8,1.6,10.0,Franca,6.914592742919922
+Erica 2016 E (2026-03-03),Erica Novo,10|11,INFERIDA,"idem; o sufixo E reaparece no boletim de nematodes 343 ('Erica Novo E'), o que reforca a identificacao mas nao a prova",530695.2,4655091.6,43.0,214.0,283.0,6.6,879.0,False,64.5,156.0,71.1,1.7,6.1,Franca,6.914592742919922
+B2 - V7 (2026-03-03),B2,7,CONFIRMADA,numero de valvula explicito no boletim,530397.5,4654985.2,0.0,111.0,594.0,5.8,264.0,False,62.9,161.0,94.0,1.7,6.7,Franca,6.607303619384766
+B3 - 7 ha (2026-03-03),B3,12|13|14|15,CONFIRMADA-BLOCO,"bloco explicito; ponto dentro do bloco desconhecido. Atencao: a tabela da 9,01 ha ao B3 da banda, o boletim diz 7 ha",530963.6,4655187.6,148.0,497.0,72.0,5.6,154.0,True,36.0,107.0,74.7,1.6,5.9,Franca,7.289275646209717
+B2 - Zona 1 (V7) (2026-06-17),B2,7,CONFIRMADA,mesma valvula que o de Marco; textura discordante,530397.5,4654985.2,0.0,111.0,594.0,5.6,505.0,False,93.0,222.0,93.5,2.4,9.3,Argilosa,6.607303619384766
+B1 C1 (2026-07-08),B1,,FORA DA BANDA,B1 tem posicao de conjunto (R2 G36) mas as sub-parcelas C1/C3/C4 nao,529777.0,4654211.5,343.0,1100.0,1503.0,7.4,4700.0,False,242.0,324.0,79.6,4.5,11.3,Franco-Limosa,nan
+B1 C3 (2026-07-08),B1,,FORA DA BANDA,idem,529777.0,4654211.5,343.0,1100.0,1503.0,5.2,439.0,False,79.4,174.0,81.1,2.1,12.0,Franca,nan
+B1 C4 (2026-07-08),B1,,FORA DA BANDA,idem,529777.0,4654211.5,343.0,1100.0,1503.0,5.3,314.0,False,81.3,191.0,80.8,1.7,11.1,Franco-Arenosa,nan
+Parcela B4 (2026-07-08),B4,16|17,AMBIGUA,B4 tem valvulas 16-17 na banda E a parcela solta B4C3 sem posicao; o boletim nao distingue,531295.1,4655306.2,106.0,849.0,370.0,6.1,1100.0,False,142.0,134.0,117.0,2.4,11.7,Franca,7.823060989379883

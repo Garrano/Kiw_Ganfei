@@ -1,0 +1,1058 @@
+[
+ {
+  "data": "2024-04-16",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.388942152261734,
+  "foco ESTE plantado": 0.41633936762809753,
+  "resto do pomar": 0.378532737493515,
+  "referencia": 0.35299620032310486
+ },
+ {
+  "data": "2024-04-18",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.42695707082748413,
+  "foco ESTE plantado": 0.4341197907924652,
+  "resto do pomar": 0.412930428981781,
+  "referencia": 0.3885500133037567
+ },
+ {
+  "data": "2024-04-21",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.4799494445323944,
+  "foco ESTE plantado": 0.4901963174343109,
+  "resto do pomar": 0.4641369581222534,
+  "referencia": 0.4455358386039734
+ },
+ {
+  "data": "2024-04-23",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.5194992423057556,
+  "foco ESTE plantado": 0.5141663551330566,
+  "resto do pomar": 0.5034603476524353,
+  "referencia": 0.4897269308567047
+ },
+ {
+  "data": "2024-05-11",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7300359010696411,
+  "foco ESTE plantado": 0.71259605884552,
+  "resto do pomar": 0.7087958455085754,
+  "referencia": 0.7144981622695923
+ },
+ {
+  "data": "2024-05-28",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8277146816253662,
+  "foco ESTE plantado": 0.7673010230064392,
+  "resto do pomar": 0.8248410820960999,
+  "referencia": 0.8257457613945007
+ },
+ {
+  "data": "2024-05-31",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8007839918136597,
+  "foco ESTE plantado": 0.7445091009140015,
+  "resto do pomar": 0.7902915477752686,
+  "referencia": 0.7905752658843994
+ },
+ {
+  "data": "2024-06-02",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8204283118247986,
+  "foco ESTE plantado": 0.7563694715499878,
+  "resto do pomar": 0.8136403560638428,
+  "referencia": 0.813263475894928
+ },
+ {
+  "data": "2024-06-10",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.5102286338806152,
+  "foco ESTE plantado": 0.5480495691299438,
+  "resto do pomar": 0.5317901968955994,
+  "referencia": 0.5325232148170471
+ },
+ {
+  "data": "2024-06-12",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8457790613174438,
+  "foco ESTE plantado": 0.8213135004043579,
+  "resto do pomar": 0.8524486422538757,
+  "referencia": 0.85393887758255
+ },
+ {
+  "data": "2024-06-27",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8733053207397461,
+  "foco ESTE plantado": 0.7932766079902649,
+  "resto do pomar": 0.8594068884849548,
+  "referencia": 0.8691151738166809
+ },
+ {
+  "data": "2024-07-02",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.875158429145813,
+  "foco ESTE plantado": 0.7803901433944702,
+  "resto do pomar": 0.8561077117919922,
+  "referencia": 0.8668797016143799
+ },
+ {
+  "data": "2024-07-05",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8973917961120605,
+  "foco ESTE plantado": 0.7926273345947266,
+  "resto do pomar": 0.871110200881958,
+  "referencia": 0.8869256377220154
+ },
+ {
+  "data": "2024-07-12",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.892070472240448,
+  "foco ESTE plantado": 0.8115856051445007,
+  "resto do pomar": 0.872109591960907,
+  "referencia": 0.8868100047111511
+ },
+ {
+  "data": "2024-07-17",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8884101510047913,
+  "foco ESTE plantado": 0.8348628282546997,
+  "resto do pomar": 0.8811103701591492,
+  "referencia": 0.891745924949646
+ },
+ {
+  "data": "2024-07-22",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8904019594192505,
+  "foco ESTE plantado": 0.8459463715553284,
+  "resto do pomar": 0.8860870003700256,
+  "referencia": 0.8973948359489441
+ },
+ {
+  "data": "2024-07-25",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8782688975334167,
+  "foco ESTE plantado": 0.8337529897689819,
+  "resto do pomar": 0.8749428391456604,
+  "referencia": 0.8882555365562439
+ },
+ {
+  "data": "2024-07-27",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.884552538394928,
+  "foco ESTE plantado": 0.8213850855827332,
+  "resto do pomar": 0.8865200281143188,
+  "referencia": 0.8942728042602539
+ },
+ {
+  "data": "2024-07-30",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8688565492630005,
+  "foco ESTE plantado": 0.7985600829124451,
+  "resto do pomar": 0.8703187108039856,
+  "referencia": 0.8773184418678284
+ },
+ {
+  "data": "2024-08-04",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8758750557899475,
+  "foco ESTE plantado": 0.8154691457748413,
+  "resto do pomar": 0.8800683617591858,
+  "referencia": 0.8902887105941772
+ },
+ {
+  "data": "2024-08-09",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.857323169708252,
+  "foco ESTE plantado": 0.7692177891731262,
+  "resto do pomar": 0.8752795457839966,
+  "referencia": 0.8797008991241455
+ },
+ {
+  "data": "2024-08-11",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8407427072525024,
+  "foco ESTE plantado": 0.746864914894104,
+  "resto do pomar": 0.8606723546981812,
+  "referencia": 0.8636727929115295
+ },
+ {
+  "data": "2024-08-14",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8666649460792542,
+  "foco ESTE plantado": 0.7949110269546509,
+  "resto do pomar": 0.886039674282074,
+  "referencia": 0.8898658752441406
+ },
+ {
+  "data": "2024-08-16",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8730743527412415,
+  "foco ESTE plantado": 0.7824087738990784,
+  "resto do pomar": 0.8935810327529907,
+  "referencia": 0.8961250185966492
+ },
+ {
+  "data": "2024-08-19",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8495236039161682,
+  "foco ESTE plantado": 0.7768754959106445,
+  "resto do pomar": 0.8655853271484375,
+  "referencia": 0.8681957125663757
+ },
+ {
+  "data": "2024-08-21",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8100466728210449,
+  "foco ESTE plantado": 0.7517037987709045,
+  "resto do pomar": 0.8223891854286194,
+  "referencia": 0.83012855052948
+ },
+ {
+  "data": "2024-08-26",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8825861215591431,
+  "foco ESTE plantado": 0.7964986562728882,
+  "resto do pomar": 0.8963028192520142,
+  "referencia": 0.8987440466880798
+ },
+ {
+  "data": "2024-08-29",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8747729063034058,
+  "foco ESTE plantado": 0.8010454177856445,
+  "resto do pomar": 0.8879855275154114,
+  "referencia": 0.8912068605422974
+ },
+ {
+  "data": "2024-09-03",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.7306916117668152,
+  "foco ESTE plantado": 0.7698751091957092,
+  "resto do pomar": 0.826408863067627,
+  "referencia": 0.7937941551208496
+ },
+ {
+  "data": "2024-09-10",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8789966106414795,
+  "foco ESTE plantado": 0.7838928699493408,
+  "resto do pomar": 0.8946496248245239,
+  "referencia": 0.8927043080329895
+ },
+ {
+  "data": "2024-09-13",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8730348944664001,
+  "foco ESTE plantado": 0.7807260155677795,
+  "resto do pomar": 0.8913436532020569,
+  "referencia": 0.8895910978317261
+ },
+ {
+  "data": "2024-09-15",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8591678142547607,
+  "foco ESTE plantado": 0.769675076007843,
+  "resto do pomar": 0.875363290309906,
+  "referencia": 0.8772860169410706
+ },
+ {
+  "data": "2024-09-18",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.38744935393333435,
+  "foco ESTE plantado": 0.3418753147125244,
+  "resto do pomar": 0.404755175113678,
+  "referencia": 0.40470778942108154
+ },
+ {
+  "data": "2024-09-23",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8568457365036011,
+  "foco ESTE plantado": 0.7822967767715454,
+  "resto do pomar": 0.872527003288269,
+  "referencia": 0.8755216002464294
+ },
+ {
+  "data": "2024-09-28",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8695584535598755,
+  "foco ESTE plantado": 0.7957577705383301,
+  "resto do pomar": 0.8932639360427856,
+  "referencia": 0.8905296325683594
+ },
+ {
+  "data": "2024-10-13",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8223658800125122,
+  "foco ESTE plantado": 0.7790718674659729,
+  "resto do pomar": 0.8599057197570801,
+  "referencia": 0.8559056520462036
+ },
+ {
+  "data": "2024-10-23",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8133448958396912,
+  "foco ESTE plantado": 0.753089189529419,
+  "resto do pomar": 0.8414838314056396,
+  "referencia": 0.8403549194335938
+ },
+ {
+  "data": "2024-10-28",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8239889144897461,
+  "foco ESTE plantado": 0.7743698954582214,
+  "resto do pomar": 0.8556566834449768,
+  "referencia": 0.8551446795463562
+ },
+ {
+  "data": "2024-10-30",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.55796217918396,
+  "foco ESTE plantado": 0.520622730255127,
+  "resto do pomar": 0.5744189620018005,
+  "referencia": 0.5759143233299255
+ },
+ {
+  "data": "2025-04-23",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.5569934844970703,
+  "foco ESTE plantado": 0.5330151319503784,
+  "resto do pomar": 0.5480099320411682,
+  "referencia": 0.5165202617645264
+ },
+ {
+  "data": "2025-04-28",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.6122716069221497,
+  "foco ESTE plantado": 0.5686867237091064,
+  "resto do pomar": 0.6306878328323364,
+  "referencia": 0.5967105031013489
+ },
+ {
+  "data": "2025-04-28",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.6146373152732849,
+  "foco ESTE plantado": 0.5619716644287109,
+  "resto do pomar": 0.6377546191215515,
+  "referencia": 0.6053696274757385
+ },
+ {
+  "data": "2025-05-06",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.6414399147033691,
+  "foco ESTE plantado": 0.6705224514007568,
+  "resto do pomar": 0.7208566665649414,
+  "referencia": 0.6900486350059509
+ },
+ {
+  "data": "2025-05-16",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.6862971186637878,
+  "foco ESTE plantado": 0.7468516230583191,
+  "resto do pomar": 0.8129127025604248,
+  "referencia": 0.7945858240127563
+ },
+ {
+  "data": "2025-05-23",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.7105115056037903,
+  "foco ESTE plantado": 0.7397578954696655,
+  "resto do pomar": 0.8200178742408752,
+  "referencia": 0.8123929500579834
+ },
+ {
+  "data": "2025-05-31",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.7256352305412292,
+  "foco ESTE plantado": 0.6871824264526367,
+  "resto do pomar": 0.8116083741188049,
+  "referencia": 0.8089610934257507
+ },
+ {
+  "data": "2025-06-07",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.6745733022689819,
+  "foco ESTE plantado": 0.6656389236450195,
+  "resto do pomar": 0.73960280418396,
+  "referencia": 0.7457377314567566
+ },
+ {
+  "data": "2025-06-15",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.7972748875617981,
+  "foco ESTE plantado": 0.7793650031089783,
+  "resto do pomar": 0.883705198764801,
+  "referencia": 0.8807183504104614
+ },
+ {
+  "data": "2025-06-17",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7921503186225891,
+  "foco ESTE plantado": 0.7554295659065247,
+  "resto do pomar": 0.8739893436431885,
+  "referencia": 0.8764589428901672
+ },
+ {
+  "data": "2025-06-17",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.77143394947052,
+  "foco ESTE plantado": 0.7414534687995911,
+  "resto do pomar": 0.8603084087371826,
+  "referencia": 0.8588752150535583
+ },
+ {
+  "data": "2025-06-20",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8041989803314209,
+  "foco ESTE plantado": 0.7682616710662842,
+  "resto do pomar": 0.8805214166641235,
+  "referencia": 0.8824819326400757
+ },
+ {
+  "data": "2025-06-22",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.795499324798584,
+  "foco ESTE plantado": 0.7651283144950867,
+  "resto do pomar": 0.8754377961158752,
+  "referencia": 0.8761271238327026
+ },
+ {
+  "data": "2025-06-27",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.803722083568573,
+  "foco ESTE plantado": 0.787409782409668,
+  "resto do pomar": 0.8872365951538086,
+  "referencia": 0.8870800137519836
+ },
+ {
+  "data": "2025-06-27",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.7964823842048645,
+  "foco ESTE plantado": 0.7774642109870911,
+  "resto do pomar": 0.8823152184486389,
+  "referencia": 0.8820850849151611
+ },
+ {
+  "data": "2025-06-30",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.804257869720459,
+  "foco ESTE plantado": 0.7779635190963745,
+  "resto do pomar": 0.8791124820709229,
+  "referencia": 0.8781989216804504
+ },
+ {
+  "data": "2025-07-02",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.7969779968261719,
+  "foco ESTE plantado": 0.7555133700370789,
+  "resto do pomar": 0.8759422302246094,
+  "referencia": 0.8744640946388245
+ },
+ {
+  "data": "2025-07-04",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7866962552070618,
+  "foco ESTE plantado": 0.694683849811554,
+  "resto do pomar": 0.8705446124076843,
+  "referencia": 0.8613612651824951
+ },
+ {
+  "data": "2025-07-05",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.8067678213119507,
+  "foco ESTE plantado": 0.7145410180091858,
+  "resto do pomar": 0.8837934136390686,
+  "referencia": 0.8742119669914246
+ },
+ {
+  "data": "2025-07-07",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8050572276115417,
+  "foco ESTE plantado": 0.7012643218040466,
+  "resto do pomar": 0.8816686868667603,
+  "referencia": 0.8712623119354248
+ },
+ {
+  "data": "2025-07-07",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.7969495058059692,
+  "foco ESTE plantado": 0.6871619820594788,
+  "resto do pomar": 0.8774656653404236,
+  "referencia": 0.8664882183074951
+ },
+ {
+  "data": "2025-07-14",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7522903084754944,
+  "foco ESTE plantado": 0.6418874263763428,
+  "resto do pomar": 0.8729196190834045,
+  "referencia": 0.8519015312194824
+ },
+ {
+  "data": "2025-07-15",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.7631284594535828,
+  "foco ESTE plantado": 0.6776300668716431,
+  "resto do pomar": 0.8772944808006287,
+  "referencia": 0.8603822588920593
+ },
+ {
+  "data": "2025-07-24",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7824864387512207,
+  "foco ESTE plantado": 0.7069218754768372,
+  "resto do pomar": 0.8849653005599976,
+  "referencia": 0.8686963319778442
+ },
+ {
+  "data": "2025-07-25",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.7989184260368347,
+  "foco ESTE plantado": 0.7347709536552429,
+  "resto do pomar": 0.8910614252090454,
+  "referencia": 0.8782454133033752
+ },
+ {
+  "data": "2025-07-27",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.81131911277771,
+  "foco ESTE plantado": 0.7401700019836426,
+  "resto do pomar": 0.9027689099311829,
+  "referencia": 0.8888025879859924
+ },
+ {
+  "data": "2025-07-27",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.7955605387687683,
+  "foco ESTE plantado": 0.7195670008659363,
+  "resto do pomar": 0.889184296131134,
+  "referencia": 0.8743001818656921
+ },
+ {
+  "data": "2025-07-30",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8015005588531494,
+  "foco ESTE plantado": 0.7332897782325745,
+  "resto do pomar": 0.8927597999572754,
+  "referencia": 0.8800615668296814
+ },
+ {
+  "data": "2025-08-01",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.7910258173942566,
+  "foco ESTE plantado": 0.713869035243988,
+  "resto do pomar": 0.8770057559013367,
+  "referencia": 0.8668901324272156
+ },
+ {
+  "data": "2025-08-04",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.8075903058052063,
+  "foco ESTE plantado": 0.7364288568496704,
+  "resto do pomar": 0.8873397707939148,
+  "referencia": 0.8778758645057678
+ },
+ {
+  "data": "2025-08-06",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.804690420627594,
+  "foco ESTE plantado": 0.7366010546684265,
+  "resto do pomar": 0.8802769780158997,
+  "referencia": 0.8729737997055054
+ },
+ {
+  "data": "2025-08-06",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.7983046174049377,
+  "foco ESTE plantado": 0.7241950035095215,
+  "resto do pomar": 0.8752380013465881,
+  "referencia": 0.8681849241256714
+ },
+ {
+  "data": "2025-08-09",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8306981921195984,
+  "foco ESTE plantado": 0.7584883570671082,
+  "resto do pomar": 0.896800696849823,
+  "referencia": 0.8924612998962402
+ },
+ {
+  "data": "2025-08-14",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.8050758838653564,
+  "foco ESTE plantado": 0.7470027804374695,
+  "resto do pomar": 0.8620730638504028,
+  "referencia": 0.8602525591850281
+ },
+ {
+  "data": "2025-08-16",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8097598552703857,
+  "foco ESTE plantado": 0.7508920431137085,
+  "resto do pomar": 0.8632813692092896,
+  "referencia": 0.8630599975585938
+ },
+ {
+  "data": "2025-08-16",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8315909504890442,
+  "foco ESTE plantado": 0.7700921893119812,
+  "resto do pomar": 0.887317955493927,
+  "referencia": 0.8876023292541504
+ },
+ {
+  "data": "2025-08-19",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8211694955825806,
+  "foco ESTE plantado": 0.7666692137718201,
+  "resto do pomar": 0.8741639852523804,
+  "referencia": 0.8763555288314819
+ },
+ {
+  "data": "2025-08-21",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.8208445906639099,
+  "foco ESTE plantado": 0.7606470584869385,
+  "resto do pomar": 0.8701642751693726,
+  "referencia": 0.8723292946815491
+ },
+ {
+  "data": "2025-08-23",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8167948126792908,
+  "foco ESTE plantado": 0.7643367052078247,
+  "resto do pomar": 0.870758056640625,
+  "referencia": 0.8722979426383972
+ },
+ {
+  "data": "2025-08-24",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.8239376544952393,
+  "foco ESTE plantado": 0.7765067219734192,
+  "resto do pomar": 0.8730294108390808,
+  "referencia": 0.8754461407661438
+ },
+ {
+  "data": "2025-08-26",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8234102129936218,
+  "foco ESTE plantado": 0.7754164338111877,
+  "resto do pomar": 0.8733030557632446,
+  "referencia": 0.8768335580825806
+ },
+ {
+  "data": "2025-08-26",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8353195190429688,
+  "foco ESTE plantado": 0.7841123342514038,
+  "resto do pomar": 0.8846750259399414,
+  "referencia": 0.8886696100234985
+ },
+ {
+  "data": "2025-09-05",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.75629061460495,
+  "foco ESTE plantado": 0.7179089188575745,
+  "resto do pomar": 0.8783690333366394,
+  "referencia": 0.8580567836761475
+ },
+ {
+  "data": "2025-09-05",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.7654340863227844,
+  "foco ESTE plantado": 0.7252880334854126,
+  "resto do pomar": 0.8887349367141724,
+  "referencia": 0.86708003282547
+ },
+ {
+  "data": "2025-09-08",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.7064492106437683,
+  "foco ESTE plantado": 0.7145015597343445,
+  "resto do pomar": 0.8588770627975464,
+  "referencia": 0.8367336392402649
+ },
+ {
+  "data": "2025-09-12",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7354723811149597,
+  "foco ESTE plantado": 0.7239105105400085,
+  "resto do pomar": 0.8280009627342224,
+  "referencia": 0.8376578688621521
+ },
+ {
+  "data": "2025-09-23",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.8274112939834595,
+  "foco ESTE plantado": 0.7733465433120728,
+  "resto do pomar": 0.8924699425697327,
+  "referencia": 0.8767824769020081
+ },
+ {
+  "data": "2025-09-25",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8236915469169617,
+  "foco ESTE plantado": 0.7667407989501953,
+  "resto do pomar": 0.8890646696090698,
+  "referencia": 0.8716987371444702
+ },
+ {
+  "data": "2025-09-25",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8264524340629578,
+  "foco ESTE plantado": 0.7703638672828674,
+  "resto do pomar": 0.8933209180831909,
+  "referencia": 0.877273440361023
+ },
+ {
+  "data": "2025-09-28",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8174359202384949,
+  "foco ESTE plantado": 0.7589389085769653,
+  "resto do pomar": 0.876801073551178,
+  "referencia": 0.8606923818588257
+ },
+ {
+  "data": "2025-09-30",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.8310251235961914,
+  "foco ESTE plantado": 0.773745059967041,
+  "resto do pomar": 0.8906087875366211,
+  "referencia": 0.8757208585739136
+ },
+ {
+  "data": "2025-10-05",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.838463306427002,
+  "foco ESTE plantado": 0.7941816449165344,
+  "resto do pomar": 0.8859258890151978,
+  "referencia": 0.8740226030349731
+ },
+ {
+  "data": "2025-10-05",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8423535823822021,
+  "foco ESTE plantado": 0.7954408526420593,
+  "resto do pomar": 0.8917297720909119,
+  "referencia": 0.880351722240448
+ },
+ {
+  "data": "2025-10-08",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8355543613433838,
+  "foco ESTE plantado": 0.7937299013137817,
+  "resto do pomar": 0.8813596963882446,
+  "referencia": 0.8718902468681335
+ },
+ {
+  "data": "2025-10-10",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.8463878035545349,
+  "foco ESTE plantado": 0.8079789876937866,
+  "resto do pomar": 0.889726459980011,
+  "referencia": 0.8838173151016235
+ },
+ {
+  "data": "2025-10-12",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8375781774520874,
+  "foco ESTE plantado": 0.8001570105552673,
+  "resto do pomar": 0.8808157444000244,
+  "referencia": 0.8757621049880981
+ },
+ {
+  "data": "2025-10-15",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.8110587000846863,
+  "foco ESTE plantado": 0.7743667960166931,
+  "resto do pomar": 0.8556724190711975,
+  "referencia": 0.8519099354743958
+ },
+ {
+  "data": "2025-10-15",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.8246057033538818,
+  "foco ESTE plantado": 0.7898309826850891,
+  "resto do pomar": 0.870287299156189,
+  "referencia": 0.8663042187690735
+ },
+ {
+  "data": "2026-04-01",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.5432479381561279,
+  "foco ESTE plantado": 0.5335522294044495,
+  "resto do pomar": 0.3937438726425171,
+  "referencia": 0.41164177656173706
+ },
+ {
+  "data": "2026-04-03",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.5322556495666504,
+  "foco ESTE plantado": 0.5392925143241882,
+  "resto do pomar": 0.4030051529407501,
+  "referencia": 0.4180847108364105
+ },
+ {
+  "data": "2026-04-03",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.5265359878540039,
+  "foco ESTE plantado": 0.5331297516822815,
+  "resto do pomar": 0.3945360779762268,
+  "referencia": 0.4123777449131012
+ },
+ {
+  "data": "2026-04-06",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.526267945766449,
+  "foco ESTE plantado": 0.5670416951179504,
+  "resto do pomar": 0.4603291153907776,
+  "referencia": 0.46616750955581665
+ },
+ {
+  "data": "2026-04-10",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.51556795835495,
+  "foco ESTE plantado": 0.6415609121322632,
+  "resto do pomar": 0.5947193503379822,
+  "referencia": 0.5735055804252625
+ },
+ {
+  "data": "2026-04-18",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.559077262878418,
+  "foco ESTE plantado": 0.5864399671554565,
+  "resto do pomar": 0.7125903964042664,
+  "referencia": 0.6717818379402161
+ },
+ {
+  "data": "2026-04-26",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.632568359375,
+  "foco ESTE plantado": 0.587399423122406,
+  "resto do pomar": 0.8247573971748352,
+  "referencia": 0.7718339562416077
+ },
+ {
+  "data": "2026-05-20",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.6873960494995117,
+  "foco ESTE plantado": 0.7576189041137695,
+  "resto do pomar": 0.8796628713607788,
+  "referencia": 0.8444192409515381
+ },
+ {
+  "data": "2026-05-26",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.6913630962371826,
+  "foco ESTE plantado": 0.79786217212677,
+  "resto do pomar": 0.8781788945198059,
+  "referencia": 0.8504101037979126
+ },
+ {
+  "data": "2026-05-28",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.658543586730957,
+  "foco ESTE plantado": 0.7635506987571716,
+  "resto do pomar": 0.8586977124214172,
+  "referencia": 0.8317221999168396
+ },
+ {
+  "data": "2026-05-31",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.6925174593925476,
+  "foco ESTE plantado": 0.7782983779907227,
+  "resto do pomar": 0.877749502658844,
+  "referencia": 0.8567334413528442
+ },
+ {
+  "data": "2026-06-07",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.6897045373916626,
+  "foco ESTE plantado": 0.7851110100746155,
+  "resto do pomar": 0.8683965802192688,
+  "referencia": 0.8542755246162415
+ },
+ {
+  "data": "2026-06-09",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.6826614737510681,
+  "foco ESTE plantado": 0.7822413444519043,
+  "resto do pomar": 0.863612949848175,
+  "referencia": 0.8508148193359375
+ },
+ {
+  "data": "2026-06-10",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.6997287273406982,
+  "foco ESTE plantado": 0.7965612411499023,
+  "resto do pomar": 0.868389904499054,
+  "referencia": 0.8584665656089783
+ },
+ {
+  "data": "2026-06-15",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.6791805028915405,
+  "foco ESTE plantado": 0.7743027806282043,
+  "resto do pomar": 0.8585675954818726,
+  "referencia": 0.8523526787757874
+ },
+ {
+  "data": "2026-06-17",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.6653419733047485,
+  "foco ESTE plantado": 0.7673123478889465,
+  "resto do pomar": 0.8633204102516174,
+  "referencia": 0.8562473654747009
+ },
+ {
+  "data": "2026-06-27",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.628657341003418,
+  "foco ESTE plantado": 0.5698047280311584,
+  "resto do pomar": 0.8354431390762329,
+  "referencia": 0.8077231645584106
+ },
+ {
+  "data": "2026-06-29",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.5991999506950378,
+  "foco ESTE plantado": 0.6357934474945068,
+  "resto do pomar": 0.8487110137939453,
+  "referencia": 0.8131052851676941
+ },
+ {
+  "data": "2026-06-30",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.6194149851799011,
+  "foco ESTE plantado": 0.6664494872093201,
+  "resto do pomar": 0.8635090589523315,
+  "referencia": 0.829921305179596
+ },
+ {
+  "data": "2026-07-02",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.5991725921630859,
+  "foco ESTE plantado": 0.6528516411781311,
+  "resto do pomar": 0.8507907390594482,
+  "referencia": 0.8165563941001892
+ },
+ {
+  "data": "2026-07-02",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.581828236579895,
+  "foco ESTE plantado": 0.6406020522117615,
+  "resto do pomar": 0.8356534242630005,
+  "referencia": 0.8040661215782166
+ },
+ {
+  "data": "2026-07-05",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.5844485759735107,
+  "foco ESTE plantado": 0.6397110223770142,
+  "resto do pomar": 0.8291447758674622,
+  "referencia": 0.7976951003074646
+ },
+ {
+  "data": "2026-07-09",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.5954862236976624,
+  "foco ESTE plantado": 0.6458824872970581,
+  "resto do pomar": 0.8337291479110718,
+  "referencia": 0.8049860000610352
+ },
+ {
+  "data": "2026-07-15",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.6557564735412598,
+  "foco ESTE plantado": 0.6876217126846313,
+  "resto do pomar": 0.8676005005836487,
+  "referencia": 0.8435818552970886
+ },
+ {
+  "data": "2026-07-25",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.667629599571228,
+  "foco ESTE plantado": 0.671591579914093,
+  "resto do pomar": 0.814703106880188,
+  "referencia": 0.8001739978790283
+ },
+ {
+  "data": "2026-07-27",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.6963326930999756,
+  "foco ESTE plantado": 0.6860441565513611,
+  "resto do pomar": 0.8567889928817749,
+  "referencia": 0.8425499796867371
+ },
+ {
+  "data": "2026-07-29",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7014454007148743,
+  "foco ESTE plantado": 0.6811813116073608,
+  "resto do pomar": 0.8441500663757324,
+  "referencia": 0.835667073726654
+ },
+ {
+  "data": "2026-08-01",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.724582850933075,
+  "foco ESTE plantado": 0.6959204077720642,
+  "resto do pomar": 0.8609148859977722,
+  "referencia": 0.8553386926651001
+ },
+ {
+  "data": "2026-08-06",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.7523378133773804,
+  "foco ESTE plantado": 0.7066666483879089,
+  "resto do pomar": 0.8723236918449402,
+  "referencia": 0.8694292306900024
+ },
+ {
+  "data": "2026-08-08",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.741799533367157,
+  "foco ESTE plantado": 0.6925188899040222,
+  "resto do pomar": 0.8578906655311584,
+  "referencia": 0.8549961447715759
+ },
+ {
+  "data": "2026-08-11",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7511306405067444,
+  "foco ESTE plantado": 0.6894750595092773,
+  "resto do pomar": 0.8575992584228516,
+  "referencia": 0.8534846305847168
+ },
+ {
+  "data": "2026-08-11",
+  "plataforma": "sentinel-2b",
+  "foco OESTE": 0.75825035572052,
+  "foco ESTE plantado": 0.6915354132652283,
+  "resto do pomar": 0.8665438890457153,
+  "referencia": 0.8650659322738647
+ },
+ {
+  "data": "2026-08-16",
+  "plataforma": "sentinel-2c",
+  "foco OESTE": 0.7475583553314209,
+  "foco ESTE plantado": 0.5240030288696289,
+  "resto do pomar": 0.8275372385978699,
+  "referencia": 0.8132954239845276
+ },
+ {
+  "data": "2026-08-18",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.7404745221138,
+  "foco ESTE plantado": 0.5182304382324219,
+  "resto do pomar": 0.8387822508811951,
+  "referencia": 0.8251906037330627
+ },
+ {
+  "data": "2026-08-21",
+  "plataforma": "sentinel-2a",
+  "foco OESTE": 0.5365185141563416,
+  "foco ESTE plantado": 0.5007663369178772,
+  "resto do pomar": 0.7378622889518738,
+  "referencia": 0.6833510398864746
+ }
+]

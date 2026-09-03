@@ -1,0 +1,9 @@
+/home/claude/cega/work/../scripts/rededge.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='sentinel/masks.json' mode='r' encoding='utf-8'>
+  masks = json.load(open("sentinel/masks.json"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "/home/claude/cega/work/../scripts/rededge.py", line 16, in <module>
+    prov = json.load(open("sentinel/proveniencia.json"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'sentinel/proveniencia.json'
+exit=1

@@ -1,0 +1,128 @@
+{
+  "aoi": {
+    "lon": -8.62601,
+    "lat": 42.04734,
+    "largura_m": 2000,
+    "altura_m": 1000,
+    "crs": "EPSG:32629",
+    "bounds_utm": [
+      529950,
+      4654600,
+      531950,
+      4655600
+    ]
+  },
+  "fonte": "AWS Open Data sentinel-cogs / Earth Search STAC v1 (L2A)",
+  "nota": "identico ao produto L2A do Copernicus Data Space; sem credenciais",
+  "cenas": [
+    {
+      "data": "2017-07-02",
+      "cena": "S2B_29TNG_20170702_0_L2A",
+      "nuvens_cena_pct": 0.197,
+      "px_mascarados_pct": 0.18,
+      "ndvi_medio": 0.542
+    },
+    {
+      "data": "2018-08-31",
+      "cena": "S2A_29TNG_20180831_1_L2A",
+      "nuvens_cena_pct": 0.002,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.586
+    },
+    {
+      "data": "2019-09-02",
+      "cena": "S2A_29TNG_20190902_1_L2A",
+      "nuvens_cena_pct": 0.002,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.497
+    },
+    {
+      "data": "2020-07-18",
+      "cena": "S2A_29TNG_20200718_1_L2A",
+      "nuvens_cena_pct": 0.001,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.417
+    },
+    {
+      "data": "2021-07-16",
+      "cena": "S2A_29TNG_20210716_1_L2A",
+      "nuvens_cena_pct": 0.003,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.536
+    },
+    {
+      "data": "2022-07-31",
+      "cena": "S2A_29TNG_20220731_0_L2A",
+      "nuvens_cena_pct": 0.002,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.488
+    },
+    {
+      "data": "2023-08-07",
+      "cena": "S2B_29TNG_20230807_0_L2A",
+      "nuvens_cena_pct": 0.002,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.5
+    },
+    {
+      "data": "2024-07-22",
+      "cena": "S2B_29TNG_20240722_0_L2A",
+      "nuvens_cena_pct": 0.003,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.509
+    },
+    {
+      "data": "2025-08-14",
+      "cena": "S2C_29TNG_20250814_0_L2A",
+      "nuvens_cena_pct": 0.002,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.482
+    },
+    {
+      "data": "2026-07-27",
+      "cena": "S2C_29TNG_20260727_0_L2A",
+      "nuvens_cena_pct": 0.003,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.463
+    },
+    {
+      "data": "2025-06-17",
+      "cena": "S2A_29TNG_20250617_1_L2A",
+      "nuvens_cena_pct": 0.004,
+      "px_mascarados_pct": 0.0,
+      "ndvi_medio": 0.555
+    }
+  ],
+  "baseline_l2a": {
+    "verificado": "earthsearch:boa_offset_applied por cena",
+    "resultado": "True em todas as cenas de baseline >=04.00; 2017-07-02 e baseline 00.01, anterior ao offset BOA — nada a aplicar",
+    "conclusao": "coleccao harmonizada; nao ha degrau radiometrico esperado em 2022",
+    "delta_referencia_sa_2021_2022": 0.0044,
+    "nota": "a metrica de defice usa a referencia sa da propria data (D3.2), logo absorve qualquer residuo de baseline"
+  },
+  "mascaras": {
+    "pomar": {
+      "vertices": 40
+    },
+    "saudavel": {
+      "vertices": 11
+    },
+    "saudavel_2": {
+      "vertices": 7
+    },
+    "saudavel_3": {
+      "vertices": 8
+    },
+    "manchaW": {
+      "vertices": 17
+    },
+    "zona0": {
+      "vertices": 12
+    }
+  },
+  "metrica": {
+    "principal": "NDVI medio/mediano por mascara (D3.1)",
+    "apoio": "area < ref-0.05 (moderado) e < ref-0.10 (severo) (D3.2)",
+    "abandonado": "media - 2 DP (D3.3): colapsa com referencia uniforme"
+  }
+}

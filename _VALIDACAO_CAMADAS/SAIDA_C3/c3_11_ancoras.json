@@ -1,0 +1,84 @@
+{
+ "ancoras": [
+  {
+   "ancora": "AOI",
+   "declarado": "529950, 4654600, 531950, 4655600",
+   "obtido": "529950, 4654600, 531950, 4655600",
+   "nota": "igual"
+  },
+  {
+   "ancora": "poligono pomar (ha)",
+   "declarado": "30,31",
+   "obtido": "30,31",
+   "nota": ""
+  },
+  {
+   "ancora": "referencia sistematica (ha / celulas)",
+   "declarado": "1,10 / 110",
+   "obtido": "1,10 / 110",
+   "nota": ""
+  },
+  {
+   "ancora": "banda contigua (ha)",
+   "declarado": "27,30",
+   "obtido": "30,31",
+   "nota": "a minha e a area DENTRO do poligono pomar; a da G35 e a area da tabela do gestor"
+  },
+  {
+   "ancora": "total da tabela do gestor (ha)",
+   "declarado": "44,93",
+   "obtido": "nao recalculado",
+   "nota": "documental, fora da minha camada"
+  },
+  {
+   "ancora": "chao lavrado nu2021 (ha)",
+   "declarado": "1,67",
+   "obtido": "1,67",
+   "nota": ""
+  },
+  {
+   "ancora": "defice de 2026 (ha)",
+   "declarado": "7,86",
+   "obtido": "7,86",
+   "nota": ""
+  },
+  {
+   "ancora": "declinio novo M2 (ha)",
+   "declarado": "3,58",
+   "obtido": "3,58",
+   "nota": ""
+  },
+  {
+   "ancora": "registos (livro fonte PT)",
+   "declarado": "212 / 222 declarados",
+   "obtido": "221",
+   "nota": "ver CORRIGIDO"
+  },
+  {
+   "ancora": "registos com posicao na banda contigua",
+   "declarado": "—",
+   "obtido": "111",
+   "nota": "novo da C3"
+  },
+  {
+   "ancora": "registos sem posicao",
+   "declarado": "—",
+   "obtido": "110",
+   "nota": "novo da C3"
+  },
+  {
+   "ancora": "linhas organismo x matriz",
+   "declarado": "26 declarados",
+   "obtido": "20",
+   "nota": "ver CORRIGIDO"
+  }
+ ],
+ "CaO_B2_V7": [
+  264.0,
+  505.0
+ ],
+ "CaO_Erica_Novo": [
+  879.0,
+  1200.0
+ ]
+}

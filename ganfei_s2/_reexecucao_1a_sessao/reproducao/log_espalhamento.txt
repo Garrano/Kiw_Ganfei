@@ -1,0 +1,21 @@
+/home/claude/cega/work/../scripts/espalhamento.py:8: ResourceWarning: unclosed file <_io.TextIOWrapper name='sentinel/masks.json' mode='r' encoding='utf-8'>
+  masks = json.load(open("sentinel/masks.json"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+data          area defice no pomar  n manchas  maior mancha  circularidade
+2024-07-22                  4.10ha          7        1.49ha          0.813
+2025-06-17                  7.12ha          5        3.59ha          0.298
+2025-08-14                  7.22ha          6        3.65ha          0.379
+2026-07-27                 10.79ha          7        4.04ha          0.879
+
+centroide da maior mancha (pixel de 10 m) e deslocamento:
+  2024-07-22  centro=(103.4, 48.8)
+  2025-06-17  centro=(102.4, 48.1)  deslocou    12 m
+  2025-08-14  centro=(102.3, 48.4)  deslocou     3 m
+  2026-07-27  centro=(102.1, 48.0)  deslocou     5 m
+
+Distancia ao nucleo de Jun/2025 dos pixels que passaram a defice depois:
+  2025-08-14:  0.80 ha novos | mediana   112 m | p90   420 m | adjacentes(<=20 m) 42.5%
+  2026-07-27:  3.97 ha novos | mediana   329 m | p90   452 m | adjacentes(<=20 m) 15.4%
+
+-> espalhamento.png
+exit=0

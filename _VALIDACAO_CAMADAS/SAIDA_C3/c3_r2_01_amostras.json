@@ -1,0 +1,42 @@
+{
+ "nota_posicao": "posições de valvulas_por_area.json; amplitude entre quatro reconstruções = 465 m (adenda v1.1)",
+ "unidades": {
+  "B2": {
+   "ha": 10.87,
+   "altura_mediana": 2.2977347373962402,
+   "pct_sem_pergola": 3.035878564857406,
+   "pct_alto": 95.12419503219871,
+   "pct_nu2021": 0.0,
+   "celulas": 1087
+  },
+  "B3": {
+   "ha": 9.92,
+   "altura_mediana": 2.222465991973877,
+   "pct_sem_pergola": 28.125,
+   "pct_alto": 67.43951612903226,
+   "pct_nu2021": 16.33064516129032,
+   "celulas": 992
+  },
+  "Erica Novo": {
+   "ha": 5.35,
+   "altura_mediana": 2.327251434326172,
+   "pct_sem_pergola": 0.1869158878504673,
+   "pct_alto": 99.62616822429906,
+   "pct_nu2021": 0.0,
+   "celulas": 535
+  },
+  "B4": {
+   "ha": 4.17,
+   "altura_mediana": 2.3079702854156494,
+   "pct_sem_pergola": 15.347721822541965,
+   "pct_alto": 83.93285371702638,
+   "pct_nu2021": 1.1990407673860912,
+   "celulas": 417
+  },
+  "V7": {
+   "ha": 3.25,
+   "pct_sem_pergola": 0.3076923076923077,
+   "celulas": 325
+  }
+ }
+}

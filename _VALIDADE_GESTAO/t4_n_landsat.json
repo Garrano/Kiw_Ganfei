@@ -1,0 +1,40 @@
+{
+ "nota": "grelha de 30 m alinhada a AOI; ±1 bloco por desfasamento",
+ "unidades": {
+  "ESTE com pergola": {
+   "celulas": 127,
+   "ha": 1.27,
+   "blocos": 27,
+   "inteiros": 2,
+   "cel_por_bloco": 4.703703703703703
+  },
+  "ESTE sem pergola": {
+   "celulas": 128,
+   "ha": 1.28,
+   "blocos": 28,
+   "inteiros": 4,
+   "cel_por_bloco": 4.571428571428571
+  },
+  "OESTE com pergola": {
+   "celulas": 218,
+   "ha": 2.18,
+   "blocos": 35,
+   "inteiros": 12,
+   "cel_por_bloco": 6.228571428571429
+  },
+  "referencia": {
+   "celulas": 110,
+   "ha": 1.1,
+   "blocos": 110,
+   "inteiros": 0,
+   "cel_por_bloco": 1.0
+  },
+  "resto do pomar": {
+   "celulas": 2220,
+   "ha": 22.2,
+   "blocos": 334,
+   "inteiros": 105,
+   "cel_por_bloco": 6.6467065868263475
+  }
+ }
+}

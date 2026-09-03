@@ -1,0 +1,112 @@
+[
+ {
+  "data": "2025-08-14",
+  "cena": "(série original)",
+  "plataforma": "",
+  "nuvens": NaN,
+  "OCIDENTAL": 0.8114644885063171,
+  "ORIENTAL": 0.7558498382568359,
+  "CONTROLO": 0.8639348745346069,
+  "contraste_OC": -0.052470386028289795,
+  "contraste_OR": -0.108085036277771
+ },
+ {
+  "data": "2025-08-16",
+  "cena": "S2A_29TNG_20250816_1_L2A",
+  "plataforma": "sentinel-2a",
+  "nuvens": 0.068488,
+  "OCIDENTAL": 0.8152040839195251,
+  "ORIENTAL": 0.7622641324996948,
+  "CONTROLO": 0.8651900887489319,
+  "contraste_OC": -0.04998600482940674,
+  "contraste_OR": -0.10292595624923706
+ },
+ {
+  "data": "2025-08-21",
+  "cena": "S2C_29TNG_20250821_0_L2A",
+  "plataforma": "sentinel-2c",
+  "nuvens": 11.273351,
+  "OCIDENTAL": 0.8251240849494934,
+  "ORIENTAL": 0.7674685716629028,
+  "CONTROLO": 0.872590959072113,
+  "contraste_OC": -0.04746687412261963,
+  "contraste_OR": -0.1051223874092102
+ },
+ {
+  "data": "2025-08-23",
+  "cena": "S2A_29TNG_20250823_0_L2A",
+  "plataforma": "sentinel-2a",
+  "nuvens": 0.006669,
+  "OCIDENTAL": 0.8210548758506775,
+  "ORIENTAL": 0.7713747620582581,
+  "CONTROLO": 0.8734432458877563,
+  "contraste_OC": -0.05238837003707886,
+  "contraste_OR": -0.10206848382949829
+ },
+ {
+  "data": "2025-08-24",
+  "cena": "S2C_29TNG_20250824_0_L2A",
+  "plataforma": "sentinel-2c",
+  "nuvens": 12.838361,
+  "OCIDENTAL": 0.827686071395874,
+  "ORIENTAL": 0.7828772068023682,
+  "CONTROLO": 0.8758841156959534,
+  "contraste_OC": -0.048198044300079346,
+  "contraste_OR": -0.0930069088935852
+ },
+ {
+  "data": "2025-08-26",
+  "cena": "S2A_29TNG_20250826_1_L2A",
+  "plataforma": "sentinel-2a",
+  "nuvens": 7.510494,
+  "OCIDENTAL": 0.8269665837287903,
+  "ORIENTAL": 0.7844935059547424,
+  "CONTROLO": 0.8764800429344177,
+  "contraste_OC": -0.04951345920562744,
+  "contraste_OR": -0.09198653697967529
+ },
+ {
+  "data": "2026-07-02",
+  "cena": "S2A_29TNG_20260702_1_L2A",
+  "plataforma": "sentinel-2a",
+  "nuvens": 0.012691,
+  "OCIDENTAL": 0.6223801374435425,
+  "ORIENTAL": 0.6674697399139404,
+  "CONTROLO": 0.8511996865272522,
+  "contraste_OC": -0.22881954908370972,
+  "contraste_OR": -0.18372994661331177
+ },
+ {
+  "data": "2026-07-05",
+  "cena": "S2B_29TNG_20260705_0_L2A",
+  "plataforma": "sentinel-2b",
+  "nuvens": 4.483002,
+  "OCIDENTAL": 0.6064910888671875,
+  "ORIENTAL": 0.6519224047660828,
+  "CONTROLO": 0.8288467526435852,
+  "contraste_OC": -0.2223556637763977,
+  "contraste_OR": -0.17692434787750244
+ },
+ {
+  "data": "2026-07-25",
+  "cena": "S2B_29TNG_20260725_0_L2A",
+  "plataforma": "sentinel-2b",
+  "nuvens": 19.188833,
+  "OCIDENTAL": 0.6838512420654297,
+  "ORIENTAL": 0.6756788492202759,
+  "CONTROLO": 0.8138089179992676,
+  "contraste_OC": -0.1299576759338379,
+  "contraste_OR": -0.1381300687789917
+ },
+ {
+  "data": "2026-07-27",
+  "cena": "(série original)",
+  "plataforma": "",
+  "nuvens": NaN,
+  "OCIDENTAL": 0.7165034413337708,
+  "ORIENTAL": 0.6927863955497742,
+  "CONTROLO": 0.8560827374458313,
+  "contraste_OC": -0.13957929611206055,
+  "contraste_OR": -0.16329634189605713
+ }
+]

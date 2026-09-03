@@ -1,0 +1,258 @@
+{
+ "EN": {
+  "ficheiro": "Ganfei_Kiwi_Decline_Traceability_Workbook.xlsx",
+  "folhas": {
+   "README": {
+    "linhas": 21,
+    "colunas": 3,
+    "cabecalhos": [
+     "Unnamed: 0",
+     "Unnamed: 1",
+     "Unnamed: 2"
+    ]
+   },
+   "Master Log": {
+    "linhas": 212,
+    "colunas": 22,
+    "cabecalhos": [
+     "Record_ID",
+     "Source_File",
+     "Doc_Type",
+     "Report_No",
+     "Client_Titular",
+     "Terrain_Block_Parcel",
+     "Parish_Municipality",
+     "Parcelario_No",
+     "Sample_Date",
+     "Received_Date",
+     "Result_Date",
+     "Matrix",
+     "Test_Category",
+     "Method",
+     "Organism_Parameter",
+     "Result",
+     "Value",
+     "Unit",
+     "Interpretation",
+     "Lab_Provider",
+     "Location_Confidence",
+     "Notes"
+    ]
+   },
+   "Pathology Matrix": {
+    "linhas": 25,
+    "colunas": 9,
+    "cabecalhos": [
+     "Organism (matrix)",
+     "UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no block code given)  [6_junho_2025_microbiologia_de_solo.pdf]",
+     "B1  [339_Kiwi.pdf]",
+     "B3  [340_Kiwi.pdf]",
+     "B4  [341_Kiwi.pdf]",
+     "V7  [342_Kiwi.pdf]",
+     "Erica Novo E  [343_Kiwi.pdf]",
+     "B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]",
+     "B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]"
+    ]
+   },
+   "Nematode Counts": {
+    "linhas": 8,
+    "colunas": 6,
+    "cabecalhos": [
+     "Block",
+     "Soil count (J2+eggs / 200cc soil)",
+     "Root count (J2+eggs / g root)",
+     "Source_File",
+     "Report_No",
+     "Sample_Date"
+    ]
+   },
+   "Soil Chemistry by Block": {
+    "linhas": 11,
+    "colunas": 10,
+    "cabecalhos": [
+     "Parameter",
+     "Erica 2016 R (2026-03-03)",
+     "Erica 2016 E (2026-03-03)",
+     "B2 - V7 (2026-03-03)",
+     "B3 - 7 ha (2026-03-03)",
+     "B2 - Zona 1 (V7) (2026-06-17)",
+     "B1 C1 (2026-07-08)",
+     "B1 C3 (2026-07-08)",
+     "B1 C4 (2026-07-08)",
+     "Parcela B4 (2026-07-08)"
+    ]
+   },
+   "ITS Diversity": {
+    "linhas": 7,
+    "colunas": 5,
+    "cabecalhos": [
+     "Metric",
+     "ISFBV0314_ITS.pdf",
+     "ISFBV0315_ITS.pdf",
+     "ISFBV0316_ITS.pdf",
+     "ISFBV0317_ITS.pdf"
+    ]
+   },
+   "Becrop Reports": {
+    "linhas": 9,
+    "colunas": 3,
+    "cabecalhos": [
+     "Metric",
+     "9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf",
+     "29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf"
+    ]
+   },
+   "Drone-NDVI Log": {
+    "linhas": 3,
+    "colunas": 7,
+    "cabecalhos": [
+     "Image_ID",
+     "Platform",
+     "Layers_On",
+     "Terrain_Coverage",
+     "Date_Captured",
+     "Observation",
+     "Traceability_Note"
+    ]
+   },
+   "Traceability Gaps": {
+    "linhas": 7,
+    "colunas": 4,
+    "cabecalhos": [
+     "Item",
+     "What the files show",
+     "Why it matters",
+     "Recommended next step"
+    ]
+   }
+  }
+ },
+ "PT": {
+  "ficheiro": "Dossie_Rastreabilidade_Declinio_Kiwi_Ganfei_PT.xlsx",
+  "folhas": {
+   "LEIA-ME": {
+    "linhas": 21,
+    "colunas": 3,
+    "cabecalhos": [
+     "Unnamed: 0",
+     "Unnamed: 1",
+     "Unnamed: 2"
+    ]
+   },
+   "Registo Principal": {
+    "linhas": 221,
+    "colunas": 22,
+    "cabecalhos": [
+     "Nº Registo",
+     "Ficheiro de Origem",
+     "Tipo de Documento",
+     "Nº Relatório",
+     "Cliente/Titular",
+     "Talhão/Parcela",
+     "Freguesia/Concelho",
+     "Nº Parcelário",
+     "Data Amostragem",
+     "Data Receção",
+     "Data Resultado",
+     "Matriz",
+     "Categoria de Ensaio",
+     "Método",
+     "Organismo/Parâmetro",
+     "Resultado",
+     "Valor",
+     "Unidade",
+     "Interpretação",
+     "Laboratório",
+     "Confiança na Localização",
+     "Notas"
+    ]
+   },
+   "Matriz Fitopatologia": {
+    "linhas": 22,
+    "colunas": 9,
+    "cabecalhos": [
+     "Organismo (matriz)",
+     "NÃO ESPECIFICADO - amostra composta/global identificada como 'Kiwi 1000' (sem código de talhão indicado)  [6_junho_2025_microbiologia_de_solo.pdf]",
+     "B1  [339_Kiwi.pdf]",
+     "B3  [340_Kiwi.pdf]",
+     "B4  [341_Kiwi.pdf]",
+     "V7  [342_Kiwi.pdf]",
+     "Erica Novo E  [343_Kiwi.pdf]",
+     "B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]",
+     "B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]"
+    ]
+   },
+   "Contagens Nemátodos": {
+    "linhas": 8,
+    "colunas": 6,
+    "cabecalhos": [
+     "Talhão",
+     "Contagem no solo (J2+ovos / 200cc solo)",
+     "Contagem na raiz (J2+ovos / g raiz)",
+     "Ficheiro de Origem",
+     "Nº Relatório",
+     "Data Amostragem"
+    ]
+   },
+   "Fisico-Quimica por Talhao": {
+    "linhas": 12,
+    "colunas": 10,
+    "cabecalhos": [
+     "Parâmetro",
+     "Erica 2016 R (2026-03-03)",
+     "Erica 2016 E (2026-03-03)",
+     "B2 - V7 (2026-03-03)",
+     "B3 - 7 ha (2026-03-03)",
+     "B2 - Zona 1 (V7) (2026-06-17)",
+     "B1 C1 (2026-07-08)",
+     "B1 C3 (2026-07-08)",
+     "B1 C4 (2026-07-08)",
+     "Parcela B4 (2026-07-08)"
+    ]
+   },
+   "Diversidade ITS": {
+    "linhas": 7,
+    "colunas": 5,
+    "cabecalhos": [
+     "Métrica",
+     "ISFBV0314_ITS.pdf",
+     "ISFBV0315_ITS.pdf",
+     "ISFBV0316_ITS.pdf",
+     "ISFBV0317_ITS.pdf"
+    ]
+   },
+   "Relatorios Becrop": {
+    "linhas": 9,
+    "colunas": 3,
+    "cabecalhos": [
+     "Métrica",
+     "9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf",
+     "29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf"
+    ]
+   },
+   "Registo Drone-NDVI": {
+    "linhas": 3,
+    "colunas": 7,
+    "cabecalhos": [
+     "ID da Imagem",
+     "Plataforma",
+     "Camadas Ativas",
+     "Cobertura de Terreno",
+     "Data da Captura",
+     "Observação",
+     "Nota de Rastreabilidade"
+    ]
+   },
+   "Pontos a Esclarecer": {
+    "linhas": 7,
+    "colunas": 4,
+    "cabecalhos": [
+     "Ponto",
+     "O que os documentos mostram",
+     "Porque é importante",
+     "Próximo passo recomendado"
+    ]
+   }
+  }
+ }
+}

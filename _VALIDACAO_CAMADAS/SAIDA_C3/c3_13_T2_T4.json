@@ -1,0 +1,227 @@
+{
+ "R1_verificacao": {
+  "n_registos_com_podred": 2,
+  "premissa_da_R1_e_falsa": true,
+  "metodo_da_C3_estava_errado_transcricao": true,
+  "becrop": {
+   "9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf": {
+    "record_id": 79,
+    "coluna": "Notes",
+    "risco_muito_alto_mencionado": true,
+    "nao_detectado_mencionado": true,
+    "menciona_P_sojae": true,
+    "texto": "PODREDUMBRE RADICULAR (podridão radicular): Risco Relevante DETETADO, NÍVEL DE RISCO MUITO ALTO. Incidência global: 'pouco disseminado' (9 em cada 100 parcelas analisadas pela Biome Makers estão afetadas por podridão radicular). Microrganismo em destaque, relacionado com a podridão radicular: Phytophthora sojae (protista). Outros: Doença da folha e Podridão por Botrytis = Não Detetado. Repartição do biocontrolo: agentes fungicidas MÉDIO, bactericidas MUITO ALTO, inseticidas MÉDIO, nematicidas BAIXO."
+   },
+   "29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf": {
+    "record_id": 86,
+    "coluna": "Notes",
+    "risco_muito_alto_mencionado": true,
+    "nao_detectado_mencionado": true,
+    "menciona_P_sojae": true,
+    "texto": "Todas as categorias de risco de doença/praga rastreadas = 'No Detectado' (não detetado), INCLUINDO a Podredumbre Radicular (podridão radicular) - ou seja, o mesmo risco que foi assinalado como MUY ALTO com deteção de Phytophthora sojae no relatório A32A0C (25/08/2023) NÃO é detetado aqui (04/02/2024), na mesma família de código A32A0x. Lista completa de não detetados: doença da folha, agalhas do colo, queda do botão floral, cancro bacteriano, esclerotiniose, phoma do kiwi, prateamento, podridão radicular branca, podridão carbonosa da raiz, podridão por Botrytis, podridão radicular, verticiliose. Repartição do biocontrolo: agentes fungicidas MÉDIO, bactericidas ALTO, inseticidas MÉDIO, nematicidas BAIXO."
+   }
+  }
+ },
+ "T2a_dif_por_ano": {
+  "2017-07-02": 0.0001,
+  "2018-08-31": 0.0004,
+  "2020-07-18": -0.0006,
+  "2021-07-16": -0.0001,
+  "2022-07-31": 0.0002,
+  "2023-08-07": 0.0005,
+  "2024-07-22": 0.001,
+  "2025-08-14": 0.0023,
+  "2026-07-27": 0.0133
+ },
+ "T2a_max_anos_anteriores": 0.0023,
+ "T2bc_its": {
+  "filtradas": [
+   25078,
+   7119,
+   4964,
+   10688
+  ],
+  "asv": [
+   281,
+   171,
+   129,
+   219
+  ],
+  "simpson": [
+   0.9797,
+   0.9767,
+   0.9614,
+   0.9771
+  ],
+  "shannon": [
+   6.82,
+   6.25,
+   5.61,
+   6.59
+  ],
+  "pielou": [
+   0.838,
+   0.8431,
+   0.7996,
+   0.8472
+  ],
+  "rhos": {
+   "asv": 1.0,
+   "simpson": 1.0,
+   "shannon": 1.0,
+   "pielou": 0.4
+  },
+  "p_exacto_rho1_n4": 0.0833,
+  "ordenacoes": {
+   "filtradas": [
+    4,
+    2,
+    1,
+    3
+   ],
+   "asv": [
+    4,
+    2,
+    1,
+    3
+   ],
+   "simpson": [
+    4,
+    2,
+    1,
+    3
+   ],
+   "shannon": [
+    4,
+    2,
+    1,
+    3
+   ],
+   "pielou": [
+    2,
+    3,
+    1,
+    4
+   ]
+  }
+ },
+ "T2d_kiwi1000_cliente": {
+  "lda": 131,
+  "sample_identifier": 15,
+  "publicado": 146,
+  "citavel": 131,
+  "total": 221
+ },
+ "T2e_datas": {
+  "real": {
+   "2026-03-03": 5,
+   "2026-05-06": 4,
+   "2026-06-17": 2,
+   "2026-07-08": 1
+  },
+  "publicado": [
+   4,
+   4,
+   2,
+   2
+  ],
+  "relatorios": 12,
+  "colheitas": 9
+ },
+ "T2f_disco_oeste": {
+  "celulas_disco": 248,
+  "reparticao": {
+   "7": 38,
+   "8": 166,
+   "9": 44
+  },
+  "celulas_v7": 325,
+  "pct_v7_dentro_do_disco": 11.7,
+  "dist_minima_v7_ao_foco_m": 53.0
+ },
+ "T2g": {
+  "doc_type_colocados": {
+   "Relatório Laboratorial - Físico-Química do Solo (Boletim de Análises)": 72,
+   "Relatório Laboratorial - Nematologia": 16,
+   "Relatório Laboratorial - Painel de Saúde do Solo (Agricultura Regenerativa)": 12,
+   "Relatório Laboratorial - Análise Foliar": 11
+  },
+  "microbiologia_colocada": 16,
+  "relatorios_microbiologia": [
+   "340_Kiwi.pdf",
+   "341_Kiwi.pdf",
+   "342_Kiwi.pdf",
+   "343_Kiwi.pdf"
+  ],
+  "organismos_medidos": [
+   "M. hapla J2 juveniles + eggs, per 200cc soil",
+   "M. hapla J2 juveniles + eggs, per g root",
+   "Meloidogyne hapla"
+  ],
+  "linhas_ensaiadas_com_posicao": 2,
+  "linhas_nunca_ensaiadas_com_posicao": 18
+ },
+ "R3_vector": {
+  "vector": {
+   "v6": 0,
+   "v7": 51,
+   "v8": 0,
+   "v9": 0,
+   "v10": 0,
+   "v11": 0,
+   "v12": 0,
+   "v13": 0,
+   "v14": 0,
+   "v15": 0,
+   "v16": 0,
+   "v17": 0
+  },
+  "nao_nulos": 1,
+  "descartados_por_bloco": 60,
+  "distribuicao": {
+   "B3": 16,
+   "B4": 16,
+   "Erica Novo": 28,
+   "v7": 51
+  },
+  "pct_maior": 45.9
+ },
+ "R6_B1": {
+  "ficheiros": 27,
+  "ficheiros_com_mais_de_uma_data": 0,
+  "value_divergente": 9,
+  "emparelhadas": 212
+ },
+ "R7_busca27": {
+  "folhas_varridas": 18,
+  "ocorrencias": 34,
+  "tipos": {
+   "Record_ID": 2,
+   "data 2023-06-27": 32
+  },
+  "nao_explicadas": 0
+ },
+ "T4": {
+  "mediana_2024": 0.8984,
+  "mediana_2026": 0.8766,
+  "queda_mediana": -0.0219,
+  "media_2024": 0.8974,
+  "media_2026": 0.8425,
+  "queda_media": -0.0548,
+  "razao_media_mediana": 2.51,
+  "assimetria_2024": -2.555,
+  "assimetria_2026": -1.396,
+  "media_menos_mediana_2024": -0.0011,
+  "media_menos_mediana_2026": -0.034,
+  "veredicto": "A divergencia 0,054 vs 0,0218 e media contra mediana. Nenhuma das duas esta errada. A diferenca entre elas e a cauda inferior e e prova independente de B10."
+ },
+ "D_ancoras": {
+  "cenas_DATAS": 9,
+  "cenas_TODAS": 11,
+  "V1_declara": 10,
+  "ndvi_ref_2017_declarado": 0.838,
+  "ndvi_ref_2017_obtido": 0.8898,
+  "ndvi_ref_2026_declarado": 0.886,
+  "ndvi_ref_2026_obtido": 0.8766
+ }
+}

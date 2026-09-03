@@ -1,0 +1,48 @@
+{
+ "_metodo": "posicao por numero de linha anotado no esquema de rega, com o compasso das fileiras medido na ortofoto; ancorado nos dois extremos medidos da parcela",
+ "_prova": "292,5 linhas x 5,00 m = 1462 m contra 1458 m medidos (0,3%)",
+ "_incerteza_m": 25,
+ "_incerteza_nota": "dominada pela definicao dos extremos da parcela (+-20 m cada) e pela hipotese de as linhas 130,5 e 423 coincidirem com esses extremos. Contra 64 m do ajuste da forma do desenho.",
+ "_valvulas_1a5": "POR COLOCAR. O esquema anota linhas 137 e 156 para as valvulas 4 e 5, que cairiam dentro deste intervalo — logo o lobo oeste tem numeracao propria e estas ancoras nao o alcancam.",
+ "metros_por_linha": 4.983,
+ "comprimento_parcela_m": 1458,
+ "azimute_eixo": 70.3,
+ "valvulas": [
+  {
+   "linha": 130.5,
+   "valvulas": "válvulas 6 e 7",
+   "E": 530173.6,
+   "N": 4654905.1
+  },
+  {
+   "linha": 267.5,
+   "valvulas": "válvulas 8 e 9",
+   "E": 530816.4,
+   "N": 4655135.0
+  },
+  {
+   "linha": 306.5,
+   "valvulas": "válvulas 10, 11, 12 e 13",
+   "E": 530999.4,
+   "N": 4655200.4
+  },
+  {
+   "linha": 336.5,
+   "valvulas": "válvulas 14 e 15",
+   "E": 531140.2,
+   "N": 4655250.8
+  },
+  {
+   "linha": 409.0,
+   "valvulas": "válvula 16",
+   "E": 531480.4,
+   "N": 4655372.4
+  },
+  {
+   "linha": 423.0,
+   "valvulas": "válvula 17",
+   "E": 531546.1,
+   "N": 4655395.9
+  }
+ ]
+}

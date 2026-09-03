@@ -1,0 +1,37 @@
+{
+ "ORIENTAL \u00b7 zona0 & COM (CHM 07-2025)  [a que a cadeia usa]": {
+  "n30": 10,
+  "degrau": -0.08688489242727535,
+  "lugar": 1
+ },
+ "ORIENTAL \u00b7 zona0 & ~nu2021 (ortofoto 2021)": {
+  "n30": 13,
+  "degrau": -0.106729306405401,
+  "lugar": 1
+ },
+ "ORIENTAL \u00b7 zona0 & ~nu2021 & COM (os dois)": {
+  "n30": 9,
+  "degrau": -0.09244746686202553,
+  "lugar": 1
+ },
+ "ORIENTAL \u00b7 zona0 crua": {
+  "n30": 24,
+  "degrau": -0.06147943438567552,
+  "lugar": 3
+ },
+ "OCIDENTAL \u00b7 disco & pomar & COM  [a que a cadeia usa]": {
+  "n30": 26,
+  "degrau": -0.08385895987202799,
+  "lugar": 1
+ },
+ "OCIDENTAL \u00b7 disco & pomar & ~nu2021": {
+  "n30": 29,
+  "degrau": -0.08942876314592624,
+  "lugar": 1
+ },
+ "OCIDENTAL \u00b7 disco & pomar": {
+  "n30": 29,
+  "degrau": -0.08942876314592624,
+  "lugar": 1
+ }
+}

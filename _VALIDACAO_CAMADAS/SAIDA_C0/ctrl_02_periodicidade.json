@@ -1,0 +1,19 @@
+{
+ "janela": [
+  527840.0,
+  4652200.0,
+  531795.0,
+  4655785.0
+ ],
+ "res": 0.5,
+ "bloco_px": 64,
+ "passo_px": 32,
+ "lam_min": 3.0,
+ "lam_max": 9.0,
+ "shape": [
+  223,
+  246
+ ],
+ "origem": "ortos2025_cog_25cm_rgbi_jpg_002-3_v01.tif R+G+B",
+ "nota": "sem NIR, sem qualquer indice de vegetacao"
+}

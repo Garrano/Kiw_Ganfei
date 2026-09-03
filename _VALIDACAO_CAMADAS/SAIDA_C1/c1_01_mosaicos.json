@@ -1,0 +1,359 @@
+[
+ {
+  "nome": "MDT-50cm-156563-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   1817
+  ],
+  "left": -43908.0,
+  "bottom": 262000.0,
+  "right": -42999.5,
+  "top": 263000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-156564-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   542,
+   852
+  ],
+  "left": -43425.0,
+  "bottom": 263000.0,
+  "right": -42999.0,
+  "top": 263271.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-157563-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -43000.0,
+  "bottom": 262000.0,
+  "right": -42000.0,
+  "top": 263000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-157564-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -43000.0,
+  "bottom": 263000.0,
+  "right": -42000.0,
+  "top": 264000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-157565-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   1253,
+   976
+  ],
+  "left": -42487.0,
+  "bottom": 263999.5,
+  "right": -41999.0,
+  "top": 264626.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-158563-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -42000.0,
+  "bottom": 262000.0,
+  "right": -41000.0,
+  "top": 263000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-158564-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -42000.0,
+  "bottom": 263000.0,
+  "right": -41000.0,
+  "top": 264000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-158565-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -42000.0,
+  "bottom": 264000.0,
+  "right": -41000.0,
+  "top": 265000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-158566-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   211,
+   592
+  ],
+  "left": -41296.0,
+  "bottom": 264999.5,
+  "right": -41000.0,
+  "top": 265105.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-159563-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -41000.0,
+  "bottom": 262000.0,
+  "right": -40000.0,
+  "top": 263000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-159564-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -41000.0,
+  "bottom": 263000.0,
+  "right": -40000.0,
+  "top": 264000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-159565-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -41000.0,
+  "bottom": 264000.0,
+  "right": -40000.0,
+  "top": 265000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-159566-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   621,
+   2000
+  ],
+  "left": -41000.0,
+  "bottom": 264999.5,
+  "right": -40000.0,
+  "top": 265310.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-160563-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -40000.0,
+  "bottom": 262000.0,
+  "right": -39000.0,
+  "top": 263000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-160564-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -40000.0,
+  "bottom": 263000.0,
+  "right": -39000.0,
+  "top": 264000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-160565-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -40000.0,
+  "bottom": 264000.0,
+  "right": -39000.0,
+  "top": 265000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-160566-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   996,
+   2000
+  ],
+  "left": -40000.0,
+  "bottom": 264999.0,
+  "right": -39000.0,
+  "top": 265497.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-161563-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -39000.0,
+  "bottom": 262000.0,
+  "right": -38000.0,
+  "top": 263000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-161564-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -39000.0,
+  "bottom": 263000.0,
+  "right": -38000.0,
+  "top": 264000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-161565-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   2000,
+   2000
+  ],
+  "left": -39000.0,
+  "bottom": 264000.0,
+  "right": -38000.0,
+  "top": 265000.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ },
+ {
+  "nome": "MDT-50cm-161566-07-2025_v02.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "shape": [
+   1366,
+   2000
+  ],
+  "left": -39000.0,
+  "bottom": 265000.0,
+  "right": -38000.0,
+  "top": 265683.0,
+  "nodata": -999.0,
+  "tags": {
+   "AREA_OR_POINT": "Point"
+  }
+ }
+]

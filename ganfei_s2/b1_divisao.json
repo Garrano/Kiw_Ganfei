@@ -1,0 +1,66 @@
+{
+ "_eixo_origem": [
+  529648.8,
+  4654300.2
+ ],
+ "_eixo_u": [
+  0.8365,
+  -0.548
+ ],
+ "_metodo": "periodicidade na ortofoto + areas tabeladas + ordem do esboco",
+ "_ancoras": [
+  [
+   529500.360497044,
+   4654009.770832341
+  ],
+  [
+   530054.0898767479,
+   4654412.643820492
+  ]
+ ],
+ "_area_detectada_ha": 8.21,
+ "_area_tabelada_ha": 9.01,
+ "_incerteza": "ordem 1,2,4,3,5 lida no esboco; se a ordem estiver trocada, as posicoes trocam com ela",
+ "valvulas": [
+  {
+   "valvula": 1,
+   "area_m2": 13500,
+   "d0": 0.0,
+   "d1": 57.8,
+   "E": 529672.9,
+   "N": 4654284.4
+  },
+  {
+   "valvula": 2,
+   "area_m2": 9375,
+   "d0": 57.8,
+   "d1": 82.8,
+   "E": 529707.6,
+   "N": 4654261.7
+  },
+  {
+   "valvula": 4,
+   "area_m2": 24550,
+   "d0": 82.8,
+   "d1": 145.7,
+   "E": 529744.3,
+   "N": 4654237.6
+  },
+  {
+   "valvula": 3,
+   "area_m2": 12750,
+   "d0": 145.7,
+   "d1": 174.5,
+   "E": 529782.7,
+   "N": 4654212.5
+  },
+  {
+   "valvula": 5,
+   "area_m2": 29900,
+   "d0": 174.5,
+   "d1": 304.0,
+   "E": 529848.9,
+   "N": 4654169.1
+  }
+ ]
+}

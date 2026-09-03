@@ -1,0 +1,431 @@
+{
+ "intervalo": [
+  "2025-08-15",
+  "2026-07-26"
+ ],
+ "total": 199,
+ "limpas": 60,
+ "plena_estacao": 11,
+ "cenas": [
+  {
+   "data": "2025-08-16",
+   "doy": 228,
+   "cena": "S2A_29TNG_20250816_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.068488
+  },
+  {
+   "data": "2025-08-16",
+   "doy": 228,
+   "cena": "S2B_29TNG_20250816_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 0.054958
+  },
+  {
+   "data": "2025-08-21",
+   "doy": 233,
+   "cena": "S2C_29TNG_20250821_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 11.273351
+  },
+  {
+   "data": "2025-08-23",
+   "doy": 235,
+   "cena": "S2A_29TNG_20250823_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.006669
+  },
+  {
+   "data": "2025-08-24",
+   "doy": 236,
+   "cena": "S2C_29TNG_20250824_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 12.838361
+  },
+  {
+   "data": "2025-08-26",
+   "doy": 238,
+   "cena": "S2A_29TNG_20250826_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 7.510494
+  },
+  {
+   "data": "2025-08-26",
+   "doy": 238,
+   "cena": "S2B_29TNG_20250826_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 3.916683
+  },
+  {
+   "data": "2025-09-05",
+   "doy": 248,
+   "cena": "S2A_29TNG_20250905_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 3.566758
+  },
+  {
+   "data": "2025-09-05",
+   "doy": 248,
+   "cena": "S2B_29TNG_20250905_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 3.963061
+  },
+  {
+   "data": "2025-09-23",
+   "doy": 266,
+   "cena": "S2C_29TNG_20250923_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 0.090629
+  },
+  {
+   "data": "2025-09-25",
+   "doy": 268,
+   "cena": "S2A_29TNG_20250925_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.002857
+  },
+  {
+   "data": "2025-09-25",
+   "doy": 268,
+   "cena": "S2B_29TNG_20250925_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 0.002449
+  },
+  {
+   "data": "2025-09-28",
+   "doy": 271,
+   "cena": "S2B_29TNG_20250928_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 12.779455
+  },
+  {
+   "data": "2025-09-30",
+   "doy": 273,
+   "cena": "S2C_29TNG_20250930_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 14.511488
+  },
+  {
+   "data": "2025-10-05",
+   "doy": 278,
+   "cena": "S2A_29TNG_20251005_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.583172
+  },
+  {
+   "data": "2025-10-05",
+   "doy": 278,
+   "cena": "S2B_29TNG_20251005_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 0.388554
+  },
+  {
+   "data": "2025-10-08",
+   "doy": 281,
+   "cena": "S2B_29TNG_20251008_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 6.583238
+  },
+  {
+   "data": "2025-10-10",
+   "doy": 283,
+   "cena": "S2C_29TNG_20251010_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 0.006408
+  },
+  {
+   "data": "2025-10-12",
+   "doy": 285,
+   "cena": "S2A_29TNG_20251012_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.940108
+  },
+  {
+   "data": "2025-10-15",
+   "doy": 288,
+   "cena": "S2A_29TNG_20251015_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 10.083064
+  },
+  {
+   "data": "2025-10-15",
+   "doy": 288,
+   "cena": "S2B_29TNG_20251015_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 9.148782
+  },
+  {
+   "data": "2025-11-21",
+   "doy": 325,
+   "cena": "S2A_29TNG_20251121_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 7.961201
+  },
+  {
+   "data": "2025-12-14",
+   "doy": 348,
+   "cena": "S2A_29TNG_20251214_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 18.10398
+  },
+  {
+   "data": "2025-12-14",
+   "doy": 348,
+   "cena": "S2B_29TNG_20251214_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 11.869715
+  },
+  {
+   "data": "2025-12-24",
+   "doy": 358,
+   "cena": "S2A_29TNG_20251224_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 19.047406
+  },
+  {
+   "data": "2025-12-24",
+   "doy": 358,
+   "cena": "S2B_29TNG_20251224_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 13.970423
+  },
+  {
+   "data": "2025-12-29",
+   "doy": 363,
+   "cena": "S2C_29TNG_20251229_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 0.777025
+  },
+  {
+   "data": "2026-02-22",
+   "doy": 53,
+   "cena": "S2A_29TNG_20260222_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 11.39307
+  },
+  {
+   "data": "2026-02-22",
+   "doy": 53,
+   "cena": "S2B_29TNG_20260222_1_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 10.224739
+  },
+  {
+   "data": "2026-03-04",
+   "doy": 63,
+   "cena": "S2B_29TNG_20260304_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 0.626474
+  },
+  {
+   "data": "2026-03-07",
+   "doy": 66,
+   "cena": "S2B_29TNG_20260307_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 14.897342
+  },
+  {
+   "data": "2026-03-17",
+   "doy": 76,
+   "cena": "S2B_29TNG_20260317_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 2.522288
+  },
+  {
+   "data": "2026-03-22",
+   "doy": 81,
+   "cena": "S2C_29TNG_20260322_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 5.218159
+  },
+  {
+   "data": "2026-03-24",
+   "doy": 83,
+   "cena": "S2A_29TNG_20260324_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 2.639313
+  },
+  {
+   "data": "2026-03-24",
+   "doy": 83,
+   "cena": "S2B_29TNG_20260324_1_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 3.502754
+  },
+  {
+   "data": "2026-03-27",
+   "doy": 86,
+   "cena": "S2B_29TNG_20260327_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 0.029518
+  },
+  {
+   "data": "2026-03-31",
+   "doy": 90,
+   "cena": "S2A_29TNG_20260331_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.094337
+  },
+  {
+   "data": "2026-04-01",
+   "doy": 91,
+   "cena": "S2C_29TNG_20260401_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 8.733205
+  },
+  {
+   "data": "2026-04-03",
+   "doy": 93,
+   "cena": "S2A_29TNG_20260403_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 1.144958
+  },
+  {
+   "data": "2026-04-03",
+   "doy": 93,
+   "cena": "S2B_29TNG_20260403_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 1.140257
+  },
+  {
+   "data": "2026-04-06",
+   "doy": 96,
+   "cena": "S2B_29TNG_20260406_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 1.66698
+  },
+  {
+   "data": "2026-04-10",
+   "doy": 100,
+   "cena": "S2A_29TNG_20260410_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 13.843907
+  },
+  {
+   "data": "2026-04-18",
+   "doy": 108,
+   "cena": "S2C_29TNG_20260418_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 11.322817
+  },
+  {
+   "data": "2026-04-26",
+   "doy": 116,
+   "cena": "S2B_29TNG_20260426_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 17.217253
+  },
+  {
+   "data": "2026-05-20",
+   "doy": 140,
+   "cena": "S2A_29TNG_20260520_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.055746
+  },
+  {
+   "data": "2026-05-26",
+   "doy": 146,
+   "cena": "S2B_29TNG_20260526_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 0.484594
+  },
+  {
+   "data": "2026-05-28",
+   "doy": 148,
+   "cena": "S2C_29TNG_20260528_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 1.106106
+  },
+  {
+   "data": "2026-05-31",
+   "doy": 151,
+   "cena": "S2C_29TNG_20260531_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 19.340627
+  },
+  {
+   "data": "2026-06-07",
+   "doy": 158,
+   "cena": "S2C_29TNG_20260607_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 7.788432
+  },
+  {
+   "data": "2026-06-09",
+   "doy": 160,
+   "cena": "S2A_29TNG_20260609_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.675663
+  },
+  {
+   "data": "2026-06-10",
+   "doy": 161,
+   "cena": "S2C_29TNG_20260610_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 3.110757
+  },
+  {
+   "data": "2026-06-17",
+   "doy": 168,
+   "cena": "S2C_29TNG_20260617_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 3.68721
+  },
+  {
+   "data": "2026-06-19",
+   "doy": 170,
+   "cena": "S2A_29TNG_20260619_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 15.601051
+  },
+  {
+   "data": "2026-06-27",
+   "doy": 178,
+   "cena": "S2C_29TNG_20260627_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 10.111418
+  },
+  {
+   "data": "2026-06-29",
+   "doy": 180,
+   "cena": "S2A_29TNG_20260629_0_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 1.823036
+  },
+  {
+   "data": "2026-06-30",
+   "doy": 181,
+   "cena": "S2C_29TNG_20260630_0_L2A",
+   "plataforma": "sentinel-2c",
+   "nuvens": 16.693352
+  },
+  {
+   "data": "2026-07-02",
+   "doy": 183,
+   "cena": "S2A_29TNG_20260702_1_L2A",
+   "plataforma": "sentinel-2a",
+   "nuvens": 0.012691
+  },
+  {
+   "data": "2026-07-02",
+   "doy": 183,
+   "cena": "S2B_29TNG_20260702_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 0.00398
+  },
+  {
+   "data": "2026-07-05",
+   "doy": 186,
+   "cena": "S2B_29TNG_20260705_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 4.483002
+  },
+  {
+   "data": "2026-07-25",
+   "doy": 206,
+   "cena": "S2B_29TNG_20260725_0_L2A",
+   "plataforma": "sentinel-2b",
+   "nuvens": 19.188833
+  }
+ ]
+}

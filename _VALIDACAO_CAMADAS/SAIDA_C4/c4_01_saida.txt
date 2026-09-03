@@ -1,0 +1,77 @@
+N3 ao foco ESTE: 95.2 m  (disco do foco = 90 m -> o N3 esta FORA)
+v8 (ponto da valvula) ao foco OESTE: 34.5 m
+v7 (ponto da valvula) ao foco OESTE: 110.7 m
+total da tabela de valvulas: 27.30 ha
+
+fraccao do defice de 2026 que e declinio NOVO (regra M2), por valvula:
+   v6    defice   0.0 %   novo   0.0 %   novo/defice   -    chao2021  0.0 %
+   v7    defice  21.2 %   novo  21.2 %   novo/defice 1.00   chao2021  0.0 %
+   v8    defice  50.7 %   novo  47.1 %   novo/defice 0.93   chao2021  0.0 %
+   v9    defice  27.9 %   novo   6.4 %   novo/defice 0.23   chao2021  0.0 %
+   v10   defice   4.4 %   novo   0.0 %   novo/defice 0.00   chao2021  0.0 %
+   v11   defice   1.4 %   novo   1.4 %   novo/defice 1.00   chao2021  0.0 %
+   v12   defice  28.7 %   novo   9.0 %   novo/defice 0.31   chao2021 12.8 %
+   v13   defice  53.4 %   novo  19.5 %   novo/defice 0.36   chao2021 22.6 %
+   v14   defice  52.9 %   novo  18.1 %   novo/defice 0.34   chao2021 13.8 %
+   v15   defice  59.3 %   novo   3.7 %   novo/defice 0.06   chao2021 15.6 %
+   v16   defice  13.0 %   novo   0.0 %   novo/defice 0.00   chao2021  2.5 %
+   v17   defice   0.0 %   novo   0.0 %   novo/defice   -    chao2021  0.0 %
+
+datacao dentro do disco de 120 m: {"OESTE": {"ha_em_defice_2026_no_disco_120m": 2.6, "ha_com_defice_continuo_desde_2024_ou_antes": 0.09, "fraccao_anterior_a_2025": 0.035}, "ESTE": {"ha_em_defice_2026_no_disco_120m": 3.4, "ha_com_defice_continuo_desde_2024_ou_antes": 1.78, "fraccao_anterior_a_2025": 0.524}}
+taxa de base: {"sao_antes_ha": 20.97, "com_historico_ha": 9.34, "defice26_sobre_terreno_sao_pct": 17.1, "defice26_sobre_terreno_com_historico_pct": 45.8, "razao": 2.68}
+
+M. hapla contra defice: {"n_unidades_colocadas": 4, "unidades": ["B3", "B4", "V7", "Erica Novo E"], "rho_defice_x_contagem_solo": -0.4, "rho_defice_x_contagem_raiz": -0.8, "nota": "n=4, uma data (2026-05-06), um laboratorio, um metodo. Com n=4 o p exacto de |rho|=1 e 2/4! = 0,083; nenhum destes valores e significativo em nenhum criterio. O sinal e NEGATIVO: mais nematodes onde ha MENOS defice.", "contagem_mais_alta_sem_posicao": [{"talhao": "B1", "solo": 250.0, "raiz": 65.0, "defice26_pct": null, "tem_posicao": false}]}
+
+matriz: {
+ "linhas_organismo_x_matriz": 20,
+ "ensaiadas_em_unidade_colocada": 2,
+ "ensaiadas_com_algum_lugar_declarado": 15,
+ "sem_qualquer_lugar_declarado": 5,
+ "linhas_com_algum_NEGATIVO": 5,
+ "linhas_com_NEGATIVO_a_partir_de_amostra_com_lugar": 4,
+ "linhas_sem_qualquer_fonte_de_Ganfei": [
+  "Dactylonectria sp. (Raiz)",
+  "Fusarium sp. (Raiz)",
+  "Ilyonectria liriodendri (Raiz)",
+  "Rhizoctonia solani (Raiz)",
+  "Oomicetes (general) (Raiz)"
+ ],
+ "linhas_cuja_unica_fonte_e_o_granel_331_2025": [
+  "Fusarium cerealis (Madeira)",
+  "Fusarium equiseti (Madeira)",
+  "Fusarium oxysporum (Madeira)",
+  "Neofusicoccum parvum (Madeira)",
+  "Armillaria sp. (Raiz)",
+  "Ceratobasidium sp. (Raiz)",
+  "Fusarium oxysporum (Raiz)",
+  "Fusarium solani (Raiz)",
+  "Neofusicoccum parvum (Raiz)",
+  "Globisporangium intermedium (Raiz)"
+ ],
+ "negativos_com_lugar": [
+  "Armillaria sp. (Raiz)",
+  "Armillaria sp. (Solo)",
+  "Rosellinia sp. (Solo)",
+  "Oomicetes (general) (Solo)"
+ ],
+ "linhas_com_lugar_mas_sem_par_de_comparacao": 10,
+ "taxa_distintos": 15,
+ "taxa": [
+  "Armillaria sp.",
+  "Ceratobasidium sp.",
+  "Dactylonectria sp.",
+  "Fusarium cerealis",
+  "Fusarium equiseti",
+  "Fusarium oxysporum",
+  "Fusarium solani",
+  "Fusarium sp.",
+  "Globisporangium intermedium",
+  "Ilyonectria liriodendri",
+  "Meloidogyne hapla",
+  "Neofusicoccum parvum",
+  "Oomicetes (general)",
+  "Rhizoctonia solani",
+  "Rosellinia sp."
+ ],
+ "nota_cobertura": "Os 15 taxa sao fungos, oomicetas e um nematode. Nao ha uma unica linha bacteriana nem viral em toda a matriz: nem Pseudomonas syringae pv. actinidiae, nem qualquer outra. Todo o diferencial bacteriano e viral esta NAO TESTADO, com ou sem posicao."
+}

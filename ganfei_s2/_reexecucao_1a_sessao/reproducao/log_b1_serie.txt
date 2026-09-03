@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/claude/cega/work/../scripts/b1_serie.py", line 12, in <module>
+    prov = json.load(open("sentinel/proveniencia.json"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'sentinel/proveniencia.json'
+exit=1

@@ -1,0 +1,99 @@
+============================================================================
+C5 · DESENHO DE AMOSTRAGEM — a coluna que falta, e o transecto
+============================================================================
+
+A restricao, lida do c4_01_numeros.json:
+  linhas organismo x matriz ........................ 20
+  ensaiadas numa unidade COM POSICAO ............... 2
+  com algum lugar declarado ........................ 15
+  com o granel 331/2025 como UNICA fonte ........... 10   <- campo do JSON
+  ... mais as 3 cuja 2.a fonte e Ribadumia (rejeitada) = 13  <- o «13»
+  linhas sem QUALQUER fonte de Ganfei .............. 5
+  linhas com algum NEGATIVO ........................ 5, das quais 4 vem
+     de amostra com lugar — e as 4 sao do MESMO granel.
+  taxa distintos ................................... 15 (fungos, oomicetas
+     e um nematode; ZERO bacterias, ZERO virus)
+
+T1 · TRANSECTO — ancorado na OBSERVACAO DE CAMPO, nao numa coordenada nossa
+  T1a   CENTRO do vazio de terreno
+  T1b   ORLA — a frente, onde o gestor diz que o vazio acaba
+  T1c   FORA — copado aparentemente sao, >= 20 m alem da orla
+  centro e orla sao apontados pelo gestor NO TERRENO, no dia; GPS em cada
+  ponto. Segunda radial a ~90 graus: opcional, e o upgrade mais barato que
+  este desenho tem — duplica a forca do gradiente sem deslocar equipa.
+
+  TESTE DE IDENTIDADE DE OBJECTO, que sai de graca:
+  registar GPS no centro e na orla e comparar DEPOIS com o poligono do
+  nucleo n.o 22 da corrida B. Testemunho de campo contra anomalia optica —
+  dois instrumentos independentes sobre a pergunta «e o mesmo sitio?».
+  Hoje sao dois objectos com o mesmo nome e a ligacao esta POR ESTABELECER.
+
+UNIDADES COM ALVO NOSSO — por coordenada, sempre
+id   papel                                              E            N  d-OESTE   d-ESTE
+U2   FOCO — oriental                             530977.0    4655117.0   496.1m     0.0m
+U3   PAR SAO — ocidental (o controlo que nunc    530260.3    4654936.1   253.3m   739.2m
+U4   PAR SAO — oriental                          531394.7    4655341.8   954.4m   474.4m
+
+  (o nucleo N3, E531068 N4655145, NAO e unidade de amostragem: esta a
+   95.2 m do foco ESTE, FORA do disco de 90 m, e a pergunta que o separa —
+   replantacao contra chao limpo mantido — fecha-se com uma VISITA ou um
+   segundo voo, nao com um painel de laboratorio.)
+
+  indicadores das duas unidades sas escolhidas, lidos do c4_01_numeros.json:
+  valv       ha   defice26    novo M2    chao 2021
+  v6       2.33       0.0%       0.0%         0.0%  <- escolhida
+  v17      2.17       0.0%       0.0%         0.0%  <- escolhida
+  v16      2.00      13.0%       0.0%         2.5%  <- rejeitada (defice)
+
+PAINEIS — os mesmos em TODAS as unidades e em TODOS os pontos
+  · as 20 linhas organismo x matriz do informe 331/2025            [todas as matrizes]
+  · bacteriologia: Pseudomonas syringae pv. actinidiae e bacterias de vaso [raiz fina, colo/tronco]
+  · isolamento selectivo de oomicetas em raiz e colo               [raiz fina, colo/tronco]
+  · nematologia de espectro largo                                  [solo 0-30 cm, solo 40-80 cm]
+  · analise foliar, Ca e macronutrientes                           [folha]
+
+EFECTIVOS
+  unidades ................. 4  (1 transecto de 3 pontos + 1 foco + 2 pares saos)
+  plantas .................. 12
+  amostras de planta ....... 48  (12 plantas x 4 matrizes)
+  fossas de perfil ......... 2 firmes (T1b (orla), U3) + 2 condicionais (U2, U4)
+     (ABI-10 e ABI-13: NAO EXISTE UMA UNICA DESCRICAO DE PERFIL DE SOLO em
+      todo o caso. As condicionais so sao interpretaveis DEPOIS do registo
+      de operacoes, porque o lado oriental esta confundido com gestao.)
+  agua ..................... 1 amostra da origem unica (ABI-06)
+  uma data, um laboratorio.
+
+PORQUE TRES PONTOS POR UNIDADE E NAO SEIS
+  Nao e uma escolha de potencia — e uma escolha sobre o que muda. Fora do foco,
+  o n actual e ZERO: nenhuma das 13 linhas foi alguma vez ensaiada em mais
+  nenhum ponto, nem doente nem sao. Passar de 0 para 3 muda o que se pode
+  dizer; passar de 3 para 6 nao muda, nesta fase, porque a pergunta ainda e
+  «existe contraste, e existe gradiente?» e nao «qual e a sua dimensao?». Se
+  houver contraste, e a segunda epoca que precisa de efectivos.
+
+O QUE ESTE DESENHO NAO PODE FAZER, E TEM DE IR ESCRITO NO RELATORIO
+  · Nao estabelece causalidade. Um contraste numa data nao satisfaz os
+    postulados de Koch nem nada que se lhes pareca.
+  · Nao identifica o agente pela forma. Circular e compativel com varios
+    agentes de solo e nao distingue nenhum.
+  · Nao distingue LOCAL de REGIONAL. As quatro unidades estao dentro da mesma
+    exploracao, com a mesma origem de agua e a mesma gestao. Se a causa for
+    regional, as quatro dao o mesmo resultado e isso NAO sera informativo.
+    Essa pergunta e a REG-01 e resolve-se fora desta campanha.
+  · Nao interpreta 2026 sem o registo de operacoes. Se o B2 ou o B3 tiveram
+    arranque, replantacao ou poda severa em 2024-2026, a amostragem pode cair
+    sobre replantacao e nao sobre declinio — e nada no material diz que parte.
+
+CONDICOES DE ARRANQUE — e desta vez verifica-se que foram cumpridas antes de as
+dar por cumpridas, porque o T3 do adversario da C2 foi posto como condicao,
+nunca correu, ninguem registou que nao, e tres camadas construiram por cima.
+  1. GES-08 — data de plantacao por talhao. Sem ela nao ha par sao valido.
+  2. GES-03/GES-04/ABI-05 — registo de operacoes do B2 e do B3, 2024-2026.
+     Sem ele nenhum resultado de 2026 e interpretavel.
+  3. T3 — prominencia de pergola sobre a ortofoto de 2025.
+  4. As duas perguntas de campo, que custam uma chamada: «ve do lado nascente um
+     vazio comparavel?» e «onde estava a planta arrancada de 2026-08-04, em
+     relacao ao vazio?».
+  Nenhuma das quatro e uma analise.
+
+gravado: C:\Users\Jackster2\Downloads\_VALIDACAO_CAMADAS\SAIDA_C5\c5_amostragem.csv  (48 linhas)

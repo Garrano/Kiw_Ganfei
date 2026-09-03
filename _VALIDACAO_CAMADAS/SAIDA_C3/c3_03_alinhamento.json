@@ -1,0 +1,1087 @@
+{
+ "emparelhadas": 212,
+ "so_EN": 0,
+ "so_PT": 9,
+ "linhas_so_PT": [
+  {
+   "linha": 93,
+   "record_id": 94,
+   "ficheiro": "Erica_2016_R__Marc_o_26.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.09% N (Baixo; 120 kg/ha N recomendado)"
+  },
+  {
+   "linha": 105,
+   "record_id": 106,
+   "ficheiro": "Erica_2016_E__Marc_o_26.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.16% N (Médio; 120 kg/ha N recomendado)"
+  },
+  {
+   "linha": 117,
+   "record_id": 118,
+   "ficheiro": "B2_V7__Marc_o_26.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.15% N (Médio; 120 kg/ha N recomendado)"
+  },
+  {
+   "linha": 129,
+   "record_id": 130,
+   "ficheiro": "B3_7ha_Marc_o_26.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.16% N (Médio; 120 kg/ha N recomendado)"
+  },
+  {
+   "linha": 141,
+   "record_id": 142,
+   "ficheiro": "B2_V7__Junho_26.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.15% N (Médio; 120 kg/ha N recomendado)"
+  },
+  {
+   "linha": 153,
+   "record_id": 154,
+   "ficheiro": "B1_C1_Julho.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.23% N (Alto; 80 kg/ha N recomendado)"
+  },
+  {
+   "linha": 165,
+   "record_id": 166,
+   "ficheiro": "B1_C3_Julho.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.10% N (Baixo; 120 kg/ha N recomendado)"
+  },
+  {
+   "linha": 177,
+   "record_id": 178,
+   "ficheiro": "B1_C4_Julho.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.09% N (Baixo; 120 kg/ha N recomendado)"
+  },
+  {
+   "linha": 189,
+   "record_id": 190,
+   "ficheiro": "B4_Julho.pdf",
+   "parametro": "Azoto Total (N)",
+   "valor": "0.12% N (Médio; 120 kg/ha N recomendado)"
+  }
+ ],
+ "linhas_so_EN": [],
+ "n_value_divergente": 9,
+ "n_sample_date_divergente": 0,
+ "n_result_divergente": 159,
+ "value_divergente": [
+  [
+   144,
+   149,
+   "n/a (page 2 not extracted)",
+   "<10 mg/kg Mn (Baixo) / MnAI 39.5 (Alto)"
+  ],
+  [
+   154,
+   160,
+   "n/a (page 2 not extracted)",
+   "237 mg/kg Fe (Alto)"
+  ],
+  [
+   155,
+   161,
+   "n/a (page 2 not extracted)",
+   "18.1 mg/kg Mn (Médio) / MnAI 57.1 (Alto)"
+  ],
+  [
+   165,
+   172,
+   "n/a (page 2 not extracted)",
+   "319 mg/kg Fe (Alto)"
+  ],
+  [
+   166,
+   173,
+   "n/a (page 2 not extracted)",
+   "<10 mg/kg Mn (Baixo) / MnAI 58.3 (Alto)"
+  ],
+  [
+   176,
+   184,
+   "n/a (page 2 not extracted)",
+   "338 mg/kg Fe (Alto)"
+  ],
+  [
+   177,
+   185,
+   "n/a (page 2 not extracted)",
+   "<10 mg/kg Mn (Baixo) / MnAI 49.6 (Alto)"
+  ],
+  [
+   187,
+   196,
+   "n/a (page 2 not extracted)",
+   "219 mg/kg Fe (Alto)"
+  ],
+  [
+   188,
+   197,
+   "n/a (page 2 not extracted)",
+   "10.8 mg/kg Mn (Baixo) / MnAI 49.5 (Alto)"
+  ]
+ ],
+ "sample_date_divergente": [],
+ "result_divergente": [
+  [
+   1,
+   1,
+   "INCONCLUSIVE (no primary trunk symptoms found; only secondary leaf/fruit symptoms compatible)",
+   "INCONCLUSIVO (sem sintomas primários no tronco; apenas sintomas secundários compatíveis nas folhas/frutos)"
+  ],
+  [
+   2,
+   2,
+   "POSITIVE (macroscopic ID only - NOT molecularly confirmed)",
+   "POSITIVO (identificação macroscópica apenas - NÃO confirmado molecularmente)"
+  ],
+  [
+   3,
+   3,
+   "Not observed macroscopically (NOT excluded by team - ubiquitous regionally, favourable soil conditions noted: high humidity, probable low pH)",
+   "Não observado macroscopicamente (NÃO excluído pela equipa - ubíquo na região, com condições de solo favoráveis: humidade elevada, provável pH baixo)"
+  ],
+  [
+   4,
+   4,
+   "HYPOTHESIS - not yet tested",
+   "HIPÓTESE - ainda não testada"
+  ],
+  [
+   22,
+   22,
+   "Count",
+   "Contagem"
+  ],
+  [
+   23,
+   23,
+   "Count",
+   "Contagem"
+  ],
+  [
+   26,
+   26,
+   "Count",
+   "Contagem"
+  ],
+  [
+   27,
+   27,
+   "Count",
+   "Contagem"
+  ],
+  [
+   30,
+   30,
+   "Count",
+   "Contagem"
+  ],
+  [
+   31,
+   31,
+   "Count",
+   "Contagem"
+  ],
+  [
+   34,
+   34,
+   "Count",
+   "Contagem"
+  ],
+  [
+   35,
+   35,
+   "Count",
+   "Contagem"
+  ],
+  [
+   38,
+   38,
+   "Count",
+   "Contagem"
+  ],
+  [
+   39,
+   39,
+   "Count",
+   "Contagem"
+  ],
+  [
+   56,
+   56,
+   "Sequencing QC",
+   "Controlo de qualidade da sequenciação"
+  ],
+  [
+   57,
+   57,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   58,
+   58,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   59,
+   59,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   60,
+   60,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   61,
+   61,
+   "Sequencing QC",
+   "Controlo de qualidade da sequenciação"
+  ],
+  [
+   62,
+   62,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   63,
+   63,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   64,
+   64,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   65,
+   65,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   66,
+   66,
+   "Sequencing QC",
+   "Controlo de qualidade da sequenciação"
+  ],
+  [
+   67,
+   67,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   68,
+   68,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   69,
+   69,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   70,
+   70,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   71,
+   71,
+   "Sequencing QC",
+   "Controlo de qualidade da sequenciação"
+  ],
+  [
+   72,
+   72,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   73,
+   73,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   74,
+   74,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   75,
+   75,
+   "Diversity metric",
+   "Métrica de diversidade"
+  ],
+  [
+   76,
+   76,
+   "Count",
+   "Contagem"
+  ],
+  [
+   83,
+   83,
+   "Count",
+   "Contagem"
+  ],
+  [
+   90,
+   90,
+   "Value",
+   "Valor"
+  ],
+  [
+   91,
+   91,
+   "Class",
+   "Classe"
+  ],
+  [
+   92,
+   92,
+   "Value",
+   "Valor"
+  ],
+  [
+   93,
+   93,
+   "Value",
+   "Valor"
+  ],
+  [
+   94,
+   95,
+   "Value",
+   "Valor"
+  ],
+  [
+   95,
+   96,
+   "Value",
+   "Valor"
+  ],
+  [
+   96,
+   97,
+   "Value",
+   "Valor"
+  ],
+  [
+   97,
+   98,
+   "Value",
+   "Valor"
+  ],
+  [
+   98,
+   99,
+   "Value",
+   "Valor"
+  ],
+  [
+   99,
+   100,
+   "Value",
+   "Valor"
+  ],
+  [
+   100,
+   101,
+   "Value",
+   "Valor"
+  ],
+  [
+   101,
+   102,
+   "Value",
+   "Valor"
+  ],
+  [
+   102,
+   103,
+   "Class",
+   "Classe"
+  ],
+  [
+   103,
+   104,
+   "Value",
+   "Valor"
+  ],
+  [
+   104,
+   105,
+   "Value",
+   "Valor"
+  ],
+  [
+   105,
+   107,
+   "Value",
+   "Valor"
+  ],
+  [
+   106,
+   108,
+   "Value",
+   "Valor"
+  ],
+  [
+   107,
+   109,
+   "Value",
+   "Valor"
+  ],
+  [
+   108,
+   110,
+   "Value",
+   "Valor"
+  ],
+  [
+   109,
+   111,
+   "Value",
+   "Valor"
+  ],
+  [
+   110,
+   112,
+   "Value",
+   "Valor"
+  ],
+  [
+   111,
+   113,
+   "Value",
+   "Valor"
+  ],
+  [
+   112,
+   114,
+   "Value",
+   "Valor"
+  ],
+  [
+   113,
+   115,
+   "Class",
+   "Classe"
+  ],
+  [
+   114,
+   116,
+   "Value",
+   "Valor"
+  ],
+  [
+   115,
+   117,
+   "Value",
+   "Valor"
+  ],
+  [
+   116,
+   119,
+   "Value",
+   "Valor"
+  ],
+  [
+   117,
+   120,
+   "Value",
+   "Valor"
+  ],
+  [
+   118,
+   121,
+   "Value",
+   "Valor"
+  ],
+  [
+   119,
+   122,
+   "Value",
+   "Valor"
+  ],
+  [
+   120,
+   123,
+   "Value",
+   "Valor"
+  ],
+  [
+   121,
+   124,
+   "Value",
+   "Valor"
+  ],
+  [
+   122,
+   125,
+   "Value",
+   "Valor"
+  ],
+  [
+   123,
+   126,
+   "Value",
+   "Valor"
+  ],
+  [
+   124,
+   127,
+   "Class",
+   "Classe"
+  ],
+  [
+   125,
+   128,
+   "Value",
+   "Valor"
+  ],
+  [
+   126,
+   129,
+   "Value",
+   "Valor"
+  ],
+  [
+   127,
+   131,
+   "Value",
+   "Valor"
+  ],
+  [
+   128,
+   132,
+   "Value",
+   "Valor"
+  ],
+  [
+   129,
+   133,
+   "Value",
+   "Valor"
+  ],
+  [
+   130,
+   134,
+   "Value",
+   "Valor"
+  ],
+  [
+   131,
+   135,
+   "Value",
+   "Valor"
+  ],
+  [
+   132,
+   136,
+   "Value",
+   "Valor"
+  ],
+  [
+   133,
+   137,
+   "Value",
+   "Valor"
+  ],
+  [
+   134,
+   138,
+   "Value",
+   "Valor"
+  ],
+  [
+   135,
+   139,
+   "Class",
+   "Classe"
+  ],
+  [
+   136,
+   140,
+   "Value",
+   "Valor"
+  ],
+  [
+   137,
+   141,
+   "Value",
+   "Valor"
+  ],
+  [
+   138,
+   143,
+   "Value",
+   "Valor"
+  ],
+  [
+   139,
+   144,
+   "Value",
+   "Valor"
+  ],
+  [
+   140,
+   145,
+   "Value",
+   "Valor"
+  ],
+  [
+   141,
+   146,
+   "Value",
+   "Valor"
+  ],
+  [
+   142,
+   147,
+   "Value",
+   "Valor"
+  ],
+  [
+   143,
+   148,
+   "Value",
+   "Valor"
+  ],
+  [
+   144,
+   149,
+   "Value",
+   "Valor"
+  ],
+  [
+   145,
+   150,
+   "Value",
+   "Valor"
+  ],
+  [
+   146,
+   151,
+   "Class",
+   "Classe"
+  ],
+  [
+   147,
+   152,
+   "Value",
+   "Valor"
+  ],
+  [
+   148,
+   153,
+   "Value",
+   "Valor"
+  ],
+  [
+   149,
+   155,
+   "Value",
+   "Valor"
+  ],
+  [
+   150,
+   156,
+   "Value",
+   "Valor"
+  ],
+  [
+   151,
+   157,
+   "Value",
+   "Valor"
+  ],
+  [
+   152,
+   158,
+   "Value",
+   "Valor"
+  ],
+  [
+   153,
+   159,
+   "Value",
+   "Valor"
+  ],
+  [
+   154,
+   160,
+   "Value",
+   "Valor"
+  ],
+  [
+   155,
+   161,
+   "Value",
+   "Valor"
+  ],
+  [
+   156,
+   162,
+   "Value",
+   "Valor"
+  ],
+  [
+   157,
+   163,
+   "Class",
+   "Classe"
+  ],
+  [
+   158,
+   164,
+   "Value",
+   "Valor"
+  ],
+  [
+   159,
+   165,
+   "Value",
+   "Valor"
+  ],
+  [
+   160,
+   167,
+   "Value",
+   "Valor"
+  ],
+  [
+   161,
+   168,
+   "Value",
+   "Valor"
+  ],
+  [
+   162,
+   169,
+   "Value",
+   "Valor"
+  ],
+  [
+   163,
+   170,
+   "Value",
+   "Valor"
+  ],
+  [
+   164,
+   171,
+   "Value",
+   "Valor"
+  ],
+  [
+   165,
+   172,
+   "Value",
+   "Valor"
+  ],
+  [
+   166,
+   173,
+   "Value",
+   "Valor"
+  ],
+  [
+   167,
+   174,
+   "Value",
+   "Valor"
+  ],
+  [
+   168,
+   175,
+   "Class",
+   "Classe"
+  ],
+  [
+   169,
+   176,
+   "Value",
+   "Valor"
+  ],
+  [
+   170,
+   177,
+   "Value",
+   "Valor"
+  ],
+  [
+   171,
+   179,
+   "Value",
+   "Valor"
+  ],
+  [
+   172,
+   180,
+   "Value",
+   "Valor"
+  ],
+  [
+   173,
+   181,
+   "Value",
+   "Valor"
+  ],
+  [
+   174,
+   182,
+   "Value",
+   "Valor"
+  ],
+  [
+   175,
+   183,
+   "Value",
+   "Valor"
+  ],
+  [
+   176,
+   184,
+   "Value",
+   "Valor"
+  ],
+  [
+   177,
+   185,
+   "Value",
+   "Valor"
+  ],
+  [
+   178,
+   186,
+   "Value",
+   "Valor"
+  ],
+  [
+   179,
+   187,
+   "Class",
+   "Classe"
+  ],
+  [
+   180,
+   188,
+   "Value",
+   "Valor"
+  ],
+  [
+   181,
+   189,
+   "Value",
+   "Valor"
+  ],
+  [
+   182,
+   191,
+   "Value",
+   "Valor"
+  ],
+  [
+   183,
+   192,
+   "Value",
+   "Valor"
+  ],
+  [
+   184,
+   193,
+   "Value",
+   "Valor"
+  ],
+  [
+   185,
+   194,
+   "Value",
+   "Valor"
+  ],
+  [
+   186,
+   195,
+   "Value",
+   "Valor"
+  ],
+  [
+   187,
+   196,
+   "Value",
+   "Valor"
+  ],
+  [
+   188,
+   197,
+   "Value",
+   "Valor"
+  ],
+  [
+   189,
+   198,
+   "Value",
+   "Valor"
+  ],
+  [
+   190,
+   199,
+   "Value",
+   "Valor"
+  ],
+  [
+   191,
+   200,
+   "Value",
+   "Valor"
+  ],
+  [
+   192,
+   201,
+   "Value",
+   "Valor"
+  ],
+  [
+   193,
+   202,
+   "Value",
+   "Valor"
+  ],
+  [
+   194,
+   203,
+   "Value",
+   "Valor"
+  ],
+  [
+   195,
+   204,
+   "Value",
+   "Valor"
+  ],
+  [
+   196,
+   205,
+   "Value",
+   "Valor"
+  ],
+  [
+   197,
+   206,
+   "Value",
+   "Valor"
+  ],
+  [
+   198,
+   207,
+   "Value",
+   "Valor"
+  ],
+  [
+   199,
+   208,
+   "Value",
+   "Valor"
+  ],
+  [
+   200,
+   209,
+   "Value",
+   "Valor"
+  ],
+  [
+   201,
+   210,
+   "Value",
+   "Valor"
+  ],
+  [
+   202,
+   211,
+   "Value",
+   "Valor"
+  ],
+  [
+   203,
+   212,
+   "Value",
+   "Valor"
+  ],
+  [
+   204,
+   213,
+   "Value",
+   "Valor"
+  ],
+  [
+   205,
+   214,
+   "Value",
+   "Valor"
+  ],
+  [
+   206,
+   215,
+   "Value",
+   "Valor"
+  ],
+  [
+   207,
+   216,
+   "Value",
+   "Valor"
+  ],
+  [
+   208,
+   217,
+   "Value",
+   "Valor"
+  ],
+  [
+   209,
+   218,
+   "Value",
+   "Valor"
+  ],
+  [
+   210,
+   219,
+   "Value",
+   "Valor"
+  ],
+  [
+   211,
+   220,
+   "Value",
+   "Valor"
+  ],
+  [
+   212,
+   221,
+   "Product data - not a site test result",
+   "Dados do produto - não é um resultado de análise do pomar"
+  ]
+ ]
+}

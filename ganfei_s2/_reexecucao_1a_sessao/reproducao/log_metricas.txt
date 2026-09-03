@@ -1,0 +1,22 @@
+/home/claude/cega/work/../scripts/metricas.py:19: ResourceWarning: unclosed file <_io.TextIOWrapper name='sentinel/masks.json' mode='r' encoding='utf-8'>
+  masks_px = json.load(open(f"{SRC}/masks.json"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+2017-07-02  ref=0.838  pomar medio=0.779  manchaW=0.797  zona0=0.689
+2018-08-31  ref=0.886  pomar medio=0.854  manchaW=0.868  zona0=0.801
+2019-09-02  ref=0.903  pomar medio=0.871  manchaW=0.904  zona0=0.776
+2020-07-18  ref=0.883  pomar medio=0.838  manchaW=0.882  zona0=0.812
+2021-07-16  ref=0.887  pomar medio=0.853  manchaW=0.900  zona0=0.710
+2022-07-31  ref=0.891  pomar medio=0.852  manchaW=0.899  zona0=0.743
+2023-08-07  ref=0.919  pomar medio=0.889  manchaW=0.920  zona0=0.746
+2024-07-22  ref=0.894  pomar medio=0.862  manchaW=0.895  zona0=0.736
+2025-06-17  ref=0.888  pomar medio=0.823  manchaW=0.829  zona0=0.629
+2025-08-14  ref=0.882  pomar medio=0.829  manchaW=0.830  zona0=0.660
+2026-07-27  ref=0.886  pomar medio=0.808  manchaW=0.748  zona0=0.656
+
+D4 — referencia sa 2021=0.8871 2022=0.8915 delta=+0.0044
+Traceback (most recent call last):
+  File "/home/claude/cega/work/../scripts/metricas.py", line 65, in <module>
+    prov = json.load(open(f"{SRC}/proveniencia.json"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'sentinel/proveniencia.json'
+exit=1

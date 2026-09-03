@@ -1,0 +1,8 @@
+{
+ "ORTOS-2025": "https://stratus.d.incd.pt:8080/orto/ortos2025/ortos2025_cog_25cm_rgbi_jpg_007-1_v01.tif",
+ "ORTOS-2021": "https://stor-002.a.acnca.pt:9000/orto/ortos2021/ortos2021_cog_25cm_rgbi_jpg_007-1_v01.tif",
+ "ORTOS-2018": "https://stor-002.a.acnca.pt:9000/orto/ortos2018/ortos2018_cog_25cm_rgbi_jpg_007-1_v01.tif",
+ "ORTOS-2012": "https://stor-002.a.acnca.pt:9000/orto/ortos2012/ortos2012_cog_50cm_rgbi_jpg_007-1_v01.tif",
+ "ORTOS-2010": "https://stor-002.a.acnca.pt:9000/orto/ortos2010/ortos2010_cog_50cm_rgbi_jpg_007-1_v01.tif",
+ "ORTOS-2007": "https://stor-002.a.acnca.pt:9000/orto/ortos2007/ortos2007_cog_50cm_rgbi_jpg_007-1_v01.tif"
+}

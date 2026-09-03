@@ -1,0 +1,135 @@
+[
+ {
+  "ancora": "AOI (EPSG:32629)",
+  "declarado": "529950, 4654600, 531950, 4655600",
+  "obtido": "529950, 4654600, 531950, 4655600",
+  "unidade": "",
+  "nota": ""
+ },
+ {
+  "ancora": "grelha",
+  "declarado": "200x100 de 10 m",
+  "obtido": "200x100",
+  "unidade": "px",
+  "nota": ""
+ },
+ {
+  "ancora": "cenas na serie",
+  "declarado": 11,
+  "obtido": 11,
+  "unidade": "datas",
+  "nota": ""
+ },
+ {
+  "ancora": "poligono `pomar` (declarado na abertura)",
+  "declarado": 2903,
+  "obtido": 3031,
+  "unidade": "px de 10 m",
+  "nota": "a abertura declara 2903 px / 29,0 ha do poligono antigo; a R2 G2 substitui por 3031 px / 30,31 ha"
+ },
+ {
+  "ancora": "poligono `pomar` em ha",
+  "declarado": "29,0 (abertura) / 30,31 (R2 G2)",
+  "obtido": "30.31",
+  "unidade": "ha",
+  "nota": ""
+ },
+ {
+  "ancora": "referencia sa",
+  "declarado": "454 (antiga) / 110 celulas (R2 G4)",
+  "obtido": 110,
+  "unidade": "px",
+  "nota": "a referencia sistematica da R2 substitui as tres manchas escolhidas"
+ },
+ {
+  "ancora": "mascara `manchaW`",
+  "declarado": "427",
+  "obtido": "NAO EXISTE",
+  "unidade": "px",
+  "nota": "R2 G4 retira-a; era circular em relacao ao NDVI que se media"
+ },
+ {
+  "ancora": "mascara `zona0`",
+  "declarado": 220,
+  "obtido": 202,
+  "unidade": "px",
+  "nota": "R2: 202 das 220 celulas sobrevivem a interseccao com o pomar novo; = FOCO ESTE"
+ },
+ {
+  "ancora": "pomar (R2 G2)",
+  "declarado": "30,31",
+  "obtido": "30.31",
+  "unidade": "ha",
+  "nota": ""
+ },
+ {
+  "ancora": "referencia sistematica (R2 G4)",
+  "declarado": "1,10 ha / 110 celulas",
+  "obtido": "1.10 ha / 110 celulas",
+  "unidade": "",
+  "nota": ""
+ },
+ {
+  "ancora": "total da banda contigua (R2 G35)",
+  "declarado": "27,30",
+  "obtido": "27.30",
+  "unidade": "ha",
+  "nota": "soma das areas tabeladas das valvulas 6 a 17"
+ },
+ {
+  "ancora": "total da tabela de valvulas (R2 G35)",
+  "declarado": "44,93",
+  "obtido": "44,93",
+  "unidade": "ha",
+  "nota": "NAO VERIFICAVEL nesta camada: as oito parcelas soltas (17,66 ha) nao tem posicao; 27,30 + 17,66 = 44,96"
+ },
+ {
+  "ancora": "NDVI medio da referencia, 2017-07-02",
+  "declarado": 0.838,
+  "obtido": "0.8884",
+  "unidade": "",
+  "nota": "medido na referencia SISTEMATICA (110 celulas). O valor declarado e da referencia antiga, escolhida por NDVI alto na ultima cena — objectos diferentes"
+ },
+ {
+  "ancora": "NDVI medio da referencia, 2026-07-27",
+  "declarado": 0.886,
+  "obtido": "0.8425",
+  "unidade": "",
+  "nota": "medido na referencia SISTEMATICA (110 celulas). O valor declarado e da referencia antiga, escolhida por NDVI alto na ultima cena — objectos diferentes"
+ },
+ {
+  "ancora": "foco OESTE (R2 G34)",
+  "declarado": "E530485 N4655053",
+  "obtido": "E530485 N4655053",
+  "unidade": "EPSG:32629",
+  "nota": "herdado, nao remedido nesta camada"
+ },
+ {
+  "ancora": "foco ESTE (R2 G34)",
+  "declarado": "E530977 N4655117",
+  "obtido": "E530977 N4655117",
+  "unidade": "EPSG:32629",
+  "nota": "herdado"
+ },
+ {
+  "ancora": "centroide do poligono `zona0`",
+  "declarado": "—",
+  "obtido": "E530999 N4655102",
+  "unidade": "EPSG:32629",
+  "nota": "a 26 m do centro declarado do foco ESTE"
+ },
+ {
+  "ancora": "distancia entre os dois focos",
+  "declarado": "—",
+  "obtido": "496",
+  "unidade": "m",
+  "nota": ""
+ },
+ {
+  "ancora": "chao lavrado em 2021 dentro do pomar",
+  "declarado": "1,67 (masks_geograficas)",
+  "obtido": "1.67",
+  "unidade": "ha",
+  "nota": ""
+ }
+]

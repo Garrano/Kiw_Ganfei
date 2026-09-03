@@ -1,0 +1,66 @@
+{
+ "2012": {
+  "ORI-COM": {
+   "pico_m": 5.25,
+   "valor": 0.14212404953362512,
+   "prominencia_no_pico": 0.16723393207748236,
+   "n": 76
+  },
+  "ORI-SEM": {
+   "pico_m": 2.25,
+   "valor": 0.29113882637922006,
+   "prominencia_no_pico": NaN,
+   "n": 126
+  },
+  "REF": {
+   "pico_m": 5.25,
+   "valor": 0.09338570309075311,
+   "prominencia_no_pico": 0.22601023161972134,
+   "n": 110
+  },
+  "RESTO": {
+   "pico_m": 5.25,
+   "valor": 0.10373074676589936,
+   "prominencia_no_pico": 0.16680226979608373,
+   "n": 2476
+  },
+  "NU21": {
+   "pico_m": 2.25,
+   "valor": 0.471382559288716,
+   "prominencia_no_pico": NaN,
+   "n": 167
+  }
+ },
+ "2021": {
+  "ORI-COM": {
+   "pico_m": 2.125,
+   "valor": 0.3125593261219647,
+   "prominencia_no_pico": NaN,
+   "n": 76
+  },
+  "ORI-SEM": {
+   "pico_m": 2.125,
+   "valor": 0.424279470122417,
+   "prominencia_no_pico": NaN,
+   "n": 126
+  },
+  "REF": {
+   "pico_m": 9.875,
+   "valor": 0.024002997411243985,
+   "prominencia_no_pico": 0.05488203538561991,
+   "n": 110
+  },
+  "RESTO": {
+   "pico_m": 9.875,
+   "valor": 0.02615087814450833,
+   "prominencia_no_pico": 0.04909204190273198,
+   "n": 2476
+  },
+  "NU21": {
+   "pico_m": 2.125,
+   "valor": 0.5382509345427618,
+   "prominencia_no_pico": NaN,
+   "n": 167
+  }
+ }
+}

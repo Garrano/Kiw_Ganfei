@@ -1,0 +1,100 @@
+[
+ {
+  "ficheiro": "ortos1995_cog_1m_irg_jpg_002-3_v01.tif",
+  "crs": "EPSG:3763",
+  "res": 1.0000000000000018,
+  "bandas": 4,
+  "bounds_32629": [
+   523753.50686476205,
+   4650711.790542239,
+   531800.4111981923,
+   4655790.469118914
+  ],
+  "cobre_aoi": false,
+  "cobre_aoi_alargada": false
+ },
+ {
+  "ficheiro": "ortos20042006_cog_50cm_rgbi_jpg_002-3_v01.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "bandas": 5,
+  "bounds_32629": [
+   523753.50686476205,
+   4650711.790542239,
+   531800.411198192,
+   4655790.469118914
+  ],
+  "cobre_aoi": false,
+  "cobre_aoi_alargada": false
+ },
+ {
+  "ficheiro": "ortos2007_cog_50cm_rgbi_jpg_002-3_v01.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "bandas": 5,
+  "bounds_32629": [
+   523753.50686476205,
+   4650711.790542239,
+   531800.411198192,
+   4655790.469118914
+  ],
+  "cobre_aoi": false,
+  "cobre_aoi_alargada": false
+ },
+ {
+  "ficheiro": "ortos2010_cog_50cm_rgbi_jpg_002-3_v01.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "bandas": 5,
+  "bounds_32629": [
+   523753.50686476205,
+   4650711.790542239,
+   531800.411198192,
+   4655790.469118914
+  ],
+  "cobre_aoi": false,
+  "cobre_aoi_alargada": false
+ },
+ {
+  "ficheiro": "ortos2012_cog_50cm_rgbi_jpg_002-3_v01.tif",
+  "crs": "EPSG:3763",
+  "res": 0.5,
+  "bandas": 5,
+  "bounds_32629": [
+   523753.50686476205,
+   4650711.790542239,
+   531800.411198192,
+   4655790.469118914
+  ],
+  "cobre_aoi": false,
+  "cobre_aoi_alargada": false
+ },
+ {
+  "ficheiro": "ortos2021_cog_25cm_rgbi_jpg_002-3_v01.tif",
+  "crs": "EPSG:3763",
+  "res": 0.25,
+  "bandas": 5,
+  "bounds_32629": [
+   523753.50686476205,
+   4650711.790542239,
+   531800.411198192,
+   4655790.469118914
+  ],
+  "cobre_aoi": false,
+  "cobre_aoi_alargada": false
+ },
+ {
+  "ficheiro": "ortos2025_cog_25cm_rgbi_jpg_002-3_v01.tif",
+  "crs": "EPSG:3763",
+  "res": 0.25,
+  "bandas": 5,
+  "bounds_32629": [
+   523753.50686476205,
+   4650711.790542239,
+   531800.411198192,
+   4655790.469118914
+  ],
+  "cobre_aoi": false,
+  "cobre_aoi_alargada": false
+ }
+]

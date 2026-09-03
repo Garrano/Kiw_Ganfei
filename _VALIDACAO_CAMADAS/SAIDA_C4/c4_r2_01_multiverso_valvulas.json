@@ -1,0 +1,78 @@
+{
+ "criterio": "contraste v8 contra v13/v14 na composicao do defice de 2026",
+ "reconstrucoes": {
+  "valvulas_por_area.json": {
+   "utilizavel": true,
+   "n": 12,
+   "unidades": {
+    "v8": {
+     "ha": 2.78,
+     "defice_ha": 1.41,
+     "pct_novo": 92.90780141843972,
+     "pct_nu21": 0.0
+    },
+    "v13+v14": {
+     "ha": 5.68,
+     "defice_ha": 3.02,
+     "pct_novo": 35.43046357615894,
+     "pct_nu21": 34.437086092715234
+    }
+   }
+  },
+  "valvulas_v6.json": {
+   "utilizavel": true,
+   "n": 12,
+   "unidades": {
+    "v8": {
+     "ha": 1.78,
+     "defice_ha": 0.06,
+     "pct_novo": 100.0,
+     "pct_nu21": 0.0
+    },
+    "v13+v14": {
+     "ha": 7.98,
+     "defice_ha": 3.01,
+     "pct_novo": 49.501661129568106,
+     "pct_nu21": 18.93687707641196
+    }
+   }
+  },
+  "valvulas_v4.json": {
+   "utilizavel": true,
+   "n": 12,
+   "unidades": {
+    "v8": {
+     "ha": 2.32,
+     "defice_ha": 0.5,
+     "pct_novo": 100.0,
+     "pct_nu21": 0.0
+    },
+    "v13+v14": {
+     "ha": 8.12,
+     "defice_ha": 3.2,
+     "pct_novo": 25.625,
+     "pct_nu21": 32.5
+    }
+   }
+  },
+  "valvulas_por_linha.json": {
+   "utilizavel": true,
+   "n": 12,
+   "unidades": {
+    "v8": {
+     "ha": 13.35,
+     "defice_ha": 3.0,
+     "pct_novo": 51.0,
+     "pct_nu21": 12.333333333333334
+    },
+    "v13+v14": {
+     "ha": 3.11,
+     "defice_ha": 0.87,
+     "pct_novo": 2.2988505747126435,
+     "pct_nu21": 29.885057471264368
+    }
+   }
+  }
+ },
+ "inverte": false
+}

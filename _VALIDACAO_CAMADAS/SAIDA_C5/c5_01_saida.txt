@@ -1,0 +1,85 @@
+==========================================================================
+C5 · RE-ETIQUETAGEM DO LIVRO-RAZAO — contagens calculadas dos ficheiros
+==========================================================================
+
+linhas de entrada: 59   linhas de saida: 59
+
+ESTATUTO DA C4 (o que viajou para cima)
+  NAO TESTADA                   41
+  EXCLUIDA                       7
+  SUSTENTADA                     5
+  EXCLUIDA-LOCAL                 4
+  INCONCLUSIVA                   2
+
+ESTATUTO RE-DERIVADO PELA C5 (dos campos de evidencia)
+  NUNCA PROCURADA                             18
+  ENCONTRADA SEM PAR                           9
+  SO FORA DE GANFEI                            5
+  EXCLUIDA-LOCAL                               4
+  SUSTENTADA-LOCAL                             4
+  INCONCLUSIVA                                 3
+  EXCLUIDA                                     3
+  NAO E CAUSA CANDIDATA NO CORPO PRINCIPAL     2
+  ENCONTRADA SEM ENSAIO                        1
+  ENCONTRADA SEM NIVEL NORMAL                  1
+  EXCLUIDA-INTERNA                             1
+  CONTRADITA EM PARTE                          1
+  FAVORECIDA SEM CONFIRMACAO                   1
+  CONSTRANGIDA, NAO EXCLUIDA                   1
+  NUNCA PROCURADA COM O INSTRUMENTO CERTO      1
+  RESOLVIDA - ERA DIVERGENCIA DE DEFINICAO     1
+  EXCLUIDA-CONDICIONAL                         1
+  SUSTENTADA                                   1
+  LEITURA RETIRADA - NAO E CAUSA CANDIDATA     1
+
+AS 41 LINHAS QUE A C4 ROTULOU 'NAO TESTADA' = 'ninguem procurou'
+  NUNCA PROCURADA                             17
+  ENCONTRADA SEM PAR                           9
+  SO FORA DE GANFEI                            5
+  NAO E CAUSA CANDIDATA NO CORPO PRINCIPAL     2
+  ENCONTRADA SEM ENSAIO                        1
+  ENCONTRADA SEM NIVEL NORMAL                  1
+  CONTRADITA EM PARTE                          1
+  FAVORECIDA SEM CONFIRMACAO                   1
+  CONSTRANGIDA, NAO EXCLUIDA                   1
+  NUNCA PROCURADA COM O INSTRUMENTO CERTO      1
+  RESOLVIDA - ERA DIVERGENCIA DE DEFINICAO     1
+  LEITURA RETIRADA - NAO E CAUSA CANDIDATA     1
+  ----------------------------------------------
+  genuinamente nunca procuradas ..............  17 de 41
+  MAL ROTULADAS ..............................  24 de 41
+  dessas, PROCURADAS E ENCONTRADAS em Ganfei .  11
+  dessas, procuradas so FORA de Ganfei .......   5
+
+O NUMERO QUE O RELATORIO TEM DE LEVAR
+  das 59 causas candidatas, com instrumento independente e desenho
+  falsificavel, estao excluidas: 3  (a C4 publicava 7)
+  linhas que nao sao candidatas no corpo principal: 3
+  candidatas efectivas: 56
+
+DECISAO DA C5 (coluna normalizada `decisao_C5`)
+  PROCURAR                      45
+  NAO PROCURAR                   9
+  JA FECHADA                     5
+
+  «45 a procurar» NAO sao 45 campanhas. Repartidas por custo:
+    custo NULO    16  
+    custo BAIXO   27  
+    custo MEDIO    1  
+    custo -        1  sem custo proprio: corre por dentro de outra linha
+    (NULO = ler um ficheiro ou fazer uma pergunta; BAIXO = mais uma
+     linha num ensaio que ja vai ser pago; MEDIO = campanha propria)
+
+  Das que decido NAO procurar, TODAS continuam NAO EXCLUIDAS,
+  e o relatorio tem de as levar assim:
+    BIO-16   Meloidogyne hapla como explicacao do contraste [INCONCLUSIVA]
+    BIO-22   Phytophthora sojae                             [NUNCA PROCURADA]
+    BIO-26   Virus e viroides                               [NUNCA PROCURADA]
+    ABI-03   Agua concentrada no foco OESTE (posicao hidrau [SUSTENTADA-LOCAL]
+    ABI-07   Stress termico                                 [NUNCA PROCURADA]
+    ABI-08   Precipitacao / seca como discriminante ESPACIA [NUNCA PROCURADA]
+    GES-06   Sobre-enxertia de 2016 (Enza Gold) e ~2020 (Er [NAO E CAUSA CANDIDATA NO CORPO PRINCIPAL]
+    GES-07   Rede de sombreamento                           [NAO E CAUSA CANDIDATA NO CORPO PRINCIPAL]
+    INS-05   'Os focos perdem agua antes de verdura' (NDMI  [LEITURA RETIRADA - NAO E CAUSA CANDIDATA]
+
+gravado: C:\Users\Jackster2\Downloads\_VALIDACAO_CAMADAS\SAIDA_C5\c5_reetiquetagem.csv

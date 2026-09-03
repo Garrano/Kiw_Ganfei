@@ -1,0 +1,50 @@
+ficheiro,bytes,razao
+_GANFEI_REEXECUCAO_CEGA\ESPECIFICACAO.md,5884,"refere: 528400, lóbulo, q5_b1, sentinel_b1"
+_GANFEI_REEXECUCAO_CEGA\LEIA-PRIMEIRO.md,4004,"refere: lóbulo, q5_b1, sentinel_b1"
+_GANFEI_REEXECUCAO_CEGA\SAIDA\AMBIGUIDADES.md,16304,refere: lóbulo
+_GANFEI_REEXECUCAO_CEGA\SAIDA\OBSERVACOES.md,7148,refere: lóbulo
+_GANFEI_REEXECUCAO_CEGA\SAIDA\README.md,2059,"refere: lóbulo, q5_b1"
+_GANFEI_REEXECUCAO_CEGA\SAIDA\codigo\figuras.py,4321,refere: sentinel_b1
+_GANFEI_REEXECUCAO_CEGA\SAIDA\codigo\inspeccao.py,1412,refere: sentinel_b1
+_GANFEI_REEXECUCAO_CEGA\SAIDA\codigo\q5.py,1686,"refere: lóbulo, q5_b1, sentinel_b1"
+_GANFEI_REEXECUCAO_CEGA\SAIDA\codigo\variantes_a.py,6168,refere: sentinel_b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2017-07-02.tif,28945,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2018-08-31.tif,28930,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2019-09-02.tif,29019,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2020-07-18.tif,29041,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2021-07-16.tif,28909,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2022-07-31.tif,29081,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2023-08-07.tif,29009,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2024-07-22.tif,28955,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2025-06-17.tif,28958,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2025-08-14.tif,29043,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\2026-07-27.tif,29099,PRODUTO DIRECTO da AOI b1
+_GANFEI_REEXECUCAO_CEGA\dados\sentinel_b1\proveniencia_b1.json,1042,PRODUTO DIRECTO da AOI b1
+ganfei_s2\AUDITORIA_COWORK_2026-08-28.md,24433,"refere: expansao_b1, lóbulo"
+ganfei_s2\_pacote_cowork\AMBIGUIDADES_sessao_independente.md,16304,refere: lóbulo
+ganfei_s2\_pacote_cowork\AUDITORIA.md,9972,"refere: b1_analise, expansao_b1, lóbulo"
+ganfei_s2\_pacote_cowork\OBSERVACOES_sessao_independente.md,7148,refere: lóbulo
+ganfei_s2\_pacote_cowork\PROMPT_AUDITORIA.md,6856,refere: expansao_b1
+ganfei_s2\_pacote_cowork\b1_nucleo_interno.py,3913,"refere: b1_nucleo, sentinel_b1"
+ganfei_s2\_pacote_cowork\f4_chave_espacial.py,13073,"refere: 528400, lobulo, lóbulo, sentinel_b1"
+ganfei_s2\_reexecucao_1a_sessao\OBSERVACOES.md,2661,"refere: b1_analise, b1_serie, sentinel_b1"
+ganfei_s2\_reexecucao_1a_sessao\reproducao\NOTAS.md,7924,"refere: b1_analise, b1_serie, expansao_b1, lóbulo, sentinel_b1"
+ganfei_s2\_reexecucao_1a_sessao\reproducao\log_b1_analise.txt,1418,"refere: b1_analise, b1_serie, expansao_b1"
+ganfei_s2\_reexecucao_1a_sessao\reproducao\log_b1_serie.txt,317,refere: b1_serie
+ganfei_s2\b1_analise.py,3471,"refere: b1_serie, expansao_b1, lobulo, sentinel_b1"
+ganfei_s2\b1_nucleo_interno.py,3913,"refere: b1_nucleo, sentinel_b1"
+ganfei_s2\b1_serie.py,2317,"refere: 528400, lobulo, sentinel_b1"
+ganfei_s2\figuras\f4_chave_espacial.py,13073,"refere: 528400, lobulo, lóbulo, sentinel_b1"
+ganfei_s2\figuras\m1_valvulas.py,10475,refere: lobulo
+ganfei_s2\sentinel_b1\2017-07-02.tif,28945,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2018-08-31.tif,28930,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2019-09-02.tif,29019,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2020-07-18.tif,29041,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2021-07-16.tif,28909,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2022-07-31.tif,29081,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2023-08-07.tif,29009,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2024-07-22.tif,28955,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2025-06-17.tif,28958,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2025-08-14.tif,29043,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\2026-07-27.tif,29099,PRODUTO DIRECTO da AOI b1
+ganfei_s2\sentinel_b1\proveniencia_b1.json,1042,PRODUTO DIRECTO da AOI b1

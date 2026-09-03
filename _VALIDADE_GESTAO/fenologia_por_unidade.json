@@ -1,0 +1,35 @@
+{
+ "par": [
+  "2025-06-17",
+  "2025-08-14"
+ ],
+ "d_doy": 58,
+ "doy_cedo": 208.28571428571428,
+ "doy_tarde": 217.0,
+ "unidades": {
+  "referência sistemática": {
+   "degrau": -0.048055188996451226,
+   "coef_dia": -0.00027942040870929585,
+   "correccao": -0.0024349492758952945,
+   "corrigido": -0.045620239720555934
+  },
+  "foco OCIDENTAL · disco 90 m c/ pérgola": {
+   "degrau": -0.12882698433739803,
+   "coef_dia": -8.424911005743619e-05,
+   "correccao": -0.0007341708162148017,
+   "corrigido": -0.12809281352118324
+  },
+  "foco ORIENTAL · Zona 0 c/ pérgola": {
+   "degrau": -0.12357902952602928,
+   "coef_dia": 0.00013188555322844406,
+   "correccao": 0.0011492883924192994,
+   "corrigido": -0.12472831791844859
+  },
+  "resto do pomar · CONTROLO": {
+   "degrau": -0.009582736662456015,
+   "coef_dia": -0.000218230074849622,
+   "correccao": -0.001901719223689565,
+   "corrigido": -0.00768101743876645
+  }
+ }
+}

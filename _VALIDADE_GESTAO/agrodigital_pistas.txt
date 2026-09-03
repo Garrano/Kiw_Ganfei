@@ -1,0 +1,21 @@
+[CAMPANHA_IFAP_ATUAL] el.innerHTML = ""; } var IFAP_WFS_PROXY = "IfapWfsProxy.ashx"; var IFAP_LOOKUP = "IfapLookup.ashx"; var CAMPANHA_IFAP_ATUAL = "2025jun10"; var CAMADA_PARCELAS_IFAP = "parcelas." + CAMPANHA_IFAP_ATUAL; var CAMADA_CULTURAS_IFAP = "culturas." + CAMPANHA_IFAP_ATUAL; var ZOOM_MINIMO_PARCELAS = 13;
+[WFS] " + nome); if (!el) return; el.classList.remove("erro"); el.innerHTML = ""; } var IFAP_WFS_PROXY = "IfapWfsProxy.ashx"; var IFAP_LOOKUP = "IfapLookup.ashx"; var CAMPANHA_IFAP_ATUAL = "2025jun10"; var CAMADA_PARCELAS_IFAP = "parcelas." + CAMPANHA_IFAP_ATUAL; var CAMADA_CULTUR
+[URL_] / observação, ao passar o rato sobre o pino (pré-visualização) ou ao // clicar no pino (abre o ficheiro numa nova aba). var URL_BASE_ANEXO_APPREDE = "https://agrodigital.ccdr-n.pt/AppRede/VerAnexo.ashx?id="; function escaparHtmlTexto(texto) { var div = document.createElement("div"); div.textContent = texto ==
+[servico] alternarCamadaRAN() { // Fonte: serviço ArcGIS Online da própria DGADR (Norte), independente do // servidor da DGT (servicos.dgterritorio.pt) que tem estado indisponível. // https://services6.arcgis.com/t20euimFqNaDI1Dq/arcgis/rest/services/RAN_Norte_shp/FeatureServer/0 var chk = document.getElementById("chkRAN
+
+--- todos os https fora de arcgisonline ---
+   https://agrodigital.ccdr-n.pt/AppRede/VerAnexo.ashx?id=
+   https://agrodigital.ccdr-n.pt/sia/
+   https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js
+   https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js
+   https://ogcapi.dgterritorio.gov.pt/
+   https://ogcapi.dgterritorio.gov.pt/collections/srup_ren_areal/items?f=json&limit=250&bbox=
+   https://services6.arcgis.com/t20euimFqNaDI1Dq/arcgis/rest/services/RAN_Norte_shp/FeatureServer/0
+   https://services6.arcgis.com/t20euimFqNaDI1Dq/arcgis/rest/services/RAN_Norte_shp/FeatureServer/0/query
+   https://unpkg.com/@turf/turf@6.5.0/turf.min.js
+   https://unpkg.com/esri-leaflet@3.0.12/dist/esri-leaflet.js
+   https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css
+   https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css
+   https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js
+   https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+   https://unpkg.com/leaflet@1.9.4/dist/leaflet.js

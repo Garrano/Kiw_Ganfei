@@ -1,0 +1,116 @@
+[
+ {
+  "ancora": "AOI",
+  "declarado": "529950, 4654600, 531950, 4655600",
+  "obtido": "igual, nas 11 imagens",
+  "nota": "grelha 200x100 de 10 m confirmada em todas"
+ },
+ {
+  "ancora": "cenas na serie",
+  "declarado": "11",
+  "obtido": "11",
+  "nota": "9 de plena estacao usadas; 2019-09-02 e 2025-06-17 sao sondas"
+ },
+ {
+  "ancora": "cenas de plena estacao",
+  "declarado": "9",
+  "obtido": "10 defensaveis",
+  "nota": "2019-09-02 (DOY 245) so difere 2 dias de 2018-08-31 (DOY 243): a exclusao nao tem base"
+ },
+ {
+  "ancora": "poligono `pomar` (antigo)",
+  "declarado": "2903 px / 29,0 ha",
+  "obtido": "2903 px / 29.03 ha",
+  "nota": "reproduz o declarado"
+ },
+ {
+  "ancora": "poligono `pomar` (operativo, R2 G2)",
+  "declarado": "30,31 ha",
+  "obtido": "3031 celulas / 30.31 ha",
+  "nota": "igual a R2 e a C1"
+ },
+ {
+  "ancora": "referencia sa (3 manchas, antiga)",
+  "declarado": "454 px",
+  "obtido": "454 px",
+  "nota": "reproduz o declarado"
+ },
+ {
+  "ancora": "referencia sistematica (R2 G4)",
+  "declarado": "1,10 ha / 110 celulas",
+  "obtido": "110 celulas / 1.10 ha",
+  "nota": "igual"
+ },
+ {
+  "ancora": "mascara `manchaW` (antiga)",
+  "declarado": "427 px",
+  "obtido": "427 px",
+  "nota": "reproduz o declarado; a mascara esta RETIRADA (R2 G4)"
+ },
+ {
+  "ancora": "mascara `zona0`",
+  "declarado": "220 px",
+  "obtido": "220 px antigo / 202 celulas operativo",
+  "nota": "202 celulas = 2,02 ha; e o FOCO ESTE"
+ },
+ {
+  "ancora": "chao lavrado nu2021",
+  "declarado": "1,67 ha",
+  "obtido": "1.67 ha",
+  "nota": "igual a C1"
+ },
+ {
+  "ancora": "NDVI da referencia, 2017-07-02",
+  "declarado": "0,838",
+  "obtido": "0.8379 (referencia antiga) / 0.8884 (sistematica)",
+  "nota": "o declarado e o da referencia ANTIGA; reproduz-se"
+ },
+ {
+  "ancora": "NDVI da referencia, 2026-07-27",
+  "declarado": "0,886",
+  "obtido": "0.8862 (referencia antiga) / 0.8425 (sistematica)",
+  "nota": "idem; a inversao de sinal da R2 G6 confirma-se"
+ },
+ {
+  "ancora": "banda contigua (R2 G35)",
+  "declarado": "27,30 ha",
+  "obtido": "27.30 ha",
+  "nota": "soma das valvulas 6-17"
+ },
+ {
+  "ancora": "total da tabela (R2 G35)",
+  "declarado": "44,93 ha",
+  "obtido": "27.30 + 17,66 = 44.96 ha",
+  "nota": "as 8 parcelas soltas continuam sem posicao; nao verificavel nesta camada"
+ },
+ {
+  "ancora": "disco OESTE r=90 m (C1)",
+  "declarado": "248 celulas / 2,48 ha",
+  "obtido": "248 / 2.48 ha",
+  "nota": "igual a C1"
+ },
+ {
+  "ancora": "disco ESTE r=90 m (C1)",
+  "declarado": "255 celulas / 2,55 ha",
+  "obtido": "255 / 2.55 ha",
+  "nota": "igual a C1"
+ },
+ {
+  "ancora": "cenas Sentinel-1 de Inverno (C1)",
+  "declarado": "441",
+  "obtido": "441",
+  "nota": "10 Invernos, orbitas 125 e 147"
+ },
+ {
+  "ancora": "dVV do foco OESTE, Inverno 2025-26, orbita 125 (C1 S15)",
+  "declarado": "-1,107 dB",
+  "obtido": "-1,107 dB",
+  "nota": "reproduzido a 3 casas"
+ },
+ {
+  "ancora": "dVV do foco OESTE, Inverno 2025-26, orbita 147 (C1 S15)",
+  "declarado": "-0,774 dB",
+  "obtido": "-0,775 dB",
+  "nota": "diferenca de 0,001 dB"
+ }
+]

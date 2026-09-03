@@ -1,0 +1,121 @@
+{
+ "valores_distintos_EN": 134,
+ "valores_distintos_PT": 148,
+ "valores_EN_ausentes_do_PT": 1,
+ "valores_PT_ausentes_do_EN": 15,
+ "melhor_deslocamento_k": 0,
+ "coincidencias_no_melhor_k": 93,
+ "primeira_linha_divergente_0based": 93,
+ "ficheiros_so_EN": [],
+ "ficheiros_so_PT": [],
+ "contagem_por_ficheiro": {
+  "29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf": {
+   "EN": 7,
+   "PT": 7
+  },
+  "339_Kiwi.pdf": {
+   "EN": 4,
+   "PT": 4
+  },
+  "340_Kiwi.pdf": {
+   "EN": 4,
+   "PT": 4
+  },
+  "341_Kiwi.pdf": {
+   "EN": 4,
+   "PT": 4
+  },
+  "342_Kiwi.pdf": {
+   "EN": 4,
+   "PT": 4
+  },
+  "343_Kiwi.pdf": {
+   "EN": 4,
+   "PT": 4
+  },
+  "6_junho_2025_microbiologia_de_solo.pdf": {
+   "EN": 15,
+   "PT": 15
+  },
+  "9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf": {
+   "EN": 7,
+   "PT": 7
+  },
+  "B2_V7__Folha__Junho_26.pdf": {
+   "EN": 11,
+   "PT": 11
+  },
+  "B2_V7__Marc_o_26_Regenerativa.pdf": {
+   "EN": 12,
+   "PT": 12
+  },
+  "Nota_sobre_a_visita_a_um_pomar_de_actini_dea_em_decli_nio1.pdf": {
+   "EN": 4,
+   "PT": 4
+  },
+  "ISFBV0315_ITS.pdf": {
+   "EN": 5,
+   "PT": 5
+  },
+  "INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf": {
+   "EN": 8,
+   "PT": 8
+  },
+  "INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf": {
+   "EN": 8,
+   "PT": 8
+  },
+  "ISFBV0314_ITS.pdf": {
+   "EN": 5,
+   "PT": 5
+  },
+  "Humus_Li_quido_y_sus_comunidades_de_microorganismos.pdf": {
+   "EN": 1,
+   "PT": 1
+  },
+  "ISFBV0317_ITS.pdf": {
+   "EN": 5,
+   "PT": 5
+  },
+  "ISFBV0316_ITS.pdf": {
+   "EN": 5,
+   "PT": 5
+  },
+  "B3_7ha_Marc_o_26.pdf": {
+   "EN": 11,
+   "PT": 12
+  },
+  "B2_V7__Marc_o_26.pdf": {
+   "EN": 11,
+   "PT": 12
+  },
+  "B1_C1_Julho.pdf": {
+   "EN": 11,
+   "PT": 12
+  },
+  "B1_C3_Julho.pdf": {
+   "EN": 11,
+   "PT": 12
+  },
+  "B2_V7__Junho_26.pdf": {
+   "EN": 11,
+   "PT": 12
+  },
+  "B1_C4_Julho.pdf": {
+   "EN": 11,
+   "PT": 12
+  },
+  "Erica_2016_E__Marc_o_26.pdf": {
+   "EN": 11,
+   "PT": 12
+  },
+  "B4_Julho.pdf": {
+   "EN": 11,
+   "PT": 12
+  },
+  "Erica_2016_R__Marc_o_26.pdf": {
+   "EN": 11,
+   "PT": 12
+  }
+ }
+}

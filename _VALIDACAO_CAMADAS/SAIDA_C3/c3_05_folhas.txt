@@ -1,0 +1,779 @@
+
+====================================================================================================
+### Dossie_Rastreabilida :: LEIA-ME   (21x3)
+====================================================================================================
+-- linha 0
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Declínio do Pomar de Kiwi de Ganfei — Ferramenta de Trabalho com Dados Rastreáveis
+     Unnamed: 2                                                   : 
+-- linha 1
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Todos os dados laboratoriais, de drone e de campo compilados a partir dos ficheiros do projeto, cada um associado ao documento de origem exato e ao local/talhão de amostragem.
+     Unnamed: 2                                                   : 
+-- linha 2
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : 
+     Unnamed: 2                                                   : 
+-- linha 3
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : 
+     Unnamed: 2                                                   : 
+-- linha 4
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Como este dossiê está organizado
+     Unnamed: 2                                                   : 
+-- linha 5
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Registo Principal (Master Log)
+     Unnamed: 2                                                   : Todos os resultados de todos os documentos laboratoriais/de campo/de plataforma, um por linha. Colunas: Source_File (nome exato do ficheiro no projeto), Doc_Type, Report_No, Terrain_Block_Parcel (talh
+-- linha 6
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Matriz de Fitopatologia
+     Unnamed: 2                                                   : Vista cruzada: organismo (linha) x talhão/amostra (coluna) para todos os resultados de fungos/oomicetas/nemátodos. A forma mais rápida de ver que patogénios coexistem e onde.
+-- linha 7
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Contagens de Nemátodos
+     Unnamed: 2                                                   : Densidade populacional de Meloidogyne hapla (J2+ovos) por talhão, solo e raiz, do lote 339-343/2026.
+-- linha 8
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Físico-Química do Solo por Talhão
+     Unnamed: 2                                                   : Vista cruzada dos boletins físico-químicos da A2 Análises Químicas: parâmetro (linha) x talhão+data (coluna).
+-- linha 9
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Diversidade ITS
+     Unnamed: 2                                                   : Índices de diversidade alfa das 4 amostras de metagenómica ITS — assinaladas como NÃO associadas a nenhum talhão.
+-- linha 10
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Relatórios Becrop
+     Unnamed: 2                                                   : Os dois relatórios de microbioma/saúde da plataforma Becrop (A32A0B, A32A0C) — assinalados como NÃO associados a nenhuma parcela na plataforma.
+-- linha 11
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Registo Drone-NDVI
+     Unnamed: 2                                                   : As 3 capturas de ecrã da plataforma fornecidas, registadas com as camadas ativas e o que é ou não rastreável visualmente.
+-- linha 12
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Pontos a Esclarecer (Traceability Gaps)
+     Unnamed: 2                                                   : Os pontos de reconciliação em aberto — ler antes de considerar qualquer registo como totalmente resolvido.
+-- linha 13
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : 
+     Unnamed: 2                                                   : 
+-- linha 14
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Legenda de cores utilizada em todo o dossiê
+     Unnamed: 2                                                   : 
+-- linha 15
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : 
+     Unnamed: 2                                                   : Deteção positiva de patogénio/praga
+-- linha 16
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : 
+     Unnamed: 2                                                   : Negativo / não detetado
+-- linha 17
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : 
+     Unnamed: 2                                                   : Alerta de rastreabilidade — localização ou origem não resolvida, ler a coluna de Notas
+-- linha 18
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : 
+     Unnamed: 2                                                   : 
+-- linha 19
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Nota de âmbito
+     Unnamed: 2                                                   : 
+-- linha 20
+     Unnamed: 0                                                   : 
+     Unnamed: 1                                                   : Este dossiê apenas reorganiza o que já existe nos ficheiros do projeto — não acrescenta nenhum resultado laboratorial novo. Quando um documento não indica um código de talhão/terreno, isso é registado
+     Unnamed: 2                                                   : 
+
+====================================================================================================
+### Dossie_Rastreabilida :: Matriz Fitopatologia   (22x9)
+====================================================================================================
+-- linha 0
+     Organismo (matriz)                                           : Fusarium cerealis (Madeira)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 1
+     Organismo (matriz)                                           : Fusarium equiseti (Madeira)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 2
+     Organismo (matriz)                                           : Fusarium oxysporum (Madeira)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 3
+     Organismo (matriz)                                           : Neofusicoccum parvum (Madeira)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 4
+     Organismo (matriz)                                           : Armillaria sp. (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : NEGATIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 5
+     Organismo (matriz)                                           : Ceratobasidium sp. (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 6
+     Organismo (matriz)                                           : Fusarium oxysporum (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 7
+     Organismo (matriz)                                           : Fusarium solani (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 8
+     Organismo (matriz)                                           : Neofusicoccum parvum (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 9
+     Organismo (matriz)                                           : Meloidogyne hapla (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : POSITIVO
+     B3  [340_Kiwi.pdf]                                           : POSITIVO
+     B4  [341_Kiwi.pdf]                                           : POSITIVO
+     V7  [342_Kiwi.pdf]                                           : POSITIVO
+     Erica Novo E  [343_Kiwi.pdf]                                 : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 10
+     Organismo (matriz)                                           : Globisporangium intermedium (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 11
+     Organismo (matriz)                                           : Armillaria sp. (Solo)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : NEGATIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : NEGATIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : NEGATIVO
+-- linha 12
+     Organismo (matriz)                                           : Rosellinia sp. (Solo)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : NEGATIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : NEGATIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : NEGATIVO
+-- linha 13
+     Organismo (matriz)                                           : Meloidogyne hapla (Solo)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : POSITIVO
+     B3  [340_Kiwi.pdf]                                           : POSITIVO
+     B4  [341_Kiwi.pdf]                                           : POSITIVO
+     V7  [342_Kiwi.pdf]                                           : POSITIVO
+     Erica Novo E  [343_Kiwi.pdf]                                 : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 14
+     Organismo (matriz)                                           : Oomicetes (general) (Solo)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : NEGATIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : NEGATIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : NEGATIVO
+-- linha 15
+     Organismo (matriz)                                           : Dactylonectria sp. (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : POSITIVO
+-- linha 16
+     Organismo (matriz)                                           : Fusarium sp. (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : POSITIVO
+-- linha 17
+     Organismo (matriz)                                           : Ilyonectria liriodendri (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : POSITIVO
+-- linha 18
+     Organismo (matriz)                                           : Rhizoctonia solani (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : POSITIVO
+-- linha 19
+     Organismo (matriz)                                           : Oomicetes (general) (Raiz)
+     NÃO ESPECIFICADO - amostra composta/global identificada como : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : NEGATIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : NEGATIVO
+-- linha 20
+     Organismo (matriz)                                           : 
+     NÃO ESPECIFICADO - amostra composta/global identificada como : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 21
+     Organismo (matriz)                                           : Ler da esquerda para a direita: que patogénios foram testados/encontrados em que amostra. Célula em branco = esse organismo não foi testado nessa amostra (não é o mesmo que um resultado negativo).
+     NÃO ESPECIFICADO - amostra composta/global identificada como : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+
+====================================================================================================
+### Dossie_Rastreabilida :: Contagens Nemátodos   (8x6)
+====================================================================================================
+-- linha 0
+     Talhão                                                       : B1
+     Contagem no solo (J2+ovos / 200cc solo)                      : 250.0
+     Contagem na raiz (J2+ovos / g raiz)                          : 65.0
+     Ficheiro de Origem                                           : 339_Kiwi.pdf
+     Nº Relatório                                                 : 339/2026 (expediente 2026039060)
+     Data Amostragem                                              : 2026-05-06
+-- linha 1
+     Talhão                                                       : B3
+     Contagem no solo (J2+ovos / 200cc solo)                      : 28.0
+     Contagem na raiz (J2+ovos / g raiz)                          : 37.0
+     Ficheiro de Origem                                           : 340_Kiwi.pdf
+     Nº Relatório                                                 : 340/2026 (expediente 2026039060)
+     Data Amostragem                                              : 2026-05-06
+-- linha 2
+     Talhão                                                       : B4
+     Contagem no solo (J2+ovos / 200cc solo)                      : 46.0
+     Contagem na raiz (J2+ovos / g raiz)                          : 156.0
+     Ficheiro de Origem                                           : 341_Kiwi.pdf
+     Nº Relatório                                                 : 341/2026 (expediente 2026039060)
+     Data Amostragem                                              : 2026-05-06
+-- linha 3
+     Talhão                                                       : V7
+     Contagem no solo (J2+ovos / 200cc solo)                      : 202.0
+     Contagem na raiz (J2+ovos / g raiz)                          : 72.0
+     Ficheiro de Origem                                           : 342_Kiwi.pdf
+     Nº Relatório                                                 : 342/2026 (expediente 2026039060)
+     Data Amostragem                                              : 2026-05-06
+-- linha 4
+     Talhão                                                       : Erica Novo E
+     Contagem no solo (J2+ovos / 200cc solo)                      : 54.0
+     Contagem na raiz (J2+ovos / g raiz)                          : 78.0
+     Ficheiro de Origem                                           : 343_Kiwi.pdf
+     Nº Relatório                                                 : 343/2026 (expediente 2026039060)
+     Data Amostragem                                              : 2026-05-06
+-- linha 5
+     Talhão                                                       : 
+     Contagem no solo (J2+ovos / 200cc solo)                      : 
+     Contagem na raiz (J2+ovos / g raiz)                          : 
+     Ficheiro de Origem                                           : 
+     Nº Relatório                                                 : 
+     Data Amostragem                                              : 
+-- linha 6
+     Talhão                                                       : MÉDIA
+     Contagem no solo (J2+ovos / 200cc solo)                      : 116.0
+     Contagem na raiz (J2+ovos / g raiz)                          : 81.6
+     Ficheiro de Origem                                           : 
+     Nº Relatório                                                 : 
+     Data Amostragem                                              : 
+-- linha 7
+     Talhão                                                       : MÁXIMO (carga mais elevada)
+     Contagem no solo (J2+ovos / 200cc solo)                      : 250.0
+     Contagem na raiz (J2+ovos / g raiz)                          : 156.0
+     Ficheiro de Origem                                           : 
+     Nº Relatório                                                 : 
+     Data Amostragem                                              : 
+
+====================================================================================================
+### Dossie_Rastreabilida :: Diversidade ITS   (7x5)
+====================================================================================================
+-- linha 0
+     Métrica                                                      : Total de leituras / leituras filtradas / % qualificadas
+     ISFBV0314_ITS.pdf                                            : 85773 / 25078 / 29%
+     ISFBV0315_ITS.pdf                                            : 251395 / 7119 / 3%
+     ISFBV0316_ITS.pdf                                            : 135516 / 4964 / 4%
+     ISFBV0317_ITS.pdf                                            : 110253 / 10688 / 10%
+-- linha 1
+     Métrica                                                      : Riqueza de ASVs
+     ISFBV0314_ITS.pdf                                            : 281
+     ISFBV0315_ITS.pdf                                            : 171
+     ISFBV0316_ITS.pdf                                            : 129
+     ISFBV0317_ITS.pdf                                            : 219
+-- linha 2
+     Métrica                                                      : Índice de equitabilidade de Pielou
+     ISFBV0314_ITS.pdf                                            : 0.838
+     ISFBV0315_ITS.pdf                                            : 0.8431
+     ISFBV0316_ITS.pdf                                            : 0.7996
+     ISFBV0317_ITS.pdf                                            : 0.8472
+-- linha 3
+     Métrica                                                      : Índice de Simpson
+     ISFBV0314_ITS.pdf                                            : 0.9797
+     ISFBV0315_ITS.pdf                                            : 0.9767
+     ISFBV0316_ITS.pdf                                            : 0.9614
+     ISFBV0317_ITS.pdf                                            : 0.9771
+-- linha 4
+     Métrica                                                      : Índice de Shannon
+     ISFBV0314_ITS.pdf                                            : 6.82
+     ISFBV0315_ITS.pdf                                            : 6.25
+     ISFBV0316_ITS.pdf                                            : 5.61
+     ISFBV0317_ITS.pdf                                            : 6.59
+-- linha 5
+     Métrica                                                      : 
+     ISFBV0314_ITS.pdf                                            : 
+     ISFBV0315_ITS.pdf                                            : 
+     ISFBV0316_ITS.pdf                                            : 
+     ISFBV0317_ITS.pdf                                            : 
+-- linha 6
+     Métrica                                                      : ALERTA: nenhuma destas 4 amostras tem código de talhão/terreno nas páginas do relatório extraídas. Confirmar com o fornecedor da sequenciação a correspondência amostra-talhão antes de usar estes valor
+     ISFBV0314_ITS.pdf                                            : 
+     ISFBV0315_ITS.pdf                                            : 
+     ISFBV0316_ITS.pdf                                            : 
+     ISFBV0317_ITS.pdf                                            : 
+
+====================================================================================================
+### Dossie_Rastreabilida :: Relatorios Becrop   (9x3)
+====================================================================================================
+-- linha 0
+     Métrica                                                      : Total de espécies detetadas
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : 856
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : 720
+-- linha 1
+     Métrica                                                      : Biosostenibilidad (sustentabilidade do solo)
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : MEDIO (score 41)
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : MUY ALTO (score 82)
+-- linha 2
+     Métrica                                                      : Biodiversidad / Funcionalidad / Resiliencia
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : Muy alto / Muy alto / Medio
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : Alto / Medio / Medio
+-- linha 3
+     Métrica                                                      : Estado de salud del cultivo / Biocontrol
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : Salud: Muy bajo / Biocontrol: Bajo
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : Salud: Alto / Biocontrol: Bajo
+-- linha 4
+     Métrica                                                      : Principais filos fúngicos (abundância relativa)
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : 60% Ascomycota / 15% Mortierellomycota / 13% Basidiomycota
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : 43% Ascomycota / 30% Basidiomycota / 20% Mortierellomycota
+-- linha 5
+     Métrica                                                      : Principais filos bacterianos (abundância relativa)
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : 37% Proteobacteria / 18% Actinobacteriota / 9% Acidobacteriota
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : 33% Proteobacteria / 18% Actinobacteriota / 10% Firmicutes
+-- linha 6
+     Métrica                                                      : Ratio Hongo-Bacteria / Ratio Arbuscular-Ectomicorriza
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : 1:51 / 1:9.72
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : 1:141 / n/a (fungi = 'Solo Ectomicorrizas' only)
+-- linha 7
+     Métrica                                                      : 
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : 
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : 
+-- linha 8
+     Métrica                                                      : ALERTA: ambos os relatórios Becrop indicam 'No hay parcela asociada' (sem parcela associada na plataforma) e uma freguesia (Cristelo Covo e Arão, Valença do Minho) diferente de 'Ganfei', usada na nota
+     9_agosto2023_A32A0C_Kiwi_1_000_Valenc_a_do_Minho.pdf         : 
+     29enero2024_A32A0B_Kiwi_1_000_Valenc_a_do_Minho.pdf          : 
+
+====================================================================================================
+### Dossie_Rastreabilida :: Registo Drone-NDVI   (3x7)
+====================================================================================================
+-- linha 0
+     ID da Imagem                                                 : PHOTO-2026-08-22-10-13-38.jpg
+     Plataforma                                                   : Plataforma Becrop (vista de mapa)
+     Camadas Ativas                                               : Parcelas, NDVI Cuadrantes, Sentinel2-10m
+     Cobertura de Terreno                                         : Polígono completo do pomar (~50 ha, todos os 'Parcelas' delimitados a vermelho visíveis, incl. o talhão principal + 4 talhões estreitos a NE + 2 talhões pequenos a SE)
+     Data da Captura                                              : Captura de ecrã feita em 2026-08-22 (data da imagem NDVI subjacente não indicada na vista)
+     Observação                                                   : A camada NDVI por quadrante (agregação hexagonal) mostra uma mancha vermelha/laranja de NDVI baixo, ampla e bem definida, na zona sudoeste-central do talhão principal, mais uma mancha secundária laran
+     Nota de Rastreabilidade                                      : Não é visível nenhum código de talhão sobreposto nesta captura - a localização da mancha só pode ser descrita em termos relativos/visuais (zona SO-central do polígono principal) até ser cruzada com a 
+-- linha 1
+     ID da Imagem                                                 : PHOTO-2026-08-22-10-19-40.jpg
+     Plataforma                                                   : Plataforma Becrop (vista de mapa)
+     Camadas Ativas                                               : NDVI (contínuo, não agregado por quadrante), RGB Visual, Sentinel2-10m
+     Cobertura de Terreno                                         : Mesmo polígono do pomar completo da imagem anterior
+     Data da Captura                                              : Captura de ecrã feita em 2026-08-22
+     Observação                                                   : A camada NDVI contínua confirma a mesma mancha SO-central como uma zona laranja/vermelha heterogénea, com assinatura visível de solo nu/acinzentado em RGB equivalente; surge uma segunda mancha, mais p
+     Nota de Rastreabilidade                                      : Mesma limitação da imagem anterior - é necessário ativar simultaneamente as etiquetas de talhão/zona da própria plataforma para associar estas manchas visuais a um relatório específico (por exemplo: e
+-- linha 2
+     ID da Imagem                                                 : PHOTO-2026-08-22-10-20-46.jpg
+     Plataforma                                                   : Plataforma Becrop (vista de mapa)
+     Camadas Ativas                                               : Parcelas, NDVI Cuadrantes, Sentinel2-10m, Simulación Canales (simulação de canais de drenagem)
+     Cobertura de Terreno                                         : Mesmo polígono do pomar completo
+     Data da Captura                                              : Captura de ecrã feita em 2026-08-22
+     Observação                                                   : A rede simulada de canais de drenagem (linhas tracejadas azuis) está sobreposta à mancha de NDVI baixo; a zona de pior NDVI situa-se entre duas linhas de canal simulado que parecem convergir/estrangul
+     Nota de Rastreabilidade                                      : Esta é a imagem mais relevante para decisão relativamente à hipótese hidrológica (ver perguntas de investigação sobre solo/drenagem) - recomenda-se exportar a lista nativa de zonas/talhões da platafor
+
+====================================================================================================
+### Dossie_Rastreabilida :: Pontos a Esclarecer   (7x4)
+====================================================================================================
+-- linha 0
+     Ponto                                                        : Rosellinia sp.
+     O que os documentos mostram                                  : A equipa de campo identificou macroscopicamente Rosellinia (provavelmente R. necatrix) na raiz de uma planta arrancada (04/08/2026). Uma análise molecular do solo, feita em separado (informe 331/2025,
+     Porque é importante                                          : Datas de amostragem diferentes (2025 vs. 2026), matriz diferente (solo vs. raiz), e possivelmente plantas/talhões diferentes. Não é necessariamente contraditório, mas também ainda não está reconciliad
+     Próximo passo recomendado                                    : Enviar a amostra de raiz recolhida na visita de 04/08/2026 para confirmação molecular; registar de que talhão provém.
+-- linha 1
+     Ponto                                                        : Amostra composta 'Kiwi 1000' (informe 331/2025)
+     O que os documentos mostram                                  : Este relatório de fitopatologia (madeira+raiz+solo, o conjunto de dados de patologia mais rico que existe) NÃO tem qualquer código de talhão/terreno - apenas a designação composta 'Kiwi 1000', que é t
+     Porque é importante                                          : Não é atualmente possível atribuir os resultados de Fusarium/Neofusicoccum/Ceratobasidium/Meloidogyne/Globisporangium a nenhum talhão específico.
+     Próximo passo recomendado                                    : Perguntar à Areeiro/ao técnico que submeteu a amostra de que talhão(ões) foi recolhida a amostra de madeira/raiz/solo de junho de 2025.
+-- linha 2
+     Ponto                                                        : Amostras de metagenómica ITS (ISFBV0314-0317)
+     O que os documentos mostram                                  : Existem quatro relatórios de metabarcoding fúngico ITS com dados de diversidade ricos, mas nenhum indica talhão, freguesia ou data de amostragem nas páginas extraídas.
+     Porque é importante                                          : Não é possível cruzar a diversidade/disbiose do solo com o quadro de fitopatologia ou com o NDVI por localização.
+     Próximo passo recomendado                                    : Localizar o formulário de submissão de amostras (normalmente uma folha de rosto separada) que atribui os códigos ISFBV a talhões/datas.
+-- linha 3
+     Ponto                                                        : Relatórios de microbioma Becrop (A32A0B, A32A0C)
+     O que os documentos mostram                                  : Ambos os relatórios indicam explicitamente 'No hay parcela asociada' (sem parcela associada) dentro do sistema Becrop/Biome Makers, e indicam uma freguesia ('Cristelo Covo e Arão, Valença do Minho') d
+     Porque é importante                                          : Não é claro se estes dois relatórios pertencem sequer ao mesmo pomar/talhão e, a pertencerem, se a aparente recuperação entre agosto de 2023 e fevereiro de 2024 é real, sazonal, ou resulta da amostrag
+     Próximo passo recomendado                                    : Confirmar junto do titular da conta Becrop/Biome Makers (Antonio Nogueira Amorim Matos) se A32A0B e A32A0C correspondem ao pomar de Ganfei e ao mesmo talhão físico, associar ambos a um código de parce
+-- linha 4
+     Ponto                                                        : Capturas de ecrã de drone/NDVI
+     O que os documentos mostram                                  : As três capturas de ecrã da plataforma mostram manchas de NDVI baixo e uma sobreposição de simulação de canais, mas nenhuma das três mostra em simultâneo as etiquetas de talhão/parcela junto com a cam
+     Porque é importante                                          : Ainda não é possível afirmar com certeza 'a mancha = talhão X' - apenas a posição relativa (zona SO-central).
+     Próximo passo recomendado                                    : Voltar a exportar a mesma vista de mapa com as etiquetas 'Parcelas' ativadas e com zoom sobre a mancha de NDVI, de modo a mostrar os códigos de talhão.
+-- linha 5
+     Ponto                                                        : Caso de referência (Kiwi Atlántico S.A., informe 240/2023)
+     O que os documentos mostram                                  : Este relatório de fitopatologia é de um cliente e concelho totalmente diferentes (Lois-Portarís, Ribadumia) - não faz parte do pomar de Ganfei.
+     Porque é importante                                          : Risco de, inadvertidamente, juntar estes dados às estatísticas do pomar de Ganfei.
+     Próximo passo recomendado                                    : Manter identificado como 'referência externa' apenas (já isolado nas suas próprias linhas neste dossiê).
+-- linha 6
+     Ponto                                                        : Inconsistência de textura do solo em B2-V7
+     O que os documentos mostram                                  : O boletim de março de 2026 (2601932) regista a textura como 'Franca'; o boletim de junho de 2026 do mesmo talhão nominal ('B2 - Zona 1 (V7)', 2606721) regista 'Argilosa'.
+     Porque é importante                                          : Pode refletir heterogeneidade espacial real dentro do talhão, um ponto de amostragem exato diferente, ou uma diferença laboratorial/de transcrição.
+     Próximo passo recomendado                                    : Confirmar as coordenadas GPS de cada amostragem dentro de B2-V7, e não apenas o nome do talhão.
+
+====================================================================================================
+### Ganfei_Kiwi_Decline_ :: Pathology Matrix   (25x9)
+====================================================================================================
+-- linha 0
+     Organism (matrix)                                            : Fusarium cerealis (Wood (Madeira))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 1
+     Organism (matrix)                                            : Fusarium equiseti (Wood (Madeira))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 2
+     Organism (matrix)                                            : Fusarium oxysporum (Wood (Madeira))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 3
+     Organism (matrix)                                            : Neofusicoccum parvum (Wood (Madeira))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 4
+     Organism (matrix)                                            : Armillaria sp. (Root (Raíz))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : NEGATIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 5
+     Organism (matrix)                                            : Ceratobasidium sp. (Root (Raíz))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 6
+     Organism (matrix)                                            : Fusarium oxysporum (Root (Raíz))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 7
+     Organism (matrix)                                            : Fusarium solani (Root (Raíz))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 8
+     Organism (matrix)                                            : Neofusicoccum parvum (Root (Raíz))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 9
+     Organism (matrix)                                            : Meloidogyne hapla (Root (Raíz))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : POSITIVO
+     B3  [340_Kiwi.pdf]                                           : POSITIVO
+     B4  [341_Kiwi.pdf]                                           : POSITIVO
+     V7  [342_Kiwi.pdf]                                           : POSITIVO
+     Erica Novo E  [343_Kiwi.pdf]                                 : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 10
+     Organism (matrix)                                            : Globisporangium intermedium (Root (Raíz))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 11
+     Organism (matrix)                                            : Armillaria sp. (Soil (Solo))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : NEGATIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 12
+     Organism (matrix)                                            : Rosellinia sp. (Soil (Solo))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : NEGATIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 13
+     Organism (matrix)                                            : Meloidogyne hapla (Soil (Solo))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : POSITIVO
+     B1  [339_Kiwi.pdf]                                           : POSITIVO
+     B3  [340_Kiwi.pdf]                                           : POSITIVO
+     B4  [341_Kiwi.pdf]                                           : POSITIVO
+     V7  [342_Kiwi.pdf]                                           : POSITIVO
+     Erica Novo E  [343_Kiwi.pdf]                                 : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 14
+     Organism (matrix)                                            : Oomicetes (general) (Soil (Solo))
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : NEGATIVO
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 15
+     Organism (matrix)                                            : Dactylonectria sp. (Root)
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : POSITIVO
+-- linha 16
+     Organism (matrix)                                            : Fusarium sp. (Root)
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : POSITIVO
+-- linha 17
+     Organism (matrix)                                            : Ilyonectria liriodendri (Root)
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : POSITIVO
+-- linha 18
+     Organism (matrix)                                            : Rhizoctonia solani (Root)
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : POSITIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : POSITIVO
+-- linha 19
+     Organism (matrix)                                            : Oomicetes (general) (Root)
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : NEGATIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : NEGATIVO
+-- linha 20
+     Organism (matrix)                                            : Armillaria sp. (Soil)
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : NEGATIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : NEGATIVO
+-- linha 21
+     Organism (matrix)                                            : Rosellinia sp. (Soil)
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : NEGATIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : NEGATIVO
+-- linha 22
+     Organism (matrix)                                            : Oomicetes (general) (Soil)
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : NEGATIVO
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : NEGATIVO
+-- linha 23
+     Organism (matrix)                                            : 
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 
+-- linha 24
+     Organism (matrix)                                            : Read left-to-right: which pathogens were tested/found in which named sample. Blank cell = that organism was not tested in that sample (not the same as a negative result).
+     UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no : 
+     B1  [339_Kiwi.pdf]                                           : 
+     B3  [340_Kiwi.pdf]                                           : 
+     B4  [341_Kiwi.pdf]                                           : 
+     V7  [342_Kiwi.pdf]                                           : 
+     Erica Novo E  [343_Kiwi.pdf]                                 : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf]            : 
+     B-3/C-3  [INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf]          : 

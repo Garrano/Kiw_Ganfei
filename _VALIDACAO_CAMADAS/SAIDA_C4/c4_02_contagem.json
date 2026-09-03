@@ -1,0 +1,27 @@
+{
+ "linhas_no_livro_razao": 59,
+ "por_estatuto": {
+  "NAO TESTADA": 41,
+  "EXCLUIDA-LOCAL": 4,
+  "EXCLUIDA": 7,
+  "SUSTENTADA": 5,
+  "INCONCLUSIVA": 2
+ },
+ "por_classe": {
+  "biologia": 27,
+  "substrato": 5,
+  "rega": 3,
+  "clima": 3,
+  "nutricao": 2,
+  "quimica": 2,
+  "gestao": 5,
+  "material": 3,
+  "regional": 3,
+  "instrumento": 6
+ },
+ "excluidas_sem_qualificacao": 7,
+ "excluidas_so_numa_zona_e_numa_data": 4,
+ "nao_testadas": 41,
+ "sustentadas": 5,
+ "inconclusivas": 2
+}

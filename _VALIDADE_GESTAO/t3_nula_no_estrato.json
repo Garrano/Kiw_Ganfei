@@ -1,0 +1,33 @@
+{
+ "unidades": {
+  "#1  ·  79 m": {
+   "celulas": 18,
+   "degrau": -0.048044213226863364,
+   "perc_longe": 2.4,
+   "perc_banda": 9.6,
+   "nula_longe_mediana": -0.017251661845615884,
+   "nula_banda_mediana": -0.02618254082543514
+  },
+  "#2  ·  82 m": {
+   "celulas": 22,
+   "degrau": -0.04135595900671818,
+   "perc_longe": 4.6,
+   "perc_banda": 14.2,
+   "nula_longe_mediana": -0.01795212711606703,
+   "nula_banda_mediana": -0.026990864958081895
+  },
+  "#3  ·  143 m": {
+   "celulas": 21,
+   "degrau": -0.03650776829038349,
+   "perc_longe": 7.1,
+   "perc_banda": 29.2,
+   "nula_longe_mediana": -0.017124299492154826,
+   "nula_banda_mediana": -0.027491671698434028
+  }
+ },
+ "bandas": {
+  "mediana_longe": -0.016578819070543538,
+  "mediana_banda": -0.027125030755996704,
+  "p_mannwhitney": 8.082014956280983e-14
+ }
+}

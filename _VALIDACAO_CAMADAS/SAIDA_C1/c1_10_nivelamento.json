@@ -1,0 +1,13 @@
+{
+ "glo30_este_menos_oeste_m": 0.31214284896850586,
+ "lidar_este_menos_oeste_m": 1.2035059928894043,
+ "correlacao_lidar_glo30_r": 0.452018804265952,
+ "declive_eixo_pct": 0.08496006121125063,
+ "residuo_eixo": {
+  "foco_oeste": -0.1975621861815937,
+  "foco_este": 0.5887669602835928,
+  "zona0": 0.8002348809265909,
+  "referencia": -0.23266746981353714,
+  "nu2021": 0.6981013357236128
+ }
+}

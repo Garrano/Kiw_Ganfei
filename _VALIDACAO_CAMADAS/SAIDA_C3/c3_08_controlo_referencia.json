@@ -1,0 +1,99 @@
+{
+ "T1": {
+  "REF_e_disco_OESTE": 12,
+  "REF_e_disco_ESTE": 6,
+  "REF_e_defice_2026": 23,
+  "REF_e_novo_M2": 19,
+  "REF_total": 110
+ },
+ "ref_declarada_celulas": 110,
+ "ref_sem_focos_celulas": 92,
+ "serie_mediana": {
+  "2017-07-02": {
+   "ref_declarada": 0.8898,
+   "ref_sem_focos": 0.8898,
+   "dif": 0.0001
+  },
+  "2018-08-31": {
+   "ref_declarada": 0.9037,
+   "ref_sem_focos": 0.904,
+   "dif": 0.0004
+  },
+  "2020-07-18": {
+   "ref_declarada": 0.8921,
+   "ref_sem_focos": 0.8915,
+   "dif": -0.0006
+  },
+  "2021-07-16": {
+   "ref_declarada": 0.9026,
+   "ref_sem_focos": 0.9026,
+   "dif": -0.0001
+  },
+  "2022-07-31": {
+   "ref_declarada": 0.9001,
+   "ref_sem_focos": 0.9003,
+   "dif": 0.0002
+  },
+  "2023-08-07": {
+   "ref_declarada": 0.9221,
+   "ref_sem_focos": 0.9227,
+   "dif": 0.0005
+  },
+  "2024-07-22": {
+   "ref_declarada": 0.8984,
+   "ref_sem_focos": 0.8994,
+   "dif": 0.001
+  },
+  "2025-08-14": {
+   "ref_declarada": 0.8774,
+   "ref_sem_focos": 0.8798,
+   "dif": 0.0023
+  },
+  "2026-07-27": {
+   "ref_declarada": 0.8766,
+   "ref_sem_focos": 0.8898,
+   "dif": 0.0133
+  }
+ },
+ "descida_2024_2026_declarada": -0.0218,
+ "descida_2024_2026_sem_focos": -0.0096,
+ "areas_defice": {
+  "2017-07-02": {
+   "ha_ref_declarada": 8.12,
+   "ha_ref_sem_focos": 8.12
+  },
+  "2018-08-31": {
+   "ha_ref_declarada": 6.9,
+   "ha_ref_sem_focos": 6.9
+  },
+  "2020-07-18": {
+   "ha_ref_declarada": 4.11,
+   "ha_ref_sem_focos": 4.07
+  },
+  "2021-07-16": {
+   "ha_ref_declarada": 3.38,
+   "ha_ref_sem_focos": 3.38
+  },
+  "2022-07-31": {
+   "ha_ref_declarada": 3.25,
+   "ha_ref_sem_focos": 3.25
+  },
+  "2023-08-07": {
+   "ha_ref_declarada": 3.34,
+   "ha_ref_sem_focos": 3.35
+  },
+  "2024-07-22": {
+   "ha_ref_declarada": 2.95,
+   "ha_ref_sem_focos": 2.96
+  },
+  "2025-08-14": {
+   "ha_ref_declarada": 6.16,
+   "ha_ref_sem_focos": 6.27
+  },
+  "2026-07-27": {
+   "ha_ref_declarada": 9.47,
+   "ha_ref_sem_focos": 10.32
+  }
+ },
+ "leitura": "Os quatro numeros de T1 nao sao zero. A referencia sistematica contem celulas dos dois discos e do mapa de defice de 2026. O sentido do vies e conservador — a referencia cai com o acontecimento e as magnitudes ficam amortecidas — mas o denominador nao esta limpo."
+}

@@ -1,0 +1,43 @@
+{
+ "n_antiga": 110,
+ "n_limpa": 78,
+ "degrau_ref_antiga": -0.048055188996451226,
+ "degrau_ref_limpa": -0.018852097647530708,
+ "unidades": {
+  "Zona 0 sem nu2021 (o publicado)": {
+   "fosso_antigo": 0.05947250790066189,
+   "fosso_limpo": 0.0679024789068434,
+   "variacao": 0.008429971006181501,
+   "declive": 0.014270544467792322,
+   "p": 0.01823632993827412
+  },
+  "ORIENTAL Zona 0 com pérgola": {
+   "fosso_antigo": 0.06834238767623901,
+   "fosso_limpo": 0.07677235868242052,
+   "variacao": 0.008429971006181508,
+   "declive": 0.012075182669183341,
+   "p": 0.02680896186114377
+  },
+  "OCIDENTAL disco 90 m com pérgola": {
+   "fosso_antigo": 0.024594797028435603,
+   "fosso_limpo": 0.033024768034617104,
+   "variacao": 0.008429971006181501,
+   "declive": 0.009407305721843744,
+   "p": 0.1500379521769378
+  },
+  "resto do pomar com pérgola": {
+   "fosso_antigo": 0.01788562536239624,
+   "fosso_limpo": 0.026315596368577745,
+   "variacao": 0.008429971006181505,
+   "declive": -0.004775240566122737,
+   "p": 0.045020183034680535
+  },
+  "B1 · lóbulo SW (kiwi)": {
+   "fosso_antigo": 0.20924419421090018,
+   "fosso_limpo": 0.2176741652170817,
+   "variacao": 0.008429971006181508,
+   "declive": -0.020421967678101463,
+   "p": 0.007915192247866803
+  }
+ }
+}

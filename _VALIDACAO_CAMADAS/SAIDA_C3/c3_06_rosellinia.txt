@@ -1,0 +1,305 @@
+############################################################################################
+# NOTAS DE CAMPO (visita tecnica) — livro PT
+############################################################################################
+
+--------------------------------------------------------------------------------------------
+[PT] Record_ID 1
+   Record_ID             : 1
+   Source_File           : Nota_sobre_a_visita_a_um_pomar_de_actini_dea_em_decli_nio1.pdf
+   Doc_Type              : Nota de Campo (visita técnica)
+   Report_No             : n/d
+   Client_Titular        : Pomar Ganfei (técnica responsável: Eng.ª Cláudia)
+   Terrain_Block_Parcel  : Pomar completo, ~50 ha (zonas afetadas, sub-talhão não especificado)
+   Parish_Municipality   : Ganfei, Valença (Emparcelamento de Ganfei)
+   Sample_Date           : 2026-08-04
+   Result_Date           : 2026-08-07
+   Matrix                : Planta inteira / observação de campo
+   Test_Category         : Diagnóstico macroscópico
+   Method                : Inspeção visual + cortes transversais de tronco/ramos + sondagem do solo à volta do tronco
+   Organism_Parameter    : Esca complex (Phaeoacremonium spp., Phaeomoniella chlamydospora, Fomitiporia mediterranea) - suspected from secondary leaf/fruit symptoms only
+   Result                : INCONCLUSIVO (sem sintomas primários no tronco; apenas sintomas secundários compatíveis nas folhas/frutos)
+   Unit                  : n/d
+   Interpretation        : Apenas hipótese de campo, não confirmada em laboratório
+   Lab_Provider          : Field team (Débora Sousa, Carlos Coutinho)
+   Location_Confidence   : Confirmado (local) / Não confirmado (diagnóstico)
+   Notes                 : Os cortes transversais em vários troncos/ramos afetados NÃO mostraram sintomas primários de esca. Foi colhida uma amostra de madeira/ramo para eventual análise de esca no INIAV (pendente, financiamento via CCDR-N em consulta).
+
+--------------------------------------------------------------------------------------------
+[PT] Record_ID 2
+   Record_ID             : 2
+   Source_File           : Nota_sobre_a_visita_a_um_pomar_de_actini_dea_em_decli_nio1.pdf
+   Doc_Type              : Nota de Campo (visita técnica)
+   Report_No             : n/d
+   Client_Titular        : Pomar Ganfei
+   Terrain_Block_Parcel  : Uma planta arrancada, local não especificado
+   Parish_Municipality   : Ganfei, Valença
+   Sample_Date           : 2026-08-04
+   Result_Date           : 2026-08-07
+   Matrix                : Raiz
+   Test_Category         : Diagnóstico macroscópico
+   Method                : Inspeção visual de sintomas radiculares (planta arrancada)
+   Organism_Parameter    : Rosellinia sp. (probably R. necatrix)
+   Result                : POSITIVO (identificação macroscópica apenas - NÃO confirmado molecularmente)
+   Unit                  : n/d
+   Interpretation        : A equipa de campo considerou este diagnóstico 'sem grandes dúvidas' - amostra de raiz recolhida mas NÃO enviada para confirmação laboratorial (conforme nota: 'não será necessário')
+   Lab_Provider          : Field team
+   Location_Confidence   : Confirmado (local) / Contradito por dados laboratoriais posteriores (ver registo referente ao relatório de 6_junho_2025: Rosellinia sp. no solo = NEGATIVO)
+   Notes                 : IMPORTANTE: uma análise molecular do solo posterior (informe 331/2025, amostra 'Kiwi 1000') deu Rosellinia sp. NEGATIVO. Trata-se de um conflito direto a esclarecer - amostra diferente, matriz diferente (raiz vs. solo), ou ausência real.
+
+--------------------------------------------------------------------------------------------
+[PT] Record_ID 3
+   Record_ID             : 3
+   Source_File           : Nota_sobre_a_visita_a_um_pomar_de_actini_dea_em_decli_nio1.pdf
+   Doc_Type              : Nota de Campo (visita técnica)
+   Report_No             : n/d
+   Client_Titular        : Pomar Ganfei
+   Terrain_Block_Parcel  : Base do tronco de várias plantas, local não especificado
+   Parish_Municipality   : Ganfei, Valença
+   Sample_Date           : 2026-08-04
+   Result_Date           : 2026-08-07
+   Matrix                : Solo (à volta do tronco)
+   Test_Category         : Diagnóstico macroscópico
+   Method                : Sondagem do solo à volta da base do tronco (sem análise laboratorial)
+   Organism_Parameter    : Phytophthora sp. / Armillaria sp.
+   Result                : Não observado macroscopicamente (NÃO excluído pela equipa - ubíquo na região, com condições de solo favoráveis: humidade elevada, provável pH baixo)
+   Unit                  : n/d
+   Interpretation        : Explicitamente assinalado como inconclusivo pela equipa de campo
+   Lab_Provider          : Field team
+   Location_Confidence   : Confirmado (local) / Não confirmado (diagnóstico)
+   Notes                 : Cruzamento com dados laboratoriais: informe 331/2025 (Kiwi 1000, raiz+solo) = Armillaria NEGATIVO (molecular). A Phytophthora não foi testada diretamente nesse relatório, mas um oomiceta relacionado (Globisporangium/Pythium) FOI positivo na raiz.
+
+--------------------------------------------------------------------------------------------
+[PT] Record_ID 4
+   Record_ID             : 4
+   Source_File           : Nota_sobre_a_visita_a_um_pomar_de_actini_dea_em_decli_nio1.pdf
+   Doc_Type              : Nota de Campo (visita técnica)
+   Report_No             : n/d
+   Client_Titular        : Pomar Ganfei
+   Terrain_Block_Parcel  : Whole orchard, ~50 ha
+   Parish_Municipality   : Ganfei, Valença
+   Sample_Date           : 2026-08-04
+   Result_Date           : 2026-08-07
+   Matrix                : Solo (estrutural)
+   Test_Category         : Hipótese hidrológica/estrutural
+   Method                : Avaliação visual/técnica (sem ensaio instrumental)
+   Organism_Parameter    : Soil hardpan ('imperme') restricting aeration/drainage
+   Result                : HIPÓTESE - ainda não testada
+   Unit                  : n/d
+   Interpretation        : Solo aluvionar, muito revolvido há cerca de 35 anos durante o emparcelamento; proposto como fator contributivo para o padrão de morte concêntrico e para o colapso apoplético (desencadeado pelo calor)
+   Lab_Provider          : Field team
+   Location_Confidence   : Confirmado (local) / Não confirmado (hipótese)
+   Notes                 : Foi recomendada a abertura de perfis de solo pela Eng.ª Manuela Costa, mas não há confirmação, nos ficheiros revistos, de que tenha sido realizada. Ações imediatas recomendadas: arranque das plantas mortas e corte da erva espontânea para melhorar o arejamento.
+
+
+############################################################################################
+# TODOS OS REGISTOS COM 'Rosellinia' — livro PT
+############################################################################################
+
+--------------------------------------------------------------------------------------------
+[PT] Record_ID 2
+   Record_ID             : 2
+   Source_File           : Nota_sobre_a_visita_a_um_pomar_de_actini_dea_em_decli_nio1.pdf
+   Doc_Type              : Nota de Campo (visita técnica)
+   Report_No             : n/d
+   Client_Titular        : Pomar Ganfei
+   Terrain_Block_Parcel  : Uma planta arrancada, local não especificado
+   Parish_Municipality   : Ganfei, Valença
+   Sample_Date           : 2026-08-04
+   Result_Date           : 2026-08-07
+   Matrix                : Raiz
+   Test_Category         : Diagnóstico macroscópico
+   Method                : Inspeção visual de sintomas radiculares (planta arrancada)
+   Organism_Parameter    : Rosellinia sp. (probably R. necatrix)
+   Result                : POSITIVO (identificação macroscópica apenas - NÃO confirmado molecularmente)
+   Unit                  : n/d
+   Interpretation        : A equipa de campo considerou este diagnóstico 'sem grandes dúvidas' - amostra de raiz recolhida mas NÃO enviada para confirmação laboratorial (conforme nota: 'não será necessário')
+   Lab_Provider          : Field team
+   Location_Confidence   : Confirmado (local) / Contradito por dados laboratoriais posteriores (ver registo referente ao relatório de 6_junho_2025: Rosellinia sp. no solo = NEGATIVO)
+   Notes                 : IMPORTANTE: uma análise molecular do solo posterior (informe 331/2025, amostra 'Kiwi 1000') deu Rosellinia sp. NEGATIVO. Trata-se de um conflito direto a esclarecer - amostra diferente, matriz diferente (raiz vs. solo), ou ausência real.
+
+--------------------------------------------------------------------------------------------
+[PT] Record_ID 17
+   Record_ID             : 17
+   Source_File           : 6_junho_2025_microbiologia_de_solo.pdf
+   Doc_Type              : Relatório Laboratorial - Fitopatologia (fungos/oomicetas/nemátodos)
+   Report_No             : 331/2025 V.1 (expediente 2025045292)
+   Client_Titular        : Kiwi 1000 (sample identifier)
+   Terrain_Block_Parcel  : NÃO ESPECIFICADO - amostra composta/global identificada como 'Kiwi 1000' (sem código de talhão indicado)
+   Parish_Municipality   : Not stated in this report (orchard client context = Ganfei, Valença)
+   Sample_Date           : 2025-06-06
+   Received_Date         : 2025-06-06
+   Result_Date           : 2025-07-07
+   Matrix                : Solo
+   Test_Category         : Fitopatologia fúngica
+   Method                : Molecular (PE/EFA/102 BM)
+   Organism_Parameter    : Rosellinia sp.
+   Result                : NEGATIVO
+   Unit                  : n/d
+   Interpretation        : Rastreio de organismo veiculado pelo solo
+   Lab_Provider          : Estación Fitopatolóxica Areeiro (Pontevedra, ES)
+   Location_Confidence   : DESCONHECIDO - alerta: sem código de terreno/talhão no documento de origem
+   Notes                 : Está em conflito com a identificação macroscópica de Rosellinia feita pela equipa de campo numa planta arrancada (ver registo da nota de campo) - amostra/matriz diferente.
+
+--------------------------------------------------------------------------------------------
+[PT] Record_ID 46
+   Record_ID             : 46
+   Source_File           : INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf
+   Doc_Type              : Relatório Laboratorial - Fitopatologia (CASO DE REFERÊNCIA, NÃO é Ganfei)
+   Report_No             : 240/2023 (expediente 2023041497)
+   Client_Titular        : Kiwi Atlántico S.A. (DIFFERENT CLIENT)
+   Terrain_Block_Parcel  : B-3/C-3
+   Parish_Municipality   : Lois-Portarís, Ribadumia, Pontevedra (Espanha) - NÃO é Ganfei/Valença
+   Sample_Date           : 2023-05-26
+   Received_Date         : 2023-05-26
+   Result_Date           : 2023-06-27
+   Matrix                : Solo
+   Test_Category         : Fitopatologia fúngica
+   Method                : Morfolóxica/Molecular
+   Organism_Parameter    : Rosellinia sp.
+   Result                : NEGATIVO
+   Unit                  : n/d
+   Interpretation        : Ponto de dados de referência de um pomar de kiwi galego diferente - útil apenas para comparação
+   Lab_Provider          : Estación Fitopatolóxica Areeiro (Pontevedra, ES)
+   Location_Confidence   : Localização confirmada, mas POMAR ERRADO - assinalar como referência/benchmark externo apenas, não faz parte do conjunto de dados de Ganfei
+   Notes                 : NÃO juntar às estatísticas do pomar de Ganfei - local/cliente diferente.
+
+--------------------------------------------------------------------------------------------
+[PT] Record_ID 54
+   Record_ID             : 54
+   Source_File           : INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf
+   Doc_Type              : Relatório Laboratorial - Fitopatologia (CASO DE REFERÊNCIA, NÃO é Ganfei)
+   Report_No             : 240/2023 (expediente 2023041497)
+   Client_Titular        : Kiwi Atlántico S.A. (DIFFERENT CLIENT)
+   Terrain_Block_Parcel  : B-3/C-3
+   Parish_Municipality   : Lois-Portarís, Ribadumia, Pontevedra (Espanha) - NÃO é Ganfei/Valença
+   Sample_Date           : 2023-05-26
+   Received_Date         : 2023-05-26
+   Result_Date           : 2023-06-27
+   Matrix                : Solo
+   Test_Category         : Fitopatologia fúngica
+   Method                : Morfolóxica/Molecular
+   Organism_Parameter    : Rosellinia sp.
+   Result                : NEGATIVO
+   Unit                  : n/d
+   Interpretation        : Ponto de dados de referência de um pomar de kiwi galego diferente - útil apenas para comparação
+   Lab_Provider          : Estación Fitopatolóxica Areeiro (Pontevedra, ES)
+   Location_Confidence   : Localização confirmada, mas POMAR ERRADO - assinalar como referência/benchmark externo apenas, não faz parte do conjunto de dados de Ganfei
+   Notes                 : NÃO juntar às estatísticas do pomar de Ganfei - local/cliente diferente.
+
+
+############################################################################################
+# TODOS OS REGISTOS COM 'Rosellinia' — livro EN (para comparar as notas)
+############################################################################################
+
+--------------------------------------------------------------------------------------------
+[EN] Record_ID 2
+   Record_ID             : 2
+   Source_File           : Nota_sobre_a_visita_a_um_pomar_de_actini_dea_em_decli_nio1.pdf
+   Doc_Type              : Field Note (visita técnica)
+   Client_Titular        : Pomar Ganfei
+   Terrain_Block_Parcel  : One uprooted plant, unspecified location
+   Parish_Municipality   : Ganfei, Valença
+   Sample_Date           : 2026-08-04
+   Result_Date           : 2026-08-07
+   Matrix                : Root
+   Test_Category         : Macroscopic diagnosis
+   Method                : Visual root symptom inspection (uprooted plant)
+   Organism_Parameter    : Rosellinia sp. (probably R. necatrix)
+   Result                : POSITIVE (macroscopic ID only - NOT molecularly confirmed)
+   Interpretation        : Field team considered this diagnosis 'without much doubt' - root sample collected but NOT sent for lab confirmation (per note: 'não será necessário')
+   Lab_Provider          : Field team
+   Location_Confidence   : Confirmed (site) / Contradicted by later lab data (see Record referencing 6_junho_2025 report: soil Rosellinia sp. = NEGATIVO)
+   Notes                 : IMPORTANT: a later molecular soil test (informe 331/2025, sample 'Kiwi 1000') returned Rosellinia sp. NEGATIVO. This is a direct conflict worth resolving - different sample, different matrix (root vs soil), or true absence.
+
+--------------------------------------------------------------------------------------------
+[EN] Record_ID 17
+   Record_ID             : 17
+   Source_File           : 6_junho_2025_microbiologia_de_solo.pdf
+   Doc_Type              : Lab Report - Pathology (fungi/oomycetes/nematodes)
+   Report_No             : 331/2025 V.1 (expediente 2025045292)
+   Client_Titular        : Kiwi 1000 (sample identifier)
+   Terrain_Block_Parcel  : UNSPECIFIED - composite/bulk sample labelled 'Kiwi 1000' (no block code given)
+   Parish_Municipality   : Not stated in this report (orchard client context = Ganfei, Valença)
+   Sample_Date           : 2025-06-06
+   Received_Date         : 2025-06-06
+   Result_Date           : 2025-07-07
+   Matrix                : Soil (Solo)
+   Test_Category         : Fungal pathology
+   Method                : Molecular (PE/EFA/102 BM)
+   Organism_Parameter    : Rosellinia sp.
+   Result                : NEGATIVO
+   Interpretation        : Soil-borne organism screen
+   Lab_Provider          : Estación Fitopatolóxica Areeiro (Pontevedra, ES)
+   Location_Confidence   : UNKNOWN - flag: no terrain/block code in source document
+   Notes                 : Conflicts with field-team macroscopic Rosellinia ID on an uprooted plant (see field note record) - different sample/matrix.
+
+--------------------------------------------------------------------------------------------
+[EN] Record_ID 46
+   Record_ID             : 46
+   Source_File           : INFORME_RESULTADOS_MOSTRA_240_Kiwi.pdf
+   Doc_Type              : Lab Report - Pathology (REFERENCE CASE, NOT Ganfei)
+   Report_No             : 240/2023 (expediente 2023041497)
+   Client_Titular        : Kiwi Atlántico S.A. (DIFFERENT CLIENT)
+   Terrain_Block_Parcel  : B-3/C-3
+   Parish_Municipality   : Lois-Portarís, Ribadumia, Pontevedra (Spain) - NOT Ganfei/Valença
+   Sample_Date           : 2023-05-26
+   Received_Date         : 2023-05-26
+   Result_Date           : 2023-06-27
+   Matrix                : Soil
+   Test_Category         : Fungal pathology
+   Method                : Morfolóxica/Molecular
+   Organism_Parameter    : Rosellinia sp.
+   Result                : NEGATIVO
+   Interpretation        : Benchmark data point from a different Galician kiwi orchard - useful for comparison only
+   Lab_Provider          : Estación Fitopatolóxica Areeiro (Pontevedra, ES)
+   Location_Confidence   : Confirmed location, but WRONG ORCHARD - flag as external reference/benchmark only, not part of the Ganfei dataset
+   Notes                 : Do NOT merge with Ganfei orchard statistics - different site/client.
+
+--------------------------------------------------------------------------------------------
+[EN] Record_ID 54
+   Record_ID             : 54
+   Source_File           : INFORME_RESULTADOS_MOSTRA_240_Kiwi_1.pdf
+   Doc_Type              : Lab Report - Pathology (REFERENCE CASE, NOT Ganfei)
+   Report_No             : 240/2023 (expediente 2023041497)
+   Client_Titular        : Kiwi Atlántico S.A. (DIFFERENT CLIENT)
+   Terrain_Block_Parcel  : B-3/C-3
+   Parish_Municipality   : Lois-Portarís, Ribadumia, Pontevedra (Spain) - NOT Ganfei/Valença
+   Sample_Date           : 2023-05-26
+   Received_Date         : 2023-05-26
+   Result_Date           : 2023-06-27
+   Matrix                : Soil
+   Test_Category         : Fungal pathology
+   Method                : Morfolóxica/Molecular
+   Organism_Parameter    : Rosellinia sp.
+   Result                : NEGATIVO
+   Interpretation        : Benchmark data point from a different Galician kiwi orchard - useful for comparison only
+   Lab_Provider          : Estación Fitopatolóxica Areeiro (Pontevedra, ES)
+   Location_Confidence   : Confirmed location, but WRONG ORCHARD - flag as external reference/benchmark only, not part of the Ganfei dataset
+   Notes                 : Do NOT merge with Ganfei orchard statistics - different site/client.
+
+
+############################################################################################
+# REPORT_NO distintos, para datar cada informe
+############################################################################################
+    20  n/d (código da amostra = prefixo do nome do ficheiro, ex | amostragem ['Not stated in extracted pages']
+    16  240/2023 (expediente 2023041497)                         | amostragem ['2023-05-26']
+    15  331/2025 V.1 (expediente 2025045292)                     | amostragem ['2025-06-06']
+    12  2601931                                                  | amostragem ['2026-03-03']
+    12  2601930                                                  | amostragem ['2026-03-03']
+    12  2601932                                                  | amostragem ['2026-03-03']
+    12  2607887                                                  | amostragem ['2026-07-08']
+    12  2607888                                                  | amostragem ['2026-07-08']
+    12  2601933                                                  | amostragem ['2026-03-03']
+    12  2607886                                                  | amostragem ['2026-07-08']
+    12  2606721                                                  | amostragem ['2026-06-17']
+    12  2607885                                                  | amostragem ['2026-07-08']
+    12  2601934                                                  | amostragem ['2026-03-03']
+    11  2606722                                                  | amostragem ['2026-06-17']
+     7  BC-R-Test-ITS3-16S4-BPP3.5-2024-02-04-A32A0B             | amostragem ['2024-02-04']
+     7  BC-R-Test-ITS3-16S4-BPP3.5-2023-08-25-A32A0C             | amostragem ['2023-08-25']
+     5  n/d                                                      | amostragem ['2026-08-04', 'nan']
+     4  339/2026 (expediente 2026039060)                         | amostragem ['2026-05-06']
+     4  342/2026 (expediente 2026039060)                         | amostragem ['2026-05-06']
+     4  341/2026 (expediente 2026039060)                         | amostragem ['2026-05-06']
+     4  340/2026 (expediente 2026039060)                         | amostragem ['2026-05-06']
+     4  343/2026 (expediente 2026039060)                         | amostragem ['2026-05-06']

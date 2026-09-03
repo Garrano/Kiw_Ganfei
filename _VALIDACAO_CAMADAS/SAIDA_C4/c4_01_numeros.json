@@ -1,0 +1,772 @@
+{
+ "_coordenadas": {
+  "foco_OESTE": [
+   530485.0,
+   4655053.0
+  ],
+  "foco_ESTE": [
+   530977.0,
+   4655117.0
+  ],
+  "nucleo_N3": [
+   531068.0,
+   4655145.0
+  ],
+  "centro_do_maior_vazio_circular": [
+   530476.0,
+   4655046.0
+  ]
+ },
+ "N3_ao_foco_ESTE_m": 95.2,
+ "foco_OESTE_ao_foco_ESTE_m": 496.1,
+ "maior_vazio_circular": {
+  "centro": [
+   530476.0,
+   4655046.0
+  ],
+  "area_ha": 3.98,
+  "raio_equivalente_m": 112.6,
+  "distancia_do_centro_ao_centro_do_foco_OESTE_m": 11.4,
+  "extensao_E_da_metade_OESTE": [
+   530363.4,
+   530476.0
+  ],
+  "nota": "O gestor situa a amostra no LADO OESTE deste nucleo, nao no centro. A zona e a metade ocidental de um nucleo descrito como redondo. O raio equivalente supoe circularidade e e so uma escala, nao uma fronteira medida."
+ },
+ "valvulas_ponto_ao_foco": {
+  "v6": {
+   "bloco": "B2",
+   "area_ha": 2.5,
+   "d_foco_OESTE_m": 253.3,
+   "d_foco_ESTE_m": 739.2
+  },
+  "v7": {
+   "bloco": "B2",
+   "area_ha": 2.51,
+   "d_foco_OESTE_m": 110.7,
+   "d_foco_ESTE_m": 594.3
+  },
+  "v8": {
+   "bloco": "B2",
+   "area_ha": 2.82,
+   "d_foco_OESTE_m": 34.5,
+   "d_foco_ESTE_m": 486.6
+  },
+  "v9": {
+   "bloco": "B2",
+   "area_ha": 1.82,
+   "d_foco_OESTE_m": 97.7,
+   "d_foco_ESTE_m": 399.7
+  },
+  "v10": {
+   "bloco": "Erica Novo",
+   "area_ha": 2.4,
+   "d_foco_OESTE_m": 171.0,
+   "d_foco_ESTE_m": 325.2
+  },
+  "v11": {
+   "bloco": "Erica Novo",
+   "area_ha": 2.46,
+   "d_foco_OESTE_m": 256.6,
+   "d_foco_ESTE_m": 241.2
+  },
+  "v12": {
+   "bloco": "B3",
+   "area_ha": 2.75,
+   "d_foco_OESTE_m": 350.1,
+   "d_foco_ESTE_m": 153.7
+  },
+  "v13": {
+   "bloco": "B3",
+   "area_ha": 2.53,
+   "d_foco_OESTE_m": 447.6,
+   "d_foco_ESTE_m": 80.8
+  },
+  "v14": {
+   "bloco": "B3",
+   "area_ha": 2.58,
+   "d_foco_OESTE_m": 546.2,
+   "d_foco_ESTE_m": 93.2
+  },
+  "v15": {
+   "bloco": "B3",
+   "area_ha": 1.14,
+   "d_foco_OESTE_m": 645.0,
+   "d_foco_ESTE_m": 174.4
+  },
+  "v16": {
+   "bloco": "B4",
+   "area_ha": 1.73,
+   "d_foco_OESTE_m": 743.0,
+   "d_foco_ESTE_m": 267.0
+  },
+  "v17": {
+   "bloco": "B4",
+   "area_ha": 2.05,
+   "d_foco_OESTE_m": 954.4,
+   "d_foco_ESTE_m": 474.4
+  }
+ },
+ "valvulas_total_ha": 27.3,
+ "valvulas_com_ponto_na_faixa_E_da_zona": [
+  "v7"
+ ],
+ "por_valvula": {
+  "v6": {
+   "ha": 2.33,
+   "pct_defice_2026": 0.0,
+   "pct_novo_M2": 0.0,
+   "fraccao_do_defice_que_e_nova": null,
+   "pct_nu2021_chao_lavrado": 0.0,
+   "d_foco_OESTE_m_centroide_voronoi": 238.0,
+   "d_foco_ESTE_m_centroide_voronoi": 730.0
+  },
+  "v7": {
+   "ha": 3.25,
+   "pct_defice_2026": 21.2,
+   "pct_novo_M2": 21.2,
+   "fraccao_do_defice_que_e_nova": 1.0,
+   "pct_nu2021_chao_lavrado": 0.0,
+   "d_foco_OESTE_m_centroide_voronoi": 120.0,
+   "d_foco_ESTE_m_centroide_voronoi": 601.0
+  },
+  "v8": {
+   "ha": 2.78,
+   "pct_defice_2026": 50.7,
+   "pct_novo_M2": 47.1,
+   "fraccao_do_defice_que_e_nova": 0.929,
+   "pct_nu2021_chao_lavrado": 0.0,
+   "d_foco_OESTE_m_centroide_voronoi": 46.0,
+   "d_foco_ESTE_m_centroide_voronoi": 490.0
+  },
+  "v9": {
+   "ha": 2.51,
+   "pct_defice_2026": 27.9,
+   "pct_novo_M2": 6.4,
+   "fraccao_do_defice_que_e_nova": 0.229,
+   "pct_nu2021_chao_lavrado": 0.0,
+   "d_foco_OESTE_m_centroide_voronoi": 97.0,
+   "d_foco_ESTE_m_centroide_voronoi": 401.0
+  },
+  "v10": {
+   "ha": 2.52,
+   "pct_defice_2026": 4.4,
+   "pct_novo_M2": 0.0,
+   "fraccao_do_defice_que_e_nova": 0.0,
+   "pct_nu2021_chao_lavrado": 0.0,
+   "d_foco_OESTE_m_centroide_voronoi": 175.0,
+   "d_foco_ESTE_m_centroide_voronoi": 321.0
+  },
+  "v11": {
+   "ha": 2.83,
+   "pct_defice_2026": 1.4,
+   "pct_novo_M2": 1.4,
+   "fraccao_do_defice_que_e_nova": 1.0,
+   "pct_nu2021_chao_lavrado": 0.0,
+   "d_foco_OESTE_m_centroide_voronoi": 258.0,
+   "d_foco_ESTE_m_centroide_voronoi": 240.0
+  },
+  "v12": {
+   "ha": 2.89,
+   "pct_defice_2026": 28.7,
+   "pct_novo_M2": 9.0,
+   "fraccao_do_defice_que_e_nova": 0.314,
+   "pct_nu2021_chao_lavrado": 12.8,
+   "d_foco_OESTE_m_centroide_voronoi": 351.0,
+   "d_foco_ESTE_m_centroide_voronoi": 153.0
+  },
+  "v13": {
+   "ha": 2.92,
+   "pct_defice_2026": 53.4,
+   "pct_novo_M2": 19.5,
+   "fraccao_do_defice_que_e_nova": 0.365,
+   "pct_nu2021_chao_lavrado": 22.6,
+   "d_foco_OESTE_m_centroide_voronoi": 448.0,
+   "d_foco_ESTE_m_centroide_voronoi": 74.0
+  },
+  "v14": {
+   "ha": 2.76,
+   "pct_defice_2026": 52.9,
+   "pct_novo_M2": 18.1,
+   "fraccao_do_defice_que_e_nova": 0.342,
+   "pct_nu2021_chao_lavrado": 13.8,
+   "d_foco_OESTE_m_centroide_voronoi": 545.0,
+   "d_foco_ESTE_m_centroide_voronoi": 86.0
+  },
+  "v15": {
+   "ha": 1.35,
+   "pct_defice_2026": 59.3,
+   "pct_novo_M2": 3.7,
+   "fraccao_do_defice_que_e_nova": 0.062,
+   "pct_nu2021_chao_lavrado": 15.6,
+   "d_foco_OESTE_m_centroide_voronoi": 629.0,
+   "d_foco_ESTE_m_centroide_voronoi": 156.0
+  },
+  "v16": {
+   "ha": 2.0,
+   "pct_defice_2026": 13.0,
+   "pct_novo_M2": 0.0,
+   "fraccao_do_defice_que_e_nova": 0.0,
+   "pct_nu2021_chao_lavrado": 2.5,
+   "d_foco_OESTE_m_centroide_voronoi": 747.0,
+   "d_foco_ESTE_m_centroide_voronoi": 271.0
+  },
+  "v17": {
+   "ha": 2.17,
+   "pct_defice_2026": 0.0,
+   "pct_novo_M2": 0.0,
+   "fraccao_do_defice_que_e_nova": null,
+   "pct_nu2021_chao_lavrado": 0.0,
+   "d_foco_OESTE_m_centroide_voronoi": 953.0,
+   "d_foco_ESTE_m_centroide_voronoi": 478.0
+  }
+ },
+ "por_bloco": {
+  "B2": {
+   "ha": 10.87,
+   "pct_defice_2026": 25.8,
+   "pct_novo_M2": 19.9,
+   "pct_nu2021_chao_lavrado": 0.0
+  },
+  "B3": {
+   "ha": 9.92,
+   "pct_defice_2026": 46.9,
+   "pct_novo_M2": 13.9,
+   "pct_nu2021_chao_lavrado": 16.3
+  },
+  "B4": {
+   "ha": 4.17,
+   "pct_defice_2026": 6.2,
+   "pct_novo_M2": 0.0,
+   "pct_nu2021_chao_lavrado": 1.2
+  },
+  "Erica Novo": {
+   "ha": 5.35,
+   "pct_defice_2026": 2.8,
+   "pct_novo_M2": 0.7,
+   "pct_nu2021_chao_lavrado": 0.0
+  }
+ },
+ "registos": {
+  "total": 221,
+  "com_posicao": 111,
+  "sem_posicao": 110,
+  "por_classe": {
+   "SEM POSICAO": 53,
+   "COLOCADO": 51,
+   "FORA DA BANDA": 40,
+   "INFERIDO": 24,
+   "COLOCADO-BLOCO": 20,
+   "AMBIGUO": 16,
+   "FORA DO CONJUNTO": 16,
+   "NAO E AMOSTRA": 1
+  }
+ },
+ "m2": {
+  "sao_antes_ha": 20.97,
+  "defice26_ha": 7.86,
+  "novo26_ha": 3.58,
+  "novo25_ha": 1.98
+ },
+ "datacao_focos_disco_120m": {
+  "OESTE": {
+   "2017-07-02": 0.0,
+   "2018-08-31": 0.0,
+   "2019-09-02": 0.0,
+   "2020-07-18": 0.0,
+   "2021-07-16": 0.0,
+   "2022-07-31": 0.0,
+   "2023-08-07": 0.0,
+   "2024-07-22": 0.09,
+   "2025-08-14": 1.02,
+   "2026-07-27": 1.49
+  },
+  "ESTE": {
+   "2017-07-02": 1.13,
+   "2018-08-31": 0.01,
+   "2019-09-02": 0.07,
+   "2020-07-18": 0.05,
+   "2021-07-16": 0.34,
+   "2022-07-31": 0.03,
+   "2023-08-07": 0.04,
+   "2024-07-22": 0.11,
+   "2025-08-14": 1.14,
+   "2026-07-27": 0.48
+  }
+ },
+ "datacao_resumo": {
+  "OESTE": {
+   "ha_em_defice_2026_no_disco_120m": 2.6,
+   "ha_com_defice_continuo_desde_2024_ou_antes": 0.09,
+   "fraccao_anterior_a_2025": 0.035
+  },
+  "ESTE": {
+   "ha_em_defice_2026_no_disco_120m": 3.4,
+   "ha_com_defice_continuo_desde_2024_ou_antes": 1.78,
+   "fraccao_anterior_a_2025": 0.524
+  }
+ },
+ "taxa_de_base": {
+  "sao_antes_ha": 20.97,
+  "com_historico_ha": 9.34,
+  "defice26_sobre_terreno_sao_pct": 17.1,
+  "defice26_sobre_terreno_com_historico_pct": 45.8,
+  "razao": 2.68
+ },
+ "M_hapla": [
+  {
+   "talhao": "B1",
+   "solo": 250.0,
+   "raiz": 65.0,
+   "defice26_pct": null,
+   "tem_posicao": false
+  },
+  {
+   "talhao": "B3",
+   "solo": 28.0,
+   "raiz": 37.0,
+   "defice26_pct": 46.9,
+   "tem_posicao": true
+  },
+  {
+   "talhao": "B4",
+   "solo": 46.0,
+   "raiz": 156.0,
+   "defice26_pct": 6.2,
+   "tem_posicao": true
+  },
+  {
+   "talhao": "V7",
+   "solo": 202.0,
+   "raiz": 72.0,
+   "defice26_pct": 21.2,
+   "tem_posicao": true
+  },
+  {
+   "talhao": "Erica Novo E",
+   "solo": 54.0,
+   "raiz": 78.0,
+   "defice26_pct": 2.8,
+   "tem_posicao": true
+  }
+ ],
+ "M_hapla_contra_defice": {
+  "n_unidades_colocadas": 4,
+  "unidades": [
+   "B3",
+   "B4",
+   "V7",
+   "Erica Novo E"
+  ],
+  "rho_defice_x_contagem_solo": -0.4,
+  "rho_defice_x_contagem_raiz": -0.8,
+  "nota": "n=4, uma data (2026-05-06), um laboratorio, um metodo. Com n=4 o p exacto de |rho|=1 e 2/4! = 0,083; nenhum destes valores e significativo em nenhum criterio. O sinal e NEGATIVO: mais nematodes onde ha MENOS defice.",
+  "contagem_mais_alta_sem_posicao": [
+   {
+    "talhao": "B1",
+    "solo": 250.0,
+    "raiz": 65.0,
+    "defice26_pct": null,
+    "tem_posicao": false
+   }
+  ]
+ },
+ "matriz": [
+  {
+   "organismo": "Fusarium cerealis (Madeira)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Fusarium equiseti (Madeira)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Fusarium oxysporum (Madeira)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Neofusicoccum parvum (Madeira)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Armillaria sp. (Raiz)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "NEGATIVO"
+    ]
+   },
+   "tem_positivo": false,
+   "tem_negativo": true,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": [
+    "granel_kiwi1000_zona_por_testemunho"
+   ]
+  },
+  {
+   "organismo": "Ceratobasidium sp. (Raiz)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Fusarium oxysporum (Raiz)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Fusarium solani (Raiz)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Neofusicoccum parvum (Raiz)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Meloidogyne hapla (Raiz)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ],
+    "B1_sem_posicao": [
+     "POSITIVO"
+    ],
+    "unidade_colocada": [
+     "POSITIVO",
+     "POSITIVO",
+     "POSITIVO",
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": true,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Globisporangium intermedium (Raiz)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": true,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Armillaria sp. (Solo)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "NEGATIVO"
+    ],
+    "espanha_rejeitado": [
+     "NEGATIVO",
+     "NEGATIVO"
+    ]
+   },
+   "tem_positivo": false,
+   "tem_negativo": true,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": [
+    "granel_kiwi1000_zona_por_testemunho"
+   ]
+  },
+  {
+   "organismo": "Rosellinia sp. (Solo)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "NEGATIVO"
+    ],
+    "espanha_rejeitado": [
+     "NEGATIVO",
+     "NEGATIVO"
+    ]
+   },
+   "tem_positivo": false,
+   "tem_negativo": true,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": [
+    "granel_kiwi1000_zona_por_testemunho"
+   ]
+  },
+  {
+   "organismo": "Meloidogyne hapla (Solo)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "POSITIVO"
+    ],
+    "B1_sem_posicao": [
+     "POSITIVO"
+    ],
+    "unidade_colocada": [
+     "POSITIVO",
+     "POSITIVO",
+     "POSITIVO",
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": true,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Oomicetes (general) (Solo)",
+   "fontes": {
+    "granel_kiwi1000_zona_por_testemunho": [
+     "NEGATIVO"
+    ],
+    "espanha_rejeitado": [
+     "NEGATIVO",
+     "NEGATIVO"
+    ]
+   },
+   "tem_positivo": false,
+   "tem_negativo": true,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": true,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": true,
+   "negativo_com_lugar": [
+    "granel_kiwi1000_zona_por_testemunho"
+   ]
+  },
+  {
+   "organismo": "Dactylonectria sp. (Raiz)",
+   "fontes": {
+    "espanha_rejeitado": [
+     "POSITIVO",
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": false,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": false,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Fusarium sp. (Raiz)",
+   "fontes": {
+    "espanha_rejeitado": [
+     "POSITIVO",
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": false,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": false,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Ilyonectria liriodendri (Raiz)",
+   "fontes": {
+    "espanha_rejeitado": [
+     "POSITIVO",
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": false,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": false,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Rhizoctonia solani (Raiz)",
+   "fontes": {
+    "espanha_rejeitado": [
+     "POSITIVO",
+     "POSITIVO"
+    ]
+   },
+   "tem_positivo": true,
+   "tem_negativo": false,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": false,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": false,
+   "negativo_com_lugar": []
+  },
+  {
+   "organismo": "Oomicetes (general) (Raiz)",
+   "fontes": {
+    "espanha_rejeitado": [
+     "NEGATIVO",
+     "NEGATIVO"
+    ]
+   },
+   "tem_positivo": false,
+   "tem_negativo": true,
+   "ensaiada_em_unidade_colocada": false,
+   "ensaiada_com_lugar": false,
+   "so_no_granel": false,
+   "fonte_ganfei_existe": false,
+   "negativo_com_lugar": []
+  }
+ ],
+ "matriz_resumo": {
+  "linhas_organismo_x_matriz": 20,
+  "ensaiadas_em_unidade_colocada": 2,
+  "ensaiadas_com_algum_lugar_declarado": 15,
+  "sem_qualquer_lugar_declarado": 5,
+  "linhas_com_algum_NEGATIVO": 5,
+  "linhas_com_NEGATIVO_a_partir_de_amostra_com_lugar": 4,
+  "linhas_sem_qualquer_fonte_de_Ganfei": [
+   "Dactylonectria sp. (Raiz)",
+   "Fusarium sp. (Raiz)",
+   "Ilyonectria liriodendri (Raiz)",
+   "Rhizoctonia solani (Raiz)",
+   "Oomicetes (general) (Raiz)"
+  ],
+  "linhas_cuja_unica_fonte_e_o_granel_331_2025": [
+   "Fusarium cerealis (Madeira)",
+   "Fusarium equiseti (Madeira)",
+   "Fusarium oxysporum (Madeira)",
+   "Neofusicoccum parvum (Madeira)",
+   "Armillaria sp. (Raiz)",
+   "Ceratobasidium sp. (Raiz)",
+   "Fusarium oxysporum (Raiz)",
+   "Fusarium solani (Raiz)",
+   "Neofusicoccum parvum (Raiz)",
+   "Globisporangium intermedium (Raiz)"
+  ],
+  "negativos_com_lugar": [
+   "Armillaria sp. (Raiz)",
+   "Armillaria sp. (Solo)",
+   "Rosellinia sp. (Solo)",
+   "Oomicetes (general) (Solo)"
+  ],
+  "linhas_com_lugar_mas_sem_par_de_comparacao": 10,
+  "taxa_distintos": 15,
+  "taxa": [
+   "Armillaria sp.",
+   "Ceratobasidium sp.",
+   "Dactylonectria sp.",
+   "Fusarium cerealis",
+   "Fusarium equiseti",
+   "Fusarium oxysporum",
+   "Fusarium solani",
+   "Fusarium sp.",
+   "Globisporangium intermedium",
+   "Ilyonectria liriodendri",
+   "Meloidogyne hapla",
+   "Neofusicoccum parvum",
+   "Oomicetes (general)",
+   "Rhizoctonia solani",
+   "Rosellinia sp."
+  ],
+  "nota_cobertura": "Os 15 taxa sao fungos, oomicetas e um nematode. Nao ha uma unica linha bacteriana nem viral em toda a matriz: nem Pseudomonas syringae pv. actinidiae, nem qualquer outra. Todo o diferencial bacteriano e viral esta NAO TESTADO, com ou sem posicao."
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "unidades": {
+  "poligono do pomar": {
+   "ha": 30.31,
+   "pct_kiwi": 95.1501154734411,
+   "pct_sem_declaracao": 2.507423292642692
+  },
+  "referencia sistematica": {
+   "ha": 1.1,
+   "pct_kiwi": 100.0,
+   "pct_sem_declaracao": 0.0
+  },
+  "com pergola (LiDAR)": {
+   "ha": 26.54,
+   "pct_kiwi": 99.43481537302185,
+   "pct_sem_declaracao": 0.26375282592313487
+  },
+  "SEM pergola (LiDAR)": {
+   "ha": 3.77,
+   "pct_kiwi": 64.9867374005305,
+   "pct_sem_declaracao": 18.30238726790451
+  },
+  "N1 foco OESTE": {
+   "ha": 1.52,
+   "pct_kiwi": 100.0,
+   "pct_sem_declaracao": 0.0
+  },
+  "N3 leste (cortado 2024?)": {
+   "ha": 1.43,
+   "pct_kiwi": 90.20979020979021,
+   "pct_sem_declaracao": 9.090909090909092
+  },
+  "foco ESTE, disco todo": {
+   "ha": 2.55,
+   "pct_kiwi": 96.07843137254902,
+   "pct_sem_declaracao": 0.7843137254901961
+  }
+ },
+ "nomes": {
+  "6": "MILHO",
+  "124": "KIWI",
+  "982": "CABECEIRAS CULT. PERMANENTES -\u00c1REA \u00daTIL",
+  "89": "POUSIO",
+  "34": "VINHA",
+  "5": "AVEIA",
+  "142": "PRADOS TEMPOR\u00c1RIOS",
+  "267": "CONSOCIA\u00c7\u00d5ES ANUAIS E OUTRAS CULT. FORRAG. ANUAIS",
+  "143": "PASTAGENS PERMANENTES",
+  "280": "PASTAGENS ARBUSTIVAS",
+  "78": "PIMENTO",
+  "33": "TOMATE",
+  "265": "SUPERF\u00cdCIE ARBUSTIVA N\u00c3O PASTORE\u00c1VEL",
+  "67": "AZEVEM",
+  "8": "SORGO",
+  "939": "EP-BOSQUETE E FORMA\u00c7\u00d5ES RELIQUIAIS-\u00c1REA \u00daTIL",
+  "231": "MELANCIA"
+ }
+}

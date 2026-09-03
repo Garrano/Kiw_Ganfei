@@ -1,0 +1,468 @@
+{
+ "principal": [
+  {
+   "ficheiro": "2017-07-02.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.18,
+   "vmin": -0.9655172228813171,
+   "vmax": 0.9508832693099976,
+   "vmed": 0.5424,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.7787,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2018-08-31.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.2989690601825714,
+   "vmax": 0.9323350191116333,
+   "vmed": 0.5865,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8535,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2019-09-02.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -1.0,
+   "vmax": 0.9934425950050354,
+   "vmed": 0.4974,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8707,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2020-07-18.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -1.0,
+   "vmax": 0.9458239078521729,
+   "vmed": 0.4168,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8381,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2021-07-16.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.9789473414421082,
+   "vmax": 0.9416863918304443,
+   "vmed": 0.5363,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.853,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2022-07-31.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -1.0,
+   "vmax": 0.9389408230781555,
+   "vmed": 0.4879,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8521,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2023-08-07.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.9900000095367432,
+   "vmax": 1.0,
+   "vmed": 0.4996,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8893,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2024-07-22.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -1.0,
+   "vmax": 1.0,
+   "vmed": 0.5094,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8617,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2025-06-17.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.4314720928668976,
+   "vmax": 0.9422074556350708,
+   "vmed": 0.5554,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8225,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2025-08-14.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.9883720874786377,
+   "vmax": 0.9316770434379578,
+   "vmed": 0.4818,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8292,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2026-07-27.tif",
+   "crs": "EPSG:32629",
+   "shape": "100x200",
+   "res": "10.000,-10.000",
+   "bounds": [
+    529950.0,
+    4654600.0,
+    531950.0,
+    4655600.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -1.0,
+   "vmax": 0.9381858110427856,
+   "vmed": 0.4633,
+   "nan_dentro_pomar_pct": 0.0,
+   "ndvi_medio_pomar": 0.8082,
+   "grelha_igual_1a": true
+  }
+ ],
+ "b1": [
+  {
+   "ficheiro": "2017-07-02.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.5,
+   "vmin": -0.061826884746551514,
+   "vmax": 0.9435028433799744,
+   "vmed": 0.5332,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2018-08-31.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.03622047230601311,
+   "vmax": 0.92364901304245,
+   "vmed": 0.5154,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2019-09-02.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.037724897265434265,
+   "vmax": 0.9531885981559753,
+   "vmed": 0.513,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2020-07-18.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.03639010339975357,
+   "vmax": 0.9392049908638,
+   "vmed": 0.4979,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2021-07-16.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.040280211716890335,
+   "vmax": 0.9404608011245728,
+   "vmed": 0.5394,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2022-07-31.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.02434077113866806,
+   "vmax": 0.9482923746109009,
+   "vmed": 0.4913,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2023-08-07.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.0644783154129982,
+   "vmax": 0.9494799375534058,
+   "vmed": 0.5119,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2024-07-22.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.08852910995483398,
+   "vmax": 0.9596792459487915,
+   "vmed": 0.5533,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2025-06-17.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.4199443757534027,
+   "vmax": 0.9414041042327881,
+   "vmed": 0.5451,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2025-08-14.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.05263157933950424,
+   "vmax": 0.9085685610771179,
+   "vmed": 0.4742,
+   "grelha_igual_1a": true
+  },
+  {
+   "ficheiro": "2026-07-27.tif",
+   "crs": "EPSG:32629",
+   "shape": "80x100",
+   "res": "10.000,-10.000",
+   "bounds": [
+    528400.0,
+    4654900.0,
+    529400.0,
+    4655700.0
+   ],
+   "bate_aoi": true,
+   "grelha10": true,
+   "nodata": "nan",
+   "nan_pct": 0.0,
+   "vmin": -0.03377947583794594,
+   "vmax": 0.9340050220489502,
+   "vmed": 0.4889,
+   "grelha_igual_1a": true
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "nota": "2026 excluida do calculo — foi a cena da seleccao",
+ "satelites": [
+  {
+   "nome": "#1  ·  79 m do oriental",
+   "celulas": 18,
+   "base": 0.8781850423131671,
+   "v2025": 0.8301408290863037,
+   "degrau_2025": -0.048044213226863364,
+   "percentil_nula": 2.4,
+   "passa": true,
+   "nula_p10": -0.03693017959594731,
+   "nula_mediana": -0.017251661845615884
+  },
+  {
+   "nome": "#2  ·  82 m do oriental",
+   "celulas": 22,
+   "base": 0.8719767842973981,
+   "v2025": 0.8306208252906799,
+   "degrau_2025": -0.04135595900671818,
+   "percentil_nula": 4.7,
+   "passa": true,
+   "nula_p10": -0.03541619266782489,
+   "nula_mediana": -0.017954272883278943
+  },
+  {
+   "nome": "#3  ·  143 m do ocidental",
+   "celulas": 21,
+   "base": 0.9012929030827114,
+   "v2025": 0.8647851347923279,
+   "degrau_2025": -0.03650776829038349,
+   "percentil_nula": 8.7,
+   "passa": true,
+   "nula_p10": -0.035773966993604356,
+   "nula_mediana": -0.017787418195179483
+  }
+ ],
+ "n_passa": 3
+}

@@ -1,0 +1,58 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# O que NUNCA entra, e porquê
+# ─────────────────────────────────────────────────────────────────────────────
+# Este repositório é o registo REPRODUZÍVEL: código, documentos da cadeia,
+# resultados em JSON/CSV e as peças de apresentação. São ~15 MB.
+#
+# O que fica de fora são 3,7 GB de duas naturezas diferentes:
+#
+#   1 · CACHES — regeneráveis pelo próprio código. Guardá-las é guardar o que
+#       os scripts sabem refazer, e faz o repositório crescer sem acrescentar
+#       nada que se possa auditar.
+#
+#   2 · PRODUTOS DA DGT — as folhas LiDAR (MDS/MDT 50 cm) e as ortofotos. **Não
+#       são nossas para redistribuir.** E desde 01-09-2026 o endpoint de
+#       descarga da DGT passou a exigir autenticação, o que torna a origem não
+#       re-obtenível por terceiros — mas isso é razão para o registar, não para
+#       republicar material de outra entidade.
+
+# ── credenciais: nunca, em nenhuma circunstância
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+.claude/settings.local.json
+
+# ── caches de imagem, regeneráveis
+_reg01_cache/
+_reg01_landsat_cache/
+_densa_ganfei/
+_orto297313/
+_controlo3/_cache/
+sentinel_b1/
+
+# ── produtos de outras entidades
+*.tif
+*.tiff
+*.las
+*.laz
+ganfei_s2/orto/
+ganfei_s2/lidar/
+
+# ── matrizes intermédias
+*.npy
+*.npz
+
+# ── saídas grandes de figura que não são peças de apresentação
+*.pdf
+!P0*.png
+!P0*.svg
+
+# ── habituais
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

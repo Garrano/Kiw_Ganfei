@@ -1,0 +1,27 @@
+{
+ "foco OESTE da cadeia": {
+  "ha": 2.48,
+  "altura": 2.2458479404449463,
+  "frac": 90.25,
+  "pct_sem_pergola": 12.096774193548388
+ },
+ "foco ESTE da cadeia": {
+  "ha": 2.55,
+  "altura": 0.4691295623779297,
+  "frac": 35.0,
+  "pct_sem_pergola": 50.19607843137255
+ },
+ "foco ESTE plantado": {
+  "ha": 1.54,
+  "altura": 2.084434986114502,
+  "frac": 68.125,
+  "pct_sem_pergola": 22.727272727272727
+ },
+ "defice 2026 total": {
+  "ha": 7.86,
+  "altura": 1.717342734336853,
+  "frac": 53.500003814697266,
+  "pct_sem_pergola": 40.71246819338422
+ },
+ "pomar_sem_pergola_ha": 3.77
+}

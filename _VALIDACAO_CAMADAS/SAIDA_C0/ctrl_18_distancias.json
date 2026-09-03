@@ -1,0 +1,22 @@
+{
+ "C1a": {
+  "d_bordo_pomar_m": 528,
+  "d_centroide_pomar_m": 1297
+ },
+ "C1b": {
+  "d_bordo_pomar_m": 781,
+  "d_centroide_pomar_m": 1580
+ },
+ "C1c": {
+  "d_bordo_pomar_m": 1111,
+  "d_centroide_pomar_m": 1850
+ },
+ "C2": {
+  "d_bordo_pomar_m": 293,
+  "d_centroide_pomar_m": 728
+ },
+ "C3": {
+  "d_bordo_pomar_m": 87,
+  "d_centroide_pomar_m": 754
+ }
+}

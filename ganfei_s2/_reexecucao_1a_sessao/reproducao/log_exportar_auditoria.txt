@@ -1,0 +1,15 @@
+/home/claude/cega/work/../scripts/exportar_auditoria.py:9: ResourceWarning: unclosed file <_io.TextIOWrapper name='sentinel/masks.json' mode='r' encoding='utf-8'>
+  masks = json.load(open("sentinel/masks.json"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+-> focos_datacao_geometria.csv
+/home/claude/cega/work/../scripts/exportar_auditoria.py:51: ResourceWarning: unclosed file <_io.TextIOWrapper name='lidar/dem_aoi.json' mode='r' encoding='utf-8'>
+  dem = np.load("lidar/dem_aoi.npy"); meta = json.load(open("lidar/dem_aoi.json"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+   pomar 6.972 m  percentil 50.0
+   saudavel 7.019 m  percentil 52.4
+   manchaW 6.671 m  percentil 32.4
+   zona0 8.026 m  percentil 92.4
+-> lidar_topografia_por_mascara.csv
+   r = -0.338  |  manchaW defice vs previsto = -0.107
+-> cota_vs_ndvi.csv
+exit=0
