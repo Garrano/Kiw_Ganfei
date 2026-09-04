@@ -72,7 +72,7 @@ import matplotlib.patheffects as pe
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "base"))
-from carta_base import (Base, COR, PAPEL, TINTA, TINTA2, TINTA3, virg,  # noqa
+from carta_base import (Base, cartela_institucional, COR, PAPEL, TINTA, TINTA2, TINTA3, virg,  # noqa
                         _halo)
 
 CONDUTA = "#1B6E8C"
@@ -345,6 +345,7 @@ b = Base()
 
 # ── 1 · o papel vegetal ─────────────────────────────────────────────────────
 fig, ax, axl = b.figura(larg=16.0, legenda=True)
+ytop = cartela_institucional(fig)
 axl.set_visible(False)
 desenha(ax, b, transparente=True)
 b.moldura(ax)
@@ -365,12 +366,12 @@ b.toponimos(ax)
 # perguntas vão no corpo do email que acompanha o mapa. `PERGUNTAS` continua
 # aqui, e é de onde esse email as tira — para não haver duas listas a divergir.
 b.moldura(ax)
-fig.text(0.035, 0.972, "GANFEI · ESQUEMA DE REGA", fontsize=21, weight="bold",
+fig.text(0.035, ytop, "GANFEI · ESQUEMA DE REGA", fontsize=21, weight="bold",
          color=TINTA, va="top", ha="left")
-fig.text(0.955, 0.972, "17 válvulas  ·  5 sectores  ·  13 sectores "
+fig.text(0.955, ytop, "17 válvulas  ·  5 sectores  ·  13 sectores "
                        "impressos", fontsize=10.5, color=TINTA2, va="top",
          ha="right")
-fig.text(0.955, 0.938, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
+fig.text(0.955, ytop - 0.034, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
          fontsize=8.2, color=TINTA3, va="top", ha="right")
 legenda(axl, b)
 fora2 = os.path.join(AQUI, "P12_camada_rega_isolada.png")

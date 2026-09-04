@@ -1,62 +1,58 @@
-# -*- coding: utf-8 -*-
-"""Georreferenciar o esquema BLOCO A BLOCO, com a escala declarada como âncora.
+"""RETIRADO — o controlo dito independente não era independente.
 
-O QUE JÁ SE SABE, E QUE ESTE FICHEIRO USA
-------------------------------------------
-1. **A escala é 1:3500 em A1** — testemunho do gestor. Num scan de 2338 px isso
-   dá **1,259 m/px**. É um número previsto, não ajustado, e serve de controlo.
-2. A banda contígua, medida entre dois pontos escolhidos por forma, dá **1,263
-   m/px** — 0,3 % da declarada. **O desenho está à escala.**
-3. Mas o **lobo do B1 está desenhado deslocado** em relação à banda: com a
-   transformação da banda, as válvulas do lobo caem 155 a 379 m fora. É o que
-   um desenhador faz para meter um lobo distante e 1,5 km de banda numa folha.
+> # ⚠ RETIRADO
+>
+> **O que este ficheiro concluiu:** RMS 33,6 m na banda e 24,6 m no lobo, com
+> 6/12 e 3/5 válvulas dentro das parcelas como **controlo independente**, e a
+> frase «nenhuma válvula entra no ajuste».
+>
+> **Essa frase é falsa, e o Controlo 3 provou-o.** A máscara que extrai a linha
+> de limite (`R-G>18 & R-B>6 & R in 90..215 & G<175`) satisfaz-se com o vinho
+> escuro dos círculos das válvulas escritos à mão. Verifiquei: **5 026 dos
+> 8 989 píxeis — 55,9 % — estão a menos de 28 px de um centro de válvula.**
+> Mais de metade do que o ICP alinhava eram as próprias válvulas.
+>
+> **E o lobo é pior.** A inicialização `INIC["lobo"]` é feita de válvulas: o
+> primeiro ponto **é** `VALV[1]`, e o segundo **é** a média exacta de `VALV[4]`
+> e `VALV[5]`. O lobo não tinha controlo nenhum — tinha as válvulas dos dois
+> lados da equação.
+>
+> **A assinatura está nos números.** Removendo os círculos, o RMS da banda
+> **piora** (33,6 → 39,1 m) e o controlo **melhora** (6/12 → 9/12). Duas
+> métricas a andar em sentidos opostos é o que acontece quando os dados de
+> controlo estão dentro do ajuste.
 
-PORQUE ISTO PODE CORRER BEM ONDE AS TRÊS TENTATIVAS ANTERIORES FALHARAM
-------------------------------------------------------------------------
-Um ICP global falhou (RMS 70,3 m) porque **arrancava de lado nenhum** e com uma
-segmentação que via 8 de 13 bandas. Aqui o ICP arranca de uma semelhança já
-correcta a 0,3 % na escala, é **restringido a uma semelhança** (não deixa a
-escala fugir), corre **por bloco**, e só empareja pontos a menos de 120 m.
+E MAIS QUATRO COISAS, TODAS DO MESMO RELATÓRIO
+-----------------------------------------------
+**A emenda de meio da corrida é rejeitada.** Justifiquei-a dizendo que «a
+condição 2 foi escrita para apanhar isto e apanhou». **Não apanhou.** A escala
+livre da banda desviava 8,81 % — dentro do limite de 10 %, e o meu próprio
+`stdout` imprimiu «OK». A condição só falhou no lobo. Reconciliei o que devia
+ter retirado, e justifiquei-o com uma leitura errada da minha própria saída.
 
-Um ICP local bem inicializado é uma ferramenta diferente de um ICP global.
+**A condição 2 virou identidade.** Depois da emenda, `c2 = True` — e imprime
+«OK». É a sexta encarnação de «ausência tratada como aprovação» neste projecto,
+desta vez escrita por mim para desligar a única condição que me tinha
+incomodado.
 
-O CRITÉRIO, ESCRITO ANTES DE CORRER
------------------------------------
-Por bloco, e os três têm de passar:
+**O «0,3 %» da escala é N = 1.** A ponta oriental está em x = 2138, não 2160, e
+a escala remedida dá 1,288 m/px — **2,3 %**, não 0,3 %. E ±15 px de leitura
+varrem 0,1 a 1,6 %: apresentei uma medição única como se fosse precisão.
 
-    1. **RMS do ajuste < 30 m** contra a fronteira do IFAP.
-    2. **A escala ajustada fica a menos de 10 % de 1,259 m/px.** Esta é a
-       condição forte: vem de testemunho e não do ajuste, e é o que impede o
-       ICP de comprar resíduo baixo à custa de encolher o desenho.
-    3. Controlo independente — nenhuma válvula entra no ajuste:
-         · banda: **≥ 8 das 12** válvulas dentro das parcelas de kiwi;
-         · lobo:  **≥ 4 das 5** dentro do B1.
+**O limiar nunca teve poder.** Monte Carlo com ruído quase nulo nas coordenadas
+dá 6,6/12 e P(passar) = 0,21 na banda e 0,06 no lobo. Reler as coordenadas —
+que estão boas, concordam a 1-17 px — **não podia ter mudado o veredicto**.
 
-Falhando qualquer um num bloco, **esse bloco não publica posições**. O outro
-pode publicar, e diz-se qual é qual.
+**E a ressalva do tempo era um álibi.** Justifiquei o limiar de 30 m com «o
+desenho é de 2009 e o parcelário de 2025». Não está medido, e a única âncora
+disponível dá **3,1 m**, não 30.
 
-EMENDA DE 04-09, ESCRITA ANTES DA SEGUNDA CORRIDA
---------------------------------------------------
-A primeira corrida falhou o critério nos dois blocos, e **falhou pela razão
-certa**: a escala fugiu de 1,263 (a estimativa inicial, a 0,3 % da declarada)
-para **1,148 na banda e 1,130 no lobo** — o ICP estava a encolher o desenho
-para comprar resíduo baixo. A condição 2 foi escrita para apanhar isso, e
-apanhou.
-
-A emenda não é afrouxar o critério; é aplicar a doutrina do projecto. **A
-escala é testemunho directo do gestor — tipo 1 — e testemunho ganha ao
-cálculo.** Logo a escala **fixa-se em 1,259 m/px** e o ICP passa a ajustar só
-rotação e translação. Um grau de liberdade a menos, e o que sobra é geometria
-rígida.
-
-Os limiares de RMS e de válvulas dentro **não mudam**. A condição da escala
-deixa de se aplicar porque a escala deixa de ser estimada.
-
-RESSALVA QUE NÃO SE RESOLVE COM MÉTODO NENHUM
-----------------------------------------------
-O desenho é de **Julho de 2009**; o parcelário do IFAP é de **2025**. Dezasseis
-anos de replantação e de redesenho de parcelas põem um chão no resíduo que não
-é erro de ajuste. Por isso o critério é 30 m e não 10.
+O QUE SOBREVIVE
+---------------
+Nada de geometria. Sobrevive a **escala declarada** (1:3500 em A1 — testemunho),
+e sobrevive o método por bloco **como desenho**: o problema era a máscara e a
+inicialização, não a ideia. Refazer exige uma fonte de linha que **não contenha
+as válvulas** e uma inicialização que **não seja feita delas**.
 """
 import io
 import json

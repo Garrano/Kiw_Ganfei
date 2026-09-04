@@ -41,10 +41,11 @@ matplotlib.use("Agg")
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "base"))
-from carta_base import Base, PAPEL, TINTA, TINTA2, TINTA3, virg   # noqa: E402
+from carta_base import cartela_institucional, Base, PAPEL, TINTA, TINTA2, TINTA3, virg   # noqa: E402
 
 b = Base()
 fig, ax, axl = b.figura(larg=16.0)
+ytop = cartela_institucional(fig)
 
 b.terreno(ax)
 b.cadastro(ax)
@@ -59,18 +60,18 @@ b.toponimos(ax)
 b.moldura(ax)
 
 # ── cartela ─────────────────────────────────────────────────────────────────
-fig.text(0.035, 0.972, "GANFEI · CARTA-BASE", fontsize=21, weight="bold",
+fig.text(0.035, ytop, "GANFEI · CARTA-BASE", fontsize=21, weight="bold",
          color=TINTA, va="top", ha="left")
-fig.text(0.035, 0.930, "Emparcelamento de Ganfei, Valença",
+fig.text(0.035, ytop - 0.042, "Emparcelamento de Ganfei, Valença",
          fontsize=10.5, color=TINTA2, va="top", ha="left")
 
 tot = sum(b.areas.values())
 sp = b.sem_posicao()
-fig.text(0.955, 0.972,
+fig.text(0.955, ytop,
          "%s ha na partição  ·  5 sectores  ·  17 válvulas, posições por resolver"
          % virg(tot),
          fontsize=10.5, color=TINTA2, va="top", ha="right")
-fig.text(0.955, 0.938, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
+fig.text(0.955, ytop - 0.034, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
          fontsize=8.2, color=TINTA3, va="top", ha="right")
 
 b.legenda(

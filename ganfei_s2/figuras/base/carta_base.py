@@ -82,6 +82,48 @@ def _halo(w=3.0, c=PAPEL):
     return [pe.withStroke(linewidth=w, foreground=c)]
 
 
+# ── identidade institucional ────────────────────────────────────────────────
+#
+# O logótipo é o da CCDR-N, extraído do cabeçalho das próprias circulares da
+# Estação de Avisos (`circul_10_junho_2025_EAEDM.pdf`, 172×57 px). Não é
+# redesenhado nem aproximado: é a marca deles, tirada de um documento deles.
+#
+# A designação vem do gestor da unidade — testemunho directo. A portaria dos
+# estatutos de 2026 não nomeia divisões temáticas (só as territoriais), mas as
+# divisões são criadas por deliberação do conselho directivo e não pela
+# portaria: o silêncio do diploma não é inexistência.
+INSTITUICAO = [
+    ("CCDR-N  ·  Comissão de Coordenação e Desenvolvimento Regional do Norte, I.P.", 7.4, TINTA2),
+    ("Divisão Agroalimentar e Pescas — Entre Douro e Minho", 8.6, TINTA),
+    ("Estação de Avisos de Entre Douro e Minho", 7.4, TINTA2),
+]
+LOGO = os.path.join(AQUI, "..", "marca", "ccdrn.png")
+
+
+def cartela_institucional(fig, x=0.035, y=0.988, alt_logo=0.052):
+    """O logótipo e a designação, no topo da folha.
+
+    Devolve a fracção de figura ocupada, para o título se acomodar abaixo.
+    """
+    import matplotlib.image as mpimg
+    if os.path.exists(LOGO):
+        im = mpimg.imread(LOGO)
+        h, w = im.shape[:2]
+        larg = alt_logo * (w / h) * (fig.get_figheight() / fig.get_figwidth())
+        ax = fig.add_axes([x, y - alt_logo, larg, alt_logo], zorder=20)
+        ax.imshow(im, interpolation="lanczos")
+        ax.axis("off")
+        xt = x + larg + 0.014
+    else:
+        xt = x
+    yy = y - 0.010
+    for txt, tam, cor in INSTITUICAO:
+        fig.text(xt, yy, txt, fontsize=tam, color=cor, va="top", ha="left",
+                 weight="bold" if tam > 8 else "normal")
+        yy -= (tam + 4.5) / (fig.get_figheight() * 72)
+    return y - alt_logo - 0.012
+
+
 def virg(x, casas=1):
     return ("%%.%df" % casas % x).replace(".", ",")
 
@@ -117,18 +159,21 @@ class Base(object):
         return sorted(k for k in self.valv if not self.tem_posicao(k))
 
     # ── enquadramento ───────────────────────────────────────────────────────
-    def figura(self, larg=16.0, legenda=True):
+    def figura(self, larg=16.0, legenda=True, cabecalho=1.62, rodape=0.42):
+        """A folha. `cabecalho` em polegadas, para a cartela institucional."""
         rl = 0.225 if legenda else 0.0
         w = 0.955 - rl - 0.035
-        alt = larg * w / ((self.bb[2] - self.bb[0]) / (self.bb[3] - self.bb[1]))
-        alt = alt / 0.845 + 0.9
+        mapa = larg * w / ((self.bb[2] - self.bb[0]) / (self.bb[3] - self.bb[1]))
+        alt = mapa + cabecalho + rodape
+        self._cabecalho, self._alt = cabecalho, alt
         fig = plt.figure(figsize=(larg, alt))
-        ax = fig.add_axes([0.035, 0.045, w, 0.845])
+        ax = fig.add_axes([0.035, rodape / alt, w, mapa / alt])
         ax.set_xlim(self.bb[0], self.bb[2])
         ax.set_ylim(self.bb[1], self.bb[3])
         ax.set_aspect("equal")
         ax.set_facecolor(PAPEL)
-        axl = fig.add_axes([0.035 + w + 0.022, 0.045, rl - 0.022, 0.845]) if legenda else None
+        axl = (fig.add_axes([0.035 + w + 0.022, rodape / alt, rl - 0.022, mapa / alt])
+               if legenda else None)
         if axl is not None:
             axl.set_xlim(0, 1)
             axl.set_ylim(0, 1)
