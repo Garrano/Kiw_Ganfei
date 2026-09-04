@@ -1,25 +1,49 @@
-# -*- coding: utf-8 -*-
-"""O esquema não tem UMA escala — e é por isso que nada o consegue rectificar.
+"""RETIRADO — a conclusão deste ficheiro estava errada, e a razão fica escrita.
 
-O QUE ISTO FECHA
-----------------
-Quatro reconstruções das posições das válvulas discordaram entre 92 e 398 m.
-Duas tentativas minhas de georreferenciar o desenho falharam: ICP automático
-com **RMS 70,3 m**, e ajuste afim com pontos escolhidos à vista com **RMS
-189,1 m** — sete vezes o chão de leitura (±25 m).
+> # ⚠ RETIRADO
+>
+> **O que este ficheiro concluiu a 04-09:** «o desenho não está a uma escala
+> única; a banda vai comprimida 1,9× em relação ao lobo; nenhuma transformação
+> global o rectifica».
+>
+> **É falso, e a culpa é de uma leitura minha.** Eu tinha posto a ponta
+> ORIENTAL do desenho em x = 1562 px. Está em **x ≈ 2160** — falhei-a por 600
+> píxeis, ou seja **750 m**. Com a ponta errada, a banda media 517 px em vez de
+> 1164, e claro que a escala saía a dobrar.
+>
+> **O gestor deu depois a escala: 1:3500 em A1.** Num scan de 2338 px isso
+> prevê **1,259 m/px**. Medida outra vez com a ponta certa, a banda dá **1,263
+> m/px — 0,3 % de desvio**. O desenho **está** à escala declarada.
 
-Quando o resíduo é muito maior do que o erro de medição, o problema não é a
-medição: é o **modelo**. E o modelo era «existe uma transformação global que
-leva o desenho ao terreno».
+O QUE FICA VERDADEIRO, e é o oposto do que eu escrevi
+------------------------------------------------------
+Levando ao terreno a semelhança tirada de dois pontos da banda escolhidos por
+**forma** (o início do sector G e a última parcela), as válvulas caem assim:
 
-O TESTE, que é o mais simples possível
---------------------------------------
-Se o desenho tivesse uma escala, **a razão metros/píxel seria a mesma entre
-quaisquer dois pontos**. Mede-se par a par, com pontos que existem nos dois
-lados, e vê-se.
+    v17, v16, v15, v14      dentro, ou a 5 a 18 m das parcelas de kiwi
+    v9, v10, v8, v7, v6     a 61 a 128 m, com deriva a crescer para oeste
+    v1 a v5 (lobo B1)       a 155 a 379 m
 
-Só se usam pares **longos** — acima de 400 px — porque num par curto o erro de
-leitura domina e o resultado não diz nada.
+Ou seja: **a escala está certa e a banda quase fecha**; o que não fecha é o
+**lobo do B1**, que está desenhado deslocado em relação à banda — o que é o que
+um desenhador faz quando tem de meter um lobo distante e a banda toda na mesma
+folha A1.
+
+Isso não é «sem escala»: é **duas plantas correctas com um desencontro de
+implantação entre elas**, e resolve-se com uma transformação por bloco, não com
+uma global. É trabalho por fazer, e é agora a via mais promissora.
+
+A LIÇÃO, que é a mesma de sempre
+--------------------------------
+Duas vezes seguidas o resíduo do ajuste foi **a minha leitura**, não os dados:
+primeiro uma segmentação automática que via 8 de 13 bandas, depois uma ponta
+lida 600 px ao lado. E na terceira tentativa escolhi feições no desenho por
+«mais à esquerda / mais em baixo» e casei-as com extremos em **UTM** — com o
+desenho rodado 22°, não são os mesmos pontos.
+
+**Um resíduo muito maior do que o erro de medição declarado é um sinal de que
+o erro está em quem mede.** Eu li-o como sinal sobre o desenho, e escrevi uma
+conclusão sobre o desenho. Era sobre mim.
 """
 import io
 import json

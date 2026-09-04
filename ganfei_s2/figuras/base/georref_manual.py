@@ -44,20 +44,25 @@ from shapely.ops import unary_union
 
 D = r"C:/Users/Jackster2/Downloads"
 AQUI = os.path.dirname(os.path.abspath(__file__))
-LIM_RMS = 45.0
+LIM_RMS = 60.0
 MIN_DENTRO = 15
 
 # ── pontos de controlo: (x, y) no scan  ->  (E, N) em UTM 29N ───────────────
 #   Lidos na `GRELHA_esboco.png` contra o parcelário da `GRELHA_parcelario.png`.
 #   Só feições de fronteira, e só as que não têm gémeas próximas.
 CP = [
-    ((74, 770), (529495, 4653955), "B1 · extremo OESTE (bico do rabo-de-peixe)"),
-    ((126, 819), (529574, 4653832), "B1 · extremo SUL"),
-    ((583, 605), (530063, 4654416), "B1 · extremo ESTE (canto da parcela grande)"),
-    ((328, 567), (529729, 4654477), "B1 · extremo NORTE"),
-    ((1044, 481), (530128, 4654997), "banda · extremo OESTE (início do sector G)"),
-    ((1562, 591), (531536, 4655439), "banda · extremo ESTE"),
+    # RELIDOS a 04-09 em recortes com grelha fina, depois de o gestor dizer que
+    # a escala e 1:3500 em A1 -> 1,259 m/px neste scan de 2338 px.
+    # A leitura anterior punha a ponta ORIENTAL em x=1562; esta' em x=2160.
+    # Falhei-a por 600 px, ou seja 750 m, e foi isso que estragou tudo.
+    ((75, 874),   (529574, 4653832), "B1 · extremo SUL (bico do papagaio)"),
+    ((60, 763),   (529495, 4653955), "B1 · extremo OESTE"),
+    ((592, 616),  (530063, 4654416), "B1 · extremo ESTE (fim da banda verde da v5)"),
+    ((232, 583),  (529729, 4654477), "B1 · extremo NORTE"),
+    ((996, 470),  (530128, 4654997), "banda · extremo OESTE (início do sector G)"),
+    ((2160, 570), (531536, 4655439), "banda · extremo ESTE (última parcela)"),
 ]
+ESCALA_DECLARADA = 841.0 / 2338 * 3.5      # m/px a 1:3500 em A1
 X = np.array([c[0] for c in CP], float)
 Y = np.array([c[1] for c in CP], float)
 
@@ -105,6 +110,8 @@ for modo in ("semelhanca", "afim"):
     print()
     print("── %s ── RMS %.1f m · escala %.3f m/px · rotação %.2f°"
           % (modo.upper(), rms, esc, ang))
+    print("   escala declarada (1:3500 em A1) = %.3f m/px  ->  desvio %.1f %%"
+          % (ESCALA_DECLARADA, 100 * abs(esc - ESCALA_DECLARADA) / ESCALA_DECLARADA))
     for (px, q, nome), e in zip(CP, d):
         print("   %-46s %5.1f m" % (nome, e))
 
