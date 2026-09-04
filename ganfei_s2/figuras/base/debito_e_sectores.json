@@ -1,0 +1,227 @@
+{
+ "debito": {
+  "A": 65.0,
+  "B": 85.0,
+  "C": 90.5,
+  "D": 95.8,
+  "E": 87.6,
+  "F": 79.1,
+  "G": 99.9,
+  "H": 91.5,
+  "I": 78.5,
+  "J": 71.6,
+  "L": 55.8,
+  "M": 55.3,
+  "N": 82.7
+ },
+ "area": {
+  "B1": 12.63,
+  "B2": 9.65,
+  "Erica Novo": 4.87,
+  "B3": 9.01,
+  "B4": 3.78
+ },
+ "valvulas_por_bloco": {
+  "B1": 5,
+  "B2": 4,
+  "Erica Novo": 2,
+  "B3": 4,
+  "B4": 2
+ },
+ "total_m3": 1038.3,
+ "area_banda_ha": 27.310000000000002,
+ "area_total_ha": 39.940000000000005,
+ "taxa_se_tudo": 25.996494742113164,
+ "taxa_se_banda": 38.01904064445257,
+ "leitura_b2": [
+  "G",
+  "F",
+  "E",
+  "D"
+ ],
+ "taxa_b2_lida": 37.554404145077726,
+ "desvio_h1_pct": 44.4594916261586,
+ "desvio_h2_pct": 1.2221152651379268,
+ "hipotese_vencedora": "H2",
+ "quarta_letra_b2": [
+  {
+   "letra": "D",
+   "desvio_pct": 1.2221152651379419
+  },
+  {
+   "letra": "H",
+   "desvio_pct": 2.3941486656895643
+  },
+  {
+   "letra": "C",
+   "desvio_pct": 2.666714572794592
+  },
+  {
+   "letra": "B",
+   "desvio_pct": 4.165827061872244
+  }
+ ],
+ "melhores": [
+  {
+   "erro_pct": 5.234218082606509,
+   "erica": [
+    "C",
+    "H"
+   ],
+   "b3": [
+    "B",
+    "J",
+    "L",
+    "N"
+   ],
+   "b4": [
+    "A",
+    "I"
+   ],
+   "sobra": [
+    "M"
+   ]
+  },
+  {
+   "erro_pct": 5.282872559180011,
+   "erica": [
+    "C",
+    "H"
+   ],
+   "b3": [
+    "B",
+    "J",
+    "M",
+    "N"
+   ],
+   "b4": [
+    "A",
+    "I"
+   ],
+   "sobra": [
+    "L"
+   ]
+  },
+  {
+   "erro_pct": 5.597736529005667,
+   "erica": [
+    "C",
+    "H"
+   ],
+   "b3": [
+    "A",
+    "I",
+    "J",
+    "N"
+   ],
+   "b4": [
+    "B",
+    "L"
+   ],
+   "sobra": [
+    "M"
+   ]
+  },
+  {
+   "erro_pct": 5.689192387156259,
+   "erica": [
+    "B",
+    "H"
+   ],
+   "b3": [
+    "C",
+    "J",
+    "L",
+    "N"
+   ],
+   "b4": [
+    "A",
+    "I"
+   ],
+   "sobra": [
+    "M"
+   ]
+  },
+  {
+   "erro_pct": 5.713709236393829,
+   "erica": [
+    "C",
+    "H"
+   ],
+   "b3": [
+    "A",
+    "I",
+    "J",
+    "N"
+   ],
+   "b4": [
+    "B",
+    "M"
+   ],
+   "sobra": [
+    "L"
+   ]
+  },
+  {
+   "erro_pct": 5.73784686372976,
+   "erica": [
+    "B",
+    "H"
+   ],
+   "b3": [
+    "C",
+    "J",
+    "M",
+    "N"
+   ],
+   "b4": [
+    "A",
+    "I"
+   ],
+   "sobra": [
+    "L"
+   ]
+  },
+  {
+   "erro_pct": 5.771914987983486,
+   "erica": [
+    "B",
+    "C"
+   ],
+   "b3": [
+    "H",
+    "J",
+    "L",
+    "N"
+   ],
+   "b4": [
+    "A",
+    "I"
+   ],
+   "sobra": [
+    "M"
+   ]
+  },
+  {
+   "erro_pct": 5.820569464556988,
+   "erica": [
+    "B",
+    "C"
+   ],
+   "b3": [
+    "H",
+    "J",
+    "M",
+    "N"
+   ],
+   "b4": [
+    "A",
+    "I"
+   ],
+   "sobra": [
+    "L"
+   ]
+  }
+ ],
+ "ressalva": "a reparticao e INFERENCIA aritmetica, nao leitura. O que fica certificado e o inverso: a leitura G+F+E+D e coerente a 1,2 % com um numero que nao a produziu."
+}
