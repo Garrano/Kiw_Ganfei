@@ -422,15 +422,6 @@ class Base(object):
         y -= 0.010
 
         y = titulo("Símbolos", y)
-        axl.plot([sw * 0.45], [y - sh * 0.5], "o", ms=6.2, mfc=TINTA2,
-                 mec=PAPEL, mew=1.3, transform=axl.transAxes, clip_on=False)
-        axl.annotate("válvula de rega, numerada", (sw + 0.055, y - sh * 0.42),
-                     xycoords="axes fraction", ha="left", va="center",
-                     fontsize=8.4, color=TINTA, annotation_clip=False)
-        axl.annotate("1 a 17, numeração do gestor", (sw + 0.055, y - sh * 1.05),
-                     xycoords="axes fraction", ha="left", va="center",
-                     fontsize=6.9, color=TINTA3, annotation_clip=False)
-        y -= sh + gap + 0.014
         y = glifo_linha(y, "#6E675C", "limite de parcela (IFAP)",
                         "cultura 124 · KIWI", lw=0.9)
         sp = self.sem_posicao()
@@ -441,9 +432,9 @@ class Base(object):
                          (0, y), xycoords="axes fraction", ha="left", va="top",
                          fontsize=7.4, color="#8C3B2E", weight="bold",
                          annotation_clip=False)
-            axl.annotate("A reconstrução do esquema põe-nas 365 a 555 m a"
+            axl.annotate("O esquema desenha-as dentro do B1; as quatro"
                          + chr(10)
-                         + "oeste do B1, fora das parcelas. Não se desenham.",
+                         + "reconstruções discordam entre si. Não se desenham.",
                          (0, y - 0.019), xycoords="axes fraction", ha="left",
                          va="top", fontsize=6.9, color=TINTA3, linespacing=1.45,
                          annotation_clip=False)

@@ -7,10 +7,10 @@ de factos até ele. Menção em prosa não conta.
 
 | classe | n | o que fazer |
 |---|---|---|
-| CORRENTE | 151 | consulta-se |
+| CORRENTE | 153 | consulta-se |
 | RETIRADO | 2 | **não se consulta** |
 | SUBSTITUIDO | 3 | **não se consulta** — usa o sucessor |
-| NAO_ALCANCADO | 1133 | nada o liga a um facto vivo; perguntar antes de usar |
+| NAO_ALCANCADO | 1137 | nada o liga a um facto vivo; perguntar antes de usar |
 
 ## Afirmações derrubadas — ficheiro vivo, linha morta
 
@@ -61,7 +61,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 
 ## Correntes — e por que caminho de consumo se chega a cada um
 
-- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← b1_terreno.py → ifap_kiwi_largo.json
+- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← ifap_parcelas_largo.json
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_culturas.json`  ← g19_parcelario.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json`  ← b1_terreno.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas.json`  ← g19_parcelario.py
@@ -194,6 +194,8 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `ganfei_s2/fazer_masks.py`  ← sar_invernos.py → masks.json
 - `ganfei_s2/fazer_masks_v2.py`  ← sar_invernos.py → masks.json
 - `ganfei_s2/figuras/P11_base_ganfei.py`
+- `ganfei_s2/figuras/P12_camada_rega.py`
+- `ganfei_s2/figuras/base/esquema_rega.json`  ← P12_camada_rega.py
 - `ganfei_s2/figuras/p01_o_caso_numa_pagina.py`
 - `ganfei_s2/figuras/p02_dois_focos.py`
 - `ganfei_s2/figuras/p03_degrau_absoluto.py`
@@ -1286,7 +1288,11 @@ Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
 - `ganfei_s2/figuras/FIGURAS_ABSTRACTS.md`
 - `ganfei_s2/figuras/base/base_sectores.json`
 - `ganfei_s2/figuras/base/carta_base.py`
+- `ganfei_s2/figuras/base/georref_esquema.json`
+- `ganfei_s2/figuras/base/georreferenciar_esquema.py`
 - `ganfei_s2/figuras/base/preparar_base.py`
+- `ganfei_s2/figuras/base/rega_multiverso.json`
+- `ganfei_s2/figuras/base/rega_multiverso.py`
 - `ganfei_s2/figuras/f10_altura_copado.py`
 - `ganfei_s2/figuras/f11_matriz_diagnostico.py`
 - `ganfei_s2/figuras/f12_landsat.py`

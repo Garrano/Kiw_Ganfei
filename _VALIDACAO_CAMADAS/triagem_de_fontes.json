@@ -1,5 +1,5 @@
 {
- "inventario": 1289,
+ "inventario": 1295,
  "classe": {
   "_MULTIVERSO/ADVERSARIO_H1.md": "NAO_ALCANCADO",
   "_MULTIVERSO/AGREGACAO_H1.md": "NAO_ALCANCADO",
@@ -1206,9 +1206,15 @@
   "ganfei_s2/fenologia.py": "NAO_ALCANCADO",
   "ganfei_s2/figuras/FIGURAS_ABSTRACTS.md": "NAO_ALCANCADO",
   "ganfei_s2/figuras/P11_base_ganfei.py": "CORRENTE",
+  "ganfei_s2/figuras/P12_camada_rega.py": "CORRENTE",
   "ganfei_s2/figuras/base/base_sectores.json": "NAO_ALCANCADO",
   "ganfei_s2/figuras/base/carta_base.py": "NAO_ALCANCADO",
+  "ganfei_s2/figuras/base/esquema_rega.json": "CORRENTE",
+  "ganfei_s2/figuras/base/georref_esquema.json": "NAO_ALCANCADO",
+  "ganfei_s2/figuras/base/georreferenciar_esquema.py": "NAO_ALCANCADO",
   "ganfei_s2/figuras/base/preparar_base.py": "NAO_ALCANCADO",
+  "ganfei_s2/figuras/base/rega_multiverso.json": "NAO_ALCANCADO",
+  "ganfei_s2/figuras/base/rega_multiverso.py": "NAO_ALCANCADO",
   "ganfei_s2/figuras/f10_altura_copado.py": "NAO_ALCANCADO",
   "ganfei_s2/figuras/f11_matriz_diagnostico.py": "NAO_ALCANCADO",
   "ganfei_s2/figuras/f12_landsat.py": "NAO_ALCANCADO",
@@ -1463,6 +1469,9 @@
   "ganfei_s2/figuras/P11_base_ganfei.py": [
    "ganfei_s2/figuras/P11_base_ganfei.py"
   ],
+  "ganfei_s2/figuras/P12_camada_rega.py": [
+   "ganfei_s2/figuras/P12_camada_rega.py"
+  ],
   "ganfei_s2/figuras/p01_o_caso_numa_pagina.py": [
    "ganfei_s2/figuras/p01_o_caso_numa_pagina.py"
   ],
@@ -1654,6 +1663,10 @@
    "_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py",
    "ganfei_s2/valvulas_por_linha.json"
   ],
+  "ganfei_s2/figuras/base/esquema_rega.json": [
+   "ganfei_s2/figuras/P12_camada_rega.py",
+   "ganfei_s2/figuras/base/esquema_rega.json"
+  ],
   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.json": [
    "ganfei_s2/figuras/p01_o_caso_numa_pagina.py",
    "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.json"
@@ -1694,30 +1707,46 @@
    "ganfei_s2/sar_invernos.py",
    "ganfei_s2/_pacote_cowork/sar_invernos.csv"
   ],
-  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py": [
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_03_mdt.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py"
+  "_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py": [
+   "_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas_largo.json",
+   "_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py": [
+   "_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_valvulas.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py": [
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py": [
+   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
+   "ganfei_s2/sentinel/masks_geograficas.json",
+   "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py"
+  ],
+  "ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py": [
+   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
+   "ganfei_s2/sentinel/masks_geograficas.json",
+   "ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py"
+  ],
+  "_VALIDADE_GESTAO/altura_copado.py": [
+   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
+   "_VALIDADE_GESTAO/chm_altura.npy",
+   "_VALIDADE_GESTAO/altura_copado.py"
   ],
   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos_contra_padrao.py": [
    "ganfei_s2/figuras/p07_matriz_uma_coluna.py",
    "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos.json",
    "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos_contra_padrao.py"
   ],
-  "_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py": [
-   "_VALIDADE_GESTAO/b1_terreno.py",
-   "_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json",
-   "_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py"
+  "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py": [
+   "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.json",
+   "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py"
   ],
-  "_VALIDACAO_CAMADAS/b1_serie_verdadeira.py": [
-   "_VALIDADE_GESTAO/lobulo_oeste_degrau.py",
-   "ganfei_s2/b1_serie_verdadeira.json",
-   "_VALIDACAO_CAMADAS/b1_serie_verdadeira.py"
-  ],
-  "ganfei_s2/b1_serie_verdadeira.py": [
-   "_VALIDADE_GESTAO/lobulo_oeste_degrau.py",
-   "ganfei_s2/b1_serie_verdadeira.json",
-   "ganfei_s2/b1_serie_verdadeira.py"
+  "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py": [
+   "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.json",
+   "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py"
   ],
   "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g08_pomar.py": [
    "ganfei_s2/sar_invernos.py",
@@ -1744,99 +1773,10 @@
    "ganfei_s2/_pacote_cowork/masks.json",
    "ganfei_s2/_pacote_cowork/exportar_pendentes2.py"
   ],
-  "_VALIDADE_GESTAO/landsat_independente.py": [
-   "_VALIDADE_GESTAO/landsat.json",
-   "_VALIDADE_GESTAO/landsat_independente.py"
-  ],
-  "_VALIDADE_GESTAO/t4_n_landsat.py": [
-   "_VALIDADE_GESTAO/landsat.json",
-   "_VALIDADE_GESTAO/t4_n_landsat.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.py": [
-   "ganfei_s2/figuras/p01_o_caso_numa_pagina.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C5/c5_02_amostragem.py": [
-   "ganfei_s2/figuras/p01_o_caso_numa_pagina.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C5/c5_02_amostragem.py"
-  ],
-  "_VALIDADE_GESTAO/orto_297313_fraccao.py": [
-   "_VALIDADE_GESTAO/orto_297313_fraccao.json",
-   "_VALIDADE_GESTAO/orto_297313_fraccao.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py": [
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy",
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py": [
-   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
-   "ganfei_s2/sentinel/masks_geograficas.json",
-   "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py"
-  ],
-  "ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py": [
-   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
-   "ganfei_s2/sentinel/masks_geograficas.json",
-   "ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py": [
-   "_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_valvulas.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py"
-  ],
-  "_VALIDADE_GESTAO/p1_pergola_oriental_2025.py": [
-   "_VALIDADE_GESTAO/p3_pergola_2010_2012.py",
-   "_VALIDADE_GESTAO/p1_pergola_oriental_2025.json",
-   "_VALIDADE_GESTAO/p1_pergola_oriental_2025.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_perfil_registos.py": [
-   "_VALIDADE_GESTAO/a2_solo_caracterizacao.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_registo_principal.csv",
-   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_perfil_registos.py"
-  ],
-  "_VALIDADE_GESTAO/triagem_referencia.py": [
-   "_VALIDADE_GESTAO/triagem_referencia.json",
-   "_VALIDADE_GESTAO/triagem_referencia.py"
-  ],
   "_VALIDADE_GESTAO/reg01_local_ou_regional.py": [
    "_VALIDADE_GESTAO/reg01_landsat.py",
    "_VALIDADE_GESTAO/reg01_local_ou_regional.json",
    "_VALIDADE_GESTAO/reg01_local_ou_regional.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py": [
-   "_VALIDADE_GESTAO/b1_terreno.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_terreno_por_unidade.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py": [
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy",
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py"
-  ],
-  "_VALIDADE_GESTAO/altura_copado.py": [
-   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
-   "_VALIDADE_GESTAO/chm_altura.npy",
-   "_VALIDADE_GESTAO/altura_copado.py"
-  ],
-  "_VALIDADE_GESTAO/landsat_degrau_absoluto.py": [
-   "ganfei_s2/figuras/p03_degrau_absoluto.py",
-   "_VALIDADE_GESTAO/landsat_degrau_absoluto.json",
-   "_VALIDADE_GESTAO/landsat_degrau_absoluto.py"
-  ],
-  "_VALIDADE_GESTAO/ocidental_independente.py": [
-   "ganfei_s2/figuras/p04_nada_escolhido.py",
-   "_VALIDADE_GESTAO/ocidental_independente.json",
-   "_VALIDADE_GESTAO/ocidental_independente.py"
-  ],
-  "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py": [
-   "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.json",
-   "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py"
-  ],
-  "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py": [
-   "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.json",
-   "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py"
   ],
   "_VALIDACAO_CAMADAS/linhas_para_valvulas.py": [
    "_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py",
@@ -1848,9 +1788,81 @@
    "_VALIDACAO_CAMADAS/valvulas_por_linha.json",
    "ganfei_s2/linhas_para_valvulas.py"
   ],
-  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py": [
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py"
+  "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_perfil_registos.py": [
+   "_VALIDADE_GESTAO/a2_solo_caracterizacao.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_registo_principal.csv",
+   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_perfil_registos.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py": [
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy",
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py"
+  ],
+  "_VALIDADE_GESTAO/ocidental_independente.py": [
+   "ganfei_s2/figuras/p04_nada_escolhido.py",
+   "_VALIDADE_GESTAO/ocidental_independente.json",
+   "_VALIDADE_GESTAO/ocidental_independente.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py": [
+   "_VALIDADE_GESTAO/b1_terreno.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_terreno_por_unidade.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py": [
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_03_mdt.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py"
+  ],
+  "_VALIDADE_GESTAO/landsat_degrau_absoluto.py": [
+   "ganfei_s2/figuras/p03_degrau_absoluto.py",
+   "_VALIDADE_GESTAO/landsat_degrau_absoluto.json",
+   "_VALIDADE_GESTAO/landsat_degrau_absoluto.py"
+  ],
+  "_VALIDADE_GESTAO/p1_pergola_oriental_2025.py": [
+   "_VALIDADE_GESTAO/p3_pergola_2010_2012.py",
+   "_VALIDADE_GESTAO/p1_pergola_oriental_2025.json",
+   "_VALIDADE_GESTAO/p1_pergola_oriental_2025.py"
+  ],
+  "_VALIDADE_GESTAO/orto_297313_fraccao.py": [
+   "_VALIDADE_GESTAO/orto_297313_fraccao.json",
+   "_VALIDADE_GESTAO/orto_297313_fraccao.py"
+  ],
+  "_VALIDACAO_CAMADAS/b1_serie_verdadeira.py": [
+   "_VALIDADE_GESTAO/lobulo_oeste_degrau.py",
+   "ganfei_s2/b1_serie_verdadeira.json",
+   "_VALIDACAO_CAMADAS/b1_serie_verdadeira.py"
+  ],
+  "ganfei_s2/b1_serie_verdadeira.py": [
+   "_VALIDADE_GESTAO/lobulo_oeste_degrau.py",
+   "ganfei_s2/b1_serie_verdadeira.json",
+   "ganfei_s2/b1_serie_verdadeira.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py": [
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy",
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py"
+  ],
+  "_VALIDADE_GESTAO/triagem_referencia.py": [
+   "_VALIDADE_GESTAO/triagem_referencia.json",
+   "_VALIDADE_GESTAO/triagem_referencia.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.py": [
+   "ganfei_s2/figuras/p01_o_caso_numa_pagina.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C5/c5_02_amostragem.py": [
+   "ganfei_s2/figuras/p01_o_caso_numa_pagina.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C5/c5_02_amostragem.py"
+  ],
+  "_VALIDADE_GESTAO/landsat_independente.py": [
+   "_VALIDADE_GESTAO/landsat.json",
+   "_VALIDADE_GESTAO/landsat_independente.py"
+  ],
+  "_VALIDADE_GESTAO/t4_n_landsat.py": [
+   "_VALIDADE_GESTAO/landsat.json",
+   "_VALIDADE_GESTAO/t4_n_landsat.py"
   ]
  },
  "retirado": {

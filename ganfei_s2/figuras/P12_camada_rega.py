@@ -1,0 +1,368 @@
+# -*- coding: utf-8 -*-
+"""P12 — CAMADA DO ESQUEMA DE REGA. Papel vegetal para pôr sobre a P11.
+
+Duas saídas do mesmo desenho:
+
+    P12_camada_rega.png            fundo transparente, só a mancha do mapa,
+                                   registada célula a célula com a P11
+    P12_camada_rega_isolada.png    a mesma, em papel e com legenda, para se
+                                   ler sozinha
+
+PORQUE ESTA CAMADA NÃO DESENHA A POSIÇÃO DAS VÁLVULAS
+------------------------------------------------------
+Há quatro reconstruções das posições em disco. **Discordam entre 92 e 398 m**,
+e o espaçamento entre válvulas vizinhas é de 98 m: a discordância é maior do
+que a distância entre válvulas. Só a `por_area` passa o teste das áreas
+declaradas — **e esse teste é circular**, porque a `por_area` foi construída
+por área acumulada para bater com essas mesmas áreas.
+
+Tentou-se resolver isso como se deve: georreferenciar o próprio desenho contra
+o parcelário do IFAP, com o critério escrito antes de correr (**RMS < 20 m**, e
+as 17 válvulas a cair dentro das parcelas). **Deu RMS 70,3 m**, e 3 das 10
+manchas detectadas dentro. Falhou, e por isso não se publica posição nenhuma.
+
+E o desenho mostra por que razão nenhuma reconstrução 1-D podia acertar: há
+**duas fiadas de válvulas na mesma estação de linha** — as 10 e 13 de um lado
+da conduta, as 11 e 12 do outro, todas anotadas «306 a 307».
+
+O QUE O ESQUEMA FIXA, E QUE ESTA CAMADA DESENHA
+------------------------------------------------
+Topologia, não geometria. Que válvula serve que sector do gestor, em que
+estação de linha está, e o débito dos sectores impressos onde a etiqueta foi
+lida. Tudo isto está no desenho e não depende de georreferenciação nenhuma.
+
+O registo com a P11 é ao nível do **sector**, que é o nível que aguenta: as
+áreas por sector batem com as declaradas dentro de 17,7 %. Ao nível da válvula
+não aguenta, e a camada diz isso em vez de o esconder.
+"""
+import io
+import json
+import os
+import sys
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.patches import FancyBboxPatch, Rectangle, Circle
+import matplotlib.patheffects as pe
+
+AQUI = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(AQUI, "base"))
+from carta_base import (Base, COR, PAPEL, TINTA, TINTA2, TINTA3, virg,  # noqa
+                        _halo)
+
+CONDUTA = "#1B6E8C"
+ALERTA = "#8C3B2E"
+
+# ── A CONVENÇÃO, e é o que faz esta camada servir para alguma coisa ─────────
+#
+#   TRAÇO CONTÍNUO, opaco   — está escrito numa fonte: no esquema, no
+#                             parcelário do IFAP, ou dito pelo gestor.
+#   TRAÇO INTERROMPIDO, 55 %— é nosso. Inferência, partição ou leitura por
+#                             confirmar. **É o que se leva ao gestor.**
+#
+# Não é decoração: metade do que uma carta destas costuma afirmar não tem
+# fonte, e sem esta distinção o leitor não consegue saber qual metade.
+CONFIRMADO = dict(linestyle="-", alpha=1.00)
+POR_CONF = dict(linestyle=(0, (5, 3)), alpha=0.55)
+
+PERGUNTAS = [
+    "Confirmar as etiquetas de sector das válvulas 10 a 17 (lemos G, F, E e D "
+    "nas 6, 7, 8 e 9).",
+    "Onde fica cada válvula DENTRO do seu sector? É o que nenhuma fonte nossa "
+    "resolve.",
+    "As válvulas 10, 11, 12 e 13 estão todas na estação 306–307, em fiadas "
+    "opostas da conduta?",
+    "Qual é a válvula desactivada na linha 185, e desde quando?",
+    "As «4 novas válvulas» anotadas já foram instaladas? Com que números?",
+    "A numeração de linha do B1 é independente da da banda (149, 137, 156, 705)?",
+    "As divisões entre B2, Erica Novo, B3 e B4 no terreno — onde passam?",
+]
+
+# ── O QUE ESTÁ ESCRITO NO ESQUEMA. Transcrição, não inferência. ─────────────
+#   `linhas` — estação de linha anotada à mão pelo gestor sobre o desenho.
+#   `sectores_lidos` — etiqueta impressa do sector, lida a 650 dpi.
+#   `debito` — m³ da caixa «Débito dos Sectores» do próprio esquema.
+DEBITO = {"A": 65.0, "B": 85.0, "C": 90.5, "D": 95.8, "E": 87.6, "F": 79.1,
+          "G": 99.9, "H": 91.5, "I": 78.5, "J": 71.6, "L": 55.8, "M": 55.3,
+          "N": 82.7}
+BLOCOS = {
+    "B1": dict(valvulas=[1, 2, 3, 4, 5],
+               linhas="149 → v1,2,3  ·  137 e 156 → v4,5  ·  eixo linha 705",
+               sectores=[], nota="numeração de linha PRÓPRIA — as linhas 137 e "
+                                 "156 cairiam dentro do B2 na numeração da banda"),
+    "B2": dict(valvulas=[6, 7, 8, 9],
+               linhas="130–131 → v6,7   ·   267–268 → v8,9",
+               sectores=["G", "F", "E", "D"], nota=""),
+    "Erica Novo": dict(valvulas=[10, 11],
+                       linhas="306–307",
+                       sectores=[], nota="mesma estação que as v12 e v13, em "
+                                         "fiada oposta da conduta"),
+    "B3": dict(valvulas=[12, 13, 14, 15],
+               linhas="306–307 → v12,13   ·   336–337 → v14,15",
+               sectores=[], nota=""),
+    "B4": dict(valvulas=[16, 17],
+               linhas="353 e 409 → v16   ·   423 → v17",
+               sectores=[], nota=""),
+}
+NOTAS = [
+    ("conduta principal sai do armazém na linha 222; linha da bomba, 229", CONDUTA),
+    ("condutas de 2,5″ (v1), 3″ e 4″ no B1; 6″ na linha da bomba", CONDUTA),
+    ("uma válvula DESACTIVADA na linha 185", ALERTA),
+    ("«4 novas válvulas» anotadas, sem número atribuído", ALERTA),
+    ("origem de água ÚNICA para toda a exploração", CONDUTA),
+]
+
+
+def desenha(ax, b, transparente):
+    """A camada. Nada aqui depende de uma posição de válvula."""
+    X = np.linspace(b.bb[0], b.bb[2], b.Z.shape[1])
+    Y = np.linspace(b.bb[3], b.bb[1], b.Z.shape[0])
+    from scipy import ndimage
+
+    # ── o contorno dos sectores, para a camada se ler sozinha e para registar
+    pontos = {}
+    for nome in b.ORDEM:
+        m = (b.SEC == b.COD[nome])
+        if not m.any():
+            continue
+        ms = ndimage.binary_closing(m, np.ones((5, 5)))
+        ax.contour(X, Y, ms.astype(float), levels=[.5],
+                   colors=PAPEL if not transparente else "#FFFFFF",
+                   linewidths=2.4, alpha=.45 if transparente else .9, zorder=5)
+        # O B1 é a união de seis parcelas do IFAP: fronteira de outra entidade,
+        # contínua. As divisões entre B2, Erica Novo, B3 e B4 saem da NOSSA
+        # partição por válvula, e vão a tracejado — é o que falta confirmar.
+        est = CONFIRMADO if nome == "B1" else POR_CONF
+        ax.contour(X, Y, ms.astype(float), levels=[.5], colors=[COR[nome]],
+                   linewidths=1.6, linestyles=[est["linestyle"]],
+                   alpha=est["alpha"], zorder=6)
+        if transparente:
+            cm = matplotlib.colors.ListedColormap([COR[nome]])
+            ax.imshow(np.ma.masked_where(~m, np.ones_like(m, float)),
+                      extent=b.ext, origin="upper", cmap=cm, alpha=.10,
+                      zorder=4, interpolation="nearest")
+        dt = ndimage.distance_transform_edt(m)
+        iy, ix = np.unravel_index(np.argmax(dt), dt.shape)
+        pontos[nome] = (b.bb[0] + ix * b.pix, b.bb[3] - iy * b.pix)
+
+    # ── a espinha: ordem da rede, oeste → este. SCHEMÁTICA, e diz-se.
+    seq = [pontos[n] for n in b.ORDEM if n in pontos]
+    ax.plot([p[0] for p in seq], [p[1] for p in seq], color=CONDUTA,
+            lw=2.0, alpha=POR_CONF["alpha"], dashes=(5, 3),
+            dash_capstyle="round", zorder=7)
+
+    # ── as estações. Deslocadas da banda com tirante: a banda tem 200 m de
+    #    largura e cinco crachás postos no centróide atropelam-se todos.
+    # Todos para SUDESTE. A noroeste da banda está o rio, e o crachá do
+    # Erica Novo caiu em cima do topónimo RIO MINHO.
+    DESVIO = {"B1": (0, -250), "B2": (-130, -340), "Erica Novo": (-40, -610),
+              "B3": (160, -340), "B4": (70, -600)}
+    CH, ESP, ALT = 17.0, 40.0, 96.0
+    for nome in b.ORDEM:
+        if nome not in pontos:
+            continue
+        Ea, Na = pontos[nome]
+        dx, dy = DESVIO.get(nome, (0, 260))
+        E, N = Ea + dx, Na + dy
+        d = BLOCOS[nome]
+        vs = d["valvulas"]
+        larg = max(ESP * len(vs) + 40, 22 * len(nome) + 40)
+        ax.plot([Ea, E], [Na, N], color=COR[nome], lw=1.0, alpha=.65,
+                dashes=(3, 2.5), zorder=8)
+        ax.plot([Ea], [Na], "o", ms=4.4, mfc=COR[nome], mec=PAPEL, mew=1.0,
+                zorder=9)
+        ax.add_patch(FancyBboxPatch((E - larg / 2, N - ALT / 2), larg, ALT,
+                                    boxstyle="round,pad=8,rounding_size=18",
+                                    facecolor=PAPEL, alpha=.93,
+                                    edgecolor=COR[nome], linewidth=1.8,
+                                    zorder=9))
+        ax.annotate(nome, (E, N + ALT * .30), ha="center", va="center",
+                    fontsize=12.5, weight="bold", color=TINTA, zorder=11)
+        for i, v in enumerate(vs):
+            cx = E - (len(vs) - 1) * ESP / 2 + i * ESP
+            ax.add_patch(Circle((cx, N - ALT * .17), CH, facecolor=COR[nome],
+                                edgecolor=PAPEL, linewidth=1.4, zorder=10))
+            ax.annotate(str(v), (cx, N - ALT * .17), ha="center", va="center",
+                        fontsize=9.6, weight="bold", color="white", zorder=11)
+        deb = sum(DEBITO[x] for x in d["sectores"]) if d["sectores"] else None
+        ax.annotate("linhas %s" % d["linhas"].split("·")[0].strip(),
+                    (E, N - ALT * .52), ha="center", va="top", fontsize=7.0,
+                    color=TINTA2, path_effects=_halo(2.8), zorder=11)
+        if deb:
+            ax.annotate("sectores %s  ·  %s m³"
+                        % ("+".join(d["sectores"]), virg(deb)),
+                        (E, N - ALT * .52 - 34), ha="center", va="top",
+                        fontsize=7.0, color=CONDUTA, weight="bold",
+                        path_effects=_halo(2.8), zorder=11)
+        else:
+            ax.annotate("sector impresso por ler", (E, N - ALT * .52 - 34),
+                        ha="center", va="top", fontsize=6.8, color=ALERTA,
+                        style="italic", path_effects=_halo(2.8), zorder=11)
+
+    # ── a ressalva, dentro do mapa, porque é sobre o mapa
+    x0, x1, y0, y1 = b.ext
+    ax.annotate("posição de cada válvula DENTRO do sector: não resolvida\n"
+                "as quatro reconstruções discordam 92–398 m; espaçamento 98 m",
+                (x0 + .035 * (x1 - x0), y0 + .155 * (y1 - y0)),
+                ha="left", va="bottom", fontsize=8.2, color=ALERTA,
+                weight="bold", linespacing=1.5,
+                path_effects=_halo(3.4), zorder=12)
+    return ax
+
+
+def legenda(axl, b):
+    y = .985
+    axl.annotate("O QUE ESTÁ CONFIRMADO", (0, y), xycoords="axes fraction",
+                 ha="left", va="top", fontsize=7.6, weight="bold", color=TINTA2)
+    y -= .034
+    for est, cor, t1, t2 in (
+            (CONFIRMADO, TINTA, "traço contínuo",
+             "está escrito no esquema, no IFAP, ou dito pelo gestor"),
+            (POR_CONF, TINTA, "traço interrompido",
+             "é nosso — inferência ou leitura POR CONFIRMAR")):
+        axl.plot([.012, .145], [y, y], color=cor, lw=1.8,
+                 linestyle=est["linestyle"], alpha=est["alpha"],
+                 transform=axl.transAxes, clip_on=False)
+        axl.annotate(t1, (.185, y), xycoords="axes fraction", ha="left",
+                     va="center", fontsize=8.2, color=TINTA)
+        axl.annotate(t2, (.185, y - .020), xycoords="axes fraction", ha="left",
+                     va="center", fontsize=6.5, color=TINTA3)
+        y -= .056
+
+    axl.annotate("ESQUEMA DE REGA", (0, y), xycoords="axes fraction",
+                 ha="left", va="top", fontsize=7.6, weight="bold", color=TINTA2)
+    y -= .030
+    for nome in b.ORDEM:
+        d = BLOCOS[nome]
+        axl.add_patch(Circle((.028, y - .012), .020, facecolor=COR[nome],
+                             edgecolor="none", transform=axl.transAxes,
+                             clip_on=False))
+        axl.annotate("%s  ·  válvulas %s"
+                     % (nome, ", ".join(str(v) for v in d["valvulas"])),
+                     (.075, y - .012), xycoords="axes fraction", ha="left",
+                     va="center", fontsize=8.2, color=TINTA)
+        axl.annotate("linhas %s" % d["linhas"], (.075, y - .034),
+                     xycoords="axes fraction", ha="left", va="center",
+                     fontsize=6.6, color=TINTA3)
+        yy = y - .034
+        if d["sectores"]:
+            yy -= .020
+            axl.annotate("sectores %s  ·  %s m³"
+                         % ("+".join(d["sectores"]),
+                            virg(sum(DEBITO[s] for s in d["sectores"]))),
+                         (.075, yy), xycoords="axes fraction", ha="left",
+                         va="center", fontsize=6.6, color=CONDUTA)
+        if d["nota"]:
+            yy -= .020
+            import textwrap as _t
+            _w = _t.wrap(d["nota"], 44)
+            axl.annotate(chr(10).join(_w[:3]), (.075, yy),
+                         xycoords="axes fraction", ha="left", va="top",
+                         fontsize=6.3, color=ALERTA, linespacing=1.5)
+            yy -= .014 * len(_w[:3])
+        y = yy - .030
+
+    axl.annotate("DO PRÓPRIO ESQUEMA", (0, y), xycoords="axes fraction",
+                 ha="left", va="top", fontsize=7.6, weight="bold", color=TINTA2)
+    y -= .030
+    for txt, cor in NOTAS:
+        axl.annotate("·", (.02, y), xycoords="axes fraction", ha="left",
+                     va="top", fontsize=9, color=cor)
+        axl.annotate(txt, (.058, y), xycoords="axes fraction", ha="left",
+                     va="top", fontsize=7.0, color=TINTA, wrap=True)
+        y -= .030
+
+    y -= .008
+    axl.annotate("DÉBITO DOS SECTORES IMPRESSOS  (m³)", (0, y),
+                 xycoords="axes fraction", ha="left", va="top", fontsize=7.6,
+                 weight="bold", color=TINTA2)
+    y -= .028
+    ks = list(DEBITO)
+    for i in range(0, len(ks), 4):
+        axl.annotate("   ".join("%s %s" % (k, virg(DEBITO[k]))
+                                for k in ks[i:i + 4]),
+                     (.02, y), xycoords="axes fraction", ha="left", va="top",
+                     fontsize=6.8, color=TINTA)
+        y -= .022
+    axl.annotate("Só as etiquetas G, F, E e D foram lidas com certeza,\n"
+                 "sobre as válvulas 6, 7, 8 e 9. As restantes ficam por ler.",
+                 (.02, y - .006), xycoords="axes fraction", ha="left", va="top",
+                 fontsize=6.4, color=TINTA3, linespacing=1.5)
+
+    # O rodapé estava ancorado no fundo enquanto o corpo crescia até lá abaixo,
+    # e os dois encavalitavam-se. Passa a seguir o y corrente.
+    y -= .052
+    axl.annotate("FONTE   «Esquema de rega retificado» (PRDLUX, Jul-09), com as\n"
+                 "anotações manuscritas do gestor. Transcrição, não inferência.\n\n"
+                 "REGISTO   ao nível do SECTOR. A georreferenciação do desenho\n"
+                 "contra o IFAP falhou o critério pré-registado (RMS 70,3 m\n"
+                 "contra o limite de 20 m), e por isso não há posições aqui.",
+                 (0, min(y, .108)), xycoords="axes fraction", ha="left",
+                 va="top", fontsize=6.4, color=TINTA3, linespacing=1.55)
+
+
+b = Base()
+
+# ── 1 · o papel vegetal ─────────────────────────────────────────────────────
+fig, ax, axl = b.figura(larg=16.0, legenda=True)
+axl.set_visible(False)
+desenha(ax, b, transparente=True)
+b.moldura(ax)
+for s in ax.spines.values():
+    s.set_alpha(.35)
+ax.patch.set_alpha(0.0)
+fora = os.path.join(AQUI, "P12_camada_rega.png")
+fig.savefig(fora, dpi=200, transparent=True)
+print("escrita %s  (transparente, registada com a P11)" % os.path.basename(fora))
+plt.close(fig)
+
+# ── 2 · a mesma, legível sozinha ────────────────────────────────────────────
+fig, ax, axl = b.figura(larg=16.0, legenda=True)
+b.terreno(ax, curvas=False, escoamento=False)
+desenha(ax, b, transparente=False)
+b.toponimos(ax)
+x0, x1, y0, y1 = b.ext
+px, py = x0 + .030 * (x1 - x0), y1 - .045 * (y1 - y0)
+import textwrap as _tw
+_alt = 60 + sum(22 + 21 * len(_tw.wrap(q, 62)) for q in PERGUNTAS)
+ax.add_patch(FancyBboxPatch((px - 26, py - _alt), 1000, _alt + 18,
+                            boxstyle="round,pad=10,rounding_size=16",
+                            facecolor=PAPEL, alpha=.90, edgecolor=ALERTA,
+                            linewidth=1.2, linestyle=(0, (5, 3)), zorder=13))
+ax.annotate("A CONFIRMAR COM O GESTOR", (px, py), ha="left", va="top",
+            fontsize=9.2, weight="bold", color=ALERTA, zorder=14)
+import textwrap
+yq = py - 46
+for i, q in enumerate(PERGUNTAS):
+    linhas = textwrap.wrap(q, 62)
+    ax.annotate("%d ·" % (i + 1), (px, yq), ha="left", va="top", fontsize=7.6,
+                weight="bold", color=ALERTA, zorder=14)
+    ax.annotate(chr(10).join(linhas), (px + 48, yq), ha="left", va="top",
+                fontsize=7.4, color=TINTA, linespacing=1.45, zorder=14)
+    yq -= 22 + 21 * len(linhas)
+b.moldura(ax)
+fig.text(0.035, 0.972, "GANFEI · ESQUEMA DE REGA", fontsize=21, weight="bold",
+         color=TINTA, va="top", ha="left")
+fig.text(0.035, 0.930, "Camada sobre a carta-base", fontsize=10.5,
+         color=TINTA2, va="top", ha="left")
+fig.text(0.955, 0.972, "17 válvulas  ·  5 sectores do gestor  ·  13 sectores "
+                       "impressos", fontsize=10.5, color=TINTA2, va="top",
+         ha="right")
+fig.text(0.955, 0.938, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
+         fontsize=8.2, color=TINTA3, va="top", ha="right")
+legenda(axl, b)
+fora2 = os.path.join(AQUI, "P12_camada_rega_isolada.png")
+fig.savefig(fora2, dpi=200)
+print("escrita %s  (com legenda)" % os.path.basename(fora2))
+plt.close(fig)
+
+json.dump(dict(debito_m3=DEBITO, blocos=BLOCOS, notas=[n for n, _ in NOTAS],
+               posicoes_publicadas=False,
+               razao="georreferenciação falhou o critério pré-registado "
+                     "(RMS 70,3 m > 20 m) e as quatro reconstruções discordam "
+                     "92–398 m para um espaçamento de 98 m"),
+          io.open(os.path.join(AQUI, "base", "esquema_rega.json"), "w",
+                  encoding="utf-8"), indent=1, ensure_ascii=False)
+print("escrito base/esquema_rega.json")

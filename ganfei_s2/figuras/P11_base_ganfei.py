@@ -49,7 +49,11 @@ fig, ax, axl = b.figura(larg=16.0)
 b.terreno(ax)
 b.cadastro(ax)
 b.sectores(ax)
-b.valvulas(ax)
+# NÃO se desenham válvulas. A base publicava-as nas posições `por_area` e a
+# camada P12, por cima, diz que essas posições não estão resolvidas — as quatro
+# reconstruções discordam 92 a 398 m para um espaçamento de 98 m, e a
+# georreferenciação do esquema falhou o critério (RMS 70,3 m contra 20 m).
+# Duas peças a dizer coisas diferentes é pior do que qualquer uma delas.
 b.rotulos(ax)
 b.toponimos(ax)
 b.moldura(ax)
@@ -57,16 +61,14 @@ b.moldura(ax)
 # ── cartela ─────────────────────────────────────────────────────────────────
 fig.text(0.035, 0.972, "GANFEI · CARTA-BASE", fontsize=21, weight="bold",
          color=TINTA, va="top", ha="left")
-fig.text(0.035, 0.930,
-         "Emparcelamento de Ganfei, Valença  ·  os cinco sectores com os nomes "
-         "do gestor, sobre o terreno e a drenagem",
+fig.text(0.035, 0.930, "Emparcelamento de Ganfei, Valença",
          fontsize=10.5, color=TINTA2, va="top", ha="left")
 
 tot = sum(b.areas.values())
 sp = b.sem_posicao()
 fig.text(0.955, 0.972,
-         "%s ha na partição  ·  5 sectores  ·  %d de 17 válvulas posicionadas"
-         % (virg(tot), 17 - len(sp)),
+         "%s ha na partição  ·  5 sectores  ·  17 válvulas, posições por resolver"
+         % virg(tot),
          fontsize=10.5, color=TINTA2, va="top", ha="right")
 fig.text(0.955, 0.938, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
          fontsize=8.2, color=TINTA3, va="top", ha="right")
@@ -74,15 +76,9 @@ fig.text(0.955, 0.938, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
 b.legenda(
     axl,
     nota="FONTES   MDT LiDAR 50 cm, DGT (7 folhas, EPSG:3763, reamostrado a 1 m).\n"
-         "Parcelário IFAP 2025, cultura 124 (KIWI). Tabela de válvulas e nomes\n"
-         "de sector do gestor; boletins A2 para os códigos de bloco.\n\n"
-         "SECTORES   Partição por válvula mais próxima dentro da área de kiwi;\n"
-         "o B1 é a união das suas seis parcelas do IFAP. A partição foi testada\n"
-         "contra as áreas declaradas pelo gestor: desvio máximo 17,7 % (B2),\n"
-         "critério de rejeição fixado em 25 % antes de correr.\n\n"
-         "ESCOAMENTO   pysheds sobre o MDT de 1 m, com resolve_flats. Sem esse\n"
-         "passo a acumulação máxima cai por um factor de 70 neste terreno.\n\n"
-         "Gerado por P11_base_ganfei.py  ·  " + time.strftime("%Y-%m-%d"))
+         "Parcelário IFAP 2025, cultura 124 (KIWI). Esquema de rega rectificado\n"
+         "e nomes de sector do gestor; boletins A2 para os códigos de bloco.\n\n"
+         "Método e ressalvas em FIGURAS_ABSTRACTS.md.")
 
 fora = os.path.join(AQUI, "P11_base_ganfei.png")
 fig.savefig(fora, dpi=200)

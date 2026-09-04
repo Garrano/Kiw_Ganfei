@@ -13,39 +13,89 @@ Ordem de leitura para quem chega agora: **P11** (onde é), **P01** (o caso),
 
 ## P11 · Carta-base de Ganfei
 
-**Mostra** a exploração inteira — 42,6 ha em cinco sectores — sobre o terreno,
-a drenagem e o cadastro. Os sectores levam **os nomes do gestor: B1, B2, Erica
-Novo, B3, B4.** É a folha em que todas as vistas seguintes assentam: esquema de
-rega, tipo de solo, porta-enxertos, datas de plantação, manchas de mortalidade.
+**Mostra** a exploração inteira — 42,6 ha na partição — sobre o terreno, a
+drenagem e o cadastro. Os sectores levam **os nomes do gestor: B1, B2, Erica
+Novo, B3, B4.** É a folha em que todas as vistas seguintes assentam.
 
 **Instrumento.** MDT LiDAR de 50 cm da DGT (7 folhas, EPSG:3763, reamostrado a
 1 m em UTM 29N); parcelário IFAP 2025, cultura 124 (KIWI); tabela de válvulas e
-nomes de sector do gestor; códigos de bloco dos boletins A2. Escoamento por
-pysheds com `resolve_flats` — sem esse passo a acumulação máxima cai por um
-factor de 70 neste terreno.
+nomes de sector do gestor; códigos de bloco dos boletins A2.
+
+**Escoamento.** pysheds sobre o MDT de 1 m, com `resolve_flats`. Sem esse passo
+a acumulação máxima cai por um factor de 70 neste terreno — 33 % das células
+são planas. Desenham-se só os canais (acumulação ≥ 5 ha e ≥ 20 ha), e o leito
+do rio é excluído: com limiar baixo a camada pinta 3 % da carta e lê-se como
+água parada, que é o contrário do que mede.
 
 **A geografia, que é o essencial.** Os cinco sectores estão todos numa
 plataforma aluvial entre **5 e 9 m**, ao longo de 2,4 km da margem esquerda do
-Minho. A sudeste o terreno sobe até 155 m; a noroeste está o leito do rio. O
-B1 é o sector **mais baixo** (mediana 6,06 m) e fica isolado, cerca de 1 km a
-sudoeste do resto.
+Minho. A sudeste o terreno sobe até 155 m; a noroeste está o leito do rio, e
+para lá dele acaba a cobertura LiDAR nacional. O **B1 é o sector mais baixo**
+(mediana 6,06 m) e fica isolado, cerca de 1 km a sudoeste do resto.
 
-**Ressalvas, e são três.**
-1. A **partição por válvula** é inferida, não cadastral: cada ponto pertence ao
-   sector da válvula mais próxima. Foi testada contra as áreas que o gestor
-   declara — desvio máximo 17,7 % (B2), com o critério de rejeição fixado em
-   25 % **antes** de correr. O B1 é excepção: é a união das suas seis parcelas
-   do IFAP e bate a 0,1 %.
-2. **As válvulas 1 a 5 não estão desenhadas.** O gestor diz que o B1 são as
-   válvulas 1–5; a reconstrução do esquema de rega põe-nas 365 a 555 m a oeste
-   das parcelas do B1. A reconstrução não alcança o lobo oeste, e desenhá-las
-   seria pôr na carta-base uma posição que o processo sabe estar errada.
-3. O **rio Minho** é identificado pela mancha contínua abaixo de 2,5 m (59,8 ha
-   na caixa) coincidente com o limite da cobertura LiDAR nacional a noroeste —
-   dois indicadores de origem diferente. Nenhum deles sozinho bastaria.
+**O rio Minho** é identificado pela mancha contínua abaixo de 2,5 m (59,8 ha na
+caixa, centro em 8,634 W / 42,046 N) coincidente com o limite da cobertura
+LiDAR nacional a noroeste — dois indicadores de origem diferente. Nenhum deles
+sozinho bastaria.
 
-**Não se conclui daqui** nada sobre o declínio. A carta é sobre estrutura; o
-acontecimento entra nas peças que assentam nela.
+**A partição, e a ressalva que a acompanha.** Cada ponto pertence ao sector da
+válvula mais próxima; o B1 é a união das suas seis parcelas do IFAP. As áreas
+que a partição dá batem com as declaradas pelo gestor dentro de **17,7 % (B2)**,
+com o critério de rejeição fixado em 25 % antes de correr.
+
+**Esse teste é circular, e fica dito.** A reconstrução usada — `por_area` — foi
+construída por área acumulada precisamente para bater com as áreas declaradas:
+compará-la com elas reproduz a calibração em vez de a verificar. Corridas as
+outras três reconstruções pelo mesmo teste, **as três falsificam** (desvios de
+82 %, 100 % e 114 %), e as quatro só concordam em **26,1 % da banda**. Ao nível
+do sector a partição serve; ao nível da válvula não serve, e por isso **a carta
+não desenha válvula nenhuma**.
+
+**Não se conclui daqui** nada sobre o declínio. A carta é sobre estrutura.
+
+---
+
+## P12 · Camada do esquema de rega
+
+**Duas saídas do mesmo desenho:** `P12_camada_rega.png`, de fundo transparente
+e registada célula a célula com a P11 — papel vegetal, para sobrepor; e
+`P12_camada_rega_isolada.png`, a mesma em papel e com legenda, para se ler
+sozinha.
+
+**Mostra** o que o «Esquema de rega retificado» (PRDLUX, Jul-09) fixa, com as
+anotações manuscritas do gestor: as 17 válvulas repartidas pelos cinco sectores
+dele, a estação de linha de cada grupo, os 13 sectores impressos A–N com o
+débito de cada um, e as notas de rede — conduta principal a sair do armazém na
+linha 222, linha da bomba 229, condutas de 2,5″/3″/4″/6″, **uma válvula
+desactivada na linha 185**, «4 novas válvulas» sem número atribuído, e origem
+de água única para toda a exploração.
+
+**A convenção gráfica, que é o que a torna útil.** Traço contínuo e opaco: está
+escrito numa fonte — no esquema, no IFAP, ou dito pelo gestor. Traço
+interrompido a 55 %: é nosso, inferência ou leitura por confirmar. Metade do que
+uma carta destas costuma afirmar não tem fonte, e sem esta distinção o leitor
+não sabe qual metade. A prancha traz sete perguntas escritas para levar ao
+gestor.
+
+**Porque não há posições de válvula.** Tentou-se georreferenciar o próprio
+desenho contra o parcelário do IFAP, com o critério escrito antes de correr —
+**RMS < 20 m**, e as 17 válvulas a cair dentro das parcelas. Deu **RMS 70,3 m**
+e 3 das 10 manchas detectadas dentro. Falhou, e não se publica posição nenhuma.
+
+**E o desenho explica porque nenhuma reconstrução podia acertar:** há **duas
+fiadas de válvulas na mesma estação de linha** — as 10 e 13 de um lado da
+conduta, as 11 e 12 do outro, todas anotadas «306 a 307». Qualquer reconstrução
+que espalhe as válvulas ao longo de um eixo tem de errar.
+
+**O que o esquema corrige na nossa leitura anterior.** As válvulas 1 a 5 estão
+desenhadas **dentro do B1**, com «149 → v1,2,3» e «137 e 156 → v4,5». A
+pertença que o gestor afirmou está corroborada pelo desenho; o que estava errado
+eram as reconstruções, que as punham 365 a 555 m a oeste. E a numeração de linha
+do B1 é própria: as linhas 137 e 156 cairiam dentro do B2 na numeração da banda.
+
+**Só as etiquetas G, F, E e D foram lidas com certeza**, sobre as válvulas 6, 7,
+8 e 9 — o que dá ao B2 um débito de 362,4 m³. As restantes ficam por ler, e
+estão na lista de perguntas.
 
 ---
 

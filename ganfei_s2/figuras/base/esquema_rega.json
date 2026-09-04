@@ -1,0 +1,85 @@
+{
+ "debito_m3": {
+  "A": 65.0,
+  "B": 85.0,
+  "C": 90.5,
+  "D": 95.8,
+  "E": 87.6,
+  "F": 79.1,
+  "G": 99.9,
+  "H": 91.5,
+  "I": 78.5,
+  "J": 71.6,
+  "L": 55.8,
+  "M": 55.3,
+  "N": 82.7
+ },
+ "blocos": {
+  "B1": {
+   "valvulas": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "linhas": "149 → v1,2,3  ·  137 e 156 → v4,5  ·  eixo linha 705",
+   "sectores": [],
+   "nota": "numeração de linha PRÓPRIA — as linhas 137 e 156 cairiam dentro do B2 na numeração da banda"
+  },
+  "B2": {
+   "valvulas": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "linhas": "130–131 → v6,7   ·   267–268 → v8,9",
+   "sectores": [
+    "G",
+    "F",
+    "E",
+    "D"
+   ],
+   "nota": ""
+  },
+  "Erica Novo": {
+   "valvulas": [
+    10,
+    11
+   ],
+   "linhas": "306–307",
+   "sectores": [],
+   "nota": "mesma estação que as v12 e v13, em fiada oposta da conduta"
+  },
+  "B3": {
+   "valvulas": [
+    12,
+    13,
+    14,
+    15
+   ],
+   "linhas": "306–307 → v12,13   ·   336–337 → v14,15",
+   "sectores": [],
+   "nota": ""
+  },
+  "B4": {
+   "valvulas": [
+    16,
+    17
+   ],
+   "linhas": "353 e 409 → v16   ·   423 → v17",
+   "sectores": [],
+   "nota": ""
+  }
+ },
+ "notas": [
+  "conduta principal sai do armazém na linha 222; linha da bomba, 229",
+  "condutas de 2,5″ (v1), 3″ e 4″ no B1; 6″ na linha da bomba",
+  "uma válvula DESACTIVADA na linha 185",
+  "«4 novas válvulas» anotadas, sem número atribuído",
+  "origem de água ÚNICA para toda a exploração"
+ ],
+ "posicoes_publicadas": false,
+ "razao": "georreferenciação falhou o critério pré-registado (RMS 70,3 m > 20 m) e as quatro reconstruções discordam 92–398 m para um espaçamento de 98 m"
+}

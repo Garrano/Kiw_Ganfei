@@ -1,0 +1,51 @@
+{
+ "discordancia_max_m": 397.9398070061003,
+ "espacamento_mediano_m": 98.11605373232406,
+ "reconstrucoes": [
+  "por_area",
+  "v4",
+  "v6",
+  "por_linha"
+ ],
+ "falsifica": [
+  "v4",
+  "v6",
+  "por_linha"
+ ],
+ "muda_pior_par_pct": 73.88750575686987,
+ "pior_par": [
+  "v6",
+  "por_linha"
+ ],
+ "concordancia_total_pct": 26.112494243130136,
+ "areas": {
+  "por_area": {
+   "B1": 12.64,
+   "B2": 11.36,
+   "Erica Novo": 5.45,
+   "B3": 9.33,
+   "B4": 3.82
+  },
+  "v4": {
+   "B1": 12.64,
+   "B2": 6.94,
+   "Erica Novo": 4.48,
+   "B3": 16.44,
+   "B4": 2.11
+  },
+  "v6": {
+   "B1": 12.64,
+   "B2": 5.49,
+   "Erica Novo": 2.35,
+   "B3": 18.02,
+   "B4": 4.1
+  },
+  "por_linha": {
+   "B1": 12.64,
+   "B2": 20.69,
+   "Erica Novo": 4.87,
+   "B3": 2.39,
+   "B4": 2.02
+  }
+ }
+}
