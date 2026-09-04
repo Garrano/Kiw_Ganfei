@@ -1,0 +1,1352 @@
+# TRIAGEM DE FONTES
+
+Gerado por `triagem_de_fontes.py`. **Não editar à mão.**
+
+«Corrente» = há um caminho de **consumo** (`open`/`load`/`join`) do registo
+de factos até ele. Menção em prosa não conta.
+
+| classe | n | o que fazer |
+|---|---|---|
+| CORRENTE | 151 | consulta-se |
+| RETIRADO | 2 | **não se consulta** |
+| SUBSTITUIDO | 3 | **não se consulta** — usa o sucessor |
+| NAO_ALCANCADO | 1133 | nada o liga a um facto vivo; perguntar antes de usar |
+
+## Afirmações derrubadas — ficheiro vivo, linha morta
+
+O nível que a triagem por ficheiro não alcança. Declarado à mão.
+
+### `_VALIDACAO_CAMADAS/CAMADA_1_CERTIFICADO.md`
+
+> «Os dois focos caem em mosaicos de campanhas de voo diferentes» (OESTE 2025-08-02, ESTE 2026-01-15)
+
+- **porquê:** é o MESMO voo, com 16 min de intervalo — tempo GPS do LAS
+- **quem:** C9_CONTROLO3_ADVERSARIO.md, 04-09-2026
+- **efeito:** a S2 da C1 cai; a medição de costura (+0,058 m, linha seguinte) sobrevive e é o que a C9 usa
+
+### `ganfei_s2/figuras/p10_braudel_mapa.py`
+
+> «as duas manchas estão nos extremos opostos do terreno» / «B1: SEM cota, SEM dreno, SEM declive» / «445 m a sul»
+
+- **porquê:** o B1 está 0,58 m ABAIXO dos dois focos; duas folhas MDT cobrem-no desde 29-08; a folga real é −200 m
+- **quem:** C9_CONTROLO3_ADVERSARIO.md + b1_terreno.py, 04-09-2026
+- **efeito:** corrigido no ficheiro em 04-09; fica listado porque a versão errada circulou em PNG
+
+### `_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py`
+
+> «o esquema anota 1,77 ha para o B1; o IFAP dá 12,63 ha — factor 7,1×»
+
+- **porquê:** a retirada 21 tirou-a: o «1,77 ha» não está na tinta do esquema; é uma leitura nossa, não uma anotação dele
+- **quem:** C8_CONTROLO3_ADVERSARIO.md · retirada 21 da LISTA_FINAL
+- **efeito:** continua escrita no script e é gravada para dentro do `valvulas_1a5.json` (campo `area_esquema_ha`), que a triagem dá como CORRENTE — apanhado pelo Controlo 3 em 04-09
+
+### `_VALIDACAO_CAMADAS/P3_ORIENTAL_REPLANTADO.md`
+
+> §2 e §3 — «o foco oriental foi REPLANTADO»
+
+- **porquê:** assentava só na prominência de pérgola, o instrumento que a produziu; o nível absoluto de NDVI não tem cova
+- **quem:** P5_RETRACCAO_DO_REPLANTADO.md, 31-08-2026
+- **efeito:** §1, §4 e §5 mantêm-se. O documento NÃO leva cartucho total — marcar a mais apagava prova boa. Sem cartucho, a verificação 3 contava-o entre os vivos: apanhado pelo Controlo 3 em 04-09
+
+## Retirados
+
+- `_VALIDACAO_CAMADAS/REG01_LANDSAT_REPLICACAO.md` — traz o cabeçalho «⚠ RETIRADO»
+- `_VALIDACAO_CAMADAS/REG01_RESULTADO.md` — traz o cabeçalho «⚠ RETIRADO»
+
+## Substituídos
+
+- `_VALIDADE_GESTAO/_bak_20260901/reg01_landsat.py` — está em `_bak_20260901/` — cópia arrumada por convenção
+- `_VALIDADE_GESTAO/_bak_20260901/reg01_landsat_r3.py` — está em `_bak_20260901/` — cópia arrumada por convenção
+- `_VALIDADE_GESTAO/_bak_20260901/reg01_local_ou_regional.py` — está em `_bak_20260901/` — cópia arrumada por convenção
+
+## Correntes — e por que caminho de consumo se chega a cada um
+
+- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← b1_terreno.py → ifap_kiwi_largo.json
+- `_MULTIVERSO/SAIDA_H2_patologista/ifap_culturas.json`  ← g19_parcelario.py
+- `_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json`  ← b1_terreno.py
+- `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas.json`  ← g19_parcelario.py
+- `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas_largo.json`
+- `_VALIDACAO_CAMADAS/A2_CONTROLO3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/C8_CONTROLO3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/C9_CONTROLO3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_0_CERTIFICADO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_1_CERTIFICADO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_ADENDA_LIDAR.md`
+- `_VALIDACAO_CAMADAS/CAMADA_4_CERTIFICADO_R2.md`
+- `_VALIDACAO_CAMADAS/CONTROLOS.md`
+- `_VALIDACAO_CAMADAS/LISTA_FINAL_2026-08-31.md`
+- `_VALIDACAO_CAMADAS/P3_ORIENTAL_REPLANTADO.md`
+- `_VALIDACAO_CAMADAS/P5_RETRACCAO_DO_REPLANTADO.md`
+- `_VALIDACAO_CAMADAS/PRE_REGISTO_REFERENCIA.md`
+- `_VALIDACAO_CAMADAS/REG01_RETRACCAO_A3.md`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.json`  ← c1_03_mdt.py
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py`  ← c1_03_mdt.py → c1_02_costura.json
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_03_camp50.npy`  ← c1_03_mdt.py
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_03_dem50.json`  ← c1_03_mdt.py
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_03_dem50.npy`  ← c1_03_mdt.py
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_03_mdt.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py`  ← b1_terreno.py → c1_04_terreno_por_unidade.json
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_terreno_por_unidade.json`  ← b1_terreno.py
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_09_sar.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_09_sar.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_09_sar_geografico.csv`  ← c1_09_sar.py
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py`  ← c1_10_nivelamento.json
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_cenas.json`  ← c2_09_sar_verificacao.py
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy`  ← c2_09_sar_verificacao.py
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py`  ← c2_09_sar_verificacao.py → c2_07_sar_pilha.npy
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py`  ← c2_09_sar_verificacao.py → c2_07_sar_pilha.npy
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_12_prom_2012.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_perfil_registos.py`  ← a2_solo_caracterizacao.py → c3_04_registo_principal.csv
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_registo_principal.csv`  ← a2_solo_caracterizacao.py
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos.json`  ← p07_matriz_uma_coluna.py
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos_contra_padrao.py`  ← p07_matriz_uma_coluna.py → c3_09_organismos.json
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.json`  ← p01_o_caso_numa_pagina.py
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.py`  ← p01_o_caso_numa_pagina.py → c4_01_numeros.json
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py`  ← valvulas_1a5_o_troco_que_falta.py → c4_r2_01_multiverso_valvulas.json
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_valvulas.json`  ← valvulas_1a5_o_troco_que_falta.py
+- `_VALIDACAO_CAMADAS/SAIDA_C5/c5_02_amostragem.py`  ← p01_o_caso_numa_pagina.py → c4_01_numeros.json
+- `_VALIDACAO_CAMADAS/SAIDA_C5/c5_amostragem.csv`  ← p08_plano_de_setembro.py
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g08_pomar.py`  ← sar_invernos.py → masks.json
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py`  ← degrau_vs_recta_pergola.py → masks_geograficas.json
+- `_VALIDACAO_CAMADAS/TRIAGEM_DE_FONTES.md`  ← triagem_de_fontes.py
+- `_VALIDACAO_CAMADAS/b1_serie_verdadeira.py`  ← lobulo_oeste_degrau.py → b1_serie_verdadeira.json
+- `_VALIDACAO_CAMADAS/certificar.py`
+- `_VALIDACAO_CAMADAS/guarda.py`
+- `_VALIDACAO_CAMADAS/linhas_para_valvulas.py`  ← valvulas_1a5_o_troco_que_falta.py → valvulas_por_linha.json
+- `_VALIDACAO_CAMADAS/registo_de_factos.py`
+- `_VALIDACAO_CAMADAS/registo_manifesto.json`
+- `_VALIDACAO_CAMADAS/triagem_de_fontes.json`
+- `_VALIDACAO_CAMADAS/triagem_de_fontes.py`
+- `_VALIDACAO_CAMADAS/valvulas_por_linha.json`  ← valvulas_1a5_o_troco_que_falta.py
+- `_VALIDACAO_CAMADAS/valvulas_v4.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py`  ← c8_05_veredicto.json
+- `_VALIDADE_GESTAO/a2_solo_caracterizacao.json`  ← a2_solo_caracterizacao.py
+- `_VALIDADE_GESTAO/a2_solo_caracterizacao.py`
+- `_VALIDADE_GESTAO/altura_copado.py`  ← degrau_vs_recta_pergola.py → chm_altura.npy
+- `_VALIDADE_GESTAO/altura_focos.json`  ← p02_dois_focos.py
+- `_VALIDADE_GESTAO/b1_terreno.json`
+- `_VALIDADE_GESTAO/b1_terreno.py`
+- `_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.json`
+- `_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py`  ← c1ab_contra_kiwi_ifap.json
+- `_VALIDADE_GESTAO/chm_altura.npy`  ← degrau_vs_recta_pergola.py
+- `_VALIDADE_GESTAO/degrau_vs_recta_pergola.json`  ← degrau_vs_recta_pergola.py
+- `_VALIDADE_GESTAO/degrau_vs_recta_pergola.py`
+- `_VALIDADE_GESTAO/densa_ganfei.json`  ← triagem_referencia_densa.py
+- `_VALIDADE_GESTAO/fenologia_por_unidade.json`  ← fenologia_por_unidade.py
+- `_VALIDADE_GESTAO/fenologia_por_unidade.py`
+- `_VALIDADE_GESTAO/g19_parcelario.json`  ← g19_parcelario.py
+- `_VALIDADE_GESTAO/g19_parcelario.py`
+- `_VALIDADE_GESTAO/halo_distancia.json`  ← halo_distancia.py
+- `_VALIDADE_GESTAO/halo_distancia.py`
+- `_VALIDADE_GESTAO/ifap_culturas.json`  ← g19_parcelario.py
+- `_VALIDADE_GESTAO/ifap_parcelas.json`  ← g19_parcelario.py
+- `_VALIDADE_GESTAO/l1_data_do_voo.json`
+- `_VALIDADE_GESTAO/l1_data_do_voo.py`
+- `_VALIDADE_GESTAO/landsat.json`
+- `_VALIDADE_GESTAO/landsat_degrau_absoluto.json`  ← p03_degrau_absoluto.py
+- `_VALIDADE_GESTAO/landsat_degrau_absoluto.py`  ← p03_degrau_absoluto.py → landsat_degrau_absoluto.json
+- `_VALIDADE_GESTAO/landsat_independente.py`  ← landsat.json
+- `_VALIDADE_GESTAO/lobulo_oeste_degrau.json`  ← lobulo_oeste_degrau.py
+- `_VALIDADE_GESTAO/lobulo_oeste_degrau.py`
+- `_VALIDADE_GESTAO/multiverso_degrau.json`  ← lobulo_oeste_degrau.py
+- `_VALIDADE_GESTAO/multiverso_degrau.py`
+- `_VALIDADE_GESTAO/ocidental_independente.json`  ← p04_nada_escolhido.py
+- `_VALIDADE_GESTAO/ocidental_independente.py`  ← p04_nada_escolhido.py → ocidental_independente.json
+- `_VALIDADE_GESTAO/orto_297313_fraccao.json`
+- `_VALIDADE_GESTAO/orto_297313_fraccao.py`  ← orto_297313_fraccao.json
+- `_VALIDADE_GESTAO/p1_pergola_oriental_2025.json`  ← p3_pergola_2010_2012.py
+- `_VALIDADE_GESTAO/p1_pergola_oriental_2025.py`  ← p3_pergola_2010_2012.py → p1_pergola_oriental_2025.json
+- `_VALIDADE_GESTAO/p3_pergola_2010_2012.json`  ← p3_pergola_2010_2012.py
+- `_VALIDADE_GESTAO/p3_pergola_2010_2012.py`
+- `_VALIDADE_GESTAO/p4_quando_foi_arrancada.json`  ← p4_quando_foi_arrancada.py
+- `_VALIDADE_GESTAO/p4_quando_foi_arrancada.py`
+- `_VALIDADE_GESTAO/reg01_landsat.json`  ← reg01_landsat.py
+- `_VALIDADE_GESTAO/reg01_landsat.py`
+- `_VALIDADE_GESTAO/reg01_landsat_cenas.json`  ← reg01_landsat.py
+- `_VALIDADE_GESTAO/reg01_local_ou_regional.json`  ← reg01_landsat.py
+- `_VALIDADE_GESTAO/reg01_local_ou_regional.py`  ← reg01_landsat.py → reg01_local_ou_regional.json
+- `_VALIDADE_GESTAO/reg01_triagem.json`
+- `_VALIDADE_GESTAO/reg01_triagem_descontinuidade.py`
+- `_VALIDADE_GESTAO/satelites_degrau.json`  ← satelites_degrau.py
+- `_VALIDADE_GESTAO/satelites_degrau.py`
+- `_VALIDADE_GESTAO/satelites_sem_2026.json`  ← satelites_sem_2026.py
+- `_VALIDADE_GESTAO/satelites_sem_2026.py`
+- `_VALIDADE_GESTAO/serie_oriental_pergola.json`  ← serie_oriental_pergola.py
+- `_VALIDADE_GESTAO/serie_oriental_pergola.py`
+- `_VALIDADE_GESTAO/t4_n_landsat.py`  ← landsat.json
+- `_VALIDADE_GESTAO/triagem_referencia.json`
+- `_VALIDADE_GESTAO/triagem_referencia.py`  ← triagem_referencia.json
+- `_VALIDADE_GESTAO/triagem_referencia_densa.json`
+- `_VALIDADE_GESTAO/triagem_referencia_densa.py`
+- `_VALIDADE_GESTAO/valvulas_1a5.json`
+- `_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py`
+- `ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py`  ← degrau_vs_recta_pergola.py → masks_geograficas.json
+- `ganfei_s2/_pacote_cowork/exportar_pendentes2.py`  ← sar_invernos.py → masks.json
+- `ganfei_s2/_pacote_cowork/masks.json`  ← sar_invernos.py
+- `ganfei_s2/_pacote_cowork/sar_invernos.csv`  ← sar_invernos.py
+- `ganfei_s2/b1_serie_verdadeira.json`  ← lobulo_oeste_degrau.py
+- `ganfei_s2/b1_serie_verdadeira.py`  ← lobulo_oeste_degrau.py → b1_serie_verdadeira.json
+- `ganfei_s2/exportar_pendentes2.py`  ← sar_invernos.py → masks.json
+- `ganfei_s2/fazer_masks.py`  ← sar_invernos.py → masks.json
+- `ganfei_s2/fazer_masks_v2.py`  ← sar_invernos.py → masks.json
+- `ganfei_s2/figuras/P11_base_ganfei.py`
+- `ganfei_s2/figuras/p01_o_caso_numa_pagina.py`
+- `ganfei_s2/figuras/p02_dois_focos.py`
+- `ganfei_s2/figuras/p03_degrau_absoluto.py`
+- `ganfei_s2/figuras/p04_nada_escolhido.py`
+- `ganfei_s2/figuras/p04a_parcelas_ifap.py`
+- `ganfei_s2/figuras/p04b_landsat_absoluto.py`
+- `ganfei_s2/figuras/p05_nove_veroes.py`
+- `ganfei_s2/figuras/p06_hipoteses_e_retirado.py`
+- `ganfei_s2/figuras/p07_matriz_uma_coluna.py`
+- `ganfei_s2/figuras/p08_plano_de_setembro.py`
+- `ganfei_s2/figuras/p10_braudel_mapa.py`
+- `ganfei_s2/linhas_para_valvulas.py`  ← valvulas_1a5_o_troco_que_falta.py → valvulas_por_linha.json
+- `ganfei_s2/sar_invernos.csv`  ← sar_invernos.py
+- `ganfei_s2/sar_invernos.py`
+- `ganfei_s2/sentinel/masks.json`  ← sar_invernos.py
+- `ganfei_s2/sentinel/masks_geograficas.json`  ← degrau_vs_recta_pergola.py
+- `ganfei_s2/valvulas_por_linha.json`  ← valvulas_1a5_o_troco_que_falta.py
+- `ganfei_s2/valvulas_v4.json`
+
+## Não alcançados
+
+Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
+
+- `_MULTIVERSO/ADVERSARIO_H1.md`
+- `_MULTIVERSO/AGREGACAO_H1.md`
+- `_MULTIVERSO/AGREGACAO_H2.md`
+- `_MULTIVERSO/ESPECIFICACAO.md`
+- `_MULTIVERSO/ESPECIFICACAO_H2.md`
+- `_MULTIVERSO/SAIDA_A/01_inspect.json`
+- `_MULTIVERSO/SAIDA_A/01_inspect.py`
+- `_MULTIVERSO/SAIDA_A/02_stac_items.json`
+- `_MULTIVERSO/SAIDA_A/02_stac_query.py`
+- `_MULTIVERSO/SAIDA_A/03_stac_summary.py`
+- `_MULTIVERSO/SAIDA_A/04_extract.py`
+- `_MULTIVERSO/SAIDA_A/04_extract_status.json`
+- `_MULTIVERSO/SAIDA_A/05_sameday_dups.json`
+- `_MULTIVERSO/SAIDA_A/05_verify.json`
+- `_MULTIVERSO/SAIDA_A/05_verify_delivered.py`
+- `_MULTIVERSO/SAIDA_A/06_dates_julaug.json`
+- `_MULTIVERSO/SAIDA_A/06_mask.py`
+- `_MULTIVERSO/SAIDA_A/06_stack_julaug.npy`
+- `_MULTIVERSO/SAIDA_A/07_mask_v2.py`
+- `_MULTIVERSO/SAIDA_A/08_series.json`
+- `_MULTIVERSO/SAIDA_A/08_series.py`
+- `_MULTIVERSO/SAIDA_A/09_rededge.py`
+- `_MULTIVERSO/SAIDA_A/10_temporal.py`
+- `_MULTIVERSO/SAIDA_A/10_year_tables.json`
+- `_MULTIVERSO/SAIDA_A/11_inference.json`
+- `_MULTIVERSO/SAIDA_A/11_inference.py`
+- `_MULTIVERSO/SAIDA_A/12_corrected.json`
+- `_MULTIVERSO/SAIDA_A/12_sensor_corrected.py`
+- `_MULTIVERSO/SAIDA_A/13_pixel_composites.py`
+- `_MULTIVERSO/SAIDA_A/14_delta_NDRE.npy`
+- `_MULTIVERSO/SAIDA_A/14_delta_NDVI.npy`
+- `_MULTIVERSO/SAIDA_A/14_spatial.json`
+- `_MULTIVERSO/SAIDA_A/14_spatial.py`
+- `_MULTIVERSO/SAIDA_A/15_cores.json`
+- `_MULTIVERSO/SAIDA_A/15_cores_timing.py`
+- `_MULTIVERSO/SAIDA_A/15_onset_NDRE.npy`
+- `_MULTIVERSO/SAIDA_A/15_onset_NDVI.npy`
+- `_MULTIVERSO/SAIDA_A/16_sensitivity.json`
+- `_MULTIVERSO/SAIDA_A/16_sensitivity.py`
+- `_MULTIVERSO/SAIDA_A/17_h1b_sensitivity.py`
+- `_MULTIVERSO/SAIDA_A/18_meteo.json`
+- `_MULTIVERSO/SAIDA_A/18_meteo.py`
+- `_MULTIVERSO/SAIDA_A/19_figuras.py`
+- `_MULTIVERSO/SAIDA_A/20_radial.py`
+- `_MULTIVERSO/SAIDA_A/21_check2017.py`
+- `_MULTIVERSO/SAIDA_A/22_atribuicao.py`
+- `_MULTIVERSO/SAIDA_B/b01_recon.py`
+- `_MULTIVERSO/SAIDA_B/b01_recon.txt`
+- `_MULTIVERSO/SAIDA_B/b02_grid_orto.py`
+- `_MULTIVERSO/SAIDA_B/b03_zoom.py`
+- `_MULTIVERSO/SAIDA_B/b04_zoom2.py`
+- `_MULTIVERSO/SAIDA_B/b05_s2_look.py`
+- `_MULTIVERSO/SAIDA_B/b06_mask.py`
+- `_MULTIVERSO/SAIDA_B/b06_mask.txt`
+- `_MULTIVERSO/SAIDA_B/b07_mask2.py`
+- `_MULTIVERSO/SAIDA_B/b07_mask2.txt`
+- `_MULTIVERSO/SAIDA_B/b08_ref.py`
+- `_MULTIVERSO/SAIDA_B/b08_ref.txt`
+- `_MULTIVERSO/SAIDA_B/b09_ref_wide.py`
+- `_MULTIVERSO/SAIDA_B/b09_ref_wide.txt`
+- `_MULTIVERSO/SAIDA_B/b10_core.py`
+- `_MULTIVERSO/SAIDA_B/b10_core.txt`
+- `_MULTIVERSO/SAIDA_B/b11_spatial.py`
+- `_MULTIVERSO/SAIDA_B/b11_spatial.txt`
+- `_MULTIVERSO/SAIDA_B/b12_maps.py`
+- `_MULTIVERSO/SAIDA_B/b12_maps.txt`
+- `_MULTIVERSO/SAIDA_B/b13_verify.txt`
+- `_MULTIVERSO/SAIDA_B/b13_verify_l2a.py`
+- `_MULTIVERSO/SAIDA_B/b14_terreno.py`
+- `_MULTIVERSO/SAIDA_B/b14_terreno.txt`
+- `_MULTIVERSO/SAIDA_B/b15_leitura.txt`
+- `_MULTIVERSO/SAIDA_B/b15_leitura_campo.py`
+- `_MULTIVERSO/SAIDA_B/b16_epoca.txt`
+- `_MULTIVERSO/SAIDA_B/b16_epoca_orto.py`
+- `_MULTIVERSO/SAIDA_B/b17_denso.py`
+- `_MULTIVERSO/SAIDA_B/b17_denso.txt`
+- `_MULTIVERSO/SAIDA_B/b18_sensibilidade.py`
+- `_MULTIVERSO/SAIDA_B/b18_sensibilidade.txt`
+- `_MULTIVERSO/SAIDA_B/b19_geometria.py`
+- `_MULTIVERSO/SAIDA_B/b19_geometria.txt`
+- `_MULTIVERSO/SAIDA_B/b20_incerteza.py`
+- `_MULTIVERSO/SAIDA_B/b20_incerteza.txt`
+- `_MULTIVERSO/SAIDA_B/b21_2017.py`
+- `_MULTIVERSO/SAIDA_B/b21_2017.txt`
+- `_MULTIVERSO/SAIDA_B/b22_figura_final.py`
+- `_MULTIVERSO/SAIDA_B/b23_sectores.py`
+- `_MULTIVERSO/SAIDA_B/b23_sectores.txt`
+- `_MULTIVERSO/SAIDA_B/b24_sectores_series.py`
+- `_MULTIVERSO/SAIDA_B/b24_sectores_series.txt`
+- `_MULTIVERSO/SAIDA_B/b25_estacional.py`
+- `_MULTIVERSO/SAIDA_B/b25_estacional.txt`
+- `_MULTIVERSO/SAIDA_C/c01_inspect.json`
+- `_MULTIVERSO/SAIDA_C/c01_inspect.py`
+- `_MULTIVERSO/SAIDA_C/c02_lookat.py`
+- `_MULTIVERSO/SAIDA_C/c03_stac_items.json`
+- `_MULTIVERSO/SAIDA_C/c03_stac_search.py`
+- `_MULTIVERSO/SAIDA_C/c04_build_stack.py`
+- `_MULTIVERSO/SAIDA_C/c04_downloaded.json`
+- `_MULTIVERSO/SAIDA_C/c04b_build_stack_par.py`
+- `_MULTIVERSO/SAIDA_C/c05_orto_inspect.py`
+- `_MULTIVERSO/SAIDA_C/c05b_orto_bounds.py`
+- `_MULTIVERSO/SAIDA_C/c06_orto_view.py`
+- `_MULTIVERSO/SAIDA_C/c07_orto_zoom.py`
+- `_MULTIVERSO/SAIDA_C/c08_panels.py`
+- `_MULTIVERSO/SAIDA_C/c09_mask_build.py`
+- `_MULTIVERSO/SAIDA_C/c09b_mask_build.py`
+- `_MULTIVERSO/SAIDA_C/c10_orto25_detail.py`
+- `_MULTIVERSO/SAIDA_C/c11_mask_v3.py`
+- `_MULTIVERSO/SAIDA_C/c11b_mask_final.py`
+- `_MULTIVERSO/SAIDA_C/c12_masks.py`
+- `_MULTIVERSO/SAIDA_C/c13_indices.py`
+- `_MULTIVERSO/SAIDA_C/c13_scenes.json`
+- `_MULTIVERSO/SAIDA_C/c14_confronto.json`
+- `_MULTIVERSO/SAIDA_C/c14_series.json`
+- `_MULTIVERSO/SAIDA_C/c14_series.py`
+- `_MULTIVERSO/SAIDA_C/c15_h1a.json`
+- `_MULTIVERSO/SAIDA_C/c15_h1a.py`
+- `_MULTIVERSO/SAIDA_C/c16_multiverso.json`
+- `_MULTIVERSO/SAIDA_C/c16_multiverso.py`
+- `_MULTIVERSO/SAIDA_C/c17_dormente.py`
+- `_MULTIVERSO/SAIDA_C/c17_downloaded.json`
+- `_MULTIVERSO/SAIDA_C/c17_items.json`
+- `_MULTIVERSO/SAIDA_C/c18_h1b.json`
+- `_MULTIVERSO/SAIDA_C/c18_h1b.py`
+- `_MULTIVERSO/SAIDA_C/c19_h1b.json`
+- `_MULTIVERSO/SAIDA_C/c19_h1b_null.py`
+- `_MULTIVERSO/SAIDA_C/c20_dormente.json`
+- `_MULTIVERSO/SAIDA_C/c20_dormente_analise.py`
+- `_MULTIVERSO/SAIDA_C/c20_nucleo.json`
+- `_MULTIVERSO/SAIDA_C/c21_fisica.py`
+- `_MULTIVERSO/SAIDA_C/c21_meteo.json`
+- `_MULTIVERSO/SAIDA_C/c21_nucleo_indep.json`
+- `_MULTIVERSO/SAIDA_C/c22_nucleo_orto.py`
+- `_MULTIVERSO/SAIDA_C/c23_decisivo.json`
+- `_MULTIVERSO/SAIDA_C/c23_decisivo.py`
+- `_MULTIVERSO/SAIDA_C/c24_estratos.json`
+- `_MULTIVERSO/SAIDA_C/c24_final.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/chm_utm_05m.json`
+- `_MULTIVERSO/SAIDA_H2_ceptico/chm_utm_05m.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/cubo_meta.json`
+- `_MULTIVERSO/SAIDA_H2_ceptico/cubo_ndre.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/cubo_ndvi.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/culturas_2025jun10.json`
+- `_MULTIVERSO/SAIDA_H2_ceptico/culturas_todas_utm.geojson`
+- `_MULTIVERSO/SAIDA_H2_ceptico/grelha_s2.json`
+- `_MULTIVERSO/SAIDA_H2_ceptico/kiwi_alvo_utm.geojson`
+- `_MULTIVERSO/SAIDA_H2_ceptico/kiwi_outros_utm.geojson`
+- `_MULTIVERSO/SAIDA_H2_ceptico/orto_estrutura.json`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p01_parcelario.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p02_kiwi_geom.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p03_blocos.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p04_identificar_b1.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p05_chm.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p06_mascaras.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p06b_frac_poligono.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p07_estrutura.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p08_orto_estrutura.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p08b_recortes.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p09_stac.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p10_descarregar.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p11_offset.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p12_serie.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p13_analise.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p14_ataque.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p15_alavanca.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p16_alavancas_quant.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p17_gradiente_paisagem.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/p18_figura.py`
+- `_MULTIVERSO/SAIDA_H2_ceptico/parcelas_2025jun10.json`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_altura_media.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_dist_bordadura.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_B1C5.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_B1C6.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_CP.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_SK.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_V1.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_mata.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_pastagem.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_pergola.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_frac_vinha.npy`
+- `_MULTIVERSO/SAIDA_H2_ceptico/s2_itens.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/00_zoom_esquema.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/01_ifap.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/02_geometria.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/04_referencias.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/05_stac_inventario.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/06_b1_vs_corpo.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/07_mascaras.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/08_s2_extrai.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/09_qc.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/10_trajectorias.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/11_niveis_e_referencia.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/12_lidar.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/13_b1_estrutura.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/14_orto_cunha.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/15_ref_mata.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/16_teste.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/17_multiverso.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/18_referencias_e_potencia.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/19_sar.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/20_teste_sar_e_declinio.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/21_diag_nulo.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/22_regressao_a_media.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/23_numeros_finais.py`
+- `_MULTIVERSO/SAIDA_H2_patologista/frac_sel.npy`
+- `_MULTIVERSO/SAIDA_H2_patologista/geom_resumo.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/kiwi_candidatos.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/lidar_estrutura.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/mascaras_meta.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/multiverso.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/polys_ent.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/s1_cenas.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/s2_cenas.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/teste.json`
+- `_MULTIVERSO/SAIDA_H2_patologista/trajectorias.json`
+- `_MULTIVERSO/VEREDICTO_A_temporal.md`
+- `_MULTIVERSO/VEREDICTO_B_espacial.md`
+- `_MULTIVERSO/VEREDICTO_C_ceptico.md`
+- `_MULTIVERSO/VEREDICTO_H2_ceptico.md`
+- `_MULTIVERSO/VEREDICTO_H2_patologista.md`
+- `_VALIDACAO_CAMADAS/ADVERSARIO_2026-08-29.md`
+- `_VALIDACAO_CAMADAS/ADVERSARIO_PROMPT.md`
+- `_VALIDACAO_CAMADAS/ANTES_DE_COMECAR.md`
+- `_VALIDACAO_CAMADAS/B1_CONTROLO3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/C4_ADENDA_RAZAO_2026-09-03.md`
+- `_VALIDACAO_CAMADAS/CAMADA_0_ADENDA_CONTROLO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_0_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_0_PROMPT.md`
+- `_VALIDACAO_CAMADAS/CAMADA_0_REVISAO_R2.md`
+- `_VALIDACAO_CAMADAS/CAMADA_0_REVISAO_R3.md`
+- `_VALIDACAO_CAMADAS/CAMADA_1_PROMPT.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_ADVERSARIO_R2.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_CERTIFICADO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_CERTIFICADO_R2.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_CERTIFICADO_R3.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_CONTROLO3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_PROMPT.md`
+- `_VALIDACAO_CAMADAS/CAMADA_2_TESTES_T1_T5.md`
+- `_VALIDACAO_CAMADAS/CAMADA_3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_3_CERTIFICADO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_3_CERTIFICADO_R2.md`
+- `_VALIDACAO_CAMADAS/CAMADA_3_CERTIFICADO_R3.md`
+- `_VALIDACAO_CAMADAS/CAMADA_3_PROMPT.md`
+- `_VALIDACAO_CAMADAS/CAMADA_3_PROMPT_R2.md`
+- `_VALIDACAO_CAMADAS/CAMADA_4_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_4_CERTIFICADO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_4_PROMPT.md`
+- `_VALIDACAO_CAMADAS/CAMADA_5_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_5_CERTIFICADO.md`
+- `_VALIDACAO_CAMADAS/CAMADA_5_CERTIFICADO_R2.md`
+- `_VALIDACAO_CAMADAS/CAMADA_5_PROMPT.md`
+- `_VALIDACAO_CAMADAS/ENCERRAMENTO_2026-08-31.md`
+- `_VALIDACAO_CAMADAS/IMPACTO_ESCALA_NAS_MANCHAS.md`
+- `_VALIDACAO_CAMADAS/MODELO_PROMPT.md`
+- `_VALIDACAO_CAMADAS/P1_P2_RESULTADOS.md`
+- `_VALIDACAO_CAMADAS/PEDIDO_DE_DOCUMENTOS.md`
+- `_VALIDACAO_CAMADAS/PROTOCOLO.md`
+- `_VALIDACAO_CAMADAS/REDERIVACAO_MASCARAS.md`
+- `_VALIDACAO_CAMADAS/REFERENCIAS_MULTIVERSO.md`
+- `_VALIDACAO_CAMADAS/REG01_CONTROLO3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/REGISTO_DE_NOMES.md`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_01_rasters.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_01_rasters.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_02_mascaras.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_02_mascaras.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_03_proveniencia.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_03_proveniencia.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_04_cena2017.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_05_orto.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_05_orto_meta.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_06_esquema_escala.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_07_vista_larga.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_08_esquema_medir.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_09_copado_orto.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_10_inventario_b1.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_10_quarentena_b1.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_11_assuncoes.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_11_eixo.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_12_ajuste.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_12_ajuste_esquema.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_13_georref.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_13_georref.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_14_lobo_oeste_e_1995.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_15_mapas.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/c0_16_bloco_sw.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/controlos.geojson`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_00_extensoes.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_01_dem2m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_01_vista_larga.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_02_candidatos.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_02_estrutura.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_02_forca.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_02_lambda.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_02_periodicidade.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_03_recortes.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_04_lista.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_05_painel.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_06_leste.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_06_leste.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_06_nordeste.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_07_blocoSW.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_07_blocoSW_mask.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_07_delimitar.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_08_blocoSW.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_08_envelope.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_09_grelha.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_10_C2_vinha_NO.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_10_C3_vinha_S.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_10_blocoSW.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_10_blocoSWb.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_10_poligonos.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_11_varrimento.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_12_blocoSW.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_12_parcelas.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_13_blocoSW.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_13_contornos.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_14_metricas.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_15_instrumento_independente.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_16_compasso.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_16_compasso.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_17_margem.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_17b_travessias.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_18_distancias.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_18_distancias.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C0/ctrl_19_geojson_final.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_00_comum.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_01_cobertura_mosaico.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_01_lidar_inventario.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_01_mosaicos.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_05_acumulacao1m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_05_bacia.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_05_bacia.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_06_solo_colocado.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_06_solo_colocado.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_06_solo_no_mapa.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_07_termico.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_07_termico.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_08_clima.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_08_precipitacao.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_11_escalas.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_11_escalas.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_12_sar_lavrado.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_12_sar_lavrado.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_12_sar_lavrado.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_13_sar_antes_depois.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_13_sar_serie.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_13_sar_serie.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_14_ancoras.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_14_ancoras.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C1/c1_15_figuras.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_00_comum.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_01_serie.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_01_serie.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_02_fenologia.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_02_fenologia.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_03_defice.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_03_defice.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_04_T2.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_04_referencia.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_04_referencia.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_05_defice_2026.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_05_manchas.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_05_manchas.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_05_novo_m2.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_06_este.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_06_este_plantado.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_08_cruzamento.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_08_cruzamento.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_10_ancoras.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_10_ancoras.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_12_pergola.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_12_pergola_2012.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_12_prom_2010.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_12_prom_2021.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_13_coberto.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_13_coberto_2025.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_00_inventario.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_00_inventario.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_01_reconciliar.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_01_reconciliar.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_02_desalinhamento.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_02_desalinhamento.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_03_alinhamento.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_03_alinhamento.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_perfil.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_05_folhas.txt`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_05_folhas_auxiliares.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_06_rosellinia.txt`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_06_rosellinia_e_campo.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_07_georreferenciacao.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_07_georreferenciar.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_07_registos_colocados.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_08_controlo_referencia.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_08_controlo_referencia.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_10_esforco_its_becrop.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_10_esforco_its_becrop.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_11_ancoras.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_11_par_contraste_e_ancoras.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_12_figuras.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_13_T2_T4.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_13_T2_T4.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_13_saida.txt`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_r2_01_amostras.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C3/c3_r2_01_amostras_contra_pergola.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_saida.txt`
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_02_contagem.json`
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_02_razao.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_02_saida.txt`
+- `_VALIDACAO_CAMADAS/SAIDA_C4/c4_razao_exclusoes.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_C5/c5_01_reetiquetagem.py`
+- `_VALIDACAO_CAMADAS/SAIDA_C5/c5_01_saida.txt`
+- `_VALIDACAO_CAMADAS/SAIDA_C5/c5_02_saida.txt`
+- `_VALIDACAO_CAMADAS/SAIDA_C5/c5_reetiquetagem.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_COORD/NOTA_COORDENACAO.md`
+- `_VALIDACAO_CAMADAS/SAIDA_COORD/coord_reetiquetagem.csv`
+- `_VALIDACAO_CAMADAS/SAIDA_COORD/coord_reetiquetagem.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/agua.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/arranque_replantacao.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/assin_2010.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/assin_2012.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/assin_2025.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/cand_pomar.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g01_render_orto.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g02_recortes.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g03_campos.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g04_trelica.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g05_prominencia.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g06_candidato.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g07_zoom.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g09_diagnostico.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g10_pomar_final.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g11_pomar_limpo.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g12_referencia_zona0.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g13_zona0_epocas.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g14_arranque.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g15_solo_nu_2021.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g16_serie.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g17_robustez.py`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/nu2021.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_1995_10m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_1995_50cm.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2004_10m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2004_50cm.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2007_10m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2007_50cm.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2010_10m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2010_50cm.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2012_10m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2012_50cm.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2021_10m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2021_50cm.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2025_10m.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/orto_2025_50cm.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/plantado_apos_2012.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/pomar.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/pomar_2012.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/pomar_antigo.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/pomar_estavel.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/pomar_novo.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/saudavel.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/serie.json`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/trelica_min3epocas.npy`
+- `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/zona0.npy`
+- `_VALIDACAO_CAMADAS/TRIAGEM_CONTROLO3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/_serie_geografica.txt`
+- `_VALIDACAO_CAMADAS/b1_divisao.json`
+- `_VALIDACAO_CAMADAS/b1_divisao.py`
+- `_VALIDACAO_CAMADAS/b1_mascara_kiwi.py`
+- `_VALIDACAO_CAMADAS/b1_subblocos.py`
+- `_VALIDACAO_CAMADAS/gancho_certificar.py`
+- `_VALIDACAO_CAMADAS/m1_v3.py`
+- `_VALIDACAO_CAMADAS/serie_mascaras_geograficas.py`
+- `_VALIDACAO_CAMADAS/valvulas_por_area.json`
+- `_VALIDADE_GESTAO/REGISTO.md`
+- `_VALIDADE_GESTAO/REGISTO_IFAP.md`
+- `_VALIDADE_GESTAO/REGISTO_REG01_GUARDA_2026-09-01.md`
+- `_VALIDADE_GESTAO/_controlo3/c3_00_comum.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_01_sensibilidade.json`
+- `_VALIDADE_GESTAO/_controlo3/c3_01_triagem_sensibilidade.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_02_penhasco.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_03_margem.json`
+- `_VALIDADE_GESTAO/_controlo3/c3_03_margem.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_04_anos_e_donos.json`
+- `_VALIDADE_GESTAO/_controlo3/c3_04_anos_e_donos.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_05_sobreposicao.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_06_unidade.json`
+- `_VALIDADE_GESTAO/_controlo3/c3_06_unidade.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_07_mascara_pre.json`
+- `_VALIDADE_GESTAO/_controlo3/c3_07_mascara_pre.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_08_orto_tres.json`
+- `_VALIDADE_GESTAO/_controlo3/c3_08_orto_tres.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_09_olhar.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_10_jovens.py`
+- `_VALIDADE_GESTAO/_controlo3/c3_11_guarda_condicao5.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_00_dados.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_01_campos.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_02_matriz.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_03_q1_probabilidade.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_04_q5_doze.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_05_multiplicidade.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_06_q3_identidade.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_07_portao.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_08_q4_profundidade.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_09_extraccao.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_10_veredicto.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_11_inversao.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_12_lote.py`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_matriz.json`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_matriz_cru.json`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_q1.json`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_q5.json`
+- `_VALIDADE_GESTAO/_controlo3_a2/c3a2_q5_global.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_00_comum.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_01_geometria.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_01_geometria.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_02_saturacao.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_02_saturacao.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_03_estabelecimento.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_03_estabelecimento.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_04_concordancia.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_04_concordancia.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_05_multiverso.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_05_multiverso.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_06_guarda.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_07_datas.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_08_cronometro.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_08_cronometro.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_09_orto.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_09_orto.py`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_10_veredicto.json`
+- `_VALIDADE_GESTAO/_controlo3_b1/c3b1_10_veredicto.py`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_01_extrai.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_01_extrai.py`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_02_grelha.py`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_03_tinta.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_03_tinta.py`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_04_sectores.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_04_sectores.py`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_06_extrapolacoes.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_06_extrapolacoes.py`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_07_contiguidade.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_07_contiguidade.py`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_08_o_177.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_08_o_177.py`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_09_tres_enumeracoes.json`
+- `_VALIDADE_GESTAO/_controlo3_c8/c8_09_tres_enumeracoes.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/b1_cota.json`
+- `_VALIDADE_GESTAO/_controlo3_c9/b1_cota_50cm.npy`
+- `_VALIDADE_GESTAO/_controlo3_c9/q1_estrutura.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q2_glo30.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q2b_copado.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q2c_ruido.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q3_dispersao.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q4_geometria.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q4b_cobertura.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q4c_figura.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q4d_tiles.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q4e_cota_do_b1.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q4f_b1_confirmacao.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q5_numeros.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/q6_portao.py`
+- `_VALIDADE_GESTAO/_controlo3_c9/rastreio_que_eu_inventei.json`
+- `_VALIDADE_GESTAO/_controlos_utm.json`
+- `_VALIDADE_GESTAO/_densa_ganfei/2017-07-02__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2017-07-12__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2017-08-08__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2017-08-18__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2017-08-31__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2017-09-20__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-06-14__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-06-14__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-06-17__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-06-17__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-06-19__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-06-19__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-06-24__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-07-07__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-07-09__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-07-17__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-07-22__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-01__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-01__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-03__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-03__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-11__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-11__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-16__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-18__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-18__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-21__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-26__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-28__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-08-31__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-07__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-10__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-12__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-12__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-15__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-17__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-17__2_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-20__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-22__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-22__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-25__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-25__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-30__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2018-09-30__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-02__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-02__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-09__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-14__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-14__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-17__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-17__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-19__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-19__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-22__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-22__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-24__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-07-24__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-01__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-01__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-03__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-03__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-13__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-13__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-16__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-21__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-21__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-23__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-26__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-31__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-08-31__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-02__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-02__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-07__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-07__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-10__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-10__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-12__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-12__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-15__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2019-09-15__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-06-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-06-23__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-03__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-03__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-06__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-06__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-08__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-08__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-11__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-11__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-13__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-16__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-18__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-18__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-21__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-21__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-23__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-26__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-31__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-07-31__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-05__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-05__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-07__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-07__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-22__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-22__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-25__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-25__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-30__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-08-30__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-01__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-01__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-04__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-04__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-06__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-06__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-09__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-09__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-21__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-29__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2020-09-29__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-03__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-03__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-06__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-06__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-08__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-08__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-11__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-11__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-13__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-13__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-06-23__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-01__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-01__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-08__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-08__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-11__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-11__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-16__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-26__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-28__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-07-28__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-10__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-10__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-12__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-12__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-15__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-15__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-17__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-17__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-20__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-20__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-27__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-08-27__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-04__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-04__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-16__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-19__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-19__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-21__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-21__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-29__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2021-09-29__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-06-11__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-06-13__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-06-28__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-01__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-06__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-08__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-18__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-21__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-28__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-07-31__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-08-02__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-08-05__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-08-07__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-08-10__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-08-12__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-08-20__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-08-22__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-08-27__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-09-09__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-09-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-09-21__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2022-09-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-06-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-06-28__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-07-01__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-07-06__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-07-13__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-07-18__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-07-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-07-31__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-08-05__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-08-07__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-08-20__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-08-30__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-09-14__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-09-19__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-09-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2023-09-29__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-06-02__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-06-12__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-06-27__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-07-02__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-07-05__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-07-12__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-07-17__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-07-22__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-07-25__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-07-27__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-07-30__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-08-04__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-08-09__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-08-11__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-08-14__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-08-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-08-19__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-08-21__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-08-29__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-09-10__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-09-13__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-09-15__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-09-18__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2024-09-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-06-15__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-06-17__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-06-17__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-06-20__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-06-22__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-06-27__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-06-27__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-06-30__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-02__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-04__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-05__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-07__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-07__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-14__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-15__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-24__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-25__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-27__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-27__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-07-30__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-01__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-04__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-06__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-06__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-09__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-13__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-14__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-16__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-19__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-21__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-24__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-26__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-08-26__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-09-23__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-09-25__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-09-25__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-09-28__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2025-09-30__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-06-07__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-06-09__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-06-10__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-06-17__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-06-27__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-06-29__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-06-30__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-07-02__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-07-02__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-07-05__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-07-15__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-07-25__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-07-27__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-07-29__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-08-06__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-08-08__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-08-11__1_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-08-11__2_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-08-16__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-08-18__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-08-31__0_L2A.npy`
+- `_VALIDADE_GESTAO/_densa_ganfei/2026-08-31__1_L2A.npy`
+- `_VALIDADE_GESTAO/agrodigital_pistas.txt`
+- `_VALIDADE_GESTAO/altura_copado.json`
+- `_VALIDADE_GESTAO/amplitude.json`
+- `_VALIDADE_GESTAO/amplitude.py`
+- `_VALIDADE_GESTAO/amplitude_serie.json`
+- `_VALIDADE_GESTAO/assin_CUL.npy`
+- `_VALIDADE_GESTAO/assin_H.npy`
+- `_VALIDADE_GESTAO/assinatura.json`
+- `_VALIDADE_GESTAO/assinatura_espectral.py`
+- `_VALIDADE_GESTAO/b1_amplitude.json`
+- `_VALIDADE_GESTAO/b1_como_unidade.json`
+- `_VALIDADE_GESTAO/b1_como_unidade.py`
+- `_VALIDADE_GESTAO/b1_contra_corpo.py`
+- `_VALIDADE_GESTAO/b1_serie.json`
+- `_VALIDADE_GESTAO/calibrar_nu.py`
+- `_VALIDADE_GESTAO/chm_50cm.npy`
+- `_VALIDADE_GESTAO/chm_frac_alto.npy`
+- `_VALIDADE_GESTAO/data_da_orto.py`
+- `_VALIDADE_GESTAO/degrau_robustez.json`
+- `_VALIDADE_GESTAO/degrau_robustez.py`
+- `_VALIDADE_GESTAO/emparelhar_moedas.json`
+- `_VALIDADE_GESTAO/emparelhar_moedas.py`
+- `_VALIDADE_GESTAO/escala_nu.json`
+- `_VALIDADE_GESTAO/fila.json`
+- `_VALIDADE_GESTAO/fileiras.json`
+- `_VALIDADE_GESTAO/fileiras_2021_2025.py`
+- `_VALIDADE_GESTAO/gerar_artefacto.py`
+- `_VALIDADE_GESTAO/ifap_cruzamento.json`
+- `_VALIDADE_GESTAO/ifap_cruzamento.py`
+- `_VALIDADE_GESTAO/ifap_cultura.npy`
+- `_VALIDADE_GESTAO/ifap_exploracao.json`
+- `_VALIDADE_GESTAO/ifap_exploracao_total.json`
+- `_VALIDADE_GESTAO/ins04_media_contra_mediana.json`
+- `_VALIDADE_GESTAO/ins04_media_contra_mediana.py`
+- `_VALIDADE_GESTAO/kiwi_por_beneficiario.json`
+- `_VALIDADE_GESTAO/kiwi_regional.json`
+- `_VALIDADE_GESTAO/laz_ids.json`
+- `_VALIDADE_GESTAO/mds_urls.json`
+- `_VALIDADE_GESTAO/obter_mds.py`
+- `_VALIDADE_GESTAO/orto_297313.json`
+- `_VALIDADE_GESTAO/orto_297313.py`
+- `_VALIDADE_GESTAO/ortos_297313_urls.json`
+- `_VALIDADE_GESTAO/p2_onze_cenas.json`
+- `_VALIDADE_GESTAO/p2_onze_cenas.py`
+- `_VALIDADE_GESTAO/p5_onde_esta_o_pico.json`
+- `_VALIDADE_GESTAO/p5_onde_esta_o_pico.py`
+- `_VALIDADE_GESTAO/paisagem.json`
+- `_VALIDADE_GESTAO/paisagem.py`
+- `_VALIDADE_GESTAO/paisagem_resultado.json`
+- `_VALIDADE_GESTAO/piso_inverno.json`
+- `_VALIDADE_GESTAO/piso_inverno.py`
+- `_VALIDADE_GESTAO/piso_inverno_tabela.json`
+- `_VALIDADE_GESTAO/postos.json`
+- `_VALIDADE_GESTAO/postos.py`
+- `_VALIDADE_GESTAO/prom_2021.npy`
+- `_VALIDADE_GESTAO/prom_2025.npy`
+- `_VALIDADE_GESTAO/recortes.py`
+- `_VALIDADE_GESTAO/rede_de_rega.json`
+- `_VALIDADE_GESTAO/rede_de_rega.py`
+- `_VALIDADE_GESTAO/refazer_c2_este.json`
+- `_VALIDADE_GESTAO/refazer_c2_este.py`
+- `_VALIDADE_GESTAO/reg01_landsat_r3.json`
+- `_VALIDADE_GESTAO/reg01_landsat_r3.py`
+- `_VALIDADE_GESTAO/sem_pergola.npy`
+- `_VALIDADE_GESTAO/serie_separada.json`
+- `_VALIDADE_GESTAO/serie_separada.py`
+- `_VALIDADE_GESTAO/serie_separada_v2.json`
+- `_VALIDADE_GESTAO/t1_ponto_de_quebra.json`
+- `_VALIDADE_GESTAO/t1_ponto_de_quebra.py`
+- `_VALIDADE_GESTAO/t2_cenas_descartadas.json`
+- `_VALIDADE_GESTAO/t2_cenas_descartadas.py`
+- `_VALIDADE_GESTAO/t3_nula_no_estrato.json`
+- `_VALIDADE_GESTAO/t3_nula_no_estrato.py`
+- `_VALIDADE_GESTAO/t4_n_landsat.json`
+- `_VALIDADE_GESTAO/t5_referencia_reconstruida.json`
+- `_VALIDADE_GESTAO/t5_referencia_reconstruida.py`
+- `_VALIDADE_GESTAO/terreno_contra_declinio.py`
+- `_VALIDADE_GESTAO/terreno_declinio.json`
+- `_VALIDADE_GESTAO/terreno_desvio.npy`
+- `_VALIDADE_GESTAO/terreno_twi.npy`
+- `_VALIDADE_GESTAO/teste_guarda_cultura.py`
+- `_VALIDADE_GESTAO/todas_urls.json`
+- `_VALIDADE_GESTAO/vista_larga.py`
+- `ganfei_s2/AUDITORIA_COWORK_2026-08-28.md`
+- `ganfei_s2/Claude outputs/CARTAS_LABORATORIO.md`
+- `ganfei_s2/Claude outputs/PROTOCOLO_CAMPO_GANFEI.md`
+- `ganfei_s2/MEMO_INFOGRAFIA.md`
+- `ganfei_s2/MEMO_INFOGRAFIA_ADENDA_v1.1.md`
+- `ganfei_s2/MEMO_INFOGRAFIA_ADENDA_v1.2.md`
+- `ganfei_s2/MEMO_INFOGRAFIA_ADENDA_v1.3.md`
+- `ganfei_s2/MEMO_INFOGRAFIA_ADENDA_v1.4.md`
+- `ganfei_s2/MEMO_INFOGRAFIA_ADENDA_v1.5.md`
+- `ganfei_s2/MEMO_INFOGRAFIA_ADENDA_v1.6.md`
+- `ganfei_s2/MEMO_INFOGRAFIA_ADENDA_v1.7.md`
+- `ganfei_s2/_apresentacao/00_ENTREGA.md`
+- `ganfei_s2/_apresentacao/01_RESULTADO_D2.md`
+- `ganfei_s2/_apresentacao/02_RESULTADO_v1.2.md`
+- `ganfei_s2/_apresentacao/03_FUSAO_E_SATELITES.md`
+- `ganfei_s2/_apresentacao/04_LOBULO_E_DERIVA.md`
+- `ganfei_s2/_apresentacao/05_REVISAO_CONTRA_A_CADEIA.md`
+- `ganfei_s2/_apresentacao/06_MOEDAS_E_G19.md`
+- `ganfei_s2/_apresentacao/07_JA_TINHA_SIDO_MEDIDO.md`
+- `ganfei_s2/_apresentacao/scripts/a_corrigir_acentos.py`
+- `ganfei_s2/_pacote_cowork/AMBIGUIDADES_sessao_independente.md`
+- `ganfei_s2/_pacote_cowork/AUDITORIA.md`
+- `ganfei_s2/_pacote_cowork/AUDITORIA_INDEPENDENTE.md`
+- `ganfei_s2/_pacote_cowork/LACUNA_BIOTICA.md`
+- `ganfei_s2/_pacote_cowork/LEIA-ME.md`
+- `ganfei_s2/_pacote_cowork/OBSERVACOES_sessao_independente.md`
+- `ganfei_s2/_pacote_cowork/PROMPT_AUDITORIA.md`
+- `ganfei_s2/_pacote_cowork/PROMPT_COWORK.md`
+- `ganfei_s2/_pacote_cowork/audit_a_b.py`
+- `ganfei_s2/_pacote_cowork/audit_a_b_cenas.csv`
+- `ganfei_s2/_pacote_cowork/audit_c.py`
+- `ganfei_s2/_pacote_cowork/audit_c_serie.csv`
+- `ganfei_s2/_pacote_cowork/audit_termico.py`
+- `ganfei_s2/_pacote_cowork/b1_nucleo_interno.py`
+- `ganfei_s2/_pacote_cowork/b1_nucleo_serie.csv`
+- `ganfei_s2/_pacote_cowork/cota_vs_ndvi.csv`
+- `ganfei_s2/_pacote_cowork/difusa.py`
+- `ganfei_s2/_pacote_cowork/difusa_nucleos.csv`
+- `ganfei_s2/_pacote_cowork/expansao.csv`
+- `ganfei_s2/_pacote_cowork/expansao_b1.csv`
+- `ganfei_s2/_pacote_cowork/exportar_pendentes.py`
+- `ganfei_s2/_pacote_cowork/exportar_pendentes3.py`
+- `ganfei_s2/_pacote_cowork/f1_matriz.py`
+- `ganfei_s2/_pacote_cowork/f2_exclusoes.py`
+- `ganfei_s2/_pacote_cowork/f3_cronologia.py`
+- `ganfei_s2/_pacote_cowork/f4_chave_espacial.py`
+- `ganfei_s2/_pacote_cowork/f5_amostragem.py`
+- `ganfei_s2/_pacote_cowork/f6_arvore_decisao.py`
+- `ganfei_s2/_pacote_cowork/f7_perfil_kvds.py`
+- `ganfei_s2/_pacote_cowork/fenologia.csv`
+- `ganfei_s2/_pacote_cowork/fenologia.py`
+- `ganfei_s2/_pacote_cowork/focos_datacao_geometria.csv`
+- `ganfei_s2/_pacote_cowork/lidar_topografia_por_mascara.csv`
+- `ganfei_s2/_pacote_cowork/pendente_bacia.csv`
+- `ganfei_s2/_pacote_cowork/pendente_degrau_campanhas.csv`
+- `ganfei_s2/_pacote_cowork/pendente_escoamento.csv`
+- `ganfei_s2/_pacote_cowork/pendente_geada.csv`
+- `ganfei_s2/_pacote_cowork/pendente_nivelamento.csv`
+- `ganfei_s2/_pacote_cowork/pendente_pomares_novos.csv`
+- `ganfei_s2/_pacote_cowork/pendente_precipitacao.csv`
+- `ganfei_s2/_pacote_cowork/pendente_sar_declives.csv`
+- `ganfei_s2/_pacote_cowork/pendente_sar_secagem.csv`
+- `ganfei_s2/_pacote_cowork/proveniencia.json`
+- `ganfei_s2/_pacote_cowork/rededge.csv`
+- `ganfei_s2/_pacote_cowork/serie_densa_W.csv`
+- `ganfei_s2/_pacote_cowork/termico.csv`
+- `ganfei_s2/_pacote_cowork/termico.py`
+- `ganfei_s2/_pacote_cowork/tracos_1995_coordenadas.csv`
+- `ganfei_s2/_reexecucao_1a_sessao/OBSERVACOES.md`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/NOTAS.md`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/cota_vs_ndvi.csv`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/expansao.csv`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/expansao_b1.csv`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/focos_datacao_geometria.csv`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/lidar_topografia_por_mascara.csv`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_b1_analise.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_b1_serie.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_espalhamento.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_exportar_auditoria.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_fazer_masks_v2.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_fenologia.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_metricas.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_rededge.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/log_termico.txt`
+- `ganfei_s2/_reexecucao_1a_sessao/reproducao/masks_regenerado_por_fazer_masks_v2.json`
+- `ganfei_s2/_serie_geografica.txt`
+- `ganfei_s2/audit_a_b.py`
+- `ganfei_s2/audit_a_b_cenas.csv`
+- `ganfei_s2/audit_c.py`
+- `ganfei_s2/audit_c_serie.csv`
+- `ganfei_s2/audit_termico.csv`
+- `ganfei_s2/audit_termico.py`
+- `ganfei_s2/b1_analise.py`
+- `ganfei_s2/b1_divisao.json`
+- `ganfei_s2/b1_divisao.py`
+- `ganfei_s2/b1_kiwi_5m.npy`
+- `ganfei_s2/b1_mascara_kiwi.npy`
+- `ganfei_s2/b1_mascara_kiwi.py`
+- `ganfei_s2/b1_nucleo_interno.py`
+- `ganfei_s2/b1_nucleo_serie.csv`
+- `ganfei_s2/b1_serie.py`
+- `ganfei_s2/b1_subblocos.json`
+- `ganfei_s2/b1_subblocos.py`
+- `ganfei_s2/bacia.py`
+- `ganfei_s2/bacia2.py`
+- `ganfei_s2/chuva.py`
+- `ganfei_s2/cota_vs_ndvi.csv`
+- `ganfei_s2/difusa.py`
+- `ganfei_s2/difusa_nucleos.csv`
+- `ganfei_s2/escoamento.py`
+- `ganfei_s2/espalhamento.py`
+- `ganfei_s2/expansao.csv`
+- `ganfei_s2/expansao_b1.csv`
+- `ganfei_s2/exportar_auditoria.py`
+- `ganfei_s2/exportar_pendentes.py`
+- `ganfei_s2/exportar_pendentes3.py`
+- `ganfei_s2/fenologia.csv`
+- `ganfei_s2/fenologia.py`
+- `ganfei_s2/figuras/FIGURAS_ABSTRACTS.md`
+- `ganfei_s2/figuras/base/base_sectores.json`
+- `ganfei_s2/figuras/base/carta_base.py`
+- `ganfei_s2/figuras/base/preparar_base.py`
+- `ganfei_s2/figuras/f10_altura_copado.py`
+- `ganfei_s2/figuras/f11_matriz_diagnostico.py`
+- `ganfei_s2/figuras/f12_landsat.py`
+- `ganfei_s2/figuras/f13_hipoteses.py`
+- `ganfei_s2/figuras/f14_plano.py`
+- `ganfei_s2/figuras/f1_matriz.py`
+- `ganfei_s2/figuras/f2_exclusoes.py`
+- `ganfei_s2/figuras/f3_cronologia.py`
+- `ganfei_s2/figuras/f4_chave_espacial.py`
+- `ganfei_s2/figuras/f5_amostragem.py`
+- `ganfei_s2/figuras/f6_arvore_decisao.py`
+- `ganfei_s2/figuras/f7_perfil_kvds.py`
+- `ganfei_s2/figuras/f8_braudel.py`
+- `ganfei_s2/figuras/f9_serie_separada.py`
+- `ganfei_s2/figuras/m1_v3.py`
+- `ganfei_s2/figuras/m1_v4.py`
+- `ganfei_s2/figuras/m1_v5.py`
+- `ganfei_s2/figuras/m1_v6.py`
+- `ganfei_s2/figuras/m1_v7.py`
+- `ganfei_s2/figuras/m1_v8_implantacao.py`
+- `ganfei_s2/figuras/m1_valvulas.py`
+- `ganfei_s2/figuras/m2_declinio.py`
+- `ganfei_s2/filtro_w.py`
+- `ganfei_s2/focos_datacao_geometria.csv`
+- `ganfei_s2/geada.py`
+- `ganfei_s2/lidar_prep.py`
+- `ganfei_s2/lidar_terreno.py`
+- `ganfei_s2/lidar_topografia_por_mascara.csv`
+- `ganfei_s2/m2_nucleos.csv`
+- `ganfei_s2/metricas.py`
+- `ganfei_s2/nivelamento.py`
+- `ganfei_s2/novos_pomares.py`
+- `ganfei_s2/orto_datar.py`
+- `ganfei_s2/orto_detalhe.py`
+- `ganfei_s2/orto_extrai.py`
+- `ganfei_s2/paleo.py`
+- `ganfei_s2/pendente_bacia.csv`
+- `ganfei_s2/pendente_degrau_campanhas.csv`
+- `ganfei_s2/pendente_escoamento.csv`
+- `ganfei_s2/pendente_geada.csv`
+- `ganfei_s2/pendente_nivelamento.csv`
+- `ganfei_s2/pendente_pomares_novos.csv`
+- `ganfei_s2/pendente_precipitacao.csv`
+- `ganfei_s2/pendente_sar_declives.csv`
+- `ganfei_s2/pendente_sar_secagem.csv`
+- `ganfei_s2/rededge.csv`
+- `ganfei_s2/rededge.py`
+- `ganfei_s2/secagem.py`
+- `ganfei_s2/sentinel/proveniencia.json`
+- `ganfei_s2/sentinel_b1/proveniencia_b1.json`
+- `ganfei_s2/serie_densa.json`
+- `ganfei_s2/serie_densa_W.csv`
+- `ganfei_s2/serie_densa_descontinuidades.py`
+- `ganfei_s2/serie_mascaras_geograficas.py`
+- `ganfei_s2/t2_mosaico.py`
+- `ganfei_s2/t2_paleo.py`
+- `ganfei_s2/t2_paleo2.py`
+- `ganfei_s2/termico.csv`
+- `ganfei_s2/termico.py`
+- `ganfei_s2/valvulas_por_area.json`
+- `ganfei_s2/valvulas_v6.json`
+- `ganfei_s2/ver2026.py`
+- `ganfei_s2/ver_masks.py`

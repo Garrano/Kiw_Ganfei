@@ -36,6 +36,7 @@ mudar, o ficheiro que o produziu é que tem de ser corrido outra vez. Isto é o
 **portão**, não o pipeline.
 """
 import json
+import io
 import os
 import sys
 
@@ -95,6 +96,8 @@ PV = {
     "esquema":   r"C:/Users/Jackster2/Downloads/Esquema de rega retificado.pdf",
     "valvulas":  r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/valvulas_1a5.json",
     "c8":        r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.json",
+    "terreno":   r"C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.json",
+    "b1terreno": r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/b1_terreno.json",
 }
 
 GANFEI = ("REFERENCIA", "foco OCIDENTAL", "foco ORIENTAL", "resto do pomar")
@@ -113,7 +116,7 @@ reg(temporal(
     Facto("A1 · acontecimento em 2025-26 em duas posições e não no resto",
           instrumento="contraste foco-menos-controlo, Sentinel-2",
           ficheiro="serie_oriental_pergola.py", comparacao_temporal=True)
-    .confirmar_com("Landsat 8/9 (USGS/NASA, OLI, LaSRC)", True, prova=PV["landsat"], nota=
+    .confirmar_com("Landsat 8/9 (USGS/NASA, OLI, LaSRC)", True, prova=PV["landsat"], chave="landsat", nota=
                    "replica direcção e datação, p exacto 0,0110 = 1/91; "
                    "controlo −0,001 (p = 0,98); magnitudes NÃO replicam"),
     GANFEI), "−0,115 (ocidental) e −0,110 (oriental), ±0,02–0,03")
@@ -127,16 +130,16 @@ reg(temporal(
           # verificacao 4 do certificar.py, na sua primeira corrida.
           ficheiro="SAIDA_C1/c1_09_sar.py", comparacao_temporal=True)
     .confirmar_com("é ele próprio o independente do óptico — física diferente",
-                   True, "reverificado por c2_09_sar_verificacao", prova=PV["sar"]),
+                   True, "reverificado por c2_09_sar_verificacao", prova=PV["sar"], chave="vv"),
     ("REFERENCIA", "foco OCIDENTAL")), "−1,107 e −0,775 dB, fora da banda de nove Invernos")
 
 reg(temporal(
     Facto("A3 · entre unidades de linha de base contínua, é o pior da região",
           instrumento="Landsat 8/9, 100 cenas, 29 blocos triados",
           ficheiro="reg01_triagem_descontinuidade.py", comparacao_temporal=True)
-    .confirmar_com("Sentinel-2, mesma triagem", True, "mesma ordenação", prova=PV["triagem"])
+    .confirmar_com("Sentinel-2, mesma triagem", True, "mesma ordenação", prova=PV["triagem"], chave="mantidos")
     .confirmar_com("ortofoto DGT 2007-2025 e 03-09", True,
-                   "cinco datados a 01-09; três a 03-09", prova=PV["orto297"])
+                   "cinco datados a 01-09; três a 03-09", prova=PV["orto297"], chave="2025")
     .fronteira("parcelário do IFAP (outra entidade) e discos pré-registados"),
     # A prova de identidade dos FOCOS e o rastreio denso de Ganfei, que os
     # cobre e os lista como continuos. Apontava para o rastreio REGIONAL, que
@@ -178,21 +181,21 @@ reg(Facto("C1 · o voo LiDAR é de 06-07-2025, 14:34:53–14:51:08 UTC",
           instrumento="tempo GPS do LAS", ficheiro="l1_data_do_voo.py")
     .instantanea("uma data, lida do cabeçalho do LAS")
     .confirmar_com("global_encoding bit 0 = 1", True,
-                   "Adjusted Standard GPS no cabeçalho do LAS", prova=PV["voo"]),
+                   "Adjusted Standard GPS no cabeçalho do LAS", prova=PV["voo"], chave="gps"),
     "um só dia, 0,27 h de amplitude")
 
 reg(Facto("C2 · a partição pérgola/chão é PÓS-TRATAMENTO",
           instrumento="data do voo contra a janela do acontecimento",
           ficheiro="CAMADA_2_ADENDA_LIDAR.md")
     .instantanea("é uma afirmação sobre a data do voo, não uma medição comparada")
-    .confirmar_com("C1, calculado em disco", True, prova=PV["voo"]),
+    .confirmar_com("C1, calculado em disco", True, prova=PV["voo"], chave="gps"),
     "toda a leitura que dela dependa herda isto")
 
 reg(Facto("C3 · o bloco sudoeste é da mesma exploração",
           instrumento="parcelário IFAP", ficheiro="g19_parcelario.py")
     .instantanea("o parcelário é de uma campanha e é assim que é usado")
     .confirmar_com("parcelário do IFAP — documento de outra entidade", True,
-                   "19,00 ha em 16 parcelas, 12,64 ha de kiwi", prova=PV["parcelario"]),
+                   "19,00 ha em 16 parcelas, 12,64 ha de kiwi", prova=PV["parcelario"], chave="ENT_ID"),
     "não há controlo externo contemporâneo de kiwi — é medição, não omissão")
 
 reg(Facto("C4 · ORI-COM tinha pérgola madura em 2010 (111 %) e 2012 (79 %)",
@@ -200,7 +203,7 @@ reg(Facto("C4 · ORI-COM tinha pérgola madura em 2010 (111 %) e 2012 (79 %)",
           ficheiro="p3_pergola_2010_2012.py")
     .instantanea("prominência medida DENTRO de cada imagem, nunca entre épocas")
     .confirmar_com("mapa certificado da C2", True,
-                   "máx dif 0,00e+00 em 2 858 células", prova=PV["prom2012"]),
+                   "máx dif 0,00e+00 em 2 858 células", prova=PV["prom2012"], chave=None),
     "instrumento a discriminar nas duas épocas")
 
 reg(Facto("C5 · ORI-SEM nunca teve pérgola",
@@ -216,7 +219,7 @@ reg(temporal(
           instrumento="prominência de pérgola, seis épocas de ortofoto",
           ficheiro="p4_quando_foi_arrancada.py", comparacao_temporal=True)
     .confirmar_com("coorte de plantação certificada pela C0", True,
-                   "documental, independente da imagem", prova=PV["c0"]),
+                   "documental, independente da imagem", prova=PV["c0"], chave="G19"),
     ("REFERENCIA",)), "prominência negativa em todas as unidades até 2007")
 
 reg(Facto("C7 · a atribuição de válvulas não sustenta nenhuma quantidade",
@@ -289,6 +292,26 @@ reg(Facto("D9 · faltam a CTC e a saturação em bases; a profundidade é NÃO "
                   "not extracted»"),
     "12 parâmetros de fertilidade, nenhum do complexo de troca")
 
+# ---- C9 · a estrutura, e o que ela NAO explica ------------------------------
+# Estava certificado na Camada 1 como S3 desde 29-08 e NUNCA foi carregado para
+# a LISTA_FINAL. A P10 apoia-se nele, por isso entra no registo.
+reg(Facto("C9 · a cota nao acompanha o declinio",
+          instrumento="MDT LiDAR 50 cm, cota por unidade",
+          ficheiro="SAIDA_C1/c1_03_mdt.py")
+    .instantanea("o terreno e a longue duree: nao ha intervalo a comparar")
+    .fronteira("mascara geografica da C2 e discos pre-registados; o MDT nao "
+               "sabe de NDVI")
+    .confirmar_com("GLO-30 — radar, outra plataforma, outra resolucao", True,
+                   "a ordenacao das quatro unidades reproduz-se; o degrau de "
+                   "costura entre campanhas de voo e 0,058 m contra 1,204 m "
+                   "de contraste", prova=PV["terreno"], chave="glo")
+    .confirmar_com("o mesmo MDT estendido ao B1 (folhas 157564 e 158564)", True,
+                   "B1 a 6,06 m (Controlo 3, com controlo de costura 0,046 m) — "
+                   "0,58 m ABAIXO do foco mais baixo",
+                   prova=PV["b1terreno"], chave="b1_media"),
+    "ORIENTAL 7,84 · resto 6,98 · referencia 6,80 · OCIDENTAL 6,64 · B1 6,06. "
+    "A cota NAO acompanha o declinio: o mais baixo de todos e o unico que sobe")
+
 # ---- C8 · RETIRADO e SUBSTITUIDO a 04-09-2026 ------------------------------
 # A versao anterior dizia «as valvulas 1-5 nao estao em nenhuma das quatro
 # reconstrucoes». **E falso**: o `valvulas_v4.json` tem-nas em `lobo_oeste`,
@@ -305,7 +328,7 @@ reg(Facto("C8 · a particao por valvula testou 60,8 pct da exploracao",
     .fronteira("a tabela e do explorador, anterior a qualquer calculo nosso")
     .confirmar_com("as quatro reconstrucoes do esquema", True,
                    "todas partem 12 valvulas, sempre 6-17",
-                   prova=PV["c8"]),
+                   prova=PV["c8"], chave="pct_testado"),
     "27,3 ha testados de 44,93 - ficaram fora 17,63 ha em treze unidades: as "
     "cinco valvulas do B1 (9,01 ha) e as soltas 18-25 e 27 (8,62 ha)")
 
@@ -341,3 +364,31 @@ if __name__ == "__main__":
         print("BLOQUEADOS: %s" % ", ".join(bloqueia))
         raise SystemExit(1)
     print("Todos os factos da LISTA_FINAL cumprem as seis condicoes do portao.")
+
+    # ---- MANIFESTO. Nao e cosmetica: e a correccao do LS-1 do Controlo 3.
+    #
+    # O certificar.py descobria os ficheiros de cada facto com um regex sobre
+    # ESTE texto-fonte (`ficheiro="..."`). Os seis factos do bloco B declaram-se
+    # num tuplo e os dois da C1 trazem directorio no nome — nenhum casava. O
+    # adversario provou-o: marcou `multiverso_degrau.py` como retirado e a
+    # verificacao 8 nao disparou. Cobertura real: 19 dos 27 factos, com uma
+    # linha verde impressa na mesma.
+    #
+    # A raiz do defeito e ler o CODIGO em vez de perguntar aos OBJECTOS. Isto
+    # publica o que cada Facto sabe de si — o ficheiro que o produz e cada
+    # ficheiro de prova — e o certificar passa a ler daqui.
+    import json as _json
+    man = []
+    for f, texto in FACTOS:
+        man.append(dict(
+            codigo=f.nome.split(" ·")[0],
+            nome=f.nome,
+            ficheiro=f.ficheiro,
+            temporal=bool(f.comparacao_temporal),
+            provas=[p for (_i, _c, _n, _ok, p) in f._independentes if p]))
+    _json.dump(dict(n=len(man), factos=man),
+               io.open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                    "registo_manifesto.json"), "w",
+                       encoding="utf-8"), indent=1, ensure_ascii=False)
+    print("manifesto: %d factos, %d ficheiros de prova"
+          % (len(man), sum(len(m["provas"]) for m in man)))

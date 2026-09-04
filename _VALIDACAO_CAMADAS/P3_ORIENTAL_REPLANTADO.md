@@ -1,3 +1,14 @@
+> # ⚠ RETIRADA PARCIAL
+>
+> **§2 e §3 deste documento estão retirados** por `P5_RETRACCAO_DO_REPLANTADO.md` (31-08-2026).
+> O veredicto «o foco oriental foi replantado» assentava só na prominência de
+> pérgola — um instrumento a confirmar-se a si próprio — e o nível absoluto de
+> NDVI não tem cova nenhuma nos anos em causa.
+>
+> **§1, §4 e §5 mantêm-se.** Este documento **não** leva cartucho de retirada
+> total, e essa distínção é deliberada: marcar a mais apaga prova boa.
+> Registado no nível-afirmação da `TRIAGEM_DE_FONTES.md`.
+
 # P3 — o foco oriental foi REPLANTADO. E a correcção sobre a PSA.
 
 **Data:** 31-08-2026

@@ -1,0 +1,216 @@
+{
+ "n": 27,
+ "factos": [
+  {
+   "codigo": "A1",
+   "nome": "A1 · acontecimento em 2025-26 em duas posições e não no resto",
+   "ficheiro": "serie_oriental_pergola.py",
+   "temporal": true,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/landsat.json"
+   ]
+  },
+  {
+   "codigo": "A2",
+   "nome": "A2 · o radar vê o mesmo, no foco ocidental",
+   "ficheiro": "SAIDA_C1/c1_09_sar.py",
+   "temporal": true,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/SAIDA_C1/c1_09_sar.json"
+   ]
+  },
+  {
+   "codigo": "A3",
+   "nome": "A3 · entre unidades de linha de base contínua, é o pior da região",
+   "ficheiro": "reg01_triagem_descontinuidade.py",
+   "temporal": true,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/reg01_triagem.json",
+    "C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/orto_297313_fraccao.json"
+   ]
+  },
+  {
+   "codigo": "B1",
+   "nome": "B1 · invariante em 43 corridas aninhadas (5 unidades × 3 raios × 5 limiares)",
+   "ficheiro": "multiverso_degrau.py",
+   "temporal": true,
+   "provas": []
+  },
+  {
+   "codigo": "B2",
+   "nome": "B2 · o degrau bate a recta com o ponto de quebra contabilizado",
+   "ficheiro": "degrau_vs_recta_pergola.py",
+   "temporal": true,
+   "provas": []
+  },
+  {
+   "codigo": "B3",
+   "nome": "B3 · são dois passos, não um: −0,050 em Ago-2025 e −0,13 a −0,23 em Jul-2026",
+   "ficheiro": "satelites_degrau.py",
+   "temporal": true,
+   "provas": []
+  },
+  {
+   "codigo": "B4",
+   "nome": "B4 · Julho de 2026 não é estável: −0,229 a −0,130, factor 1,7",
+   "ficheiro": "satelites_sem_2026.py",
+   "temporal": true,
+   "provas": []
+  },
+  {
+   "codigo": "B5",
+   "nome": "B5 · a correcção de dia-do-ano é ≤ 0,0011, e é limite superior",
+   "ficheiro": "fenologia_por_unidade.py",
+   "temporal": true,
+   "provas": []
+  },
+  {
+   "codigo": "B7",
+   "nome": "B7 · os três núcleos destacados não se distinguem no seu estrato de distância",
+   "ficheiro": "halo_distancia.py",
+   "temporal": true,
+   "provas": []
+  },
+  {
+   "codigo": "B6",
+   "nome": "B6 · a referência tinha 14 a 18 células dentro dos discos",
+   "ficheiro": "PRE_REGISTO_REFERENCIA.md",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "C1",
+   "nome": "C1 · o voo LiDAR é de 06-07-2025, 14:34:53–14:51:08 UTC",
+   "ficheiro": "l1_data_do_voo.py",
+   "temporal": false,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/l1_data_do_voo.json"
+   ]
+  },
+  {
+   "codigo": "C2",
+   "nome": "C2 · a partição pérgola/chão é PÓS-TRATAMENTO",
+   "ficheiro": "CAMADA_2_ADENDA_LIDAR.md",
+   "temporal": false,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/l1_data_do_voo.json"
+   ]
+  },
+  {
+   "codigo": "C3",
+   "nome": "C3 · o bloco sudoeste é da mesma exploração",
+   "ficheiro": "g19_parcelario.py",
+   "temporal": false,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas_largo.json"
+   ]
+  },
+  {
+   "codigo": "C4",
+   "nome": "C4 · ORI-COM tinha pérgola madura em 2010 (111 %) e 2012 (79 %)",
+   "ficheiro": "p3_pergola_2010_2012.py",
+   "temporal": false,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/SAIDA_C2/c2_12_prom_2012.npy"
+   ]
+  },
+  {
+   "codigo": "C5",
+   "nome": "C5 · ORI-SEM nunca teve pérgola",
+   "ficheiro": "p3_pergola_2010_2012.py",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "C6",
+   "nome": "C6 · a pérgola apareceu no pomar entre 2007 e 2010",
+   "ficheiro": "p4_quando_foi_arrancada.py",
+   "temporal": true,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/CAMADA_0_CERTIFICADO.md"
+   ]
+  },
+  {
+   "codigo": "C7",
+   "nome": "C7 · a atribuição de válvulas não sustenta nenhuma quantidade",
+   "ficheiro": "lobulo_oeste_degrau.py",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "D1",
+   "nome": "D1 · a matriz de diagnóstico tem uma coluna: 13 de 20 linhas numa só amostra",
+   "ficheiro": "CAMADA_4_CERTIFICADO_R2.md",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "D2",
+   "nome": "D2 · o único organismo com posição é o M. hapla, e anticorrelaciona com o défice",
+   "ficheiro": "CAMADA_4_CERTIFICADO_R2.md",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "D3",
+   "nome": "D3 · a única amostra oriental é um composto sobre 9,92 ha, 28,1 % sem pérgola",
+   "ficheiro": "CAMADA_4_CERTIFICADO_R2.md",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "D4",
+   "nome": "D4 · o esforço de amostragem é inverso à heterogeneidade do substrato",
+   "ficheiro": "CAMADA_4_CERTIFICADO_R2.md",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "D5",
+   "nome": "D5 · nenhuma amostra com posição é anterior ao acontecimento",
+   "ficheiro": "CAMADA_4_CERTIFICADO_R2.md",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "D6",
+   "nome": "D6 · a PSA nunca foi encomendada porque os sintomas não eram compatíveis",
+   "ficheiro": "LISTA_FINAL",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "D7",
+   "nome": "D7 · os boletins A2 não podem testar afectado contra não afectado",
+   "ficheiro": "a2_solo_caracterizacao.py",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "D9",
+   "nome": "D9 · faltam a CTC e a saturação em bases; a profundidade é NÃO SABIDA, não ausente",
+   "ficheiro": "a2_solo_caracterizacao.py",
+   "temporal": false,
+   "provas": []
+  },
+  {
+   "codigo": "C9",
+   "nome": "C9 · a cota nao acompanha o declinio",
+   "ficheiro": "SAIDA_C1/c1_03_mdt.py",
+   "temporal": false,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.json",
+    "C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/b1_terreno.json"
+   ]
+  },
+  {
+   "codigo": "C8",
+   "nome": "C8 · a particao por valvula testou 60,8 pct da exploracao",
+   "ficheiro": "valvulas_1a5_o_troco_que_falta.py",
+   "temporal": false,
+   "provas": [
+    "C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.json"
+   ]
+  }
+ ]
+}

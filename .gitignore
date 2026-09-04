@@ -47,8 +47,8 @@ ganfei_s2/lidar/
 
 # ── saídas grandes de figura que não são peças de apresentação
 *.pdf
-!P0*.png
-!P0*.svg
+!P[0-9]*.png
+!P[0-9]*.svg
 
 # ── habituais
 __pycache__/

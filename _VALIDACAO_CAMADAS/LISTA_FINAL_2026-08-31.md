@@ -126,6 +126,28 @@ atribuída a qualquer válvula varia até 50×**. Nenhuma peça pode escrever um
 área por válvula.
 
 
+**C9 · A cota não acompanha o declínio.**
+MDT LiDAR 50 cm, por unidade: **ORIENTAL 7,84 m** · resto 6,98 · referência
+6,80 · **OCIDENTAL 6,64 m** · **B1 6,06 m**.
+As duas manchas estão a 1,20 m uma da outra, em posições opostas dentro do
+pomar — **e o B1, que não declina, está 0,58 m abaixo das duas.** O mais baixo
+de todos é o único que sobe.
+*Confirmado por:* **GLO-30** — radar, outra plataforma — que reproduz a
+ordenação das quatro unidades do pomar; e o degrau de costura entre campanhas de
+voo é 0,058 m contra 1,204 m de contraste. Para o B1, o controlo de costura dá **0,046 m**.
+> **A estrutura não explica o acontecimento**, e agora por uma razão mais forte
+> do que «posições opostas»: a ordenação por cota e a ordenação por declínio
+> **não coincidem em ponto nenhum**.
+*Corrigido duas vezes a 04-09, e a segunda pelo Controlo 3.* A primeira versão
+dizia «as duas manchas estão nos extremos opostos do terreno» e que o B1 estava
+**sem cota, sem dreno, sem declive**. Eram falsas as duas — e a correcção que eu
+fiz também: escrevi que o mosaico parava **445 m** a norte do B1, e essa medida
+é da **aresta errada**. A folga real é **−200 m**: a caixa entra dentro do B1, e
+**5,5 ha já estavam no array que a própria peça abria**.
+*E o número do B1 é do adversário, que o mediu com controlo de costura (0,046 m)
+e confirmação GLO-30 no sinal certo:* **6,06 m**, 0,58 m abaixo do «ponto
+baixo». A minha medição deu 6,185; fico com a dele, que tem o controlo.
+
 **C8 · A hipótese «rede de rega sobre-estendida» foi fechada por um teste que
 não alcançava o troço que a torna sobre-estendida.**
 A P06 dá-a por fechada — «partição por válvula contra 200 partições rodadas da

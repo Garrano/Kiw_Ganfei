@@ -1,0 +1,13 @@
+{
+ "cota_mediana_m": 6.061898708343506,
+ "cota_media_m": 6.185201772436196,
+ "cota_p5_m": 4.841740655899048,
+ "cota_p95_m": 7.8640543699264525,
+ "n_px_50cm": 505700,
+ "area_ha": 12.642512555583467,
+ "mosaicos": [
+  "MDT-50cm-157564-07-2025_v02.tif",
+  "MDT-50cm-158564-07-2025_v02.tif"
+ ],
+ "nota": "cota do sector B1 medida pelo Controlo 3 a 04-09-2026 dos mosaicos que ja estavam em disco; a P10 afirma que este sector nao tem cota"
+}

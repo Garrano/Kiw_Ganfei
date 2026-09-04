@@ -74,7 +74,8 @@ class Facto:
         self._instantanea = None      # razao para dispensar a condicao 5
 
     # ------------------------------------------------------------------ 2
-    def confirmar_com(self, instrumento, concorda=True, nota="", prova=None):
+    def confirmar_com(self, instrumento, concorda=True, nota="", prova=None,
+                      chave=""):
         """Regista um instrumento independente e se ele CONCORDA.
 
         `concorda=False` não é um aviso: é o que impede o veredicto de sair.
@@ -92,8 +93,40 @@ class Facto:
         escreve `nao_testavel()` e assina.
         """
         import os as _os
+        # QUINTA ENCARNACAO, fechada a 04-09. Exigir que o ficheiro EXISTA nao
+        # chega: o C9 declarava «confirmado por GLO-30» com
+        # prova=c1_04_terreno_por_unidade.json — a saida do proprio LiDAR, com
+        # ZERO ocorrencias de «glo». O portao via um ficheiro e acreditava.
+        #
+        # `chave` e um termo que TEM de aparecer no conteudo da prova. Sem ele,
+        # a confirmacao e registada mas nao conta. Quando o confirmador nao
+        # deixa termo procuravel (um .npy, por exemplo), passa-se chave=None
+        # explicitamente e assina-se a razao em `nota`.
         ok_prova = bool(prova) and _os.path.exists(prova)
-        self._independentes.append((instrumento, bool(concorda), nota,
+        detalhe = ""
+        if ok_prova and chave:
+            try:
+                with open(prova, "rb") as fh:
+                    corpo = fh.read(4_000_000).decode("utf-8", "ignore").lower()
+                if chave.lower() not in corpo:
+                    ok_prova = False
+                    detalhe = ("o ficheiro de prova NAO contem «%s»" % chave)
+                else:
+                    detalhe = "contem «%s»" % chave
+            except Exception as e:
+                ok_prova, detalhe = False, "prova ilegivel (%s)" % type(e).__name__
+        elif ok_prova and chave is None:
+            detalhe = "sem termo procuravel — declarado"
+        elif ok_prova and chave == "":
+            # O OMISSIVO NAO PODE DESLIGAR A VERIFICACAO. Se `chave` fica por
+            # declarar, a confirmacao nao conta — senao esta correccao seria a
+            # sexta encarnacao de «ausencia tratada como aprovacao», dentro da
+            # correccao da quinta. Para dispensar, escreve-se chave=None e
+            # assina-se a razao em `nota`.
+            ok_prova = False
+            detalhe = "chave por declarar — passa chave=<termo> ou chave=None"
+        self._independentes.append((instrumento, bool(concorda),
+                                    (nota + ("  [" + detalhe + "]" if detalhe else "")),
                                     ok_prova, prova))
         return self
 
@@ -500,6 +533,7 @@ if __name__ == "__main__":
          .reproduz(P, P, nome="c2_12_prom_2012.npy")
          .confirmar_com("mapa certificado da C2", concorda=True,
                         nota="máx dif 0,00e+00 em 2 858 células",
+                        chave=None,   # .npy binário — sem termo procurável, declarado
                         prova=_os.path.join(
                             r"C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS",
                             "SAIDA_C2", "c2_12_prom_2012.npy")))

@@ -22,6 +22,7 @@ entrar alguma coisa por engano, o git recusa-a. As duas camadas são de propósi
     python sincronizar.py --aplicar  copia
 """
 import os
+import re
 import shutil
 import sys
 
@@ -39,7 +40,11 @@ def entra(rel):
     if any(x in rel for x in EXCLUI):
         return False
     b = os.path.basename(rel)
-    if b.startswith("P0") and b.lower().endswith((".png", ".svg")):
+    # `P0` e nao `P\d+`: e a TERCEIRA vez que este prefixo cega alguma coisa
+    # nesta arvore. A verificacao 7 do certificar nao via a P10; o
+    # `.gitignore` tinha a mesma regra; e este filtro deixava a P10 e a P11
+    # fora do repositorio sem dizer nada.
+    if re.match(r"^P\d+[a-z]?_", b) and b.lower().endswith((".png", ".svg")):
         return True
     return rel.lower().endswith(EXT)
 

@@ -50,6 +50,7 @@ independentes por desenho, e cuja função é encontrar premissas falsas
 partilhadas, coisa que nenhum teste automático faz.
 """
 import io
+import json
 import os
 import re
 import subprocess
@@ -120,6 +121,24 @@ else:
                       "Corre triagem_referencia_densa.py.")
     CODIGOS_REG = set(re.findall(r"OK\s+([ABCD]\d)\b", out))
 
+# ── o MANIFESTO do registo. Substitui os regex sobre o texto-fonte nas
+#   verificacoes 4 e 8. O Controlo 3 provou que o regex nao via oito dos 27
+#   factos — os seis do bloco B (declarados num tuplo) e os dois com directorio
+#   no nome — e que as duas verificacoes imprimiam linha verde na mesma.
+MANIF = os.path.join(AQUI, "registo_manifesto.json")
+FICH_FACTOS, PROVAS_FACTOS = {}, {}
+if os.path.exists(MANIF):
+    _m = json.load(io.open(MANIF, encoding="utf-8"))
+    for _f in _m["factos"]:
+        if _f.get("ficheiro"):
+            FICH_FACTOS[_f["codigo"]] = _f["ficheiro"]
+        PROVAS_FACTOS[_f["codigo"]] = _f.get("provas", [])
+    if CODIGOS_REG and set(FICH_FACTOS) | set(PROVAS_FACTOS) != set(CODIGOS_REG):
+        AVISOS.append("o manifesto e a corrida do registo não têm os mesmos "
+                      "códigos — corre registo_de_factos.py")
+else:
+    FALHAS.append("falta registo_manifesto.json — corre registo_de_factos.py")
+
 # ── 2 · a prosa não derivou do registo
 if os.path.exists(LISTA):
     txt = io.open(LISTA, encoding="utf-8").read()
@@ -172,13 +191,16 @@ else:
 # ── 4 · os ficheiros que produzem os factos existem
 txt_reg = io.open(REGISTO, encoding="utf-8").read()
 falta = []
-for fich in sorted(set(re.findall(r'ficheiro="([^"]+\.py)"', txt_reg))):
+for cod, fich in sorted(FICH_FACTOS.items()):
+    if not fich.endswith(".py"):
+        continue
     if not any(os.path.exists(os.path.join(d, fich)) for d in DIRS_FACTOS):
-        falta.append(fich)
+        falta.append("%s → %s" % (cod, fich))
 if falta:
     FALHAS.append("scripts de factos que já não existem: %s" % ", ".join(falta))
 else:
-    diz("  reprodutibilidade todos os scripts citados existem em disco")
+    diz("  reprodutibilidade %d scripts de facto existem em disco"
+        % len({v for v in FICH_FACTOS.values() if v.endswith(".py")}))
 
 # ── 5 · o rastreio de descontinuidade está fresco
 alvo = TRIAGEM if os.path.exists(TRIAGEM) else (
@@ -218,7 +240,12 @@ if os.path.isdir(FIG) and os.path.exists(LISTA):
     t_lista = os.path.getmtime(LISTA)
     velhas = []
     for f in sorted(os.listdir(FIG)):
-        if not (f.lower().startswith("p0") and f.lower().endswith(".png")):
+        # `startswith("p0")` era CEGO a P10 — a unica das onze pecas que nao
+        # comeca por «p0». O Controlo 3 mostrou que a 04-09 as 09:45 esta
+        # verificacao devolveu CERTIFICADA com seis afirmacoes falsas vivas
+        # nessa peca. Agora e P seguido de digitos, sem depender do zero.
+        import re as _re
+        if not (_re.match(r"^P\d+[a-z]?_", f) and f.lower().endswith(".png")):
             continue
         alvo = os.path.join(FIG, f)
         fonte = os.path.join(FIG, f[:f.rfind(".")].lower() + ".py")
@@ -246,6 +273,46 @@ if os.path.isdir(FIG) and os.path.exists(LISTA):
                           % (n_fig, cab.split("—")[-1].strip()))
         else:
             diz("  P06/lista        %d retiradas nas duas" % n_fig)
+
+# ── 8 · nenhum facto se apoia num ficheiro morto, e a triagem nao esta velha
+#
+#   Porque existe: duas vezes se consultou um ficheiro que ja nao valia, e nas
+#   duas o processo nao deu sinal nenhum — porque nada em disco distingue um
+#   ficheiro vivo de um morto. A triagem distingue; isto obriga-a a valer.
+TRI = os.path.join(AQUI, "triagem_de_fontes.json")
+if not os.path.exists(TRI):
+    FALHAS.append("falta a triagem_de_fontes.json — corre triagem_de_fontes.py")
+else:
+    T = json.load(io.open(TRI, encoding="utf-8"))
+    CL = T["classe"]
+    mortos = {os.path.basename(k): (v, k) for k, v in CL.items()
+              if v in ("RETIRADO", "SUBSTITUIDO")}
+    # basename dos DOIS lados: `citados` trazia "SAIDA_C1/c1_09_sar.py" com
+    # prefixo e `mortos` e indexado por basename, portanto nunca casavam.
+    citados = {}
+    for cod, fich in FICH_FACTOS.items():
+        citados.setdefault(os.path.basename(fich), set()).add(cod)
+    for cod, ps in PROVAS_FACTOS.items():
+        for x in ps:
+            citados.setdefault(os.path.basename(x), set()).add(cod)
+    maus = sorted({"%s (%s) — factos %s"
+                   % (b, mortos[b][0], ",".join(sorted(citados[b])))
+                   for b in citados if b in mortos})
+    if maus:
+        FALHAS.append("facto apoiado em ficheiro morto: %s" % "; ".join(maus))
+    elif os.path.getmtime(TRI) < os.path.getmtime(LISTA):
+        AVISOS.append("a triagem é mais velha que a LISTA_FINAL — corre "
+                      "triagem_de_fontes.py")
+    else:
+        n = {}
+        for v in CL.values():
+            n[v] = n.get(v, 0) + 1
+        diz("  triagem          %d correntes · %d mortos · %d não alcançados"
+            % (n.get("CORRENTE", 0),
+               n.get("RETIRADO", 0) + n.get("SUBSTITUIDO", 0),
+               n.get("NAO_ALCANCADO", 0)))
+        diz("  cobertura 8      %d ficheiros de %d factos vigiados"
+            % (len(citados), len(set().union(*citados.values()) if citados else [])))
 
 # ── modo completo: volta a correr o rastreio
 if COMPLETO:
