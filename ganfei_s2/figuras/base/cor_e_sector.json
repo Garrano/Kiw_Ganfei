@@ -1,0 +1,46 @@
+{
+ "pergunta": "cada cor impressa corresponde a um sector?",
+ "metodo": "mediana RGB da trama colorida numa janela de 26 px a volta de cada valvula com etiqueta conhecida, no scan a 2338 px",
+ "amostras": {
+  "v6 Sector G": [
+   198,
+   216,
+   192
+  ],
+  "v7 Sector F": [
+   251,
+   244,
+   212
+  ],
+  "v8 Sector E": [
+   214,
+   183,
+   207
+  ],
+  "v9 Sector D": [
+   217,
+   189,
+   210
+  ],
+  "v16 Sector M": [
+   244,
+   237,
+   207
+  ]
+ },
+ "par_decisivo": {
+  "a": "v7 Sector F",
+  "b": "v16 Sector M",
+  "delta_rgb": 11.1,
+  "separacao_na_folha_pt": 250,
+  "nota": "extremos opostos do desenho, sem ambiguidade de amostragem"
+ },
+ "par_descartado": {
+  "a": "v8 Sector E",
+  "b": "v9 Sector D",
+  "delta_rgb": 7.3,
+  "nota": "bandas vizinhas — a amostra pode ter caido na mesma; nao se usa como prova"
+ },
+ "veredicto": "NAO. A cor repete-se: e colorizacao de mapa, escolhida para que bandas vizinhas se distingam, nao uma chave de identidade. Localmente serve para contar bandas; nao serve para inferir a letra.",
+ "quem": "hipotese levantada pelo utilizador em 04-09-2026, a partir de ter lido «sector M» na banda amarela da valvula 16"
+}

@@ -110,6 +110,28 @@ Recortes a 900 dpi das três zonas em falta ficam em
 `Downloads/_esquema_rega/decodificar_*.png`, prontos para quem conheça o
 terreno os decodificar. **É a pergunta 1 da lista ao gestor.**
 
+**E a cor não resolve o problema — foi testado.** Levantou-se a hipótese de
+cada cor impressa corresponder a um sector, o que permitiria ler as etiquetas
+todas sem as decifrar. Mediu-se a mediana RGB da trama em torno de cada válvula
+com etiqueta conhecida: o **sector F** (válvula 7) e o **sector M** (válvula 16)
+têm o **mesmo amarelo, ΔRGB 11,1**, em extremos opostos da folha e sem
+ambiguidade de amostragem. A cor é **colorização de mapa** — escolhida para que
+bandas vizinhas se distingam — e não uma chave de identidade.
+
+Uma consequência útil fica: **localmente** a cor serve, porque bandas adjacentes
+diferem. Ao decifrar um recorte pode contar-se as bandas com segurança; só não
+se pode inferir a letra a partir da cor. Medições em
+`figuras/base/cor_e_sector.json`.
+
+**O que saiu da prancha em 04-09, e fica aqui.** O registo da P12 com a P11 é ao
+**nível do sector**: a georreferenciação do desenho contra o parcelário do IFAP
+falhou o critério pré-registado — RMS 70,3 m contra o limite de 20 m, e 3 das 10
+manchas detectadas dentro das parcelas — e por isso a camada não traz posição de
+válvula nenhuma. As quatro reconstruções discordam entre 92 e 398 m para um
+espaçamento entre válvulas de 98 m. Nada disto vai escrito na carta: o traço
+interrompido já o diz, e repeti-lo por extenso era anotar na carta do gestor uma
+lacuna que é nossa.
+
 ---
 
 ## P01 · O caso numa página

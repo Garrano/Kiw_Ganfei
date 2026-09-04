@@ -202,19 +202,14 @@ def desenha(ax, b, transparente):
                         (E, N - ALT * .62 - 34), ha="center", va="top",
                         fontsize=7.0, color=CONDUTA, weight="bold",
                         path_effects=_halo(2.8), zorder=11)
-        else:
-            ax.annotate("sector impresso por ler", (E, N - ALT * .62 - 34),
-                        ha="center", va="top", fontsize=6.8, color=ALERTA,
-                        style="italic", path_effects=_halo(2.8), zorder=11)
+        # Não se escreve «sector impresso por ler» debaixo dos outros quatro:
+        # é uma lacuna NOSSA anotada na carta do gestor. A pergunta vai no
+        # email, e a razão fica no FIGURAS_ABSTRACTS.md.
 
-    # ── a ressalva, dentro do mapa, porque é sobre o mapa
-    x0, x1, y0, y1 = b.ext
-    ax.annotate("posição de cada válvula DENTRO do sector: não resolvida\n"
-                "as quatro reconstruções discordam 92–398 m; espaçamento 98 m",
-                (x0 + .035 * (x1 - x0), y0 + .095 * (y1 - y0)),
-                ha="left", va="bottom", fontsize=8.2, color=ALERTA,
-                weight="bold", linespacing=1.5,
-                path_effects=_halo(3.4), zorder=12)
+    # A ressalva da posição não resolvida saiu do mapa em 04-09. O traço
+    # interrompido já a diz, e a chave da legenda explica-o; repeti-la por
+    # extenso era pôr na carta do gestor uma lacuna que é nossa. Fica no
+    # FIGURAS_ABSTRACTS.md, com os números.
     return ax
 
 
@@ -290,10 +285,7 @@ def legenda(axl, b):
     # e os dois encavalitavam-se. Passa a seguir o y corrente.
     y -= .052
     axl.annotate("Fonte   «Esquema de rega retificado» (PRDLUX, Jul-09), com as\n"
-                 "anotações manuscritas do gestor.\n\n"
-                 "Registo   ao nível do sector. A georreferenciação do desenho\n"
-                 "contra o IFAP falhou o critério pré-registado (RMS 70,3 m\n"
-                 "contra o limite de 20 m), e por isso não há posições aqui.",
+                 "anotações manuscritas do gestor.",
                  (0, min(y, .120)), xycoords="axes fraction", ha="left",
                  va="top", color=TINTA3, **MARGINALIA)
 
