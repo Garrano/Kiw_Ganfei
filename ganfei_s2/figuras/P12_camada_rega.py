@@ -22,10 +22,27 @@ válvula 8 a **34 m** desse ponto, com a frase fora do cálculo
 (`m1_v8_implantacao.py`). Chega para o sector; não chega para a célula de uma
 válvula numa malha de 98 m.
 
-Tentou-se resolver isso como se deve: georreferenciar o próprio desenho contra
-o parcelário do IFAP, com o critério escrito antes de correr (**RMS < 20 m**, e
-as 17 válvulas a cair dentro das parcelas). **Deu RMS 70,3 m**, e 3 das 10
-manchas detectadas dentro. Falhou, e por isso não se publica posição nenhuma.
+QUATRO TENTATIVAS DE GEORREFERENCIAR, E O ESTADO A 04-09
+---------------------------------------------------------
+    1. ICP global automático .................... RMS  70,3 m   falhou
+    2. afim, pontos à vista ..................... RMS 189,1 m   falhou
+    3. idem, com a ponta oriental corrigida ..... RMS 112,4 m   falhou
+    4. ICP local POR BLOCO, escala fixa ......... RMS  33,6 m (banda)
+                                                  RMS  24,6 m (lobo)   falhou
+
+A tentativa 3 falhou por um erro meu: a ponta oriental do desenho fora lida em
+x = 1562 px quando está em **x ≈ 2160** — 600 píxeis, ou 750 m. E dela saiu uma
+conclusão publicada e depois **retirada**: «o desenho não tem escala única».
+
+O gestor deu então a escala — **1:3500 em A1**, ou 1,259 m/px neste scan — e a
+banda, remedida, dá 1,263. **O desenho está à escala.** A tentativa 4 fixa a
+escala nesse valor (é testemunho: ganha ao cálculo) e ajusta por bloco.
+
+Ficou perto e **não passou**: o critério pré-registado pedia RMS < 30 m e ≥8/12
+válvulas dentro das parcelas na banda, ≥4/5 no lobo. Saiu 33,6 m com 6/12, e
+24,6 m com 3/5. Todas as válvulas caem a **≤ 26 m** das parcelas — que é o chão
+de leitura do método — mas o critério é o critério, e **não se publicam
+posições**.
 
 E o desenho mostra por que razão nenhuma reconstrução 1-D podia acertar: há
 **duas fiadas de válvulas na mesma estação de linha** — as 10 e 13 de um lado

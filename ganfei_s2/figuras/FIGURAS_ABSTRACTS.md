@@ -89,10 +89,36 @@ uma carta destas costuma afirmar não tem fonte, e sem esta distinção o leitor
 não sabe qual metade. A prancha traz sete perguntas escritas para levar ao
 gestor.
 
-**Porque não há posições de válvula.** Tentou-se georreferenciar o próprio
-desenho contra o parcelário do IFAP, com o critério escrito antes de correr —
-**RMS < 20 m**, e as 17 válvulas a cair dentro das parcelas. Deu **RMS 70,3 m**
-e 3 das 10 manchas detectadas dentro. Falhou, e não se publica posição nenhuma.
+**Porque não há posições de válvula — quatro tentativas, e o estado a 04-09.**
+
+| tentativa | RMS | |
+|---|---|---|
+| ICP global automático | 70,3 m | falhou |
+| afim, pontos escolhidos à vista | 189,1 m | falhou |
+| idem, com a ponta oriental corrigida | 112,4 m | falhou |
+| **ICP local por bloco, escala fixa** | **33,6 m** banda · **24,6 m** lobo | falhou |
+
+A terceira falhou por erro meu: a ponta oriental do desenho fora lida em
+x = 1562 px quando está em **x ≈ 2160** — 600 píxeis, ou **750 m**. Dela saiu
+uma conclusão publicada e depois **retirada**: «o desenho não tem escala única;
+a banda vai comprimida 1,9×».
+
+**O gestor deu então a escala: 1:3500 em A1** — 1,259 m/px neste scan de
+2338 px. Remedida com a ponta certa, a banda dá **1,263 m/px, 0,3 % de
+desvio**. O desenho está à escala, e a conclusão anterior era sobre a minha
+leitura, não sobre o desenho.
+
+A quarta tentativa fixa a escala nesse valor — é testemunho de tipo 1, e ganha
+ao cálculo — e ajusta rotação e translação **por bloco**, porque o lobo do B1
+está desenhado deslocado em relação à banda. Chegou perto e **não passou**: o
+critério pré-registado pedia RMS < 30 m e ≥ 8/12 válvulas dentro das parcelas
+na banda, ≥ 4/5 no lobo; saiu 33,6 m com 6/12 e 24,6 m com 3/5.
+
+**Todas as válvulas caem a ≤ 26 m das parcelas** — que é o chão de leitura do
+método (±15 px × 1,26 m/px ≈ ±20 m). Mas o critério é o critério, e não se
+publicam posições. Fica registado que o resíduo está agora **na mesma ordem de
+grandeza da precisão do método e da mudança real de fronteiras** entre o
+desenho de Jul-2009 e o parcelário de 2025.
 
 **E o desenho explica porque nenhuma reconstrução podia acertar:** há **duas
 fiadas de válvulas na mesma estação de linha** — as 10 e 13 de um lado da

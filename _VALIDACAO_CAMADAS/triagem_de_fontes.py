@@ -245,8 +245,29 @@ for _ in range(3):
 print("  + produtores dos dados vivos: %d" % (len(CORRENTE) - antes))
 
 # ── 4 · RETIRADO — só o cabeçalho explícito. Sem regex sobre prosa.
-RETIRADO = {r: "traz o cabeçalho «⚠ RETIRADO»" for r, d in INV.items()
-            if d["texto"].lstrip().startswith("> # ⚠ RETIRADO")}
+def _retirado(t):
+    """O cartucho, em `.md` e em `.py`.
+
+    A convenção era só para documentos: primeira linha «> # ⚠ RETIRADO». Mas a
+    04-09 um SCRIPT foi retirado — o `escala_do_desenho.py`, cuja conclusão
+    sobre a escala do esquema era falsa — e a triagem não o via, porque um `.py`
+    começa pelas aspas triplas do docstring e não por `>`. Um ficheiro retirado
+    que a triagem dá como vivo é exactamente o buraco que ela existe para tapar.
+
+    Num `.py` o cartucho vai dentro do docstring do módulo, nas primeiras
+    linhas. Aqui aceitam-se as duas formas.
+    """
+    t = t.lstrip()
+    if t.startswith("> # ⚠ RETIRADO"):
+        return True
+    cab = t[:600]
+    py = cab.startswith('"""') or cab.startswith("# -*- coding")
+    marcado = "⚠ RETIRADO" in cab or cab.lstrip('"').lstrip().startswith("RETIRADO")
+    return bool(py and marcado)
+
+
+RETIRADO = {r: "traz o cartucho «⚠ RETIRADO»" for r, d in INV.items()
+            if _retirado(d["texto"])}
 
 # ── 5 · SUBSTITUÍDO — só quando um ficheiro CORRENTE o diz, com o verbo à mão
 # Duas fontes, ambas declaradas: uma convenção de directório (uma pasta chamada

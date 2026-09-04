@@ -15,9 +15,20 @@ contígua. São feições de fronteira, não de sinal.
 
 A INCERTEZA, declarada antes
 ----------------------------
-A escala sai a ≈1,7 m por píxel do scan. A minha leitura de uma feição no
-desenho tem uns **±15 px**, ou seja **±25 m**. Isso é o chão do método: nenhum
+> **CORRIGIDO a 04-09.** Este cabeçalho dizia «a escala sai a ≈1,7 m/px». Não
+> sai: o gestor declarou **1:3500 em A1**, o que num scan de 2338 px dá
+> **1,259 m/px** — e a banda, remedida, confirma-o a 0,3 %. O ±25 m abaixo
+> continua válido porque vem de ±15 px de leitura × ~1,6 m/px, e a ordem de
+> grandeza não muda.
+
+A escala é 1,259 m/px (1:3500 em A1). A minha leitura de uma feição no desenho
+tem uns **±15 px**, ou seja **±20 a 25 m**. Isso é o chão do método: nenhum
 ajuste pode sair melhor do que isso, e um que saia é suspeito.
+
+> **E este ficheiro foi superado.** O `georref_por_bloco.py` faz o mesmo por
+> bloco, com ICP local e a escala fixa no valor declarado, e chega a RMS 33,6 m
+> (banda) e 24,6 m (lobo) contra os 112,4 m daqui. Fica pela cadeia de
+> tentativas, não como método corrente.
 
 Contra um espaçamento entre válvulas de 98 m, ±25 m serve para dizer **em que
 sector cai cada válvula** e não serve para dizer onde ela está dentro do

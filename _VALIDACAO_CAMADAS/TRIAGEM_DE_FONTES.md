@@ -8,9 +8,9 @@ de factos até ele. Menção em prosa não conta.
 | classe | n | o que fazer |
 |---|---|---|
 | CORRENTE | 153 | consulta-se |
-| RETIRADO | 2 | **não se consulta** |
+| RETIRADO | 3 | **não se consulta** |
 | SUBSTITUIDO | 3 | **não se consulta** — usa o sucessor |
-| NAO_ALCANCADO | 1137 | nada o liga a um facto vivo; perguntar antes de usar |
+| NAO_ALCANCADO | 1147 | nada o liga a um facto vivo; perguntar antes de usar |
 
 ## Afirmações derrubadas — ficheiro vivo, linha morta
 
@@ -50,8 +50,9 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 
 ## Retirados
 
-- `_VALIDACAO_CAMADAS/REG01_LANDSAT_REPLICACAO.md` — traz o cabeçalho «⚠ RETIRADO»
-- `_VALIDACAO_CAMADAS/REG01_RESULTADO.md` — traz o cabeçalho «⚠ RETIRADO»
+- `_VALIDACAO_CAMADAS/REG01_LANDSAT_REPLICACAO.md` — traz o cartucho «⚠ RETIRADO»
+- `_VALIDACAO_CAMADAS/REG01_RESULTADO.md` — traz o cartucho «⚠ RETIRADO»
+- `ganfei_s2/figuras/base/escala_do_desenho.py` — traz o cartucho «⚠ RETIRADO»
 
 ## Substituídos
 
@@ -61,7 +62,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 
 ## Correntes — e por que caminho de consumo se chega a cada um
 
-- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← ifap_parcelas_largo.json
+- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← b1_terreno.py → ifap_kiwi_largo.json
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_culturas.json`  ← g19_parcelario.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json`  ← b1_terreno.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas.json`  ← g19_parcelario.py
@@ -94,7 +95,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py`  ← c1_10_nivelamento.json
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_cenas.json`  ← c2_09_sar_verificacao.py
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy`  ← c2_09_sar_verificacao.py
-- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py`  ← c2_09_sar_verificacao.py → c2_07_sar_pilha.npy
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py`  ← c2_09_sar_verificacao.py → c2_07_sar_cenas.json
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.json`
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py`
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py`  ← c2_09_sar_verificacao.py → c2_07_sar_pilha.npy
@@ -1288,7 +1289,17 @@ Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
 - `ganfei_s2/figuras/FIGURAS_ABSTRACTS.md`
 - `ganfei_s2/figuras/base/base_sectores.json`
 - `ganfei_s2/figuras/base/carta_base.py`
+- `ganfei_s2/figuras/base/cenarios_letras.json`
+- `ganfei_s2/figuras/base/cenarios_letras.py`
+- `ganfei_s2/figuras/base/cor_e_sector.json`
+- `ganfei_s2/figuras/base/debito_e_sectores.json`
+- `ganfei_s2/figuras/base/debito_e_sectores.py`
+- `ganfei_s2/figuras/base/escala_do_desenho.json`
 - `ganfei_s2/figuras/base/georref_esquema.json`
+- `ganfei_s2/figuras/base/georref_manual.json`
+- `ganfei_s2/figuras/base/georref_manual.py`
+- `ganfei_s2/figuras/base/georref_por_bloco.json`
+- `ganfei_s2/figuras/base/georref_por_bloco.py`
 - `ganfei_s2/figuras/base/georreferenciar_esquema.py`
 - `ganfei_s2/figuras/base/preparar_base.py`
 - `ganfei_s2/figuras/base/rega_multiverso.json`

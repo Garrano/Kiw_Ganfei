@@ -15,6 +15,20 @@ tem de ser proporcional à sua área.
 **É uma verificação independente da leitura**, e é a primeira coisa neste
 ficheiro que não depende de conseguir ver texto de três píxeis.
 
+> **RESSALVA POSTA A 04-09, e pode derrubar a conclusão principal.**
+> Este ficheiro concluiu que as 13 letras A–N cobrem **só a banda**, e que o B1
+> está fora do sistema de letras — apoiado em a dotação bater a 1,2 % nessa
+> hipótese e falhar por 44,5 % na outra.
+>
+> Depois disso, o recorte `_esquema_rega/GRELHA_lobo.png`, lido a 04-09, mostra
+> **etiquetas de sector impressas nas bandas do lobo do B1** — lê-se «sector H»
+> junto à válvula 5. Se assim for, **as letras entram no B1 e a conclusão deste
+> ficheiro cai**, e com ela o número de 38,0 m³/ha que serve de alvo à busca.
+>
+> O gestor leu, de forma independente, **4 = I** e **5 = H** — o que aponta no
+> mesmo sentido. Está por confirmar, e enquanto não estiver **nada daqui entra
+> em peça nenhuma**.
+
 O QUE SE DECIDE, E O QUE NÃO
 ----------------------------
 Decide-se **se as letras cobrem a exploração toda ou só a banda contígua** —
