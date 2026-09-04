@@ -225,6 +225,54 @@ reg(Facto("D6 · a PSA nunca foi encomendada porque os sintomas não eram compat
                   "outra vez a quem sabe. FALTA a linha no livro-razão"),
     "exclusão clínica, não lacuna")
 
+# ---- D7-D9 · os boletins A2 de fisico-quimica do solo -----------------------
+# Nove boletins x 12 parametros. A unidade e o BOLETIM, nao o registo: doze
+# parametros do mesmo tubo nao sao doze observacoes.
+reg(Facto("D7 · os boletins A2 não podem testar afectado contra não afectado",
+          instrumento="9 boletins de físico-química do solo",
+          ficheiro="a2_solo_caracterizacao.py")
+    .instantanea("cada boletim é uma data única; não há série a comparar")
+    .fronteira("código de bloco escrito pelo laboratório, não derivado de "
+               "sinal nosso")
+    .nao_testavel("nenhum boletim tem coordenada; 3 de 9 são do sector B1, fora "
+                  "da AOI e em estabelecimento; e o C7 proíbe a atribuição por "
+                  "válvula"),
+    "0 de 9 com coordenada · 0 dentro de um foco · 3 de 9 no B1")
+
+reg(Facto("D8 · a acidez do solo não acompanha o declínio",
+          instrumento="pH(H2O) em 9 boletins — química, não óptica",
+          ficheiro="a2_solo_caracterizacao.py")
+    .instantanea("pH de uma colheita, sem série")
+    .fronteira("código de bloco do laboratório")
+    .confirmar_com("série óptica do B1 (Landsat 100 cenas + Sentinel-2)", True,
+                   "os dois pH mais baixos, 5,2 e 5,3, são do B1, que SOBE "
+                   "+0,092 enquanto os focos descem −0,085"),
+    "hipótese pré-registada que só podia falhar, e falhou")
+
+reg(Facto("D9 · faltam a CTC e a saturação em bases, e a profundidade não está "
+          "declarada em campo nenhum",
+          instrumento="inventário dos 12 parâmetros e de 5 campos de metadados",
+          ficheiro="a2_solo_caracterizacao.py")
+    .instantanea("é um inventário, não uma medição")
+    .nao_testavel("é uma ausência documental: não há segundo instrumento a pedir"),
+    "a química que existe é de acima da camada que se suspeita")
+
+# ---- C8 · o troco de rede que nenhum teste alcancou -------------------------
+reg(Facto("C8 · a hipótese da rede sobre-estendida foi fechada por um teste que "
+          "não alcançava o troço oeste",
+          instrumento="inventário das quatro reconstruções do esquema de rega",
+          ficheiro="valvulas_1a5_o_troco_que_falta.py")
+    .instantanea("é um inventário do que entrou no teste, não uma medição no tempo")
+    .fronteira("o esquema de rega é documento do explorador, anterior a "
+               "qualquer cálculo nosso")
+    .confirmar_com("testemunho do gestor, tipo 1, 03-09-2026", True,
+                   "«B1 = válvulas 1-5»")
+    .confirmar_com("geometria independente", True,
+                   "o bloco do G19 (C0, por extrapolação do esquema) e o B1 "
+                   "(IFAP, via coordenadas do gestor) batem a 1 m no bordo norte"),
+    "válvulas 1-5 ausentes das quatro reconstruções; o teste correu 12, todas "
+    "no corpo principal")
+
 # ══════════════════════════════════════════════════════════════════ o portão
 if __name__ == "__main__":
     print("=" * 96)

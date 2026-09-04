@@ -66,10 +66,7 @@ FECHADAS = [
      "MDT LiDAR a 50 cm: cota, microdepressão, TWI, área drenante",
      "o défice está no terreno ALTO, e está lá desde 2017",
      "p < 0,001 em 11/11"),
-    ("Rede de rega sobre-estendida",
-     "partição por válvula contra 200 partições rodadas da mesma geometria",
-     "a válvula não explica nada que a geografia já não explique",
-     "dentro do nulo 11/11"),
+
     ("Poda", "132 cenas de Abril a Outubro, saltos entre cenas a < 12 dias",
      "um só salto acima de 3 desvios em três anos, e é de Abril",
      "1 em 124"),
@@ -80,6 +77,14 @@ FECHADAS = [
 ]
 
 CONFUNDIDAS = [
+    ("Rede de rega sobre-estendida",
+     "partição por válvula contra 200 partições rodadas da mesma geometria:" + chr(10) +
+     "a válvula não explica nada que a geografia já não explique, 11/11 dentro do nulo.",
+     "MAS as quatro reconstruções contêm as válvulas 6 a 17 — TODAS no corpo" + chr(10) +
+     "principal. As válvulas 1 a 5, que servem o B1 a 500 m a sudoeste, estão" + chr(10) +
+     "«POR COLOCAR», e o fundamento invoca um objecto retirado a 28-08.",
+     "fechada só para o corpo principal · o troço que a torna sobre-estendida "
+     "nunca foi testado"),
     ("Porta-enxerto  ·  Summer Kiwi contra pé franco",
      "dentro do bloco: nulo apertado, −0,0004, IC95 [−0,0015, +0,0014].  "
      "Entre blocos: trajectórias\n"
@@ -139,7 +144,7 @@ LIM = 0.607                               # divisória
 y = 0.975
 ax.text(XH, y + 0.018, "JÁ FECHADO", fontsize=11.4, color=FECHADA,
         fontweight="bold")
-ax.text(XH + 0.115, y + 0.019, "sete hipóteses fixadas antes de correr, "
+ax.text(XH + 0.115, y + 0.019, "seis hipóteses fixadas antes de correr, "
         "corridas, e refutadas por medição", fontsize=8.8, color=TINTA3)
 ax.plot([XH, LIM - 0.012], [y + 0.006, y + 0.006], lw=1.6, color=FECHADA)
 y -= 0.030
@@ -242,7 +247,7 @@ fig.text(0.026, 0.922,
          "lado do instrumento que o deu.",
          fontsize=11, color=TINTA2)
 fig.text(0.026, 0.892,
-         "Sete fecharam com medição. Uma foi testada e o desenho não a isola. "
+         "Seis fecharam com medição. Duas foram testadas e o desenho não as isola. "
          "Duas continuam abertas: uma porque nunca foi procurada, a outra "
          "porque a decisão de a excluir não está escrita em lado nenhum.",
          fontsize=11, color=TINTA, fontweight="bold")

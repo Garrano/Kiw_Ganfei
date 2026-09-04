@@ -125,6 +125,29 @@ entre as duas posições sobrevive às quatro reconstruções do esquema; **a á
 atribuída a qualquer válvula varia até 50×**. Nenhuma peça pode escrever uma
 área por válvula.
 
+
+**C8 · A hipótese «rede de rega sobre-estendida» foi fechada por um teste que
+não alcançava o troço que a torna sobre-estendida.**
+A P06 dá-a por fechada — «partição por válvula contra 200 partições rodadas da
+mesma geometria · dentro do nulo 11/11». Mas **as quatro reconstruções do
+esquema contêm as válvulas 6 a 17, doze, todas no corpo principal.** As
+**válvulas 1 a 5 não estão em nenhuma**, e estão registadas como *«POR
+COLOCAR»* — com um fundamento que invoca «o lóbulo oeste», o objecto **retirado
+a 28-08** com 49 ficheiros em quarentena.
+*Confirmado por:* **testemunho de tipo 1** — «B1 = válvulas 1-5», gestor,
+03-09-2026 — e por **geometria independente**: o bloco do **G19** (C0, por
+extrapolação do esquema, E529350–530085 / N4653700–4654478) e o **B1** (IFAP,
+via coordenadas do gestor, E529495–530063 / N4653832–4654477) batem **a 1 metro
+no bordo norte**, com o B1 inteiramente dentro.
+*E fecha o «pertença NÃO confirmada» do G19:* o C3 já certifica que 12,64 ha de
+kiwi ali são todos do ENT 472062.
+**O esquema anota 1,77 ha para o B1; o IFAP dá 12,63 ha — factor 7,1×.** É uma
+instância concreta do C7.
+
+> **A hipótese passa de FECHADA a fechada só para o corpo principal.** Cinco
+> válvulas servem um sector 500 m a sudoeste, fora da janela em que todo o teste
+> correu. **Reabrir não é confirmar:** não se conclui que a rega explica o
+> declínio, conclui-se que a hipótese não foi testada onde teria de ser.
 ## D · O QUE SOBREVIVE DA BIOLOGIA
 
 **D1 · A matriz de diagnóstico tem uma coluna.** Das 20 linhas organismo ×
@@ -150,6 +173,29 @@ são posteriores a Março de 2026.
 compatíveis.** Falta escrevê-la no livro-razão — é a ausência dessa linha que
 fez quatro documentos tratarem isto como lacuna.
 
+
+**D7 · Os boletins A2 não podem testar afectado contra não afectado.** Nove
+boletins × 12 parâmetros — e **a unidade é o boletim**, porque doze parâmetros
+do mesmo tubo não são doze observações. **Zero têm coordenada**, zero estão
+inequivocamente dentro de um foco, e **três dos nove são do sector B1**, que
+fica fora da AOI e está em estabelecimento. A atribuição a um foco teria de
+passar pela válvula, e o **C7** proíbe-o. *Correr o teste seria produzir um
+número que o registo já proíbe.*
+
+**D8 · A acidez do solo não acompanha o declínio.** Hipótese pré-registada, e
+escrita para só poder falhar: *se a acidez explicasse o declínio, os pH mais
+baixos estariam nos blocos em declínio*. **Os dois pH mais baixos — 5,2 e 5,3 —
+são do B1**, que não declina: sobe +0,092 enquanto os focos descem −0,085.
+**Falsificada.** *Confirmado por:* instrumento genuinamente independente — a
+química não sabe nada de NDVI. *E não se lê ao contrário:* com n = 9 e sem
+coordenadas, esta hipótese nunca poderia ter sido confirmada.
+
+**D9 · Faltam a CTC e a saturação em bases, e a profundidade não está declarada
+em campo nenhum.** Os 12 parâmetros são pH, textura, MO, C:N, N, P₂O₅, K₂O, CaO,
+MgO, S, Fe, Mn — fertilidade, sem nada do complexo de troca. E a profundidade
+está ausente de `Notes`, `Matrix`, `Method`, `Test_Category` e `Interpretation`
+nos 108 registos. **A química que existe é de acima da camada que se suspeita:**
+serve para caracterizar, não para testar o impermeável.
 ---
 
 ## E · O QUE FOI RETIRADO — dezanove
