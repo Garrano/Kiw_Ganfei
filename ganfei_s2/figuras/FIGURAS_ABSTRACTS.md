@@ -93,9 +93,22 @@ pertença que o gestor afirmou está corroborada pelo desenho; o que estava erra
 eram as reconstruções, que as punham 365 a 555 m a oeste. E a numeração de linha
 do B1 é própria: as linhas 137 e 156 cairiam dentro do B2 na numeração da banda.
 
-**Só as etiquetas G, F, E e D foram lidas com certeza**, sobre as válvulas 6, 7,
-8 e 9 — o que dá ao B2 um débito de 362,4 m³. As restantes ficam por ler, e
-estão na lista de perguntas.
+**As etiquetas de sector, e porque só quatro foram lidas.** Estão impressas em
+texto vertical de cerca de 1,5 pt no original, dentro de um JPEG digitalizado.
+Leram-se **G, F, E e D** — sobre as válvulas 6, 7, 8 e 9 — porque essas quatro
+bandas são largas e a etiqueta apanhou pixéis suficientes; isso dá ao **B2** um
+débito de **362,4 m³**, o único que se pode somar hoje.
+
+As outras nove letras (A, B, C, H, I, J, L, M, N) cobrem treze válvulas — as 1 a
+5 no B1 e as 10 a 17 na banda — e ficam por ler por três razões, todas do
+ficheiro e não do método: bandas estreitas de mais para a etiqueta sobreviver à
+digitalização, etiquetas tapadas pela caneta das anotações manuscritas, e
+compressão JPEG a desfazer o traço. Ampliar mais não acrescenta informação —
+os pixéis não existem.
+
+Recortes a 900 dpi das três zonas em falta ficam em
+`Downloads/_esquema_rega/decodificar_*.png`, prontos para quem conheça o
+terreno os decodificar. **É a pergunta 1 da lista ao gestor.**
 
 ---
 

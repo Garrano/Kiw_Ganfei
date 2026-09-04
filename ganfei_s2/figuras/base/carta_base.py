@@ -54,6 +54,11 @@ COR = {"B1": "#0072B2", "B2": "#D55E00", "Erica Novo": "#009E73",
        "B3": "#7E4E9B", "B4": "#E69F00"}
 AGUA = "#5E93AE"
 NIVEL_AGUA = 2.5      # m — abaixo disto e leito do Minho, nao terreno
+# A marginália — proveniência, método, ressalvas — vai numa serifa humanista
+# e não na grotesca do corpo do mapa. É a convenção da cartografia impressa:
+# lê-se como nota de rodapé, não como mais um rótulo a competir com o terreno.
+MARGINALIA = dict(family="Palatino Linotype", fontsize=7.0, style="italic",
+                  linespacing=1.62)
 CURVA = "#A79C88"
 CURVA_ALTA = "#B2977A"
 
@@ -447,6 +452,6 @@ class Base(object):
 
         if nota:
             axl.annotate(nota, (0, 0.005), xycoords="axes fraction", ha="left",
-                         va="bottom", fontsize=6.4, color=TINTA3,
-                         linespacing=1.55, annotation_clip=False)
+                         va="bottom", color=TINTA3, annotation_clip=False,
+                         **MARGINALIA)
         return axl

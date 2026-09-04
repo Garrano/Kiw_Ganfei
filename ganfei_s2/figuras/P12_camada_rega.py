@@ -55,6 +55,12 @@ from carta_base import (Base, COR, PAPEL, TINTA, TINTA2, TINTA3, virg,  # noqa
 CONDUTA = "#1B6E8C"
 ALERTA = "#8C3B2E"
 
+# A marginália vai numa serifa humanista, não na grotesca do corpo do mapa.
+# É a convenção da cartografia impressa: a proveniência lê-se como nota de
+# rodapé, e não como mais um rótulo a competir com os do terreno.
+MARGINALIA = dict(family="Palatino Linotype", fontsize=7.0, style="italic",
+                  linespacing=1.62)
+
 # ── A CONVENÇÃO, e é o que faz esta camada servir para alguma coisa ─────────
 #
 #   TRAÇO CONTÍNUO, opaco   — está escrito numa fonte: no esquema, no
@@ -253,14 +259,6 @@ def legenda(axl, b):
                             virg(sum(DEBITO[s] for s in d["sectores"]))),
                          (.075, yy), xycoords="axes fraction", ha="left",
                          va="center", fontsize=6.6, color=CONDUTA)
-        if d["nota"]:
-            yy -= .020
-            import textwrap as _t
-            _w = _t.wrap(d["nota"], 44)
-            axl.annotate(chr(10).join(_w[:3]), (.075, yy),
-                         xycoords="axes fraction", ha="left", va="top",
-                         fontsize=6.3, color=ALERTA, linespacing=1.5)
-            yy -= .014 * len(_w[:3])
         y = yy - .030
 
     axl.annotate("DO PRÓPRIO ESQUEMA", (0, y), xycoords="axes fraction",
@@ -285,21 +283,19 @@ def legenda(axl, b):
                      (.02, y), xycoords="axes fraction", ha="left", va="top",
                      fontsize=6.8, color=TINTA)
         y -= .022
-    axl.annotate("Só as etiquetas G, F, E e D foram lidas com certeza,\n"
-                 "sobre as válvulas 6, 7, 8 e 9. As restantes ficam por ler.",
-                 (.02, y - .006), xycoords="axes fraction", ha="left", va="top",
-                 fontsize=6.4, color=TINTA3, linespacing=1.5)
+    # A nota sobre as etiquetas por ler foi para o FIGURAS_ABSTRACTS.md.
+    y -= .014
 
     # O rodapé estava ancorado no fundo enquanto o corpo crescia até lá abaixo,
     # e os dois encavalitavam-se. Passa a seguir o y corrente.
     y -= .052
-    axl.annotate("FONTE   «Esquema de rega retificado» (PRDLUX, Jul-09), com as\n"
-                 "anotações manuscritas do gestor. Transcrição, não inferência.\n\n"
-                 "REGISTO   ao nível do SECTOR. A georreferenciação do desenho\n"
+    axl.annotate("Fonte   «Esquema de rega retificado» (PRDLUX, Jul-09), com as\n"
+                 "anotações manuscritas do gestor.\n\n"
+                 "Registo   ao nível do sector. A georreferenciação do desenho\n"
                  "contra o IFAP falhou o critério pré-registado (RMS 70,3 m\n"
                  "contra o limite de 20 m), e por isso não há posições aqui.",
-                 (0, min(y, .108)), xycoords="axes fraction", ha="left",
-                 va="top", fontsize=6.4, color=TINTA3, linespacing=1.55)
+                 (0, min(y, .120)), xycoords="axes fraction", ha="left",
+                 va="top", color=TINTA3, **MARGINALIA)
 
 
 b = Base()

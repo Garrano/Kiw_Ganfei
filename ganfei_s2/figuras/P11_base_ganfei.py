@@ -75,7 +75,7 @@ fig.text(0.955, 0.938, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
 
 b.legenda(
     axl,
-    nota="FONTES   MDT LiDAR 50 cm, DGT (7 folhas, EPSG:3763, reamostrado a 1 m).\n"
+    nota="Fontes   MDT LiDAR 50 cm, DGT (7 folhas, EPSG:3763, reamostrado a 1 m).\n"
          "Parcelário IFAP 2025, cultura 124 (KIWI). Esquema de rega rectificado\n"
          "e nomes de sector do gestor; boletins A2 para os códigos de bloco.\n\n"
          "Método e ressalvas em FIGURAS_ABSTRACTS.md.")
