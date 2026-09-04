@@ -159,7 +159,7 @@ def desenha(ax, b, transparente):
     # Erica Novo caiu em cima do topónimo RIO MINHO.
     DESVIO = {"B1": (0, -250), "B2": (-130, -340), "Erica Novo": (-40, -610),
               "B3": (160, -340), "B4": (70, -600)}
-    CH, ESP, ALT = 17.0, 40.0, 96.0
+    CH, ESP, ALT = 26.0, 64.0, 132.0
     for nome in b.ORDEM:
         if nome not in pontos:
             continue
@@ -168,7 +168,7 @@ def desenha(ax, b, transparente):
         E, N = Ea + dx, Na + dy
         d = BLOCOS[nome]
         vs = d["valvulas"]
-        larg = max(ESP * len(vs) + 40, 22 * len(nome) + 40)
+        larg = max(ESP * len(vs) + 46, 24 * len(nome) + 46)
         ax.plot([Ea, E], [Na, N], color=COR[nome], lw=1.0, alpha=.65,
                 dashes=(3, 2.5), zorder=8)
         ax.plot([Ea], [Na], "o", ms=4.4, mfc=COR[nome], mec=PAPEL, mew=1.0,
@@ -178,26 +178,26 @@ def desenha(ax, b, transparente):
                                     facecolor=PAPEL, alpha=.93,
                                     edgecolor=COR[nome], linewidth=1.8,
                                     zorder=9))
-        ax.annotate(nome, (E, N + ALT * .30), ha="center", va="center",
-                    fontsize=12.5, weight="bold", color=TINTA, zorder=11)
+        ax.annotate(nome, (E, N + ALT * .31), ha="center", va="center",
+                    fontsize=13.0, weight="bold", color=TINTA, zorder=11)
         for i, v in enumerate(vs):
             cx = E - (len(vs) - 1) * ESP / 2 + i * ESP
-            ax.add_patch(Circle((cx, N - ALT * .17), CH, facecolor=COR[nome],
-                                edgecolor=PAPEL, linewidth=1.4, zorder=10))
-            ax.annotate(str(v), (cx, N - ALT * .17), ha="center", va="center",
-                        fontsize=9.6, weight="bold", color="white", zorder=11)
+            ax.add_patch(Circle((cx, N - ALT * .19), CH, facecolor=COR[nome],
+                                edgecolor=PAPEL, linewidth=1.6, zorder=10))
+            ax.annotate(str(v), (cx, N - ALT * .19), ha="center", va="center",
+                        fontsize=8.6, weight="bold", color="white", zorder=11)
         deb = sum(DEBITO[x] for x in d["sectores"]) if d["sectores"] else None
         ax.annotate("linhas %s" % d["linhas"].split("·")[0].strip(),
-                    (E, N - ALT * .52), ha="center", va="top", fontsize=7.0,
+                    (E, N - ALT * .62), ha="center", va="top", fontsize=7.0,
                     color=TINTA2, path_effects=_halo(2.8), zorder=11)
         if deb:
             ax.annotate("sectores %s  ·  %s m³"
                         % ("+".join(d["sectores"]), virg(deb)),
-                        (E, N - ALT * .52 - 34), ha="center", va="top",
+                        (E, N - ALT * .62 - 34), ha="center", va="top",
                         fontsize=7.0, color=CONDUTA, weight="bold",
                         path_effects=_halo(2.8), zorder=11)
         else:
-            ax.annotate("sector impresso por ler", (E, N - ALT * .52 - 34),
+            ax.annotate("sector impresso por ler", (E, N - ALT * .62 - 34),
                         ha="center", va="top", fontsize=6.8, color=ALERTA,
                         style="italic", path_effects=_halo(2.8), zorder=11)
 
@@ -205,7 +205,7 @@ def desenha(ax, b, transparente):
     x0, x1, y0, y1 = b.ext
     ax.annotate("posição de cada válvula DENTRO do sector: não resolvida\n"
                 "as quatro reconstruções discordam 92–398 m; espaçamento 98 m",
-                (x0 + .035 * (x1 - x0), y0 + .155 * (y1 - y0)),
+                (x0 + .035 * (x1 - x0), y0 + .095 * (y1 - y0)),
                 ha="left", va="bottom", fontsize=8.2, color=ALERTA,
                 weight="bold", linespacing=1.5,
                 path_effects=_halo(3.4), zorder=12)
@@ -221,7 +221,7 @@ def legenda(axl, b):
             (CONFIRMADO, TINTA, "traço contínuo",
              "está escrito no esquema, no IFAP, ou dito pelo gestor"),
             (POR_CONF, TINTA, "traço interrompido",
-             "é nosso — inferência ou leitura POR CONFIRMAR")):
+             "inferência ou leitura por confirmar")):
         axl.plot([.012, .145], [y, y], color=cor, lw=1.8,
                  linestyle=est["linestyle"], alpha=est["alpha"],
                  transform=axl.transAxes, clip_on=False)
@@ -236,9 +236,8 @@ def legenda(axl, b):
     y -= .030
     for nome in b.ORDEM:
         d = BLOCOS[nome]
-        axl.add_patch(Circle((.028, y - .012), .020, facecolor=COR[nome],
-                             edgecolor="none", transform=axl.transAxes,
-                             clip_on=False))
+        axl.plot([.030], [y - .012], marker="o", ms=11, mfc=COR[nome],
+                 mec="none", transform=axl.transAxes, clip_on=False)
         axl.annotate("%s  ·  válvulas %s"
                      % (nome, ", ".join(str(v) for v in d["valvulas"])),
                      (.075, y - .012), xycoords="axes fraction", ha="left",
@@ -323,31 +322,13 @@ fig, ax, axl = b.figura(larg=16.0, legenda=True)
 b.terreno(ax, curvas=False, escoamento=False)
 desenha(ax, b, transparente=False)
 b.toponimos(ax)
-x0, x1, y0, y1 = b.ext
-px, py = x0 + .030 * (x1 - x0), y1 - .045 * (y1 - y0)
-import textwrap as _tw
-_alt = 60 + sum(22 + 21 * len(_tw.wrap(q, 62)) for q in PERGUNTAS)
-ax.add_patch(FancyBboxPatch((px - 26, py - _alt), 1000, _alt + 18,
-                            boxstyle="round,pad=10,rounding_size=16",
-                            facecolor=PAPEL, alpha=.90, edgecolor=ALERTA,
-                            linewidth=1.2, linestyle=(0, (5, 3)), zorder=13))
-ax.annotate("A CONFIRMAR COM O GESTOR", (px, py), ha="left", va="top",
-            fontsize=9.2, weight="bold", color=ALERTA, zorder=14)
-import textwrap
-yq = py - 46
-for i, q in enumerate(PERGUNTAS):
-    linhas = textwrap.wrap(q, 62)
-    ax.annotate("%d ·" % (i + 1), (px, yq), ha="left", va="top", fontsize=7.6,
-                weight="bold", color=ALERTA, zorder=14)
-    ax.annotate(chr(10).join(linhas), (px + 48, yq), ha="left", va="top",
-                fontsize=7.4, color=TINTA, linespacing=1.45, zorder=14)
-    yq -= 22 + 21 * len(linhas)
+# A caixa «A confirmar com o gestor» saiu da prancha em 04-09: as sete
+# perguntas vão no corpo do email que acompanha o mapa. `PERGUNTAS` continua
+# aqui, e é de onde esse email as tira — para não haver duas listas a divergir.
 b.moldura(ax)
 fig.text(0.035, 0.972, "GANFEI · ESQUEMA DE REGA", fontsize=21, weight="bold",
          color=TINTA, va="top", ha="left")
-fig.text(0.035, 0.930, "Camada sobre a carta-base", fontsize=10.5,
-         color=TINTA2, va="top", ha="left")
-fig.text(0.955, 0.972, "17 válvulas  ·  5 sectores do gestor  ·  13 sectores "
+fig.text(0.955, 0.972, "17 válvulas  ·  5 sectores  ·  13 sectores "
                        "impressos", fontsize=10.5, color=TINTA2, va="top",
          ha="right")
 fig.text(0.955, 0.938, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
