@@ -134,11 +134,23 @@ esquema contêm as válvulas 6 a 17, doze, todas no corpo principal.** As
 **válvulas 1 a 5 não estão em nenhuma**, e estão registadas como *«POR
 COLOCAR»* — com um fundamento que invoca «o lóbulo oeste», o objecto **retirado
 a 28-08** com 49 ficheiros em quarentena.
-*Confirmado por:* **testemunho de tipo 1** — «B1 = válvulas 1-5», gestor,
-03-09-2026 — e por **geometria independente**: o bloco do **G19** (C0, por
-extrapolação do esquema, E529350–530085 / N4653700–4654478) e o **B1** (IFAP,
-via coordenadas do gestor, E529495–530063 / N4653832–4654477) batem **a 1 metro
-no bordo norte**, com o B1 inteiramente dentro.
+*Confirmado por:* **o próprio esquema de rega** — o PDF mostra as válvulas 1 a
+5 num lóbulo fisicamente separado ao extremo oeste, ligado por conduta de 3 e 4
+polegadas, rotulado **«B1»**, e as notas manuscritas do projectista falam de
+«campo **B1 C3**», «**B1 C2**» e «o B1». **Isto fecha a nomenclatura**: os
+boletins de solo rotulados B1 C1 / C3 / C4 são sub-campos deste lóbulo.
+*E por* **testemunho de tipo 1** — «B1 = válvulas 1-5», gestor, 03-09-2026.
+
+> **CORRIGIDO em 03-09, e a correcção é minha.** Escrevi primeiro que o bloco do
+> **G19** (E529350–530085 / N4653700–4654478) e o **B1** do IFAP
+> (E529495–530063 / N4653832–4654477) «batem a 1 metro no bordo norte». É
+> verdade dos números registados e **é enganador**: o G19 vem de uma
+> extrapolação de ~1200 px além do troço ajustado, com **erro declarado de
+> ±150 m** e resíduo mediano do ajuste de **64 m** (`c0_13_georref.json`).
+> Concordarem a 1 m dentro de um envelope de ±150 m é coincidência de
+> arredondamento, não precisão. **O que é sólido é o contido:** o B1 do IFAP
+> cai inteiramente dentro da caixa do G19, e as duas derivações são
+> independentes — mas com a incerteza do esquema à vista.
 *E fecha o «pertença NÃO confirmada» do G19:* o C3 já certifica que 12,64 ha de
 kiwi ali são todos do ENT 472062.
 **O esquema anota 1,77 ha para o B1; o IFAP dá 12,63 ha — factor 7,1×.** É uma
@@ -174,31 +186,31 @@ compatíveis.** Falta escrevê-la no livro-razão — é a ausência dessa linha
 fez quatro documentos tratarem isto como lacuna.
 
 
-**D7 · Os boletins A2 não podem testar afectado contra não afectado.** Nove
-boletins × 12 parâmetros — e **a unidade é o boletim**, porque doze parâmetros
-do mesmo tubo não são doze observações. **Zero têm coordenada**, zero estão
-inequivocamente dentro de um foco, e **três dos nove são do sector B1**, que
-fica fora da AOI e está em estabelecimento. A atribuição a um foco teria de
-passar pela válvula, e o **C7** proíbe-o. *Correr o teste seria produzir um
-número que o registo já proíbe.*
+**D7 · Os boletins A2 não podem testar afectado contra não afectado.**
+São **oito talhões, não nove boletins**: «B2 - V7» (Março) e «B2 - Zona 1 (V7)»
+(Junho) são o mesmo talhão, a mesma válvula, colocados na mesma coordenada.
+A colocação que existe é **INFERIDA, não medida**, e o **C7** proíbe a
+atribuição por válvula — que era a única via que restaria.
+*E o talhão repetido vale mais do que a contagem:* é o **único piso de ruído
+medido** deste conjunto — **0,2 unidades de pH** entre as duas datas, e a
+**textura muda de classe** (Franca → Argilosa).
+*(As três razões que eu tinha escrito — «zero têm coordenada», «três de nove são
+do B1», «nove boletins» — foram todas corrigidas pelo Controlo 3 a 04-09. O
+«zero» era um literal escrito à mão: o script nunca abriu o ficheiro que o
+próprio facto nomeia como fonte, e esse ficheiro coloca **seis** dos nove.)*
 
-**D8 · A acidez do solo não acompanha o declínio.** Hipótese pré-registada, e
-escrita para só poder falhar: *se a acidez explicasse o declínio, os pH mais
-baixos estariam nos blocos em declínio*. **Os dois pH mais baixos — 5,2 e 5,3 —
-são do B1**, que não declina: sobe +0,092 enquanto os focos descem −0,085.
-**Falsificada.** *Confirmado por:* instrumento genuinamente independente — a
-química não sabe nada de NDVI. *E não se lê ao contrário:* com n = 9 e sem
-coordenadas, esta hipótese nunca poderia ter sido confirmada.
+**D9 · Faltam a CTC e a saturação em bases. A profundidade é NÃO SABIDA, não
+ausente.** Os 12 parâmetros são pH, textura, MO, C:N, N, P₂O₅, K₂O, CaO, MgO, S,
+Fe, Mn — fertilidade, **nada do complexo de troca**. Essa ausência é documental e
+verificável.
+**A profundidade não.** Os cinco campos que interroguei **não podiam contê-la**,
+os nove PDF de origem **não estão nesta máquina**, e o livro em inglês marca nove
+células «page 2 not extracted» onde o português tem números. *«Não sabido» e
+«ausente» são coisas diferentes, e este dossiê já foi apanhado a confundi-las.*
 
-**D9 · Faltam a CTC e a saturação em bases, e a profundidade não está declarada
-em campo nenhum.** Os 12 parâmetros são pH, textura, MO, C:N, N, P₂O₅, K₂O, CaO,
-MgO, S, Fe, Mn — fertilidade, sem nada do complexo de troca. E a profundidade
-está ausente de `Notes`, `Matrix`, `Method`, `Test_Category` e `Interpretation`
-nos 108 registos. **A química que existe é de acima da camada que se suspeita:**
-serve para caracterizar, não para testar o impermeável.
 ---
 
-## E · O QUE FOI RETIRADO — dezanove
+## E · O QUE FOI RETIRADO — vinte e uma
 
 As quinze da P06, mais três de 31-08, mais a de 01-09:
 
@@ -220,6 +232,26 @@ algébrica: limpar a referência desloca todos os fossos pela mesma constante,
 **18 ·** «O B1 é o comparador sem degrau» — zero instrumentos independentes, a
 recta ganha porque o bloco está em subida, e o veredicto dependia de um limiar
 inventado.
+
+**20 ·** «A acidez do solo não acompanha o declínio» (D8) — **retirado no mesmo
+dia em que entrou.** Assentava num degrau de +0,092 que o Controlo 3 **rejeitou
+a 03-09 às 23:07:55**, e o script que o usou foi escrito **9,3 horas depois**.
+E o número não sustenta nada: P(os dois mais baixos serem de um grupo de três) =
+**1/12**; Mann-Whitney exacto **p = 0,25**; os postos do B1 são **1, 2 e nove** —
+cobre o intervalo inteiro. O piso de ruído medido é **0,2 de pH** e o facto
+assentava em 0,3. **E nos seis boletins com posição a relação inverte-se**
+(ρ = −1,000, p = 0,042).
+
+**21 ·** «As válvulas 1-5 não estão em nenhuma das quatro reconstruções» (C8) —
+**estão.** O `valvulas_v4.json` tem-nas em `lobo_oeste`, com UTM; o meu leitor
+procurava `valvulas`/`metros_por_linha`, caía no dicionário de topo e devolvia
+zero — e eu escrevi por cima um comentário a afirmar que a chave «não enumera
+válvulas». **O critério pré-registado dizia que, nesse caso, o ficheiro não
+servia para nada. Publiquei contra o meu próprio critério.**
+A conclusão sobrevive por outra via — a cobertura de **60,8 %** — o esquema de
+rega sai da frase, e o «1,77 ha» sai também: **não está na tinta.** O
+varrimento dá 44 px de largura máxima em vermelho, e a anotação é um traçado
+vectorial sobreposto ao scan, de mão desconhecida.
 
 ---
 

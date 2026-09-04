@@ -1,0 +1,15 @@
+{
+ "p_dois_mais_baixos": 0.08333333333333333,
+ "p_min_e_max": 0.08333333333333333,
+ "mw_p_acido": 0.25,
+ "mw_p_basico": 0.7857142857142857,
+ "mw_p_acido_sem_pseudoreplica": 0.2857142857142857,
+ "amplitude_B1": [
+  5.2,
+  7.4
+ ],
+ "amplitude_todos": [
+  5.2,
+  7.4
+ ]
+}

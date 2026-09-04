@@ -74,12 +74,27 @@ class Facto:
         self._instantanea = None      # razao para dispensar a condicao 5
 
     # ------------------------------------------------------------------ 2
-    def confirmar_com(self, instrumento, concorda=True, nota=""):
+    def confirmar_com(self, instrumento, concorda=True, nota="", prova=None):
         """Regista um instrumento independente e se ele CONCORDA.
 
         `concorda=False` não é um aviso: é o que impede o veredicto de sair.
+
+        `prova` — CAMINHO DE UM FICHEIRO, e desde 04-09 é o que decide.
+        --------------------------------------------------------------------
+        O Controlo 3 correu o D8 com o confirmador «contagem de nuvens sobre
+        Braga em 1997» e **o portão autorizou**, com saída idêntica. A condição
+        2 lia uma cadeia de caracteres e acreditava — exactamente o defeito que
+        a condição 5 tinha e que foi fechado a 03-09 **só na condição 5**.
+
+        É a quarta encarnação de «ausência tratada como aprovação» neste
+        ficheiro. A regra passa a ser: **uma confirmação sem ficheiro é
+        registada mas não conta** para o controlo 1. Quem não tem ficheiro
+        escreve `nao_testavel()` e assina.
         """
-        self._independentes.append((instrumento, bool(concorda), nota))
+        import os as _os
+        ok_prova = bool(prova) and _os.path.exists(prova)
+        self._independentes.append((instrumento, bool(concorda), nota,
+                                    ok_prova, prova))
         return self
 
     def nao_testavel(self, porque):
@@ -288,6 +303,9 @@ class Facto:
 
         concordantes = [i for i in self._independentes if i[1]]
         discordantes = [i for i in self._independentes if not i[1]]
+        # so conta para o controlo 1 quem traz ficheiro (ver confirmar_com)
+        com_prova = [i for i in concordantes if i[3]]
+        sem_prova = [i for i in concordantes if not i[3]]
 
         # ── O MESMO INDICE NAO CONFIRMA O MESMO INDICE.
         # A CLAUDE.md diz em letra: «Um NDVI nao se confirma com outro calculo
@@ -311,9 +329,17 @@ class Facto:
             faltas.append("instrumento independente DISCORDA: %s"
                           % "; ".join("%s%s" % (i[0], (" — " + i[2]) if i[2] else "")
                                       for i in discordantes))
-        elif not concordantes and not self._nao_testavel:
-            faltas.append("sem instrumento independente e sem nao_testavel() "
-                          "— controlo 1 do CONTROLOS.md")
+        elif not com_prova and not self._nao_testavel:
+            if sem_prova:
+                faltas.append(
+                    "o(s) confirmador(es) nao trazem ficheiro de prova: %s. "
+                    "Uma confirmacao sem ficheiro nao conta para o controlo 1 "
+                    "— o portao ja autorizou «contagem de nuvens sobre Braga em "
+                    "1997». Passa `prova=<caminho>`, ou usa nao_testavel()"
+                    % "; ".join(i[0][:44] for i in sem_prova))
+            else:
+                faltas.append("sem instrumento independente e sem nao_testavel() "
+                              "— controlo 1 do CONTROLOS.md")
 
         if self._ancoras is not None and not self._ancoras[0]:
             faltas.append("as âncoras não discriminam (%s)" % self._ancoras[1])
@@ -342,8 +368,11 @@ class Facto:
 
         linhas = ["VEREDICTO: %s" % texto,
                   "  instrumento    : %s" % self.instrumento]
-        for nome, _, nota in concordantes:
-            linhas.append("  confirmado por : %s%s" % (nome, (" — " + nota) if nota else ""))
+        for nome, _, nota, okp, prova in concordantes:
+            import os as _o
+            marca = ("  [%s]" % _o.path.basename(prova)) if okp else "  [SEM PROVA]"
+            linhas.append("  confirmado por : %s%s%s"
+                          % (nome, (" — " + nota) if nota else "", marca))
         if self._nao_testavel:
             linhas.append("  SEM instrumento independente: %s" % self._nao_testavel)
         if self._ancoras:
@@ -470,7 +499,10 @@ if __name__ == "__main__":
          .fronteira("mascara geografica da C2, anterior ao calculo")
          .reproduz(P, P, nome="c2_12_prom_2012.npy")
          .confirmar_com("mapa certificado da C2", concorda=True,
-                        nota="máx dif 0,00e+00 em 2 858 células"))
+                        nota="máx dif 0,00e+00 em 2 858 células",
+                        prova=_os.path.join(
+                            r"C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS",
+                            "SAIDA_C2", "c2_12_prom_2012.npy")))
     try:
         print(f.veredicto("ORI-COM tinha pérgola madura em 2012"))
     except FactoNaoValidado as e:

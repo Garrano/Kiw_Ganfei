@@ -1,0 +1,15 @@
+{
+ "n_sectores": 13,
+ "n_valvulas_desenho": 17,
+ "n_entradas_tabela_gestor": 25,
+ "debito_min": 55.3,
+ "debito_max": 99.9,
+ "debito_razao": 1.8065099457504523,
+ "area_min": 1500,
+ "area_max": 29900,
+ "area_razao": 19.933333333333334,
+ "cv_debito": 0.1788390571241931,
+ "cv_area": 0.4615072416833066,
+ "total_debito_m3": 1040.3,
+ "h_sector_igual_valvula": "FALSIFICADA"
+}

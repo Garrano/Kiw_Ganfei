@@ -1,5 +1,6 @@
 {
  "valvulas_nas_reconstrucoes": [
+  "v1",
   "v10",
   "v11",
   "v12",
@@ -8,18 +9,16 @@
   "v15",
   "v16",
   "v17",
+  "v2",
+  "v3",
+  "v4",
+  "v5",
   "v6",
   "v7",
   "v8",
   "v9"
  ],
- "valvulas_1a5_ausentes": [
-  "v1",
-  "v2",
-  "v3",
-  "v4",
-  "v5"
- ],
+ "valvulas_1a5_ausentes": [],
  "nota_1a5": "POR COLOCAR. O esquema anota linhas 137 e 156 para as valvulas 4 e 5, que cairiam dentro deste intervalo \u2014 logo o lobo oeste tem numeracao propria e estas ancoras nao o alcancam.",
  "fundamento_invoca_lobulo": true,
  "g19": [
@@ -39,5 +38,5 @@
  "area_esquema_ha": 1.77,
  "area_ifap_ha": 12.63,
  "factor": 7.1,
- "veredicto": "reaberta para o troco oeste; fechada so para o corpo principal"
+ "veredicto": "mantem-se fechada"
 }

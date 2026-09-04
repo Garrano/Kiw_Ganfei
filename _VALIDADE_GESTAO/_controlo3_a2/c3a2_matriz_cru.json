@@ -1,0 +1,566 @@
+{
+ "pH (H2O)": {
+  "Erica 2016 R": [
+   "7.2 (Neutro)",
+   "unidades de pH",
+   ""
+  ],
+  "Erica 2016 E": [
+   "6.6 (Ligeiramente \u00e1cido)",
+   "unidades de pH",
+   ""
+  ],
+  "B2 - V7": [
+   "5.8 (\u00c1cido - precisa 3t/ha calc\u00e1rio)",
+   "unidades de pH",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "5.6 (\u00c1cido - precisa 3t/ha calc\u00e1rio)",
+   "unidades de pH",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "5.6 (\u00c1cido - precisa 4t/ha calc\u00e1rio)",
+   "unidades de pH",
+   ""
+  ],
+  "B1 C1": [
+   "7.4 (Neutro)",
+   "unidades de pH",
+   ""
+  ],
+  "B1 C3": [
+   "5.2 (Muito \u00e1cido - precisa 6t/ha calc\u00e1rio)",
+   "unidades de pH",
+   ""
+  ],
+  "B1 C4": [
+   "5.3 (Muito \u00e1cido - precisa 4.5t/ha calc\u00e1rio)",
+   "unidades de pH",
+   ""
+  ],
+  "Parcela B4": [
+   "6.1 (Ligeiramente \u00e1cido)",
+   "unidades de pH",
+   ""
+  ]
+ },
+ "Textura": {
+  "Erica 2016 R": [
+   "Franca",
+   "classe",
+   ""
+  ],
+  "Erica 2016 E": [
+   "Franca",
+   "classe",
+   ""
+  ],
+  "B2 - V7": [
+   "Franca",
+   "classe",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "Franca",
+   "classe",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "Argilosa",
+   "classe",
+   ""
+  ],
+  "B1 C1": [
+   "Franco-Limosa",
+   "classe",
+   ""
+  ],
+  "B1 C3": [
+   "Franca",
+   "classe",
+   ""
+  ],
+  "B1 C4": [
+   "Franco-Arenosa",
+   "classe",
+   ""
+  ],
+  "Parcela B4": [
+   "Franca",
+   "classe",
+   ""
+  ]
+ },
+ "Mat\u00e9ria Org\u00e2nica (MO)": {
+  "Erica 2016 R": [
+   "1.6% (M\u00e9dia)",
+   "%",
+   ""
+  ],
+  "Erica 2016 E": [
+   "1.7% (M\u00e9dia)",
+   "%",
+   ""
+  ],
+  "B2 - V7": [
+   "1.7% (M\u00e9dia)",
+   "%",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "1.6% (M\u00e9dia)",
+   "%",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "2.4% (M\u00e9dia)",
+   "%",
+   ""
+  ],
+  "B1 C1": [
+   "4.5% (Alta)",
+   "%",
+   ""
+  ],
+  "B1 C3": [
+   "2.1% (M\u00e9dia)",
+   "%",
+   ""
+  ],
+  "B1 C4": [
+   "1.7% (M\u00e9dia)",
+   "%",
+   ""
+  ],
+  "Parcela B4": [
+   "2.4% (M\u00e9dia)",
+   "%",
+   ""
+  ]
+ },
+ "Raz\u00e3o C:N": {
+  "Erica 2016 R": [
+   "10.0",
+   "raz\u00e3o",
+   ""
+  ],
+  "Erica 2016 E": [
+   "6.1",
+   "raz\u00e3o",
+   ""
+  ],
+  "B2 - V7": [
+   "6.7 (Baixa)",
+   "raz\u00e3o",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "5.9 (Baixa)",
+   "raz\u00e3o",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "9.3",
+   "raz\u00e3o",
+   ""
+  ],
+  "B1 C1": [
+   "11.3",
+   "raz\u00e3o",
+   ""
+  ],
+  "B1 C3": [
+   "12.0",
+   "raz\u00e3o",
+   ""
+  ],
+  "B1 C4": [
+   "11.1",
+   "raz\u00e3o",
+   ""
+  ],
+  "Parcela B4": [
+   "11.7",
+   "raz\u00e3o",
+   ""
+  ]
+ },
+ "Azoto Total (N)": {
+  "Erica 2016 R": [
+   "0.09% N (Baixo; 120 kg/ha N recomendado)",
+   "%",
+   ""
+  ],
+  "Erica 2016 E": [
+   "0.16% N (M\u00e9dio; 120 kg/ha N recomendado)",
+   "%",
+   ""
+  ],
+  "B2 - V7": [
+   "0.15% N (M\u00e9dio; 120 kg/ha N recomendado)",
+   "%",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "0.16% N (M\u00e9dio; 120 kg/ha N recomendado)",
+   "%",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "0.15% N (M\u00e9dio; 120 kg/ha N recomendado)",
+   "%",
+   ""
+  ],
+  "B1 C1": [
+   "0.23% N (Alto; 80 kg/ha N recomendado)",
+   "%",
+   ""
+  ],
+  "B1 C3": [
+   "0.10% N (Baixo; 120 kg/ha N recomendado)",
+   "%",
+   ""
+  ],
+  "B1 C4": [
+   "0.09% N (Baixo; 120 kg/ha N recomendado)",
+   "%",
+   ""
+  ],
+  "Parcela B4": [
+   "0.12% N (M\u00e9dio; 120 kg/ha N recomendado)",
+   "%",
+   ""
+  ]
+ },
+ "F\u00f3sforo (P2O5)": {
+  "Erica 2016 R": [
+   "206 mg/kg P2O5 (Excesso)",
+   "mg/kg",
+   ""
+  ],
+  "Erica 2016 E": [
+   "156 mg/kg P2O5 (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - V7": [
+   "161 mg/kg P2O5 (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "107 mg/kg P2O5 (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "222 mg/kg P2O5 (Excesso)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C1": [
+   "324 mg/kg P2O5 (Excesso)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C3": [
+   "174 mg/kg P2O5 (Excesso)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C4": [
+   "191 mg/kg P2O5 (Excesso)",
+   "mg/kg",
+   ""
+  ],
+  "Parcela B4": [
+   "134 mg/kg P2O5 (Alto)",
+   "mg/kg",
+   ""
+  ]
+ },
+ "Pot\u00e1ssio (K2O)": {
+  "Erica 2016 R": [
+   "80.8 mg/kg K2O (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "Erica 2016 E": [
+   "71.1 mg/kg K2O (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - V7": [
+   "94.0 mg/kg K2O (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "74.7 mg/kg K2O (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "93.5 mg/kg K2O (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C1": [
+   "79.6 mg/kg K2O (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C3": [
+   "81.1 mg/kg K2O (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C4": [
+   "80.8 mg/kg K2O (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "Parcela B4": [
+   "117 mg/kg K2O (Alto)",
+   "mg/kg",
+   ""
+  ]
+ },
+ "C\u00e1lcio (CaO)": {
+  "Erica 2016 R": [
+   "1200 mg/kg CaO (Excesso)",
+   "mg/kg",
+   ""
+  ],
+  "Erica 2016 E": [
+   "879 mg/kg CaO (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - V7": [
+   "264 mg/kg CaO (Muito baixo)",
+   "mg/kg",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "<154 mg/kg CaO (Muito baixo)",
+   "mg/kg",
+   "<"
+  ],
+  "B2 - Zona 1 (V7)": [
+   "505 mg/kg CaO (Baixo)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C1": [
+   "4700 mg/kg CaO (Excesso)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C3": [
+   "439 mg/kg CaO (Baixo)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C4": [
+   "314 mg/kg CaO (Muito baixo)",
+   "mg/kg",
+   ""
+  ],
+  "Parcela B4": [
+   "1100 mg/kg CaO (Excesso)",
+   "mg/kg",
+   ""
+  ]
+ },
+ "Magn\u00e9sio (MgO)": {
+  "Erica 2016 R": [
+   "97.4 mg/kg MgO (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "Erica 2016 E": [
+   "64.5 mg/kg MgO (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - V7": [
+   "62.9 mg/kg MgO (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "36.0 mg/kg MgO (Baixo)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "93.0 mg/kg MgO (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C1": [
+   "242 mg/kg MgO (Excesso)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C3": [
+   "79.4 mg/kg MgO (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C4": [
+   "81.3 mg/kg MgO (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "Parcela B4": [
+   "142 mg/kg MgO (Alto)",
+   "mg/kg",
+   ""
+  ]
+ },
+ "Enxofre (S)": {
+  "Erica 2016 R": [
+   "12.1 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "Erica 2016 E": [
+   "10.3 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - V7": [
+   "9.2 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "9.4 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "12.7 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C1": [
+   "16.9 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C3": [
+   "14.1 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C4": [
+   "13.1 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ],
+  "Parcela B4": [
+   "12.1 mg/kg S (M\u00e9dio)",
+   "mg/kg",
+   ""
+  ]
+ },
+ "Ferro (Fe)": {
+  "Erica 2016 R": [
+   "213 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "Erica 2016 E": [
+   "218 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - V7": [
+   "293 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B3 - 7 ha": [
+   "251 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B2 - Zona 1 (V7)": [
+   "379 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C1": [
+   "237 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C3": [
+   "319 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C4": [
+   "338 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "Parcela B4": [
+   "219 mg/kg Fe (Alto)",
+   "mg/kg",
+   ""
+  ]
+ },
+ "Mangan\u00eas (Mn)": {
+  "Erica 2016 R": [
+   "<10 mg/kg Mn (Baixo)",
+   "mg/kg",
+   "<"
+  ],
+  "Erica 2016 E": [
+   "<10 mg/kg Mn (Muito baixo)",
+   "mg/kg",
+   "<"
+  ],
+  "B2 - V7": [
+   "<10 mg/kg Mn (Muito baixo)",
+   "mg/kg",
+   "<"
+  ],
+  "B3 - 7 ha": [
+   "<10 mg/kg Mn (Muito baixo)",
+   "mg/kg",
+   "<"
+  ],
+  "B2 - Zona 1 (V7)": [
+   "<10 mg/kg Mn (Baixo) / MnAI 39.5 (Alto)",
+   "mg/kg",
+   "<"
+  ],
+  "B1 C1": [
+   "18.1 mg/kg Mn (M\u00e9dio) / MnAI 57.1 (Alto)",
+   "mg/kg",
+   ""
+  ],
+  "B1 C3": [
+   "<10 mg/kg Mn (Baixo) / MnAI 58.3 (Alto)",
+   "mg/kg",
+   "<"
+  ],
+  "B1 C4": [
+   "<10 mg/kg Mn (Baixo) / MnAI 49.6 (Alto)",
+   "mg/kg",
+   "<"
+  ],
+  "Parcela B4": [
+   "10.8 mg/kg Mn (Baixo) / MnAI 49.5 (Alto)",
+   "mg/kg",
+   ""
+  ]
+ }
+}

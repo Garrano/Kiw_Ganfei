@@ -1,0 +1,101 @@
+{
+ "pH (H2O)": {
+  "posto_B3": 3.5,
+  "posto_V7_mar": 5.0,
+  "posto_V7_jun": 3.5,
+  "rho_deficit": -0.9404032585917882,
+  "rho_distancia": 0.7612788283838285,
+  "p_focos_menores": 0.25,
+  "censurados": 0
+ },
+ "Mat\u00e9ria Org\u00e2nica (MO)": {
+  "posto_B3": 1.5,
+  "posto_V7_mar": 4.0,
+  "posto_V7_jun": 7.5,
+  "rho_deficit": 0.0,
+  "rho_distancia": 0.3692744729379982,
+  "p_focos_menores": 0.38095238095238093,
+  "censurados": 0
+ },
+ "Raz\u00e3o C:N": {
+  "posto_B3": 1.0,
+  "posto_V7_mar": 3.0,
+  "posto_V7_jun": 4.0,
+  "rho_deficit": -0.44136741475237473,
+  "rho_distancia": 0.7356123579206245,
+  "p_focos_menores": 0.047619047619047616,
+  "censurados": 0
+ },
+ "Azoto Total (N)": {
+  "posto_B3": 7.5,
+  "posto_V7_mar": 5.5,
+  "posto_V7_jun": 5.5,
+  "rho_deficit": 0.4090909090909091,
+  "rho_distancia": -0.5606060606060606,
+  "p_focos_menores": 0.8452380952380952,
+  "censurados": 0
+ },
+ "F\u00f3sforo (P2O5)": {
+  "posto_B3": 1.0,
+  "posto_V7_mar": 4.0,
+  "posto_V7_jun": 8.0,
+  "rho_deficit": -0.26482044885142486,
+  "rho_distancia": 0.029424494316824982,
+  "p_focos_menores": 0.35714285714285715,
+  "censurados": 0
+ },
+ "Pot\u00e1ssio (K2O)": {
+  "posto_B3": 2.0,
+  "posto_V7_mar": 8.0,
+  "posto_V7_jun": 7.0,
+  "rho_deficit": 0.1765469659009499,
+  "rho_distancia": 0.29424494316824984,
+  "p_focos_menores": 0.7142857142857143,
+  "censurados": 0
+ },
+ "C\u00e1lcio (CaO)": {
+  "posto_B3": 1.0,
+  "posto_V7_mar": 2.0,
+  "posto_V7_jun": 5.0,
+  "rho_deficit": -0.8827348295047495,
+  "rho_distancia": 0.8827348295047495,
+  "p_focos_menores": 0.047619047619047616,
+  "censurados": 1
+ },
+ "Magn\u00e9sio (MgO)": {
+  "posto_B3": 1.0,
+  "posto_V7_mar": 2.0,
+  "posto_V7_jun": 6.0,
+  "rho_deficit": -0.6179143806533246,
+  "rho_distancia": 0.8533103351879245,
+  "p_focos_menores": 0.08333333333333333,
+  "censurados": 0
+ },
+ "Enxofre (S)": {
+  "posto_B3": 2.0,
+  "posto_V7_mar": 1.0,
+  "posto_V7_jun": 6.0,
+  "rho_deficit": -0.31346775286392936,
+  "rho_distancia": 0.4030299679679092,
+  "p_focos_menores": 0.07142857142857142,
+  "censurados": 0
+ },
+ "Ferro (Fe)": {
+  "posto_B3": 5.0,
+  "posto_V7_mar": 6.0,
+  "posto_V7_jun": 9.0,
+  "rho_deficit": 0.7944613465542745,
+  "rho_distancia": -0.6179143806533246,
+  "p_focos_menores": 0.9166666666666666,
+  "censurados": 0
+ },
+ "Mangan\u00eas (Mn)": {
+  "posto_B3": 4.0,
+  "posto_V7_mar": 4.0,
+  "posto_V7_jun": 4.0,
+  "rho_deficit": -0.13483997249264842,
+  "rho_distancia": 0.674199862463242,
+  "p_focos_menores": 0.4166666666666667,
+  "censurados": 7
+ }
+}

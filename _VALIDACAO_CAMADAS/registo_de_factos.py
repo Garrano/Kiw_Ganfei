@@ -76,6 +76,27 @@ def temporal(f, unidades=("REFERENCIA",), prova=None):
     return f.identidade_no_tempo(prova or PROVA, nota=list(unidades))
 
 
+
+# ── os caminhos de PROVA. Desde 04-09 a condicao 2 exige um ficheiro:
+# o Controlo 3 correu o D8 com o confirmador «contagem de nuvens sobre
+# Braga em 1997» e o portao autorizou. Uma confirmacao sem ficheiro e
+# registada mas nao conta.
+PV = {
+    "landsat":   r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/landsat.json",
+    "sar":       r"C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/SAIDA_C1/c1_09_sar.json",
+    "sar_ver":   r"C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.json",
+    "triagem":   r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/reg01_triagem.json",
+    "orto297":   r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/orto_297313_fraccao.json",
+    "voo":       r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/l1_data_do_voo.json",
+    "parcelario":r"C:/Users/Jackster2/Downloads/_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas_largo.json",
+    "c1ab":      r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.json",
+    "prom2012":  r"C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/SAIDA_C2/c2_12_prom_2012.npy",
+    "c0":        r"C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS/CAMADA_0_CERTIFICADO.md",
+    "esquema":   r"C:/Users/Jackster2/Downloads/Esquema de rega retificado.pdf",
+    "valvulas":  r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/valvulas_1a5.json",
+    "c8":        r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.json",
+}
+
 GANFEI = ("REFERENCIA", "foco OCIDENTAL", "foco ORIENTAL", "resto do pomar")
 
 # ══════════════════════════════════════════════════════════════════ os factos
@@ -92,7 +113,7 @@ reg(temporal(
     Facto("A1 · acontecimento em 2025-26 em duas posições e não no resto",
           instrumento="contraste foco-menos-controlo, Sentinel-2",
           ficheiro="serie_oriental_pergola.py", comparacao_temporal=True)
-    .confirmar_com("Landsat 8/9 (USGS/NASA, OLI, LaSRC)", True,
+    .confirmar_com("Landsat 8/9 (USGS/NASA, OLI, LaSRC)", True, prova=PV["landsat"], nota=
                    "replica direcção e datação, p exacto 0,0110 = 1/91; "
                    "controlo −0,001 (p = 0,98); magnitudes NÃO replicam"),
     GANFEI), "−0,115 (ocidental) e −0,110 (oriental), ±0,02–0,03")
@@ -106,16 +127,16 @@ reg(temporal(
           # verificacao 4 do certificar.py, na sua primeira corrida.
           ficheiro="SAIDA_C1/c1_09_sar.py", comparacao_temporal=True)
     .confirmar_com("é ele próprio o independente do óptico — física diferente",
-                   True, "reverificado por SAIDA_C2/c2_09_sar_verificacao.py"),
+                   True, "reverificado por c2_09_sar_verificacao", prova=PV["sar"]),
     ("REFERENCIA", "foco OCIDENTAL")), "−1,107 e −0,775 dB, fora da banda de nove Invernos")
 
 reg(temporal(
     Facto("A3 · entre unidades de linha de base contínua, é o pior da região",
           instrumento="Landsat 8/9, 100 cenas, 29 blocos triados",
           ficheiro="reg01_triagem_descontinuidade.py", comparacao_temporal=True)
-    .confirmar_com("Sentinel-2, mesma triagem", True, "mesma ordenação")
+    .confirmar_com("Sentinel-2, mesma triagem", True, "mesma ordenação", prova=PV["triagem"])
     .confirmar_com("ortofoto DGT 2007-2025 e 03-09", True,
-                   "cinco datados a 01-09; três a 03-09, com outra leitura")
+                   "cinco datados a 01-09; três a 03-09", prova=PV["orto297"])
     .fronteira("parcelário do IFAP (outra entidade) e discos pré-registados"),
     # A prova de identidade dos FOCOS e o rastreio denso de Ganfei, que os
     # cobre e os lista como continuos. Apontava para o rastreio REGIONAL, que
@@ -157,21 +178,21 @@ reg(Facto("C1 · o voo LiDAR é de 06-07-2025, 14:34:53–14:51:08 UTC",
           instrumento="tempo GPS do LAS", ficheiro="l1_data_do_voo.py")
     .instantanea("uma data, lida do cabeçalho do LAS")
     .confirmar_com("global_encoding bit 0 = 1", True,
-                   "Adjusted Standard GPS confirmado no cabeçalho"),
+                   "Adjusted Standard GPS no cabeçalho do LAS", prova=PV["voo"]),
     "um só dia, 0,27 h de amplitude")
 
 reg(Facto("C2 · a partição pérgola/chão é PÓS-TRATAMENTO",
           instrumento="data do voo contra a janela do acontecimento",
           ficheiro="CAMADA_2_ADENDA_LIDAR.md")
     .instantanea("é uma afirmação sobre a data do voo, não uma medição comparada")
-    .confirmar_com("C1, calculado em disco", True),
+    .confirmar_com("C1, calculado em disco", True, prova=PV["voo"]),
     "toda a leitura que dela dependa herda isto")
 
 reg(Facto("C3 · o bloco sudoeste é da mesma exploração",
           instrumento="parcelário IFAP", ficheiro="g19_parcelario.py")
     .instantanea("o parcelário é de uma campanha e é assim que é usado")
-    .confirmar_com("documento de outra entidade, desenhado para pagamentos", True,
-                   "19,00 ha em 16 parcelas, 12,64 ha de kiwi, todo do ENT 472062"),
+    .confirmar_com("parcelário do IFAP — documento de outra entidade", True,
+                   "19,00 ha em 16 parcelas, 12,64 ha de kiwi", prova=PV["parcelario"]),
     "não há controlo externo contemporâneo de kiwi — é medição, não omissão")
 
 reg(Facto("C4 · ORI-COM tinha pérgola madura em 2010 (111 %) e 2012 (79 %)",
@@ -179,7 +200,7 @@ reg(Facto("C4 · ORI-COM tinha pérgola madura em 2010 (111 %) e 2012 (79 %)",
           ficheiro="p3_pergola_2010_2012.py")
     .instantanea("prominência medida DENTRO de cada imagem, nunca entre épocas")
     .confirmar_com("mapa certificado da C2", True,
-                   "máx dif 0,00e+00 em 2 858 células"),
+                   "máx dif 0,00e+00 em 2 858 células", prova=PV["prom2012"]),
     "instrumento a discriminar nas duas épocas")
 
 reg(Facto("C5 · ORI-SEM nunca teve pérgola",
@@ -195,7 +216,7 @@ reg(temporal(
           instrumento="prominência de pérgola, seis épocas de ortofoto",
           ficheiro="p4_quando_foi_arrancada.py", comparacao_temporal=True)
     .confirmar_com("coorte de plantação certificada pela C0", True,
-                   "documental, independente da imagem"),
+                   "documental, independente da imagem", prova=PV["c0"]),
     ("REFERENCIA",)), "prominência negativa em todas as unidades até 2007")
 
 reg(Facto("C7 · a atribuição de válvulas não sustenta nenhuma quantidade",
@@ -229,49 +250,65 @@ reg(Facto("D6 · a PSA nunca foi encomendada porque os sintomas não eram compat
 # Nove boletins x 12 parametros. A unidade e o BOLETIM, nao o registo: doze
 # parametros do mesmo tubo nao sao doze observacoes.
 reg(Facto("D7 · os boletins A2 não podem testar afectado contra não afectado",
-          instrumento="9 boletins de físico-química do solo",
+          instrumento="9 boletins sobre 8 talhões de físico-química do solo",
           ficheiro="a2_solo_caracterizacao.py")
     .instantanea("cada boletim é uma data única; não há série a comparar")
     .fronteira("código de bloco escrito pelo laboratório, não derivado de "
                "sinal nosso")
-    .nao_testavel("nenhum boletim tem coordenada; 3 de 9 são do sector B1, fora "
-                  "da AOI e em estabelecimento; e o C7 proíbe a atribuição por "
-                  "válvula"),
-    "0 de 9 com coordenada · 0 dentro de um foco · 3 de 9 no B1")
+    # AS RAZOES FORAM TODAS CORRIGIDAS a 04-09 pelo Controlo 3. A conclusao
+    # sobrevive; as tres razoes que eu tinha escrito nao.
+    .nao_testavel("n = 8 talhões, não 9 boletins — «B2 - V7» e «B2 - Zona 1 "
+                  "(V7)» são o mesmo talhão em duas datas. A colocação que "
+                  "existe é INFERIDA, não medida. E o C7 proíbe a atribuição "
+                  "por válvula, que é a única via que restaria"),
+    "8 talhões · o repetido dá o único piso de ruído do conjunto: 0,2 de pH, e "
+    "a textura muda de classe entre as duas datas")
 
-reg(Facto("D8 · a acidez do solo não acompanha o declínio",
-          instrumento="pH(H2O) em 9 boletins — química, não óptica",
-          ficheiro="a2_solo_caracterizacao.py")
-    .instantanea("pH de uma colheita, sem série")
-    .fronteira("código de bloco do laboratório")
-    .confirmar_com("série óptica do B1 (Landsat 100 cenas + Sentinel-2)", True,
-                   "os dois pH mais baixos, 5,2 e 5,3, são do B1, que SOBE "
-                   "+0,092 enquanto os focos descem −0,085"),
-    "hipótese pré-registada que só podia falhar, e falhou")
+# D8 · RETIRADO a 04-09-2026 — a vigesima retirada.
+# «A acidez do solo nao acompanha o declinio.» Assentava num degrau de
+# +0,092 que o Controlo 3 REJEITOU a 03-09 as 23:07:55, e o script que o
+# usou foi escrito 9,3 horas depois. E o proprio numero nao suporta nada:
+# P(os dois mais baixos serem de um grupo de 3) = 1/12; Mann-Whitney
+# exacto p = 0,25; os postos do B1 sao 1, 2 e NOVE — cobre o intervalo
+# inteiro. O piso de ruido medido no unico talhao repetido e 0,2 de pH,
+# e o D8 assentava em 0,3. E nos seis boletins com posicao a relacao
+# INVERTE-SE. Ver A2_CONTROLO3_ADVERSARIO.md.
 
-reg(Facto("D9 · faltam a CTC e a saturação em bases, e a profundidade não está "
-          "declarada em campo nenhum",
+reg(Facto("D9 · faltam a CTC e a saturação em bases; a profundidade é NÃO "
+          "SABIDA, não ausente",
           instrumento="inventário dos 12 parâmetros e de 5 campos de metadados",
           ficheiro="a2_solo_caracterizacao.py")
     .instantanea("é um inventário, não uma medição")
-    .nao_testavel("é uma ausência documental: não há segundo instrumento a pedir"),
-    "a química que existe é de acima da camada que se suspeita")
+    # CORRIGIDO a 04-09: escrevi «a profundidade nao esta declarada em campo
+    # nenhum». Os cinco campos que interroguei NAO PODIAM conte-la, e os nove
+    # PDF de origem nao estao nesta maquina. «Nao sabido» e «ausente» sao
+    # coisas diferentes, e este dossie ja foi apanhado a confundi-las.
+    .nao_testavel("a falta da CTC e da saturação em bases é ausência documental "
+                  "verificável; a profundidade é NÃO SABIDA — os PDF de origem "
+                  "não estão em disco e o livro EN marca nove células «page 2 "
+                  "not extracted»"),
+    "12 parâmetros de fertilidade, nenhum do complexo de troca")
 
-# ---- C8 · o troco de rede que nenhum teste alcancou -------------------------
-reg(Facto("C8 · a hipótese da rede sobre-estendida foi fechada por um teste que "
-          "não alcançava o troço oeste",
-          instrumento="inventário das quatro reconstruções do esquema de rega",
+# ---- C8 · RETIRADO e SUBSTITUIDO a 04-09-2026 ------------------------------
+# A versao anterior dizia «as valvulas 1-5 nao estao em nenhuma das quatro
+# reconstrucoes». **E falso**: o `valvulas_v4.json` tem-nas em `lobo_oeste`,
+# com UTM. O leitor procurava as chaves erradas e eu escrevi por cima um
+# comentario a afirmar o contrario. E o criterio pre-registado do proprio
+# ficheiro dizia que, nesse caso, ele «nao serve para nada». Vigesima primeira
+# retirada. Ver C8_CONTROLO3_ADVERSARIO.md.
+#
+# A conclusao resiste por outra via, mais forte e sem o esquema de rega:
+reg(Facto("C8 · a particao por valvula testou 60,8 pct da exploracao",
+          instrumento="tabela de areas por valvula do gestor",
           ficheiro="valvulas_1a5_o_troco_que_falta.py")
-    .instantanea("é um inventário do que entrou no teste, não uma medição no tempo")
-    .fronteira("o esquema de rega é documento do explorador, anterior a "
-               "qualquer cálculo nosso")
-    .confirmar_com("testemunho do gestor, tipo 1, 03-09-2026", True,
-                   "«B1 = válvulas 1-5»")
-    .confirmar_com("geometria independente", True,
-                   "o bloco do G19 (C0, por extrapolação do esquema) e o B1 "
-                   "(IFAP, via coordenadas do gestor) batem a 1 m no bordo norte"),
-    "válvulas 1-5 ausentes das quatro reconstruções; o teste correu 12, todas "
-    "no corpo principal")
+    .instantanea("e uma contagem de cobertura, nao uma medicao no tempo")
+    .fronteira("a tabela e do explorador, anterior a qualquer calculo nosso")
+    .confirmar_com("as quatro reconstrucoes do esquema", True,
+                   "todas partem 12 valvulas, sempre 6-17",
+                   prova=PV["c8"]),
+    "27,3 ha testados de 44,93 - ficaram fora 17,63 ha em treze unidades: as "
+    "cinco valvulas do B1 (9,01 ha) e as soltas 18-25 e 27 (8,62 ha)")
+
 
 # ══════════════════════════════════════════════════════════════════ o portão
 if __name__ == "__main__":
@@ -303,4 +340,4 @@ if __name__ == "__main__":
     if bloqueia:
         print("BLOQUEADOS: %s" % ", ".join(bloqueia))
         raise SystemExit(1)
-    print("Todos os factos da LISTA_FINAL cumprem as cinco condições do portão.")
+    print("Todos os factos da LISTA_FINAL cumprem as seis condicoes do portao.")

@@ -1,0 +1,104 @@
+{
+ "nativo": [
+  2338,
+  1654
+ ],
+ "pagina_mm": [
+  297.0388888888889,
+  210.25555555555556
+ ],
+ "px_por_mm": 7.871023247984739,
+ "recortes": {
+  "A_lobo_oeste": {
+   "box": [
+    0,
+    463,
+    467,
+    1190
+   ],
+   "saida": "rec_A_lobo_oeste.png",
+   "tamanho": [
+    1401,
+    2181
+   ]
+  },
+  "B_corpo_oeste": {
+   "box": [
+    374,
+    463,
+    1028,
+    1190
+   ],
+   "saida": "rec_B_corpo_oeste.png",
+   "tamanho": [
+    1962,
+    2181
+   ]
+  },
+  "C_corpo_meio": {
+   "box": [
+    935,
+    396,
+    1589,
+    1091
+   ],
+   "saida": "rec_C_corpo_meio.png",
+   "tamanho": [
+    1962,
+    2085
+   ]
+  },
+  "D_corpo_este": {
+   "box": [
+    1496,
+    330,
+    2338,
+    1025
+   ],
+   "saida": "rec_D_corpo_este.png",
+   "tamanho": [
+    2526,
+    2085
+   ]
+  },
+  "E_faixa_baixa": {
+   "box": [
+    0,
+    992,
+    1169,
+    1654
+   ],
+   "saida": "rec_E_faixa_baixa.png",
+   "tamanho": [
+    3507,
+    1986
+   ]
+  },
+  "F_faixa_baixa2": {
+   "box": [
+    1169,
+    959,
+    2338,
+    1654
+   ],
+   "saida": "rec_F_faixa_baixa2.png",
+   "tamanho": [
+    3507,
+    2085
+   ]
+  },
+  "G_topo": {
+   "box": [
+    0,
+    0,
+    2338,
+    496
+   ],
+   "saida": "rec_G_topo.png",
+   "tamanho": [
+    7014,
+    1488
+   ]
+  }
+ }
+}

@@ -11,7 +11,7 @@ Três mudanças em relação à F13, e todas vêm da adenda v1.8
    honesto não é «fechado» nem «não testado» — é **testado e confundido**, com
    o multiverso a dizer qual escolha decide.
 
-2. **Entra a coluna do RETIRADO, com dezanove linhas.** Não é um apêndice de
+2. **Entra a coluna do RETIRADO, com vinte e uma linhas.** Não é um apêndice de
    modéstia: é o argumento que vai à frente do pedido. Um processo que apanha
    os seus próprios erros, e cada vez mais depressa, vale mais para quem decide
    do que qualquer p.
@@ -80,11 +80,10 @@ CONFUNDIDAS = [
     ("Rede de rega sobre-estendida",
      "partição por válvula contra 200 partições rodadas da mesma geometria:" + chr(10) +
      "a válvula não explica nada que a geografia já não explique, 11/11 dentro do nulo.",
-     "MAS as quatro reconstruções contêm as válvulas 6 a 17 — TODAS no corpo" + chr(10) +
-     "principal. As válvulas 1 a 5, que servem o B1 a 500 m a sudoeste, estão" + chr(10) +
-     "«POR COLOCAR», e o fundamento invoca um objecto retirado a 28-08.",
-     "fechada só para o corpo principal · o troço que a torna sobre-estendida "
-     "nunca foi testado"),
+     "MAS a partição testou 27,3 ha de 44,93 — 60,8 %. Ficaram fora 17,63 ha em" + chr(10) +
+     "treze unidades: as cinco válvulas do B1 (9,01 ha) e as soltas 18-25 e 27" + chr(10) +
+     "(8,62 ha). O teste cobria três quintos da exploração.",
+     "fechada para 60,8 % da exploração · dois quintos nunca foram testados"),
     ("Porta-enxerto  ·  Summer Kiwi contra pé franco",
      "dentro do bloco: nulo apertado, −0,0004, IC95 [−0,0015, +0,0014].  "
      "Entre blocos: trajectórias\n"
@@ -129,6 +128,8 @@ RETIRADO = [
     ("«os fossos são conservadores, pelo T5»", "identidade algébrica: limpar a referência desloca todos os fossos pela MESMA constante, +0,008430, idêntica à nona casa"),
     ("«o B1 é o comparador sem degrau»", "zero instrumentos independentes, a recta ganha porque o bloco está em subida, e o veredicto dependia de um limiar inventado"),
     ("«blocos vizinhos com degrau 2 a 4× maior»", "estavam desmatados desde 2024 e a queda caía do lado PRÉ da fronteira; passou o portão com dois instrumentos e ρ = 0,890 porque ambos mediam a mesma coisa errada"),
+    ("«a acidez do solo não acompanha o declínio»", "retirado no mesmo dia em que entrou: assentava num degrau que o adversário rejeitara 9,3 horas antes, e o piso de ruído medido (0,2 de pH) é maior do que a diferença em que assentava"),
+    ("«as válvulas 1-5 não estão em nenhuma reconstrução»", "estão, com UTM, em valvulas_v4.json sob a chave `lobo_oeste`; o meu leitor procurava as chaves erradas e eu escrevi por cima que essa chave «não enumera válvulas». Publiquei contra o meu próprio critério pré-registado"),
 ]
 
 fig = plt.figure(figsize=(18.6, 12.4), dpi=200)
@@ -202,7 +203,7 @@ ax.plot([LIM, LIM], [0.02, 0.995], lw=1.0, color="#e2dfd9")
 y = 0.975
 ax.text(XR, y + 0.018, "RETIRADO", fontsize=11.4, color=MORTO,
         fontweight="bold")
-ax.text(XR + 0.090, y + 0.019, "dezanove afirmações que este processo matou — "
+ax.text(XR + 0.090, y + 0.019, "vinte e uma afirmações que este processo matou — "
         "todas nossas", fontsize=8.8, color=TINTA3)
 ax.plot([XR, 0.994], [y + 0.006, y + 0.006], lw=1.6, color=MORTO)
 y -= 0.030

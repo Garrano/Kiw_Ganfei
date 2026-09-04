@@ -87,7 +87,21 @@ for f in FONTES:
         print("    %-26s (nao existe)" % f)
         continue
     d = carrega(cam)
-    ch = d.get("valvulas", d.get("metros_por_linha", d))
+    # CORRIGIDO a 04-09 pelo Controlo 3, e o defeito era fatal: este leitor
+    # procurava as chaves «valvulas» e «metros_por_linha». O `valvulas_v4.json`
+    # nao tem nenhuma das duas — tem `corpo` (6-17) e **`lobo_oeste` (1-5)** —
+    # e por isso caia no dicionario de topo e devolvia ZERO valvulas. Pior: eu
+    # escrevi por cima um comentario a afirmar que `corpo`/`lobo_oeste` «nao
+    # enumeram valvulas». As duas enumeram, e as 1-5 estao la com UTM.
+    #
+    # O criterio pre-registado deste ficheiro dizia: se estiverem em ALGUMA
+    # reconstrucao, «a hipotese continua fechada e este ficheiro nao serve para
+    # nada». Estao. **O veredicto foi publicado contra o proprio criterio.**
+    ch = {}
+    for k, v in d.items():
+        if str(k).startswith("_"):
+            continue
+        ch.update(v if isinstance(v, dict) else {k: v})
     # so contam as chaves que SAO um numero de valvula. `valvulas_v4.json` tem
     # «corpo»/«lobo_oeste» e `valvulas_por_linha.json` tem ancoras de linha —
     # nenhuma delas enumera valvulas, e enfiá-las na uniao dava lixo.
