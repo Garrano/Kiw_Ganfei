@@ -1,0 +1,55 @@
+{
+ "criterio": "menor dispersão relativa da dotação entre blocos",
+ "cenarios": [
+  {
+   "nome": "S1 · a minha leitura, letras só na banda",
+   "dotacao": {
+    "B2": 37.6
+   },
+   "cv_pct": NaN,
+   "amplitude": NaN,
+   "sobra": [
+    "A",
+    "B",
+    "C",
+    "H",
+    "I",
+    "J",
+    "L",
+    "M",
+    "N"
+   ],
+   "repetidas": []
+  },
+  {
+   "nome": "S2 · a leitura do gestor tal como veio",
+   "dotacao": {
+    "B1": 13.5,
+    "B2": 33.4,
+    "B3": 29.2,
+    "B4": 31.8
+   },
+   "cv_pct": 29.5,
+   "amplitude": 2.48,
+   "sobra": [
+    "C",
+    "J"
+   ],
+   "repetidas": []
+  },
+  {
+   "nome": "S3 · série descendente I→A, v4 a v12",
+   "dotacao": {
+    "B1": 13.5,
+    "B2": 37.6,
+    "Erica Novo": 36.0,
+    "B3": 22.5,
+    "B4": 33.7
+   },
+   "cv_pct": 32.3,
+   "amplitude": 2.79,
+   "sobra": [],
+   "repetidas": []
+  }
+ ]
+}

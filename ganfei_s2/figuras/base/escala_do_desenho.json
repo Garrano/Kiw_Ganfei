@@ -1,0 +1,99 @@
+{
+ "min_px": 400.0,
+ "pares": [
+  {
+   "de": "B1 oeste",
+   "para": "B1 este",
+   "px": 535.0756955796068,
+   "m": 731.5360551606462,
+   "m_px": 1.367163676474277,
+   "onde": "no lobo B1"
+  },
+  {
+   "de": "B1 oeste",
+   "para": "banda oeste",
+   "px": 1012.1368484547927,
+   "m": 1219.2017880564317,
+   "m_px": 1.2045819593642506,
+   "onde": "entre os dois"
+  },
+  {
+   "de": "B1 oeste",
+   "para": "banda este",
+   "px": 1498.7277938304874,
+   "m": 2523.477164548948,
+   "m_px": 1.683746157865919,
+   "onde": "entre os dois"
+  },
+  {
+   "de": "B1 sul",
+   "para": "B1 este",
+   "px": 504.6236221185053,
+   "m": 761.693507915093,
+   "m_px": 1.5094289576008348,
+   "onde": "no lobo B1"
+  },
+  {
+   "de": "B1 sul",
+   "para": "banda oeste",
+   "px": 978.2474124678276,
+   "m": 1290.015891374986,
+   "m_px": 1.3187010514248734,
+   "onde": "entre os dois"
+  },
+  {
+   "de": "B1 sul",
+   "para": "banda este",
+   "px": 1453.9876203049323,
+   "m": 2536.1177023158843,
+   "m_px": 1.744249859420403,
+   "onde": "entre os dois"
+  },
+  {
+   "de": "B1 este",
+   "para": "banda oeste",
+   "px": 477.38558838741665,
+   "m": 584.6246659182283,
+   "m_px": 1.2246382801229077,
+   "onde": "entre os dois"
+  },
+  {
+   "de": "B1 este",
+   "para": "banda este",
+   "px": 979.100097027878,
+   "m": 1793.3928738567017,
+   "m_px": 1.8316746973069071,
+   "onde": "entre os dois"
+  },
+  {
+   "de": "B1 norte",
+   "para": "banda oeste",
+   "px": 721.1463097042098,
+   "m": 655.4395471742607,
+   "m_px": 0.9088856704308731,
+   "onde": "entre os dois"
+  },
+  {
+   "de": "B1 norte",
+   "para": "banda este",
+   "px": 1234.2333652919938,
+   "m": 2047.1182183743078,
+   "m_px": 1.6586151986662607,
+   "onde": "entre os dois"
+  },
+  {
+   "de": "banda oeste",
+   "para": "banda este",
+   "px": 529.550752997293,
+   "m": 1475.7465907126468,
+   "m_px": 2.7867897125248553,
+   "onde": "na banda"
+  }
+ ],
+ "escala_min": 0.9088856704308731,
+ "escala_max": 2.7867897125248553,
+ "variacao": 3.0661609080091767,
+ "mediana_lobo": 1.438296317037556,
+ "mediana_banda": 2.7867897125248553,
+ "veredicto": "o desenho não tem uma escala única; nenhuma transformação global o rectifica"
+}
