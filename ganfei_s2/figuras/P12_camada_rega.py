@@ -116,25 +116,30 @@ PERGUNTAS = [
 DEBITO = {"A": 65.0, "B": 85.0, "C": 90.5, "D": 95.8, "E": 87.6, "F": 79.1,
           "G": 99.9, "H": 91.5, "I": 78.5, "J": 71.6, "L": 55.8, "M": 55.3,
           "N": 82.7}
+# ── ETIQUETAS DE SECTOR, com a origem de cada uma. Três estados:
+#     "lida"      — lida por nós no desenho a 650 dpi. Entra a cheio.
+#     "gestor"    — lida pelo gestor. Entra a tracejado, para ele confirmar.
+#     ausente     — por ler. Não se inventa.
+ETIQ = {6: ("G", "lida"), 7: ("F", "lida"), 8: ("E", "lida"), 9: ("D", "lida"),
+        4: ("I", "gestor"), 5: ("H", "gestor"), 13: ("D", "gestor"),
+        14: ("B", "gestor"), 15: ("N", "gestor"), 16: ("M", "gestor"),
+        17: ("A", "gestor")}
 BLOCOS = {
     "B1": dict(valvulas=[1, 2, 3, 4, 5],
                linhas="149 → v1,2,3  ·  137 e 156 → v4,5  ·  eixo linha 705",
-               sectores=[], nota="numeração de linha PRÓPRIA — as linhas 137 e "
-                                 "156 cairiam dentro do B2 na numeração da banda"),
+               nota="numeração de linha PRÓPRIA"),
     "B2": dict(valvulas=[6, 7, 8, 9],
-               linhas="130–131 → v6,7   ·   267–268 → v8,9",
-               sectores=["G", "F", "E", "D"], nota=""),
-    "Erica Novo": dict(valvulas=[10, 11],
-                       linhas="306–307",
-                       sectores=[], nota="mesma estação que as v12 e v13, em "
-                                         "fiada oposta da conduta"),
+               linhas="130–131 → v6,7   ·   267–268 → v8,9", nota=""),
+    "Erica Novo": dict(valvulas=[10, 11], linhas="306–307",
+                       nota="mesma estação que as v12 e v13"),
     "B3": dict(valvulas=[12, 13, 14, 15],
-               linhas="306–307 → v12,13   ·   336–337 → v14,15",
-               sectores=[], nota=""),
+               linhas="306–307 → v12,13   ·   336–337 → v14,15", nota=""),
     "B4": dict(valvulas=[16, 17],
-               linhas="353 e 409 → v16   ·   423 → v17",
-               sectores=[], nota=""),
+               linhas="353 e 409 → v16   ·   423 → v17", nota=""),
 }
+for _b, _d in BLOCOS.items():
+    _d["sectores"] = [ETIQ[v][0] for v in _d["valvulas"]
+                      if ETIQ.get(v, ("", ""))[1] == "lida"]
 NOTAS = [
     ("conduta principal sai do armazém na linha 222; linha da bomba, 229", CONDUTA),
     ("condutas de 2,5″ (v1), 3″ e 4″ no B1; 6″ na linha da bomba", CONDUTA),
@@ -186,9 +191,9 @@ def desenha(ax, b, transparente):
     #    largura e cinco crachás postos no centróide atropelam-se todos.
     # Todos para SUDESTE. A noroeste da banda está o rio, e o crachá do
     # Erica Novo caiu em cima do topónimo RIO MINHO.
-    DESVIO = {"B1": (0, -250), "B2": (-130, -340), "Erica Novo": (-40, -610),
-              "B3": (160, -340), "B4": (70, -600)}
-    CH, ESP, ALT = 26.0, 64.0, 132.0
+    DESVIO = {"B1": (0, -250), "B2": (-150, -320), "Erica Novo": (30, -700),
+              "B3": (170, -330), "B4": (60, -600)}
+    CH, ESP, ALT = 26.0, 64.0, 150.0
     for nome in b.ORDEM:
         if nome not in pontos:
             continue
@@ -215,14 +220,23 @@ def desenha(ax, b, transparente):
                                 edgecolor=PAPEL, linewidth=1.6, zorder=10))
             ax.annotate(str(v), (cx, N - ALT * .19), ha="center", va="center",
                         fontsize=8.6, weight="bold", color="white", zorder=11)
+            if v in ETIQ:
+                let, orig = ETIQ[v]
+                ax.annotate(let if orig == "lida" else let + "?",
+                            (cx, N - ALT * .19 - CH - 13), ha="center",
+                            va="center", fontsize=8.0,
+                            weight="bold" if orig == "lida" else "normal",
+                            style="normal" if orig == "lida" else "italic",
+                            color=TINTA if orig == "lida" else TINTA2,
+                            alpha=1.0 if orig == "lida" else .8, zorder=11)
         deb = sum(DEBITO[x] for x in d["sectores"]) if d["sectores"] else None
         ax.annotate("linhas %s" % d["linhas"].split("·")[0].strip(),
-                    (E, N - ALT * .62), ha="center", va="top", fontsize=7.0,
+                    (E, N - ALT * .78), ha="center", va="top", fontsize=7.0,
                     color=TINTA2, path_effects=_halo(2.8), zorder=11)
         if deb:
             ax.annotate("sectores %s  ·  %s m³"
                         % ("+".join(d["sectores"]), virg(deb)),
-                        (E, N - ALT * .62 - 34), ha="center", va="top",
+                        (E, N - ALT * .78 - 34), ha="center", va="top",
                         fontsize=7.0, color=CONDUTA, weight="bold",
                         path_effects=_halo(2.8), zorder=11)
         # Não se escreve «sector impresso por ler» debaixo dos outros quatro:
@@ -254,6 +268,20 @@ def legenda(axl, b):
         axl.annotate(t2, (.185, y - .020), xycoords="axes fraction", ha="left",
                      va="center", fontsize=6.5, color=TINTA3)
         y -= .056
+    axl.annotate("G", (.055, y + .004), xycoords="axes fraction", ha="center",
+                 va="center", fontsize=9.5, weight="bold", color=TINTA)
+    axl.annotate("N?", (.115, y + .004), xycoords="axes fraction", ha="center",
+                 va="center", fontsize=9.5, style="italic", color=TINTA2)
+    axl.annotate("letra do sector impresso", (.185, y + .010),
+                 xycoords="axes fraction", ha="left", va="center",
+                 fontsize=8.2, color=TINTA)
+    axl.annotate("a cheio, lida no desenho; em itálico com ?,",
+                 (.185, y - .012), xycoords="axes fraction", ha="left",
+                 va="center", fontsize=6.5, color=TINTA3)
+    axl.annotate("lida pelo gestor e por confirmar",
+                 (.185, y - .030), xycoords="axes fraction", ha="left",
+                 va="center", fontsize=6.5, color=TINTA3)
+    y -= .072
 
     axl.annotate("ESQUEMA DE REGA", (0, y), xycoords="axes fraction",
                  ha="left", va="top", fontsize=7.6, weight="bold", color=TINTA2)

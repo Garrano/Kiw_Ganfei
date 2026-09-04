@@ -24,8 +24,8 @@
     5
    ],
    "linhas": "149 → v1,2,3  ·  137 e 156 → v4,5  ·  eixo linha 705",
-   "sectores": [],
-   "nota": "numeração de linha PRÓPRIA — as linhas 137 e 156 cairiam dentro do B2 na numeração da banda"
+   "nota": "numeração de linha PRÓPRIA",
+   "sectores": []
   },
   "B2": {
    "valvulas": [
@@ -35,13 +35,13 @@
     9
    ],
    "linhas": "130–131 → v6,7   ·   267–268 → v8,9",
+   "nota": "",
    "sectores": [
     "G",
     "F",
     "E",
     "D"
-   ],
-   "nota": ""
+   ]
   },
   "Erica Novo": {
    "valvulas": [
@@ -49,8 +49,8 @@
     11
    ],
    "linhas": "306–307",
-   "sectores": [],
-   "nota": "mesma estação que as v12 e v13, em fiada oposta da conduta"
+   "nota": "mesma estação que as v12 e v13",
+   "sectores": []
   },
   "B3": {
    "valvulas": [
@@ -60,8 +60,8 @@
     15
    ],
    "linhas": "306–307 → v12,13   ·   336–337 → v14,15",
-   "sectores": [],
-   "nota": ""
+   "nota": "",
+   "sectores": []
   },
   "B4": {
    "valvulas": [
@@ -69,8 +69,8 @@
     17
    ],
    "linhas": "353 e 409 → v16   ·   423 → v17",
-   "sectores": [],
-   "nota": ""
+   "nota": "",
+   "sectores": []
   }
  },
  "notas": [
