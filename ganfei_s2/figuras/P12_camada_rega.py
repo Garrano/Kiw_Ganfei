@@ -16,6 +16,12 @@ que a distância entre válvulas. Só a `por_area` passa o teste das áreas
 declaradas — **e esse teste é circular**, porque a `por_area` foi construída
 por área acumulada para bater com essas mesmas áreas.
 
+Há, isso sim, uma verificação que não é circular e que só se encontrou a 04-09:
+o gestor nomeou «Zona 0 = válvulas 8, 9, 10», e a colocação por área põe a
+válvula 8 a **34 m** desse ponto, com a frase fora do cálculo
+(`m1_v8_implantacao.py`). Chega para o sector; não chega para a célula de uma
+válvula numa malha de 98 m.
+
 Tentou-se resolver isso como se deve: georreferenciar o próprio desenho contra
 o parcelário do IFAP, com o critério escrito antes de correr (**RMS < 20 m**, e
 as 17 válvulas a cair dentro das parcelas). **Deu RMS 70,3 m**, e 3 das 10

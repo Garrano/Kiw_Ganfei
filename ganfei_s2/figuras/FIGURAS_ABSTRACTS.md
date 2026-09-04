@@ -47,9 +47,21 @@ com o critério de rejeição fixado em 25 % antes de correr.
 construída por área acumulada precisamente para bater com as áreas declaradas:
 compará-la com elas reproduz a calibração em vez de a verificar. Corridas as
 outras três reconstruções pelo mesmo teste, **as três falsificam** (desvios de
-82 %, 100 % e 114 %), e as quatro só concordam em **26,1 % da banda**. Ao nível
-do sector a partição serve; ao nível da válvula não serve, e por isso **a carta
-não desenha válvula nenhuma**.
+82 %, 100 % e 114 %), e as quatro só concordam em **26,1 % da banda**.
+
+**Mas há uma verificação que NÃO é circular, e foi encontrada tarde.** O
+cabeçalho do `m1_v8_implantacao.py` regista-a: o gestor nomeou «**Zona 0 =
+válvulas 8, 9, 10**», e a colocação por área acumulada põe a válvula 8 a
+**34 m** desse ponto — com essa frase fora do cálculo. Contra um espaçamento
+entre válvulas de 98 m, é uma âncora de **testemunho directo** a validar, e
+distingue a `por_area` das outras três, que falharam por 71 % de escala, 64 m e
+321 m respectivamente.
+
+Ou seja: a `por_area` não é apenas «a que passa a sua própria calibração». Ao
+nível do sector a partição serve, e tem esse apoio independente; ao nível da
+válvula individual continua sem resolução suficiente, e por isso **a carta não
+desenha válvula nenhuma** — 34 m de erro numa malha de 98 m chega para o
+sector e não chega para a célula.
 
 **Não se conclui daqui** nada sobre o declínio. A carta é sobre estrutura.
 
