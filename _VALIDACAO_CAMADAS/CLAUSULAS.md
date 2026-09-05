@@ -142,6 +142,53 @@ georreferenciação. Mas chega sempre **depois de publicar**, e por isso o custo
 sempre uma retirada. A cláusula é a da literatura das equipas vermelhas: o
 adversário lê o critério **antes**.
 
+### S1 · Procurar é um comando, e vem antes de criar · **executável**
+`python ja_existe.py <termos>` varre as quatro árvores — os 1 282 ficheiros,
+não só os correntes — e devolve cada acerto **com o seu estado**: a classe da
+triagem, se pré-registou uma falsificação, e se já consta das hipóteses
+fechadas. Ordena pelo que interessa antes de começar: primeiro o que já está
+fechado.
+
+*Testado nos três casos de 04-09. `ja_existe.py rede rega` devolve o
+`rede_de_rega.py` em primeiro lugar, marcado JÁ FECHADO, com a primeira linha
+do cabeçalho. Teria bastado.*
+
+**A justificação é a que o utilizador deu, e é melhor do que a minha proposta
+de arrumar a árvore:** nenhuma base de código séria foi lida por inteiro por
+ninguém, e todas funcionam. O que a prática de topo faz com árvores grandes
+não é indexá-las — é **tornar a procura barata e torná-la hábito**. Um índice
+completo é caro de manter e envelhece; a procura não envelhece. E uma árvore
+arrumada que não se consulta falha exactamente como uma desarrumada: a 04-09 a
+causa não foi a desordem, foi eu não ter procurado.
+
+### S2 · Nenhum artefacto sem produtor, com roquete · **executável**
+Todo o `.json` escrito pelo processo leva o carimbo de quem o escreveu, quando,
+e de que estado do repositório — `proveniencia.guardar()`. É a **regra 1 de
+Sandve**: *for every result, keep track of how it was produced*, e é o que o
+Sumatra automatiza.
+
+*Medido: **52 dos 57 `.json` correntes** não trazem marca nenhuma. Um deles, o
+`valvulas_v6.json`, traz a ordem espacial dos treze sectores — informação que
+mais nenhum ficheiro tem — e **nenhum guião em disco a escreve**. Quando o
+adversário perguntou se ela corroborava a leitura das etiquetas, a resposta foi
+«não sei de onde vem», e por isso não pôde contar. Um número sem produtor não é
+prova: é boato com casas decimais.*
+
+**O roquete é o que torna isto praticável numa árvore herdada.** Retroactivar os
+52 seria correr 52 guiões, alguns dos quais descarregam dados. A prática de topo
+para dívida herdada não é pagá-la de uma vez — é **impedir que cresça**: fixa-se
+a contagem como linha de base e o certificador **falha se ela subir**. Cada
+guião tocado passa a usar `guardar()` e a dívida desce sozinha. Verificado: com
+a linha de base artificialmente baixada, o certificador falha com código 1.
+
+### S3 · Uma afirmação de ficheiro não alcançado entra por verificar · **prosa**
+Um número lido no cabeçalho de um ficheiro fora do conjunto CORRENTE não se
+repete: reproduz-se primeiro, ou vai marcado como não verificado.
+*Repeti os «34 m» do `m1_v8_implantacao.py` — um ficheiro NAO_ALCANCADO — sem
+correr o código, e não reconciliam: a mesma reconstrução põe a válvula 8 a
+506 m da máscara. Usei-o para corrigir uma afirmação minha, o que espalhou o
+erro em vez de o conter.*
+
 ---
 
 ## 4 · Onde isto deixa o processo
@@ -155,7 +202,9 @@ adversário lê o critério **antes**.
 | E · cabeçalho divergente | C6 | prosa |
 | F · insumo morto a jusante | C7 | **executável** |
 | G · leitura tomada por sinal | — | **aberta** |
-| H · repetir o que existe | C8 | **executável** |
+| H · repetir o que existe | C8, **S1** | **executável** |
+| — · número sem origem rastreável | **S2** | **executável** |
+| E · cabeçalho de ficheiro não alcançado | **S3** | prosa |
 
 **A forma G continua aberta, e é honesto dizê-lo.** Não conheço maneira
 mecânica de apanhar uma leitura minha errada — a ponta lida 600 px ao lado, os

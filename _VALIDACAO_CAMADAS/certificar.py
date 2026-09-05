@@ -330,6 +330,24 @@ else:
         diz("  cobertura 8      %d ficheiros de %d factos vigiados"
             % (len(citados), len(set().union(*citados.values()) if citados else [])))
 
+# ── 9 · o roquete da proveniência: a dívida não cresce
+#
+#   52 dos 57 .json correntes não trazem marca de quem os escreveu, e um deles
+#   — o valvulas_v6.json — traz informação que ninguém mais tem e que por isso
+#   não pôde contar. Retroactivar os 52 seria correr 52 guiões; a prática para
+#   dívida herdada é impedir que cresça, não pagá-la de uma vez.
+PROV = os.path.join(AQUI, "proveniencia.py")
+if os.path.exists(PROV):
+    rc, out, err = corre([PROV], "proveniencia")
+    m = re.search(r"sem produtor: (\d+)", out)
+    if rc != 0:
+        FALHAS.append("proveniência: %s"
+                      % (re.search(r"\*\*\*(.+?)\*\*\*", out).group(1).strip()
+                         if "***" in out else err.strip()[-120:]))
+    elif m:
+        diz("  proveniência     %s artefactos sem produtor — linha de base "
+            "não subiu" % m.group(1))
+
 # ── modo completo: volta a correr o rastreio
 if COMPLETO:
     diz()

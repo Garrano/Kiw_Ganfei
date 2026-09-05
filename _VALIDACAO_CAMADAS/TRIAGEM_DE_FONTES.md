@@ -7,7 +7,7 @@ de factos até ele. Menção em prosa não conta.
 
 | classe | n | o que fazer |
 |---|---|---|
-| CORRENTE | 153 | consulta-se |
+| CORRENTE | 156 | consulta-se |
 | RETIRADO | 4 | **não se consulta** |
 | SUBSTITUIDO | 3 | **não se consulta** — usa o sucessor |
 | NAO_ALCANCADO | 1155 | nada o liga a um facto vivo; perguntar antes de usar |
@@ -63,7 +63,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 
 ## Correntes — e por que caminho de consumo se chega a cada um
 
-- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← b1_terreno.py → ifap_kiwi_largo.json
+- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← ifap_parcelas_largo.json
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_culturas.json`  ← g19_parcelario.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json`  ← b1_terreno.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas.json`  ← g19_parcelario.py
@@ -96,7 +96,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py`  ← c1_10_nivelamento.json
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_cenas.json`  ← c2_09_sar_verificacao.py
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy`  ← c2_09_sar_verificacao.py
-- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py`  ← c2_09_sar_verificacao.py → c2_07_sar_cenas.json
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py`  ← c2_09_sar_verificacao.py → c2_07_sar_pilha.npy
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.json`
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py`
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py`  ← c2_09_sar_verificacao.py → c2_07_sar_pilha.npy
@@ -118,6 +118,8 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `_VALIDACAO_CAMADAS/certificar.py`
 - `_VALIDACAO_CAMADAS/guarda.py`
 - `_VALIDACAO_CAMADAS/linhas_para_valvulas.py`  ← valvulas_1a5_o_troco_que_falta.py → valvulas_por_linha.json
+- `_VALIDACAO_CAMADAS/proveniencia.py`
+- `_VALIDACAO_CAMADAS/proveniencia_base.json`  ← proveniencia.py
 - `_VALIDACAO_CAMADAS/registo_de_factos.py`
 - `_VALIDACAO_CAMADAS/registo_manifesto.json`
 - `_VALIDACAO_CAMADAS/triagem_de_fontes.json`
@@ -216,6 +218,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `ganfei_s2/sentinel/masks_geograficas.json`  ← degrau_vs_recta_pergola.py
 - `ganfei_s2/valvulas_por_linha.json`  ← valvulas_1a5_o_troco_que_falta.py
 - `ganfei_s2/valvulas_v4.json`
+- `ganfei_s2/valvulas_v6.json`
 
 ## Não alcançados
 
@@ -696,6 +699,7 @@ Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
 - `_VALIDACAO_CAMADAS/b1_subblocos.py`
 - `_VALIDACAO_CAMADAS/gancho_arranque.py`
 - `_VALIDACAO_CAMADAS/gancho_certificar.py`
+- `_VALIDACAO_CAMADAS/ja_existe.py`
 - `_VALIDACAO_CAMADAS/m1_v3.py`
 - `_VALIDACAO_CAMADAS/serie_mascaras_geograficas.py`
 - `_VALIDACAO_CAMADAS/valvulas_por_area.json`
@@ -1373,6 +1377,5 @@ Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
 - `ganfei_s2/termico.csv`
 - `ganfei_s2/termico.py`
 - `ganfei_s2/valvulas_por_area.json`
-- `ganfei_s2/valvulas_v6.json`
 - `ganfei_s2/ver2026.py`
 - `ganfei_s2/ver_masks.py`
