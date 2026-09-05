@@ -64,6 +64,20 @@ As que mais provavelmente voltariam a ser tentadas:
 - **Georreferenciação por bloco** (04-09) — 55,9 % dos píxeis que o ICP alinhava
   eram os círculos das próprias válvulas.
 
+## Medidas, com veredicto — e o veredicto vive em prosa, não em JSON
+
+Estas quatro correram com critério escrito antes, e **nenhuma guarda o resultado
+num ficheiro**: imprimem no terminal e o veredicto ficou no documento que as
+comentou. Quem procurar o `.py` encontra a pergunta, não a resposta. É por isso
+que estão aqui.
+
+| hipótese | resultado | onde |
+|---|---|---|
+| **INS-04 · a referência sistemática está em declínio** | **CONFIRMADA, e maior do que dizia** — em 301 cenas de Verão, não 9. Média a cair muito mais do que a mediana: é um **subconjunto** de células da referência a colapsar, e **60 % é o B6**. Consequência que se propaga a tudo: **toda a magnitude expressa como fosso à referência é um limite inferior.** E o teste que o próprio INS-04 nomeava para o fechar — certificar a série Landsat da referência — **não é possível**: 110 células de 10 m dão **zero** píxeis de 30 m com o crivo de contenção. Substituto declarado: ortofoto de 2025 sobre as 92 células limpas. | `ins04_media_contra_mediana.py` · veredicto em `C4_ADENDA_RAZAO_2026-09-03.md` §2 |
+| **REG-01 · R3 — onde caem os dois focos de Ganfei no outro instrumento** | **INVERTEU-SE, e é o caso a estudar antes de citar um `.py` isolado.** O R3 corrido a 01-09 deu os focos **acima** do percentil 10 (14 % e 14 %) e o `guarda.py` autorizou o veredicto pela primeira vez sem a marca de NÃO TESTÁVEL. **Estava errado:** a ortofoto DGT 2025 mostrou que os cinco blocos do ENT 297313 usados como comparador tinham sido **desmatados em 2024**, e a queda caía do lado PRÉ da fronteira. Entre unidades de linha de base **contínua**, os focos de Ganfei ficam nos percentis **3,2 % e 6,5 %** da ordenação conjunta de 31 — dos piores, não dos melhores. E com intervalo: P(ordenação errada) = **0,07 por cenas, 0,25 por anos**, e **retirado 2026 a conclusão cai**. | veredicto corrente em `REG01_RETRACCAO_A3.md` + `REG01_CONTROLO3_ADVERSARIO.md` e `LISTA_FINAL`. ⚠ **`reg01_landsat_r3.py` e `REG01_LANDSAT_REPLICACAO.md` estão RETIRADOS** — os «14 %» são deles; não citar daí. |
+| **B1 medido como unidade** (Landsat, 100 cenas, 6 parcelas do IFAP) | **MEDIDO, com duas ressalvas do adversário.** A enumeração das seis parcelas está certa e não falta nenhuma — mas só **quatro** passam a guarda de cobertura, e o guião calcula **a mediana regional sem aplicar a si próprio** a guarda que exige às parcelas. Não invalida a leitura; obriga a citá-la com o n. | `b1_como_unidade.py` · `B1_CONTROLO3_ADVERSARIO.md` |
+| **T5 · reconstrução da grelha de referência** (pré-registo de 31-08, margem de 120 m, sem alargar) | **CORREU sem LINE-STOP** — os cinco fossos cresceram, nenhum encolheu nem mudou de sinal. **Mas não conta como confirmação independente:** o adversário mostrou que o T5 é **uma identidade algébrica disfarçada de teste** — o fosso de cada unidade é `r − v`, e é exactamente isso que a variação mede. Confirma aritmética, não o mundo. | `t5_referencia_reconstruida.py` · `CAMADA_2_CONTROLO3_ADVERSARIO.md` |
+
 ## Aberto, e é onde vale a pena gastar
 
 - **Posição de cada válvula dentro do sector.** Cinco tentativas; a melhor deixa
