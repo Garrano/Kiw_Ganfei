@@ -62,16 +62,19 @@ b.moldura(ax)
 # ── cartela ─────────────────────────────────────────────────────────────────
 fig.text(0.035, ytop, "GANFEI · CARTA-BASE", fontsize=21, weight="bold",
          color=TINTA, va="top", ha="left")
-fig.text(0.035, ytop - 0.042, "Emparcelamento de Ganfei, Valença",
+# o intervalo título-subtítulo fixa-se em POLEGADAS: em fracção de figura
+# ele muda de tamanho sempre que a folha muda de altura.
+fig.text(0.035, ytop - 0.30 / fig.get_figheight(),
+         "Emparcelamento de Ganfei, Valença",
          fontsize=10.5, color=TINTA2, va="top", ha="left")
 
 tot = sum(b.areas.values())
 sp = b.sem_posicao()
-fig.text(0.955, ytop,
+fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight(),
          "%s ha na partição  ·  5 sectores  ·  17 válvulas, posições por resolver"
          % virg(tot),
          fontsize=10.5, color=TINTA2, va="top", ha="right")
-fig.text(0.955, ytop - 0.034, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
+fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight() - 0.026, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
          fontsize=8.2, color=TINTA3, va="top", ha="right")
 
 b.legenda(

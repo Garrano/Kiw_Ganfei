@@ -92,18 +92,36 @@ def _halo(w=3.0, c=PAPEL):
 # estatutos de 2026 não nomeia divisões temáticas (só as territoriais), mas as
 # divisões são criadas por deliberação do conselho directivo e não pela
 # portaria: o silêncio do diploma não é inexistência.
+# HIERARQUIA. A identidade do editor é **subordinada** ao assunto da folha.
+# Na primeira versão ela media 7,4/8,6/7,4 pt com a linha do meio a negro e a
+# negrito, contra um título de 21 — razão de 2,4 para 1, e o negrito a puxá-la
+# ainda mais para cima. Duas coisas a disputar o mesmo lugar.
+#
+# Aqui a razão passa a ~3,4 para 1, o negro sai (a identidade fica em TINTA2 e
+# TINTA3), e o peso forte guarda-se só para a divisão, que é a linha com
+# significado. O logótipo encolhe na mesma proporção.
 INSTITUICAO = [
-    ("CCDR-N  ·  Comissão de Coordenação e Desenvolvimento Regional do Norte, I.P.", 7.4, TINTA2),
-    ("Divisão Agroalimentar e Pescas — Entre Douro e Minho", 8.6, TINTA),
-    ("Estação de Avisos de Entre Douro e Minho", 7.4, TINTA2),
+    ("CCDR-N  ·  Comissão de Coordenação e Desenvolvimento Regional do Norte, I.P.",
+     6.1, TINTA3, "normal"),
+    ("Divisão Agroalimentar e Pescas — Entre Douro e Minho", 7.2, TINTA2, "semibold"),
+    ("Estação de Avisos de Entre Douro e Minho", 6.1, TINTA3, "normal"),
 ]
-LOGO = os.path.join(AQUI, "..", "marca", "ccdrn.png")
+# o logótipo vai com fundo chaveado a transparente — um logótipo dentro de uma
+# caixa branca sobre papel creme lê-se como um autocolante, não como uma marca
+LOGO = os.path.join(AQUI, "..", "marca", "ccdrn_alpha.png")
 
 
-def cartela_institucional(fig, x=0.035, y=0.988, alt_logo=0.052):
+def cartela_institucional(fig, x=0.035, y=0.982, alt_logo=0.036,
+                          respiro_pol=0.42):
     """O logótipo e a designação, no topo da folha.
 
-    Devolve a fracção de figura ocupada, para o título se acomodar abaixo.
+    `respiro_pol` — o espaço branco, EM POLEGADAS, entre a identidade e o
+    título. É estrutura, não sobra: a convenção da folha impressa é que essa
+    distância valha pelo menos a altura de maiúscula do título, e de
+    preferência uma vez e meia. Com título a 21 pt isso são ~0,29 pol; usam-se
+    0,42, porque a identidade tem três linhas e precisa de fechar como bloco.
+
+    Devolve o `y` onde o título pode começar.
     """
     import matplotlib.image as mpimg
     if os.path.exists(LOGO):
@@ -113,15 +131,20 @@ def cartela_institucional(fig, x=0.035, y=0.988, alt_logo=0.052):
         ax = fig.add_axes([x, y - alt_logo, larg, alt_logo], zorder=20)
         ax.imshow(im, interpolation="lanczos")
         ax.axis("off")
-        xt = x + larg + 0.014
+        xt = x + larg + 0.013
     else:
         xt = x
-    yy = y - 0.010
-    for txt, tam, cor in INSTITUICAO:
+    # o bloco de texto centra-se opticamente contra o logótipo
+    npol = sum((t + 4.2) / 72.0 for _, t, _, _ in INSTITUICAO)
+    yy = y - (alt_logo - npol / fig.get_figheight()) / 2.0
+    fundo = yy
+    for txt, tam, cor, peso in INSTITUICAO:
         fig.text(xt, yy, txt, fontsize=tam, color=cor, va="top", ha="left",
-                 weight="bold" if tam > 8 else "normal")
-        yy -= (tam + 4.5) / (fig.get_figheight() * 72)
-    return y - alt_logo - 0.012
+                 weight=peso)
+        fundo = yy
+        yy -= (tam + 4.2) / (fig.get_figheight() * 72)
+    fundo = min(fundo, y - alt_logo)
+    return fundo - respiro_pol / fig.get_figheight()
 
 
 def virg(x, casas=1):
@@ -159,8 +182,14 @@ class Base(object):
         return sorted(k for k in self.valv if not self.tem_posicao(k))
 
     # ── enquadramento ───────────────────────────────────────────────────────
-    def figura(self, larg=16.0, legenda=True, cabecalho=1.62, rodape=0.42):
-        """A folha. `cabecalho` em polegadas, para a cartela institucional."""
+    def figura(self, larg=16.0, legenda=True, cabecalho=1.88, rodape=0.42):
+        """A folha. `cabecalho` em polegadas.
+
+        1,88 pol é o que a banda precisa: margem (0,21) + bloco da identidade
+        (0,41) + respiro (0,42) + título (0,35) + subtítulo (0,18) + ar até à
+        moldura (0,15). Com 1,62 o subtítulo da P11 ficava cortado pelo mapa —
+        o respiro maior empurrou-o para dentro da moldura.
+        """
         rl = 0.225 if legenda else 0.0
         w = 0.955 - rl - 0.035
         mapa = larg * w / ((self.bb[2] - self.bb[0]) / (self.bb[3] - self.bb[1]))

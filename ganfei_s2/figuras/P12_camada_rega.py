@@ -371,10 +371,10 @@ b.toponimos(ax)
 b.moldura(ax)
 fig.text(0.035, ytop, "GANFEI · ESQUEMA DE REGA", fontsize=21, weight="bold",
          color=TINTA, va="top", ha="left")
-fig.text(0.955, ytop, "17 válvulas  ·  5 sectores  ·  13 sectores "
+fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight(), "17 válvulas  ·  5 sectores  ·  13 sectores "
                        "impressos", fontsize=10.5, color=TINTA2, va="top",
          ha="right")
-fig.text(0.955, ytop - 0.034, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
+fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight() - 0.026, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
          fontsize=8.2, color=TINTA3, va="top", ha="right")
 legenda(axl, b)
 fora2 = os.path.join(AQUI, "P12_camada_rega_isolada.png")
