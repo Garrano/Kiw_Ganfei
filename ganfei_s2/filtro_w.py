@@ -1,3 +1,18 @@
+# -*- coding: utf-8 -*-
+"""RETIRADO em 06-09-2026. Inerte por C7.
+
+⚠ A sua mascara-alvo principal e a que o projecto retirou formalmente. O
+`masks_geograficas.json` regista: «_manchaW: RETIRADA. Era pomar & (nd2026 <
+0,76) dilatada — definia a mancha pelo sinal que depois se media.» Este ficheiro
+carrega-a na mesma como `ALVO["manchaW"]` e publica NDVI, NDMI e BSI sobre ela.
+
+E a sua uniao `saudavel` sao as tres manchas escolhidas por aparencia do
+`masks.json`, intersectadas com `copado = nd2026 > 0,78` — uma referencia
+garantidamente alta no ano terminal, que e o ano em que tudo se decide.
+"""
+raise SystemExit("filtro_w.py esta RETIRADO (C7): mede a mancha retirada.")
+
+# --- original abaixo, inerte ---
 """Serie densa Jul2023-Jun2025 sobre a AOI: NDVI, NDMI (humidade) e BSI (solo nu)
 nas mascaras manchaW / zona0 / saudavel. Objectivo: datar e caracterizar o que
 mudou no sector W entre Jul/2024 e Jun/2025."""

@@ -1,3 +1,21 @@
+# -*- coding: utf-8 -*-
+"""RETIRADO em 06-09-2026. Inerte por C7.
+
+⚠ O discriminador deste ficheiro E o sinal. Corre sobre `sentinel/masks.json`,
+onde `pomar = abertura((nd2026 > 0,78) & dist>5)`. Logo «distancia a bordadura
+do pomar» e **distancia ao contorno de NDVI 0,78 de 2026** — e a separacao
+bordo/interior que ele usa para distinguir pixeis mistos de focos reais esta
+desenhada sobre a cena que esta a classificar.
+
+Medido pelo adversario: 52 % do rebordo abaixo do limiar de defice contra 35-39 %
+no interior — exactamente o que uma fronteira tirada do sinal produz.
+
+Corria sem cartucho e reescrevia `difusa_nucleos.csv`, imprimindo 29,03 ha, a
+area do poligono retirado, ja substituida por 30,31.
+"""
+raise SystemExit("difusa.py esta RETIRADO (C7): a fronteira e o proprio sinal.")
+
+# --- original abaixo, inerte ---
 """A componente difusa: metade do defice de 2026 esta fora dos dois focos.
 E bordadura estrutural ou sao focos novos? Discriminador: distancia ao bordo
 do pomar. Pixel misto de 10 m vive no bordo; foco real forma nucleo interior."""

@@ -1,3 +1,24 @@
+# -*- coding: utf-8 -*-
+"""RETIRADO em 06-09-2026. Inerte por C7. E o mais perigoso dos tres.
+
+⚠ Corre sobre `sentinel/masks.json` — as mascaras CIRCULARES retiradas, em que
+`pomar` era `nd2026 > 0,78` e `manchaW` era `nd2026 < 0,76`. E, pior, **reescreve
+`sentinel/proveniencia.json`** (linha 78) carimbando o registo de proveniencia do
+projecto com a contagem de vertices dessas mascaras. E a falha canonica da C7:
+um ficheiro retirado a reescrever o seu proprio registo com a conclusao morta.
+
+O adversario de 06-09 correu-o numa copia isolada e confirmou-o: produziu a
+tabela inteira e reescreveu o proveniencia.json.
+
+O `masks.json` da 29,03 ha de pomar e uma referencia de 0,886 no ano terminal;
+o `masks_geograficas.json` da 30,31 ha e 0,843. **Os dois sistemas discordam em
+0,043 de NDVI no ano de que tudo depende, e os dois estavam classificados
+CORRENTE.** O que vale e o geografico.
+"""
+raise SystemExit("metricas.py esta RETIRADO (C7): corre sobre mascaras "
+                 "circulares e reescreve sentinel/proveniencia.json.")
+
+# --- original abaixo, inerte ---
 """Pos-processamento D3/D6 — nao toca no process_sentinel.py.
 
 Metrica principal (D3.1): NDVI medio e mediano por mascara por data.

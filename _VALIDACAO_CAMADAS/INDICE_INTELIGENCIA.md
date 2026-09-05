@@ -23,6 +23,7 @@
 | AUD-07 | 2026-09-05 | Controlo 4 · P8 as 49 cenas do vao | **PARCIAL** | mascara de nuvem funcionou (r -0.17); regra de classificacao retirada |
 | AUD-08 | 2026-09-06 | pre-registo SAR Out-Abr (C9 antes da corrida) | **REDESENHADO** | MDE errado 2.5-5.7x; janela de inverno herdada sem interrogacao |
 | AUD-09 | 2026-09-06 | lote de Verao · familia das mascaras | **PARCIAL** | saudavel LIMPA (percentil 34-91 no universo certo, recuo de 30 m exacto, zero celulas de 2025); contagens reconciliam todas; pomar 22,3 % definido por ortofoto POSTERIOR; zona0 sem produtor em codigo |
+| AUD-10 | 2026-09-06 | lote de Verao · cadeia serie/fenologia/defice | **PARCIAL** | c2_01/02/03 e c1_14 reproduzem o disco exactamente; SONDA A tinha potencia e passou; foco ORIENTAL limpo (poligono fixo); MAS o centro do foco OCIDENTAL esta no percentil 0,17 de 2421 candidatos - magnitude ocidental nao estimavel; dAICc sub-penalizado 2,40; as 43 corridas sao 1 bit (p=1/36); erro de +-0,02-0,03 nao rastreavel |
 
 ## Por estação — e é aqui que a assimetria aparece
 

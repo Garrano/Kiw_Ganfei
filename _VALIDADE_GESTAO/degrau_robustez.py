@@ -1,4 +1,36 @@
 # -*- coding: utf-8 -*-
+"""CORRIGIDO em 06-09-2026. A leitura que este ficheiro imprime esta SUPERADA.
+
+⚠ Ele pergunta se a referencia sistematica tambem tem degrau — «se der, entao
+parte do que se le nos focos e um evento de toda a area» — e imprime que sim,
+com estrela de significancia, num racio de 2,6x.
+
+**O racio esta inflacionado porque a referencia esta contaminada pelos focos.**
+Medido a 06-09 e verificado:
+
+    REFERENCIA total                    110 celulas
+      dentro do disco OESTE (90 m)       12
+      dentro do disco ESTE   (90 m)       6
+      dentro de qualquer foco            18  = 16 %
+
+    degrau da referencia inteira    -0,0188  (n=110)
+    degrau SEM as celulas dos focos -0,0132  (n= 92)
+    degrau DAS 18 celulas de dentro -0,1325
+
+A referencia partilha 16 % das suas celulas com aquilo que devia controlar. E
+a forma A, e desloca o racio na direccao que enfraquece o resultado dos focos.
+
+O `halo_distancia.py` ja tinha medido isto a 31-08, melhor: 44,5 % da
+referencia a menos de 150 m dos focos, metade limpa a -0,016 contra metade
+proxima a -0,075, e a leitura certa — **«nao houve evento de area»**. O facto
+B6 regista-o. Este ficheiro continua a re-emitir a leitura anterior.
+
+Nao fica inerte porque o resto do que faz — a robustez aos limiares — nao esta
+em causa. Mas **o bloco da referencia nao se cita**: cita-se o halo_distancia.
+"""
+
+# --- original abaixo ---
+# -*- coding: utf-8 -*-
 """Duas verificacoes que o degrau tem de passar antes de ir para uma figura.
 
 1. RESISTE AO LIMIAR? O corte de 0,5 m que separa «tem pergola» de «nao tem»
