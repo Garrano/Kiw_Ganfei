@@ -1,3 +1,26 @@
+# -*- coding: utf-8 -*-
+"""RETIRADO. Inerte por C7. Nao correr — reescreve sentinel/masks.json.
+
+⚠ Este e o ficheiro que a CLAUSULAS.md nomeia como O caso da forma E: o
+cabecalho dizia «poligonos geograficos e estaticos» e o codigo a seguir definia
+`pomar` por `nd2026 > 0,78` e `manchaW` por `nd2026 < 0,76` — mascaras tiradas
+do proprio sinal que depois se media ate 2026. Quatro auditorias passaram por
+cima porque ninguem leu o cabecalho e o codigo juntos.
+
+E ate 06-09-2026 nao tinha cartucho nem guarda, e chamava `json.dump` ao nivel
+do modulo: **importa-lo bastava para reescrever `sentinel/masks.json`.** A C7
+existe por causa deste ficheiro e nao estava aplicada a ele.
+
+O que vale esta em `sentinel/masks_geograficas.json`, derivado de ortofoto DGT.
+Nota do adversario de 06-09: a `zona0` desse ficheiro vem daqui — de uma lista
+de sete vertices escrita a mao, sem produtor em codigo nenhum — e a unica
+imagem que este guiao abre e `sentinel/2026-07-27.tif`.
+"""
+raise SystemExit(
+    "fazer_masks_v2.py esta RETIRADO (ver cabecalho). Inerte por C7: correr "
+    "isto reescreveria sentinel/masks.json com mascaras derivadas do sinal.")
+
+# --- original abaixo, inerte ---
 """masks.json v2 — regras D1-D3 da sessao de 28/08/2026.
 
 Principios:
@@ -93,3 +116,4 @@ masks["manchaW"] = contorno(mw, 0.8)
 masks["zona0"] = contorno(z0, 0.6)
 json.dump(masks, open("sentinel/masks.json", "w"), indent=1)
 print("\n-> sentinel/masks.json  (chaves:", ", ".join(masks), ")")
+

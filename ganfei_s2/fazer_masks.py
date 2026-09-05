@@ -1,3 +1,22 @@
+# -*- coding: utf-8 -*-
+"""RETIRADO. Inerte por C7. Nao correr — reescreve sentinel/masks.json.
+
+⚠ E o PAI do `fazer_masks_v2.py`, e tem o mesmo defeito sem nunca ter sido
+retirado. O cabecalho diz «rascunho, segundo as regras acordadas» e nao
+menciona limiar nenhum; no codigo, **todas** as unidades sao limiares sobre o
+NDVI de 2026: `pomar` de `nd > 0,78`, `manchaW` de `nd < 0,76`, `zona0` de
+`nd < 0,80`, `saudavel` de `nd > 0,85`.
+
+Chamava `json.dump` ao nivel do modulo: correr isto regredia `masks.json` a
+versao inteiramente por limiar e apagava as chaves `saudavel_2`/`saudavel_3`
+que cerca de vinte ficheiros a jusante indexam pelo nome.
+
+O que vale esta em `sentinel/masks_geograficas.json`.
+"""
+raise SystemExit(
+    "fazer_masks.py esta RETIRADO (ver cabecalho). Inerte por C7.")
+
+# --- original abaixo, inerte ---
 """Rascunho de sentinel/masks.json sobre o recorte de 2026, segundo as regras
 acordadas. Poligonos em coordenadas de PIXEL, como o process_sentinel.py espera.
 NOTA: o process_sentinel.py aceita UM poligono por chave, sem buracos — a
@@ -79,3 +98,4 @@ masks = {"pomar": contorno(pomar), "saudavel": contorno(cand, 0.8),
 for k, v in masks.items(): print(f"  {k}: {len(v)} vertices")
 json.dump(masks, open("sentinel/masks.json", "w"), indent=1)
 print("-> sentinel/masks.json")
+

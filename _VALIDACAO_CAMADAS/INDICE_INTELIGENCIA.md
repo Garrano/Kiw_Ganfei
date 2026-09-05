@@ -22,6 +22,7 @@
 | AUD-06 | 2026-09-05 | Controlo 4 · P2 as onze cenas | **NAO_DECIDE** | degrau real; numero de acontecimentos nao determinavel |
 | AUD-07 | 2026-09-05 | Controlo 4 · P8 as 49 cenas do vao | **PARCIAL** | mascara de nuvem funcionou (r -0.17); regra de classificacao retirada |
 | AUD-08 | 2026-09-06 | pre-registo SAR Out-Abr (C9 antes da corrida) | **REDESENHADO** | MDE errado 2.5-5.7x; janela de inverno herdada sem interrogacao |
+| AUD-09 | 2026-09-06 | lote de Verao · familia das mascaras | **PARCIAL** | saudavel LIMPA (percentil 34-91 no universo certo, recuo de 30 m exacto, zero celulas de 2025); contagens reconciliam todas; pomar 22,3 % definido por ortofoto POSTERIOR; zona0 sem produtor em codigo |
 
 ## Por estação — e é aqui que a assimetria aparece
 
@@ -37,11 +38,11 @@
 
 | instrumento | vivos | citáveis |
 |---|---|---|
-| NDVI S2 | 33 | 8 |
+| NDVI S2 | 32 | 7 |
 | — | 31 | 3 |
 | LiDAR | 16 | 5 |
 | ortofoto | 14 | 0 |
-| NDVI S2 · ortofoto | 12 | 3 |
+| NDVI S2 · ortofoto | 13 | 4 |
 | NDVI S2 · LiDAR | 9 | 4 |
 | IFAP | 8 | 3 |
 | LiDAR · ortofoto | 7 | 2 |
@@ -81,7 +82,7 @@
 | `_VALIDADE_GESTAO/serie_separada.py` | — | Primavera/Verão | NDVI S2 · LiDAR |
 | `_VALIDADE_GESTAO/terreno_contra_declinio.py` | — | Primavera/Verão | NDVI S2 · Landsat · LiDAR |
 | `_VALIDADE_GESTAO/triagem_referencia_densa.py` | — | ano inteiro | NDVI S2 · LiDAR |
-| `ganfei_s2/fazer_masks_v2.py` | — | Primavera/Verão | NDVI S2 |
+| `ganfei_s2/fazer_masks_v2.py` | — | Primavera/Verão | NDVI S2 · ortofoto |
 | `_VALIDADE_GESTAO/serie_oriental_pergola.py` | A1 | Primavera/Verão | LiDAR · ortofoto |
 | `_VALIDACAO_CAMADAS/SAIDA_C1/c1_09_sar.py` | A2 | Inverno | SAR S1 · NDVI S2 |
 | `_VALIDADE_GESTAO/reg01_triagem_descontinuidade.py` | A3 | Primavera/Verão | NDVI S2 · Landsat · LiDAR · ortofoto · IFAP |
