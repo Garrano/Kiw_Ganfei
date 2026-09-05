@@ -54,6 +54,22 @@ e sobrevive o método por bloco **como desenho**: o problema era a máscara e a
 inicialização, não a ideia. Refazer exige uma fonte de linha que **não contenha
 as válvulas** e uma inicialização que **não seja feita delas**.
 """
+# ─────────────────────────────────────────────────────────────────────────────
+# FICHEIRO RETIRADO — RECUSA-SE A CORRER.
+#
+# O cartucho no cabeçalho protege quem LÊ. Não protegia quem EXECUTA: até
+# 04-09 este ficheiro corria na mesma, imprimia a conclusão retirada, e
+# reescrevia o seu próprio .json com ela. Um ficheiro retirado que republica
+# o que foi retirado é pior do que não ter cartucho nenhum.
+#
+# Fica em disco porque a regra 5 manda arquivar e não apagar, e porque a
+# cadeia de tentativas é o que se aprende. Mas não produz nada.
+import sys as _sys
+print(__doc__.split("O QUE")[0].strip()[:1200], file=_sys.stderr)
+raise SystemExit(
+    "RETIRADO: este ficheiro não corre. Lê o cabeçalho, e usa georref_v5.py.")
+# ─────────────────────────────────────────────────────────────────────────────
+
 import io
 import json
 import os

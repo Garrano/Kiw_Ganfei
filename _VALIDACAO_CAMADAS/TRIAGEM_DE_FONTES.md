@@ -63,7 +63,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 
 ## Correntes — e por que caminho de consumo se chega a cada um
 
-- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← ifap_parcelas_largo.json
+- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← b1_terreno.py → ifap_kiwi_largo.json
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_culturas.json`  ← g19_parcelario.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json`  ← b1_terreno.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas.json`  ← g19_parcelario.py
@@ -96,7 +96,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py`  ← c1_10_nivelamento.json
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_cenas.json`  ← c2_09_sar_verificacao.py
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy`  ← c2_09_sar_verificacao.py
-- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py`  ← c2_09_sar_verificacao.py → c2_07_sar_pilha.npy
+- `_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py`  ← c2_09_sar_verificacao.py → c2_07_sar_cenas.json
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.json`
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py`
 - `_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py`  ← c2_09_sar_verificacao.py → c2_07_sar_pilha.npy
