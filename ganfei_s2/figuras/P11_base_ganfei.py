@@ -71,8 +71,9 @@ fig.text(0.035, ytop - 0.30 / fig.get_figheight(),
 tot = sum(b.areas.values())
 sp = b.sem_posicao()
 fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight(),
-         "%s ha na partição  ·  5 sectores  ·  17 válvulas, posições por resolver"
-         % virg(tot),
+         # a faixa diz FACTOS. «posições por resolver» é a nossa lacuna, e
+         # saiu daqui pela mesma razão que a nota saiu da legenda.
+         "%s ha na partição  ·  5 sectores  ·  17 válvulas" % virg(tot),
          fontsize=10.5, color=TINTA2, va="top", ha="right")
 fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight() - 0.026, "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
          fontsize=8.2, color=TINTA3, va="top", ha="right")

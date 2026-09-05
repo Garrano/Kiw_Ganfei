@@ -503,21 +503,10 @@ class Base(object):
         y = titulo("Símbolos", y)
         y = glifo_linha(y, "#6E675C", "limite de parcela (IFAP)",
                         "cultura 124 · KIWI", lw=0.9)
-        sp = self.sem_posicao()
-        if sp:
-            y -= 0.006
-            axl.annotate("válvulas %s: posição por determinar."
-                         % "–".join([str(sp[0]), str(sp[-1])]),
-                         (0, y), xycoords="axes fraction", ha="left", va="top",
-                         fontsize=7.4, color="#8C3B2E", weight="bold",
-                         annotation_clip=False)
-            axl.annotate("O esquema desenha-as dentro do B1; as quatro"
-                         + chr(10)
-                         + "reconstruções discordam entre si. Não se desenham.",
-                         (0, y - 0.019), xycoords="axes fraction", ha="left",
-                         va="top", fontsize=6.9, color=TINTA3, linespacing=1.45,
-                         annotation_clip=False)
-            y -= 0.062
+        # A nota «válvulas 1-5: posição por determinar» saiu da legenda em
+        # 05-09. É uma lacuna NOSSA anotada numa carta que vai para fora, e a
+        # carta afirma o que sabe — não confessa o que não sabe. A razão vive
+        # no FIGURAS_ABSTRACTS.md e a pergunta vive no email.
 
         for e in (extra or []):
             y = linha(y, e.get("cor", "none"), e["texto"], e.get("sub", ""),
