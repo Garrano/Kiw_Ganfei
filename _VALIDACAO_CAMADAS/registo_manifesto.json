@@ -1,4 +1,9 @@
 {
+ "_produtor": {
+  "script": "registo_de_factos.py",
+  "quando": "2026-09-05 11:30",
+  "commit": null
+ },
  "n": 27,
  "factos": [
   {

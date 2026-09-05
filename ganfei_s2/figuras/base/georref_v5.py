@@ -62,6 +62,10 @@ uma a 200 m.
 Falhando A ou B, não se publicam posições. Falhando C, não se publica nem se
 usa o critério — reescreve-se.
 """
+import sys as _s, os as _o
+_s.path.insert(0, r'C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS')
+from proveniencia import marca as _marca  # noqa: E402
+
 import io
 import json
 import os
@@ -247,7 +251,7 @@ for v in sorted(U):
     print("   v%-2d  E %.0f  N %.0f   %s" % (v, U[v][0], U[v][1],
           "dentro" if dv == 0 else "a %.0f m" % dv))
 
-json.dump(dict(escala=ESC, raio_exclusao_px=RAIO_EXCL,
+json.dump(dict(_produtor=_marca(), escala=ESC, raio_exclusao_px=RAIO_EXCL,
                px_linha_apos_exclusao=int(len(DES)),
                dist_min_valvula_px=float(d0.min()),
                rms_banda=rmsb, rms_lobo=rmsl,

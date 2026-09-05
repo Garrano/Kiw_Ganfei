@@ -35,6 +35,10 @@ Não recalcula os números. Os valores aqui são os certificados; se um deles
 mudar, o ficheiro que o produziu é que tem de ser corrido outra vez. Isto é o
 **portão**, não o pipeline.
 """
+import sys as _s, os as _o
+_s.path.insert(0, r'C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS')
+from proveniencia import marca as _marca  # noqa: E402
+
 import json
 import io
 import os
@@ -386,7 +390,7 @@ if __name__ == "__main__":
             ficheiro=f.ficheiro,
             temporal=bool(f.comparacao_temporal),
             provas=[p for (_i, _c, _n, _ok, p) in f._independentes if p]))
-    _json.dump(dict(n=len(man), factos=man),
+    _json.dump(dict(_produtor=_marca(), n=len(man), factos=man),
                io.open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                     "registo_manifesto.json"), "w",
                        encoding="utf-8"), indent=1, ensure_ascii=False)

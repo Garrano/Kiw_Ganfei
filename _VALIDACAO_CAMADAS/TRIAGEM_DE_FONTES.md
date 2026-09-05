@@ -63,7 +63,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 
 ## Correntes — e por que caminho de consumo se chega a cada um
 
-- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← ifap_parcelas_largo.json
+- `_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py`  ← b1_terreno.py → ifap_kiwi_largo.json
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_culturas.json`  ← g19_parcelario.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json`  ← b1_terreno.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas.json`  ← g19_parcelario.py

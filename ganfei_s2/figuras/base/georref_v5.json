@@ -1,4 +1,9 @@
 {
+ "_produtor": {
+  "script": "georref_v5.py",
+  "quando": "2026-09-05 11:30",
+  "commit": null
+ },
  "escala": 1.2589820359281436,
  "raio_exclusao_px": 32.0,
  "px_linha_apos_exclusao": 3595,

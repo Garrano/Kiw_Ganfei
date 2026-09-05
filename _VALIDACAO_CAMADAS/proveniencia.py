@@ -115,12 +115,10 @@ if __name__ == "__main__":
         if _os.path.exists(BASE) else None
     print("artefactos correntes sem produtor: %d" % n)
     if linha is None:
-        _json.dump({"n": n, "fixado": _dt.datetime.now().strftime("%Y-%m-%d"),
-                    "nota": "linha de base do roquete: esta contagem NÃO pode "
-                            "subir. Desce sozinha à medida que os guiões forem "
-                            "tocados e passarem a usar guardar()."},
-                   _io.open(BASE, "w", encoding="utf-8"), indent=1,
-                   ensure_ascii=False)
+        guardar({"n": n, "fixado": _dt.datetime.now().strftime("%Y-%m-%d"),
+                 "nota": "linha de base do roquete: esta contagem NÃO pode "
+                         "subir. Desce sozinha à medida que os guiões forem "
+                         "tocados e passarem a usar guardar()."}, BASE)
         print("linha de base fixada em %d" % n)
     else:
         print("linha de base: %d" % linha)
@@ -129,9 +127,7 @@ if __name__ == "__main__":
             raise SystemExit(1)
         if n < linha:
             print("desceu %d; a baixar a linha de base" % (linha - n))
-            _json.dump({"n": n, "fixado": _dt.datetime.now().strftime("%Y-%m-%d"),
-                        "nota": "roquete: só desce."},
-                       _io.open(BASE, "w", encoding="utf-8"), indent=1,
-                       ensure_ascii=False)
+            guardar({"n": n, "fixado": _dt.datetime.now().strftime("%Y-%m-%d"),
+                     "nota": "roquete: só desce."}, BASE)
         else:
             print("estável")

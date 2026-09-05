@@ -58,6 +58,10 @@ O registo com a P11 é ao nível do **sector**, que é o nível que aguenta: as
 áreas por sector batem com as declaradas dentro de 17,7 %. Ao nível da válvula
 não aguenta, e a camada diz isso em vez de o esconder.
 """
+import sys as _s, os as _o
+_s.path.insert(0, r'C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS')
+from proveniencia import marca as _marca  # noqa: E402
+
 import io
 import json
 import os
@@ -382,7 +386,7 @@ fig.savefig(fora2, dpi=200)
 print("escrita %s  (com legenda)" % os.path.basename(fora2))
 plt.close(fig)
 
-json.dump(dict(debito_m3=DEBITO, blocos=BLOCOS, notas=[n for n, _ in NOTAS],
+json.dump(dict(_produtor=_marca(), debito_m3=DEBITO, blocos=BLOCOS, notas=[n for n, _ in NOTAS],
                posicoes_publicadas=False,
                razao="georreferenciação falhou o critério pré-registado "
                      "(RMS 70,3 m > 20 m) e as quatro reconstruções discordam "

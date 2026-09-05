@@ -60,6 +60,10 @@ Antes de abrir um ficheiro para uma análise nova, procura-o no
 ALCANÇADO: pergunta-se porquê antes de o usar como prova. E se estiver em
 AFIRMAÇÕES DERRUBADAS, o ficheiro consulta-se, mas aquela linha não.
 """
+import sys as _s, os as _o
+_s.path.insert(0, r'C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS')
+from proveniencia import marca as _marca  # noqa: E402
+
 import io
 import json
 import os
@@ -317,7 +321,7 @@ if CONFLITO:
         print("  · %s — %s" % (rel, porque))
 
 # ── 8 · saída
-json.dump(dict(inventario=len(INV), classe=CLASSE, cadeia=CADEIA,
+json.dump(dict(_produtor=_marca(), inventario=len(INV), classe=CLASSE, cadeia=CADEIA,
                retirado=RETIRADO, substituido=SUBST, derrubadas=DERRUBADAS,
                conflitos=[dict(ficheiro=a, porque=b) for a, b in CONFLITO]),
           io.open(os.path.join(VC, "triagem_de_fontes.json"), "w",
