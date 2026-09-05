@@ -542,3 +542,84 @@ if __name__ == "__main__":
     except FactoNaoValidado as e:
         print(str(e).rstrip())
         print("  *** BLOQUEOU um facto bom — o portão é apertado de mais ***")
+
+
+    # ═════════════════════════════════════════════════════════════════════
+    # ISOLAMENTO — cada condição tem de saber bloquear SOZINHA.
+    #
+    # Medido a 04-09-2026: nos oito casos históricos deste auto-teste,
+    # **nenhuma** das nove condições bloqueava sozinha, e duas nem sequer
+    # chegavam a disparar. Consequência: se uma condição ficasse inerte, o
+    # auto-teste continuava a passar, porque outra bloqueava o mesmo caso.
+    #
+    # É esse o mecanismo por trás das SETE encarnações de «ausência tratada
+    # como aprovação» neste ficheiro. Não foram sete descuidos: foi uma
+    # bateria de testes sem poder para os apanhar.
+    #
+    # Cada caso abaixo é o controlo positivo com UMA coisa partida. Se a
+    # condição correspondente ficar inerte, o caso passa a passar — e isso
+    # é detectável. É a exigência de severidade aplicada ao próprio portão.
+    # ═════════════════════════════════════════════════════════════════════
+    print()
+    print("=" * 78)
+    print("ISOLAMENTO — cada condição bloqueia sozinha?")
+    print("=" * 78)
+    NPY = _os.path.join(r"C:/Users/Jackster2/Downloads/_VALIDACAO_CAMADAS",
+                        "SAIDA_C2", "c2_12_prom_2012.npy")
+    Q = rng.normal(0.17, 0.05, 76)
+
+    def base(**kw):
+        """O controlo positivo, para partir só uma coisa de cada vez."""
+        f = Facto(kw.get("nome", "facto de isolamento"),
+                  instrumento=kw.get("instrumento", "prominência de pérgola, ortofoto 2012"),
+                  ficheiro="isolamento.py",
+                  comparacao_temporal=kw.get("temporal", False))
+        f.ancoras(alta=kw.get("alta", rng.normal(0.220, 0.02, 110)),
+                  baixa=kw.get("baixa", rng.normal(-0.017, 0.015, 167)),
+                  nome_alta="REF", nome_baixa="NU21")
+        if not kw.get("temporal"):
+            f.instantanea("medição dentro de uma imagem")
+        f.fronteira("máscara geográfica anterior ao cálculo",
+                    derivada_do_sinal=kw.get("do_sinal", False))
+        f.reproduz(Q, kw.get("cert", Q), nome="c2_12_prom_2012.npy")
+        if kw.get("confirmar", True):
+            f.confirmar_com(kw.get("conf", "mapa certificado da C2"),
+                            concorda=kw.get("concorda", True),
+                            nota="isolamento", chave=None,
+                            prova=(NPY if kw.get("prova", True) else None))
+        return f
+
+    CASOS = [
+        ("1 · instrumento declarado", dict(instrumento=None)),
+        ("2 · mesmo índice", dict(instrumento="NDVI Landsat", conf="NDVI Sentinel-2")),
+        ("3 · confirmador discorda", dict(concorda=False)),
+        ("4 · prova sem ficheiro", dict(prova=False)),
+        ("5 · sem instrumento independente", dict(confirmar=False)),
+        ("6 · âncoras discriminam", dict(alta=rng.normal(0.10, 0.05, 110),
+                                         baixa=rng.normal(0.10, 0.05, 167))),
+        ("7 · reproduz o certificado", dict(cert=Q + 1.0)),
+        ("8 · fronteira do sinal", dict(do_sinal=True)),
+        ("9 · identidade no tempo", dict(temporal=True)),
+    ]
+    maus = []
+    for nome, kw in CASOS:
+        try:
+            base(**kw).veredicto("isolamento")
+            razoes = []
+        except FactoNaoValidado as e:
+            razoes = [l.strip()[1:].strip() for l in str(e).splitlines()
+                      if l.strip().startswith("·")]
+        n = len(razoes)
+        marca = "OK" if n == 1 else ("PASSOU — condição inerte" if n == 0
+                                     else "%d razões — não isola" % n)
+        if n != 1:
+            maus.append(nome)
+        print("  %-34s %s" % (nome, marca))
+        if n != 1:
+            for r in razoes:
+                print("       · %s" % r[:88])
+    print()
+    if maus:
+        print("*** %d condições não isolam: %s" % (len(maus), "; ".join(maus)))
+    else:
+        print("as nove condições bloqueiam sozinhas — desligar qualquer uma é detectável")

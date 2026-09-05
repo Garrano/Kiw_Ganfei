@@ -12,6 +12,17 @@ pela sessão paralela nos cabeçalhos do código.
 **Dezanove veredictos retirados em seis dias.** Nenhum foi apanhado por
 recomputação. Todos por ir a um instrumento diferente.
 
+
+> **Dois documentos companheiros, e vêm carregados no arranque com este.**
+>
+> · **`HIPOTESES_FECHADAS.md`** — o que já foi testado e fechado. A triagem
+>   é cega ao negativo por construção, e a 04-09 isso custou a repetição de um
+>   estudo de onze cenas. Ler antes de desenhar um teste novo.
+>
+> · **`CLAUSULAS.md`** — as oito formas que as vinte e três retiradas tomaram,
+>   o invariante que as une (*alguma coisa que devia ser independente não era*),
+>   e as nove cláusulas que as travam — quatro delas já executáveis.
+
 ---
 
 ## 0 · A PRÉ-VOO — onze perguntas, antes de escrever a primeira linha de código

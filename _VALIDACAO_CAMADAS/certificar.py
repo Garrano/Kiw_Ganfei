@@ -103,8 +103,24 @@ else:
                       "%d bloqueios (esperados >= 4), controlo positivo %s"
                       % (bloqueados, "passa" if passou else "FALHA"))
     else:
-        diz("  guarda.py        %d retiradas históricas bloqueadas, controlo positivo passa"
-            % bloqueados)
+        # ISOLAMENTO — a condição que faltava, e que explica as sete
+        # encarnações. Um auto-teste em que nenhuma condição bloqueia sozinha
+        # não consegue detectar uma condição a ficar inerte: outra bloqueia o
+        # mesmo caso e o teste continua verde. Medido a 04-09: eram 0 de 9.
+        if "não isolam" in out:
+            mau = [l.strip() for l in out.splitlines() if "não isolam" in l]
+            FALHAS.append("condições do portão que não bloqueiam sozinhas: %s"
+                          % (mau[0][:150] if mau else "?"))
+        elif "bloqueiam sozinhas" not in out:
+            FALHAS.append("o auto-teste do guarda.py já não corre a bateria de "
+                          "ISOLAMENTO — sem ela, uma condição inerte passa "
+                          "despercebida")
+        else:
+            n_iso = out.count("  OK") if "ISOLAMENTO" in out else 0
+            diz("  guarda.py        %d retiradas históricas bloqueadas, controlo "
+                "positivo passa" % bloqueados)
+            diz("  isolamento       as 9 condições bloqueiam sozinhas — "
+                "desligar qualquer uma é detectável")
 
 # ── 1 · o portão sobre todos os factos
 rc, out, err = corre([REGISTO], "registo")
