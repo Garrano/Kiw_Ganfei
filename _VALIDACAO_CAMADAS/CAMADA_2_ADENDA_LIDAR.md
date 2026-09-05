@@ -131,9 +131,11 @@ chamou «foco ESTE plantado» — a máscara `~nu2021` — não tinha pérgola.*
 
 ## PASSA — o que a adenda confirma
 
+> ⚠ **Duas linhas desta tabela estao RETIRADAS** (L4 e L6, no topo da pagina). Nao citar desta seccao sem confrontar o cartucho.
+
 | facto | como |
 |---|---|
-| **O degrau do foco ESTE existe, e agora tem controlo negativo.** Restringido a copado (1,27 ha com pérgola): degrau de **+0,0585 em fosso**, degrau bate recta **2,29 : 1**, p = 0,042. Na parte **sem** pérgola (1,28 ha): **1,06 : 1, p = 0,368** — recta e degrau indistintos, nada acontece em 2025. | `refazer_c2_este.py`. É o teste-placebo que a C2 não podia correr: o sinal está onde estão as plantas e não está onde elas não estão. |
+| ⚠ **RETIRADO — ver L4 no topo desta pagina.** O «controlo negativo» nao controla nada: o chao da **+0,0531** contra **+0,0585** no copado, **91 % do mesmo degrau**. O que separa os dois p e a variancia residual, **23 vezes maior** no chao — nao o efeito. ~~O degrau do foco ESTE existe, e agora tem controlo negativo.~~ Restringido a copado (1,27 ha com pérgola): degrau de **+0,0585 em fosso**, degrau bate recta **2,29 : 1**, p = 0,042. Na parte **sem** pérgola (1,28 ha): **1,06 : 1, p = 0,368** — recta e degrau indistintos, nada acontece em 2025. | `refazer_c2_este.py`. É o teste-placebo que a C2 não podia correr: o sinal está onde estão as plantas e não está onde elas não estão. |
 | **V8 aguenta por inteiro.** As três manchas de declínio novo junto ao foco ESTE reproduzem-se a 0,55 / 0,61 / 0,25 ha a **60, 75 e 166 m** (publicado: 62, 72, 167 m), e **71 a 92 % delas tinham pérgola**. Não é chão. | idem |
 | **A direcção de V10 confirma-se com instrumento melhor.** Fracção sem pérgola do défice dentro do disco ESTE: **71,7 % (2017), 74,5 % (2020), 75,6 % (2024), 61,3 % (2025), 53,4 % (2026)**. O núcleo oriental foi cerca de três quartos chão durante oito anos e cresceu para dentro de copado em 2025-26. | idem |
 | **As 3,58 ha de declínio novo de 2026 tinham pérgola completa** — 2,17 m, 79,9 %. Responde à pergunta que o adversário disse que ninguém tinha feito ao ramo **ascendente**: não é terreno arrancado. | `altura_copado.py` |
