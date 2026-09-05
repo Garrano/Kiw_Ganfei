@@ -100,30 +100,69 @@ def _halo(w=3.0, c=PAPEL):
 # Aqui a razão passa a ~3,4 para 1, o negro sai (a identidade fica em TINTA2 e
 # TINTA3), e o peso forte guarda-se só para a divisão, que é a linha com
 # significado. O logótipo encolhe na mesma proporção.
+# A identidade corre numa LINHA, ao lado do logótipo, e não empilhada em três.
+# Empilhada, formava um bloco com massa própria que competia com o título; em
+# linha, lê-se como o cabeçalho de folha que é — uma tira de crédito, não um
+# segundo título.
+#
+# E cai a redundância que estava lá: o logótipo já diz CCDR NORTE. Escrever
+# «CCDR-N» ao lado dele é dizer duas vezes a mesma coisa, e ocupava o lugar
+# onde a divisão devia estar a ganhar peso.
+#
+# Dentro da linha a hierarquia mantém-se pelo peso: a divisão é a única com
+# significado operacional, e é a única em semibold.
+# QUAL NOME CARREGA A FOLHA — decidido por robustez, não por gosto.
+#
+# A prática de topo diz: a entidade-mãe é a marca dominante, a unidade é
+# subordinada, e um título de unidade só se contextualiza quando não é único
+# dentro do Estado. A marginália cartográfica pede, além do produtor, a
+# identificação da SÉRIE.
+#
+# Aqui isso resolve-se por um facto medido. Os estatutos mudaram a meio do
+# período experimental (Portaria 239/2026, em vigor 30-05-2026); as divisões
+# nomeadas no diploma são TERRITORIAIS, e as temáticas criam-se por deliberação
+# do conselho directivo — podem mudar sem diploma. Já «Estação de Avisos»
+# ocorre ZERO vezes nos estatutos e assina 292 boletins em 46 anos.
+#
+# A divisão é legalmente real e administrativamente volátil; a estação é
+# administrativamente invisível e operacionalmente permanente. Uma identidade
+# assente na divisão envelhece com a próxima deliberação.
+#
+# E os próprios documentos que saem já resolvem isto: o cabeçalho da circular
+# traz AVISOS AGRÍCOLAS e ESTAÇÃO DE AVISOS DE ENTRE DOURO E MINHO, e NÃO
+# nomeia a divisão. Essa solução atravessou a mudança de estatutos intacta.
+#
+# A divisão desce ao rodapé como unidade responsável: não se perde, deixa de
+# competir com o título, e não data a folha.
 INSTITUICAO = [
-    ("CCDR-N  ·  Comissão de Coordenação e Desenvolvimento Regional do Norte, I.P.",
-     6.1, TINTA3, "normal"),
-    ("Divisão Agroalimentar e Pescas — Entre Douro e Minho", 7.2, TINTA2, "semibold"),
-    ("Estação de Avisos de Entre Douro e Minho", 6.1, TINTA3, "normal"),
+    ("Comissão de Coordenação e Desenvolvimento Regional do Norte, I.P.",
+     TINTA3, "normal"),
+    ("Avisos Agrícolas — Estação de Avisos de Entre Douro e Minho",
+     TINTA2, "semibold"),
 ]
+UNIDADE_RODAPE = "Divisão Agroalimentar e Pescas — Entre Douro e Minho"
+CORPO_INST = 7.0
 # o logótipo vai com fundo chaveado a transparente — um logótipo dentro de uma
 # caixa branca sobre papel creme lê-se como um autocolante, não como uma marca
 LOGO = os.path.join(AQUI, "..", "marca", "ccdrn_alpha.png")
 
 
-def cartela_institucional(fig, x=0.035, y=0.982, alt_logo=0.036,
-                          respiro_pol=0.42):
-    """O logótipo e a designação, no topo da folha.
+def cartela_institucional(fig, x=0.035, y=0.980, alt_logo=0.034,
+                          respiro_pol=0.40, risco=True):
+    """Logótipo e identidade numa linha só, a atravessar a folha.
 
-    `respiro_pol` — o espaço branco, EM POLEGADAS, entre a identidade e o
-    título. É estrutura, não sobra: a convenção da folha impressa é que essa
-    distância valha pelo menos a altura de maiúscula do título, e de
-    preferência uma vez e meia. Com título a 21 pt isso são ~0,29 pol; usam-se
-    0,42, porque a identidade tem três linhas e precisa de fechar como bloco.
+    Os segmentos são medidos e encadeados: o matplotlib não compõe pesos
+    diferentes dentro de um `text`, portanto desenha-se um de cada vez e
+    avança-se pela largura renderizada de cada um.
+
+    `respiro_pol` — o branco entre a tira e o título, em polegadas. É
+    estrutura: a convenção da folha impressa é que valha pelo menos a altura
+    de maiúscula do título (0,29 pol com 21 pt), e de preferência mais.
 
     Devolve o `y` onde o título pode começar.
     """
     import matplotlib.image as mpimg
+    W = fig.get_figwidth() * fig.dpi
     if os.path.exists(LOGO):
         im = mpimg.imread(LOGO)
         h, w = im.shape[:2]
@@ -131,19 +170,34 @@ def cartela_institucional(fig, x=0.035, y=0.982, alt_logo=0.036,
         ax = fig.add_axes([x, y - alt_logo, larg, alt_logo], zorder=20)
         ax.imshow(im, interpolation="lanczos")
         ax.axis("off")
-        xt = x + larg + 0.013
+        xt = x + larg + 0.014
     else:
         xt = x
-    # o bloco de texto centra-se opticamente contra o logótipo
-    npol = sum((t + 4.2) / 72.0 for _, t, _, _ in INSTITUICAO)
-    yy = y - (alt_logo - npol / fig.get_figheight()) / 2.0
-    fundo = yy
-    for txt, tam, cor, peso in INSTITUICAO:
-        fig.text(xt, yy, txt, fontsize=tam, color=cor, va="top", ha="left",
-                 weight=peso)
-        fundo = yy
-        yy -= (tam + 4.2) / (fig.get_figheight() * 72)
-    fundo = min(fundo, y - alt_logo)
+    ymeio = y - alt_logo / 2.0
+    fig.canvas.draw()
+    ren = fig.canvas.get_renderer()
+
+    def por(txt, cor, peso):
+        """Desenha e devolve a largura em fracção de figura."""
+        t = fig.text(por.x, ymeio, txt, fontsize=CORPO_INST, color=cor,
+                     weight=peso, va="center", ha="left")
+        return t.get_window_extent(renderer=ren).width / W
+
+    por.x = xt
+    for k, (txt, cor, peso) in enumerate(INSTITUICAO):
+        if k:
+            por.x += por("   ·   ", TINTA3, "normal")
+        por.x += por(txt, cor, peso)
+
+    fundo = y - alt_logo
+    if risco:
+        # filete: formaliza a tira sem lhe dar massa. Fica bem abaixo do
+        # logótipo e bem acima do título, e atravessa a largura útil.
+        yr = fundo - 0.011
+        fig.add_artist(plt.Line2D([x, 0.955], [yr, yr], color=TINTA3,
+                                  lw=0.6, alpha=.45,
+                                  transform=fig.transFigure, zorder=19))
+        fundo = yr
     return fundo - respiro_pol / fig.get_figheight()
 
 
@@ -514,6 +568,9 @@ class Base(object):
                       lw=e.get("lw", 0.0), lc=e.get("lc"))
 
         if nota:
+            # a unidade responsável vai aqui, antes das fontes: é proveniência
+            # administrativa, não identidade de folha
+            nota = "Unidade responsável   %s\n\n%s" % (UNIDADE_RODAPE, nota)
             axl.annotate(nota, (0, 0.005), xycoords="axes fraction", ha="left",
                          va="bottom", color=TINTA3, annotation_clip=False,
                          **MARGINALIA)
