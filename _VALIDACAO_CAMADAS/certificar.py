@@ -348,6 +348,35 @@ if os.path.exists(PROV):
         diz("  proveniência     %s artefactos sem produtor — linha de base "
             "não subiu" % m.group(1))
 
+# ── 10 · C3: a ficha de fuga bloqueia as cinco ocorrências da forma A
+#
+#   Forma A — «o controlo partilha dados com o que controla» — é a mais cara
+#   das oito e era a única sem cobertura executável. A bateria replica as cinco
+#   ocorrências históricas E os positivos: uma bateria só de casos que bloqueiam
+#   provaria apenas que a função levanta excepções.
+FUGA = os.path.join(AQUI, "fuga.py")
+if os.path.exists(FUGA):
+    _cab = io.open(FUGA, encoding="utf-8").read(400)
+    _retirada = "RETIRADO" in _cab
+    rc, out, err = corre([FUGA], "fuga")
+    m = re.search(r"bloqueiam (\d+)/(\d+) · passam (\d+)/(\d+)", out)
+    if _retirada:
+        # A v1 foi retirada no dia em que foi escrita: a bateria dava 14/14 com
+        # o teste central arrancado. Enquanto nao houver v2, a forma A — a mais
+        # cara das oito — continua SEM cobertura executável, e diz-se.
+        AVISOS.append("C3 (fuga.py) está RETIRADA e inerte — a forma A "
+                      "continua sem cobertura executável; ver "
+                      "C3_ADVERSARIO_2026-09-05.md")
+    elif rc != 0 or not m:
+        FALHAS.append("C3/fuga: %s" % ((out + err).strip()[-200:]))
+    elif m.group(1) != m.group(2) or m.group(3) != m.group(4):
+        FALHAS.append("C3/fuga: bloqueiam %s/%s e passam %s/%s — a cláusula "
+                      "deixou de apanhar alguma coisa, ou passou a travar "
+                      "trabalho bom" % m.groups())
+    else:
+        diz("  C3 fuga          %s casos bloqueiam sozinhos · %s positivos "
+            "passam" % (m.group(1), m.group(3)))
+
 # ── modo completo: volta a correr o rastreio
 if COMPLETO:
     diz()
