@@ -1,10 +1,10 @@
 {
  "_produtor": {
   "script": "triagem_de_fontes.py",
-  "quando": "2026-09-05 11:29",
+  "quando": "2026-09-06 00:27",
   "commit": null
  },
- "inventario": 1318,
+ "inventario": 1338,
  "classe": {
   "_MULTIVERSO/ADVERSARIO_H1.md": "NAO_ALCANCADO",
   "_MULTIVERSO/AGREGACAO_H1.md": "NAO_ALCANCADO",
@@ -236,7 +236,10 @@
   "_VALIDACAO_CAMADAS/ADVERSARIO_PROMPT.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/ANTES_DE_COMECAR.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/B1_CONTROLO3_ADVERSARIO.md": "NAO_ALCANCADO",
+  "_VALIDACAO_CAMADAS/C3_ADVERSARIO_2026-09-05.md": "CORRENTE",
   "_VALIDACAO_CAMADAS/C4_ADENDA_RAZAO_2026-09-03.md": "NAO_ALCANCADO",
+  "_VALIDACAO_CAMADAS/C4_ADVERSARIO_P2_2026-09-05.md": "NAO_ALCANCADO",
+  "_VALIDACAO_CAMADAS/C4_P8_RESULTADO.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/C8_CONTROLO3_ADVERSARIO.md": "CORRENTE",
   "_VALIDACAO_CAMADAS/C9_CONTROLO3_ADVERSARIO.md": "CORRENTE",
   "_VALIDACAO_CAMADAS/CAMADA_0_ADENDA_CONTROLO.md": "NAO_ALCANCADO",
@@ -276,6 +279,7 @@
   "_VALIDACAO_CAMADAS/GEORREF_CONTROLO3_ADVERSARIO.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/HIPOTESES_FECHADAS.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/IMPACTO_ESCALA_NAS_MANCHAS.md": "NAO_ALCANCADO",
+  "_VALIDACAO_CAMADAS/INDICE_INTELIGENCIA.md": "CORRENTE",
   "_VALIDACAO_CAMADAS/LISTA_FINAL_2026-08-31.md": "CORRENTE",
   "_VALIDACAO_CAMADAS/MODELO_PROMPT.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/P1_P2_RESULTADOS.md": "NAO_ALCANCADO",
@@ -283,6 +287,9 @@
   "_VALIDACAO_CAMADAS/P5_RETRACCAO_DO_REPLANTADO.md": "CORRENTE",
   "_VALIDACAO_CAMADAS/PEDIDO_DE_DOCUMENTOS.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/PRE_REGISTO_REFERENCIA.md": "CORRENTE",
+  "_VALIDACAO_CAMADAS/PRE_REGISTO_SAR_2025_26.md": "NAO_ALCANCADO",
+  "_VALIDACAO_CAMADAS/PRE_REGISTO_VAO.md": "NAO_ALCANCADO",
+  "_VALIDACAO_CAMADAS/PRE_REGISTO_VAO_ADENDA.md": "RETIRADO",
   "_VALIDACAO_CAMADAS/PROTOCOLO.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/REDERIVACAO_MASCARAS.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/REFERENCIAS_MULTIVERSO.md": "NAO_ALCANCADO",
@@ -528,18 +535,24 @@
   "_VALIDACAO_CAMADAS/TRIAGEM_CONTROLO3_ADVERSARIO.md": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/TRIAGEM_DE_FONTES.md": "CORRENTE",
   "_VALIDACAO_CAMADAS/_serie_geografica.txt": "NAO_ALCANCADO",
+  "_VALIDACAO_CAMADAS/afirmacoes.csv": "CORRENTE",
   "_VALIDACAO_CAMADAS/b1_divisao.json": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/b1_divisao.py": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/b1_mascara_kiwi.py": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/b1_serie_verdadeira.py": "CORRENTE",
   "_VALIDACAO_CAMADAS/b1_subblocos.py": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/certificar.py": "CORRENTE",
+  "_VALIDACAO_CAMADAS/estatuto.py": "CORRENTE",
+  "_VALIDACAO_CAMADAS/estatuto_base.json": "CORRENTE",
+  "_VALIDACAO_CAMADAS/fuga.py": "RETIRADO",
   "_VALIDACAO_CAMADAS/gancho_arranque.py": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/gancho_certificar.py": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/guarda.py": "CORRENTE",
+  "_VALIDACAO_CAMADAS/indice_inteligencia.py": "CORRENTE",
   "_VALIDACAO_CAMADAS/ja_existe.py": "NAO_ALCANCADO",
   "_VALIDACAO_CAMADAS/linhas_para_valvulas.py": "CORRENTE",
   "_VALIDACAO_CAMADAS/m1_v3.py": "NAO_ALCANCADO",
+  "_VALIDACAO_CAMADAS/pendentes.csv": "CORRENTE",
   "_VALIDACAO_CAMADAS/proveniencia.py": "CORRENTE",
   "_VALIDACAO_CAMADAS/proveniencia_base.json": "CORRENTE",
   "_VALIDACAO_CAMADAS/registo_de_factos.py": "CORRENTE",
@@ -1032,6 +1045,10 @@
   "_VALIDADE_GESTAO/p4_quando_foi_arrancada.py": "CORRENTE",
   "_VALIDADE_GESTAO/p5_onde_esta_o_pico.json": "NAO_ALCANCADO",
   "_VALIDADE_GESTAO/p5_onde_esta_o_pico.py": "NAO_ALCANCADO",
+  "_VALIDADE_GESTAO/p8_reagregado.json": "NAO_ALCANCADO",
+  "_VALIDADE_GESTAO/p8_reagregar.py": "NAO_ALCANCADO",
+  "_VALIDADE_GESTAO/p8_vao.json": "NAO_ALCANCADO",
+  "_VALIDADE_GESTAO/p8_vao.py": "NAO_ALCANCADO",
   "_VALIDADE_GESTAO/paisagem.json": "NAO_ALCANCADO",
   "_VALIDADE_GESTAO/paisagem.py": "NAO_ALCANCADO",
   "_VALIDADE_GESTAO/paisagem_resultado.json": "NAO_ALCANCADO",
@@ -1056,6 +1073,9 @@
   "_VALIDADE_GESTAO/reg01_local_ou_regional.py": "CORRENTE",
   "_VALIDADE_GESTAO/reg01_triagem.json": "CORRENTE",
   "_VALIDADE_GESTAO/reg01_triagem_descontinuidade.py": "CORRENTE",
+  "_VALIDADE_GESTAO/sar_ano_inteiro.csv": "NAO_ALCANCADO",
+  "_VALIDADE_GESTAO/sar_ano_inteiro.json": "NAO_ALCANCADO",
+  "_VALIDADE_GESTAO/sar_ano_inteiro.py": "NAO_ALCANCADO",
   "_VALIDADE_GESTAO/satelites_degrau.json": "CORRENTE",
   "_VALIDADE_GESTAO/satelites_degrau.py": "CORRENTE",
   "_VALIDADE_GESTAO/satelites_sem_2026.json": "CORRENTE",
@@ -1332,6 +1352,9 @@
   "_VALIDACAO_CAMADAS/A2_CONTROLO3_ADVERSARIO.md": [
    "_VALIDACAO_CAMADAS/A2_CONTROLO3_ADVERSARIO.md"
   ],
+  "_VALIDACAO_CAMADAS/C3_ADVERSARIO_2026-09-05.md": [
+   "_VALIDACAO_CAMADAS/C3_ADVERSARIO_2026-09-05.md"
+  ],
   "_VALIDACAO_CAMADAS/C8_CONTROLO3_ADVERSARIO.md": [
    "_VALIDACAO_CAMADAS/C8_CONTROLO3_ADVERSARIO.md"
   ],
@@ -1352,6 +1375,9 @@
   ],
   "_VALIDACAO_CAMADAS/CONTROLOS.md": [
    "_VALIDACAO_CAMADAS/CONTROLOS.md"
+  ],
+  "_VALIDACAO_CAMADAS/INDICE_INTELIGENCIA.md": [
+   "_VALIDACAO_CAMADAS/INDICE_INTELIGENCIA.md"
   ],
   "_VALIDACAO_CAMADAS/LISTA_FINAL_2026-08-31.md": [
    "_VALIDACAO_CAMADAS/LISTA_FINAL_2026-08-31.md"
@@ -1392,8 +1418,17 @@
   "_VALIDACAO_CAMADAS/certificar.py": [
    "_VALIDACAO_CAMADAS/certificar.py"
   ],
+  "_VALIDACAO_CAMADAS/estatuto.py": [
+   "_VALIDACAO_CAMADAS/estatuto.py"
+  ],
+  "_VALIDACAO_CAMADAS/fuga.py": [
+   "_VALIDACAO_CAMADAS/fuga.py"
+  ],
   "_VALIDACAO_CAMADAS/guarda.py": [
    "_VALIDACAO_CAMADAS/guarda.py"
+  ],
+  "_VALIDACAO_CAMADAS/indice_inteligencia.py": [
+   "_VALIDACAO_CAMADAS/indice_inteligencia.py"
   ],
   "_VALIDACAO_CAMADAS/proveniencia.py": [
    "_VALIDACAO_CAMADAS/proveniencia.py"
@@ -1573,6 +1608,18 @@
    "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
    "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy"
   ],
+  "_VALIDACAO_CAMADAS/afirmacoes.csv": [
+   "_VALIDACAO_CAMADAS/estatuto.py",
+   "_VALIDACAO_CAMADAS/afirmacoes.csv"
+  ],
+  "_VALIDACAO_CAMADAS/estatuto_base.json": [
+   "_VALIDACAO_CAMADAS/estatuto.py",
+   "_VALIDACAO_CAMADAS/estatuto_base.json"
+  ],
+  "_VALIDACAO_CAMADAS/pendentes.csv": [
+   "_VALIDACAO_CAMADAS/estatuto.py",
+   "_VALIDACAO_CAMADAS/pendentes.csv"
+  ],
   "_VALIDACAO_CAMADAS/proveniencia_base.json": [
    "_VALIDACAO_CAMADAS/proveniencia.py",
    "_VALIDACAO_CAMADAS/proveniencia_base.json"
@@ -1745,6 +1792,24 @@
    "ganfei_s2/sar_invernos.py",
    "ganfei_s2/_pacote_cowork/sar_invernos.csv"
   ],
+  "_VALIDADE_GESTAO/altura_copado.py": [
+   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
+   "_VALIDADE_GESTAO/chm_altura.npy",
+   "_VALIDADE_GESTAO/altura_copado.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py": [
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py"
+  ],
+  "_VALIDADE_GESTAO/orto_297313_fraccao.py": [
+   "_VALIDADE_GESTAO/orto_297313_fraccao.json",
+   "_VALIDADE_GESTAO/orto_297313_fraccao.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py": [
+   "_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_valvulas.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py"
+  ],
   "_VALIDACAO_CAMADAS/linhas_para_valvulas.py": [
    "_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py",
    "_VALIDACAO_CAMADAS/valvulas_por_linha.json",
@@ -1755,119 +1820,40 @@
    "_VALIDACAO_CAMADAS/valvulas_por_linha.json",
    "ganfei_s2/linhas_para_valvulas.py"
   ],
-  "_VALIDADE_GESTAO/triagem_referencia.py": [
-   "_VALIDADE_GESTAO/triagem_referencia.json",
-   "_VALIDADE_GESTAO/triagem_referencia.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py": [
-   "_VALIDADE_GESTAO/valvulas_1a5_o_troco_que_falta.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_valvulas.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_r2_01_multiverso_das_valvulas.py"
+  "_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py": [
+   "_VALIDADE_GESTAO/b1_terreno.py",
+   "_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json",
+   "_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py"
   ],
   "_VALIDADE_GESTAO/p1_pergola_oriental_2025.py": [
    "_VALIDADE_GESTAO/p3_pergola_2010_2012.py",
    "_VALIDADE_GESTAO/p1_pergola_oriental_2025.json",
    "_VALIDADE_GESTAO/p1_pergola_oriental_2025.py"
   ],
-  "_VALIDADE_GESTAO/orto_297313_fraccao.py": [
-   "_VALIDADE_GESTAO/orto_297313_fraccao.json",
-   "_VALIDADE_GESTAO/orto_297313_fraccao.py"
-  ],
-  "_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py": [
-   "_VALIDADE_GESTAO/b1_terreno.py",
-   "_MULTIVERSO/SAIDA_H2_patologista/ifap_kiwi_largo.json",
-   "_MULTIVERSO/SAIDA_H2_patologista/03_ifap_largo.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py": [
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_03_mdt.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos_contra_padrao.py": [
-   "ganfei_s2/figuras/p07_matriz_uma_coluna.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos_contra_padrao.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py": [
-   "_VALIDADE_GESTAO/b1_terreno.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_terreno_por_unidade.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py"
-  ],
-  "_VALIDADE_GESTAO/altura_copado.py": [
-   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
-   "_VALIDADE_GESTAO/chm_altura.npy",
-   "_VALIDADE_GESTAO/altura_copado.py"
-  ],
-  "_VALIDADE_GESTAO/landsat_degrau_absoluto.py": [
-   "ganfei_s2/figuras/p03_degrau_absoluto.py",
-   "_VALIDADE_GESTAO/landsat_degrau_absoluto.json",
-   "_VALIDADE_GESTAO/landsat_degrau_absoluto.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py": [
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.json",
-   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_10_nivelamento.py"
-  ],
   "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g08_pomar.py": [
    "ganfei_s2/sar_invernos.py",
-   "ganfei_s2/_pacote_cowork/masks.json",
+   "ganfei_s2/sentinel/masks.json",
    "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g08_pomar.py"
   ],
   "ganfei_s2/exportar_pendentes2.py": [
    "ganfei_s2/sar_invernos.py",
-   "ganfei_s2/_pacote_cowork/masks.json",
+   "ganfei_s2/sentinel/masks.json",
    "ganfei_s2/exportar_pendentes2.py"
   ],
   "ganfei_s2/fazer_masks.py": [
    "ganfei_s2/sar_invernos.py",
-   "ganfei_s2/_pacote_cowork/masks.json",
+   "ganfei_s2/sentinel/masks.json",
    "ganfei_s2/fazer_masks.py"
   ],
   "ganfei_s2/fazer_masks_v2.py": [
    "ganfei_s2/sar_invernos.py",
-   "ganfei_s2/_pacote_cowork/masks.json",
+   "ganfei_s2/sentinel/masks.json",
    "ganfei_s2/fazer_masks_v2.py"
   ],
   "ganfei_s2/_pacote_cowork/exportar_pendentes2.py": [
    "ganfei_s2/sar_invernos.py",
-   "ganfei_s2/_pacote_cowork/masks.json",
+   "ganfei_s2/sentinel/masks.json",
    "ganfei_s2/_pacote_cowork/exportar_pendentes2.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py": [
-   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
-   "ganfei_s2/sentinel/masks_geograficas.json",
-   "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py"
-  ],
-  "ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py": [
-   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
-   "ganfei_s2/sentinel/masks_geograficas.json",
-   "ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py"
-  ],
-  "_VALIDADE_GESTAO/landsat_independente.py": [
-   "_VALIDADE_GESTAO/landsat.json",
-   "_VALIDADE_GESTAO/landsat_independente.py"
-  ],
-  "_VALIDADE_GESTAO/t4_n_landsat.py": [
-   "_VALIDADE_GESTAO/landsat.json",
-   "_VALIDADE_GESTAO/t4_n_landsat.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py": [
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy",
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py"
-  ],
-  "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py": [
-   "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.json",
-   "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py"
-  ],
-  "_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py": [
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy",
-   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py"
-  ],
-  "_VALIDADE_GESTAO/ocidental_independente.py": [
-   "ganfei_s2/figuras/p04_nada_escolhido.py",
-   "_VALIDADE_GESTAO/ocidental_independente.json",
-   "_VALIDADE_GESTAO/ocidental_independente.py"
   ],
   "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.py": [
    "ganfei_s2/figuras/p01_o_caso_numa_pagina.py",
@@ -1879,15 +1865,47 @@
    "_VALIDACAO_CAMADAS/SAIDA_C4/c4_01_numeros.json",
    "_VALIDACAO_CAMADAS/SAIDA_C5/c5_02_amostragem.py"
   ],
+  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py": [
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_03_mdt.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_02_costura.py"
+  ],
   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_perfil_registos.py": [
    "_VALIDADE_GESTAO/a2_solo_caracterizacao.py",
    "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_registo_principal.csv",
    "_VALIDACAO_CAMADAS/SAIDA_C3/c3_04_perfil_registos.py"
   ],
-  "_VALIDADE_GESTAO/reg01_local_ou_regional.py": [
-   "_VALIDADE_GESTAO/reg01_landsat.py",
-   "_VALIDADE_GESTAO/reg01_local_ou_regional.json",
-   "_VALIDADE_GESTAO/reg01_local_ou_regional.py"
+  "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py": [
+   "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.json",
+   "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py"
+  ],
+  "_VALIDADE_GESTAO/triagem_referencia.py": [
+   "_VALIDADE_GESTAO/triagem_referencia.json",
+   "_VALIDADE_GESTAO/triagem_referencia.py"
+  ],
+  "_VALIDADE_GESTAO/landsat_degrau_absoluto.py": [
+   "ganfei_s2/figuras/p03_degrau_absoluto.py",
+   "_VALIDADE_GESTAO/landsat_degrau_absoluto.json",
+   "_VALIDADE_GESTAO/landsat_degrau_absoluto.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py": [
+   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
+   "ganfei_s2/sentinel/masks_geograficas.json",
+   "_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py"
+  ],
+  "ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py": [
+   "_VALIDADE_GESTAO/degrau_vs_recta_pergola.py",
+   "ganfei_s2/sentinel/masks_geograficas.json",
+   "ganfei_s2/_TENTATIVA_FALHADA_mascaras_geograficas.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos_contra_padrao.py": [
+   "ganfei_s2/figuras/p07_matriz_uma_coluna.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C3/c3_09_organismos_contra_padrao.py"
+  ],
+  "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py": [
+   "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.json",
+   "_VALIDADE_GESTAO/c1ab_contra_kiwi_ifap.py"
   ],
   "_VALIDACAO_CAMADAS/b1_serie_verdadeira.py": [
    "_VALIDADE_GESTAO/lobulo_oeste_degrau.py",
@@ -1899,12 +1917,43 @@
    "ganfei_s2/b1_serie_verdadeira.json",
    "ganfei_s2/b1_serie_verdadeira.py"
   ],
-  "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py": [
-   "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.json",
-   "_VALIDADE_GESTAO/_controlo3_c8/c8_05_veredicto.py"
+  "_VALIDADE_GESTAO/reg01_local_ou_regional.py": [
+   "_VALIDADE_GESTAO/reg01_landsat.py",
+   "_VALIDADE_GESTAO/reg01_local_ou_regional.json",
+   "_VALIDADE_GESTAO/reg01_local_ou_regional.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py": [
+   "_VALIDADE_GESTAO/b1_terreno.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_terreno_por_unidade.json",
+   "_VALIDACAO_CAMADAS/SAIDA_C1/c1_04_focos_terreno.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py": [
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy",
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.py"
+  ],
+  "_VALIDADE_GESTAO/ocidental_independente.py": [
+   "ganfei_s2/figuras/p04_nada_escolhido.py",
+   "_VALIDADE_GESTAO/ocidental_independente.json",
+   "_VALIDADE_GESTAO/ocidental_independente.py"
+  ],
+  "_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py": [
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_09_sar_verificacao.py",
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_07_sar_pilha.npy",
+   "_VALIDACAO_CAMADAS/SAIDA_C2/c2_11_figuras.py"
+  ],
+  "_VALIDADE_GESTAO/landsat_independente.py": [
+   "_VALIDADE_GESTAO/landsat.json",
+   "_VALIDADE_GESTAO/landsat_independente.py"
+  ],
+  "_VALIDADE_GESTAO/t4_n_landsat.py": [
+   "_VALIDADE_GESTAO/landsat.json",
+   "_VALIDADE_GESTAO/t4_n_landsat.py"
   ]
  },
  "retirado": {
+  "_VALIDACAO_CAMADAS/fuga.py": "traz o cartucho «⚠ RETIRADO»",
+  "_VALIDACAO_CAMADAS/PRE_REGISTO_VAO_ADENDA.md": "traz o cartucho «⚠ RETIRADO»",
   "_VALIDACAO_CAMADAS/REG01_LANDSAT_REPLICACAO.md": "traz o cartucho «⚠ RETIRADO»",
   "_VALIDACAO_CAMADAS/REG01_RESULTADO.md": "traz o cartucho «⚠ RETIRADO»",
   "ganfei_s2/figuras/base/escala_do_desenho.py": "traz o cartucho «⚠ RETIRADO»",
@@ -1945,5 +1994,10 @@
    "efeito": "§1, §4 e §5 mantêm-se. O documento NÃO leva cartucho total — marcar a mais apagava prova boa. Sem cartucho, a verificação 3 contava-o entre os vivos: apanhado pelo Controlo 3 em 04-09"
   }
  ],
- "conflitos": []
+ "conflitos": [
+  {
+   "ficheiro": "_VALIDACAO_CAMADAS/fuga.py",
+   "porque": "traz o cartucho «⚠ RETIRADO»"
+  }
+ ]
 }

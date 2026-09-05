@@ -1,0 +1,9 @@
+id,data,alvo,ficheiros,veredicto,relatorio,o_que_sobreviveu
+AUD-01,2026-08-29,"Camada 4 · terreno e halo","terreno_contra_declinio.py; halo_distancia.py",PARCIAL,ADVERSARIO_2026-08-29.md,"placebo do chao retirado (91% do sinal); nulo toroidal mantido"
+AUD-02,2026-08-31,"Controlo 3 · Camada 2","t5_referencia_reconstruida.py; satelites_degrau.py",PARCIAL,CAMADA_2_CONTROLO3_ADVERSARIO.md,"T5 e identidade algebrica; degrau mantido"
+AUD-03,2026-09-01,"REG-01 · replicacao Landsat",reg01_landsat_r3.py,RETIRADO,REG01_RETRACCAO_A3.md,"conclusao invertida: comparador desmatado em 2024"
+AUD-04,2026-09-03,"Controlo 3 · B1",b1_como_unidade.py,PARCIAL,B1_CONTROLO3_ADVERSARIO.md,"enumeracao das 6 parcelas certa; so 4 passam a guarda de cobertura"
+AUD-05,2026-09-05,"C3 · clausula da ficha de fuga",fuga.py,RETIRADO,C3_ADVERSARIO_2026-09-05.md,"desenho conceptual sobrevive; implementacao retirada no mesmo dia"
+AUD-06,2026-09-05,"Controlo 4 · P2 as onze cenas",p2_onze_cenas.py,NAO_DECIDE,C4_ADVERSARIO_P2_2026-09-05.md,"degrau real; numero de acontecimentos nao determinavel"
+AUD-07,2026-09-05,"Controlo 4 · P8 as 49 cenas do vao","p8_vao.py; p8_reagregar.py",PARCIAL,C4_P8_RESULTADO.md,"mascara de nuvem funcionou (r -0.17); regra de classificacao retirada"
+AUD-08,2026-09-06,"pre-registo SAR Out-Abr (C9 antes da corrida)",PRE_REGISTO_SAR_2025_26.md,REDESENHADO,C4_P8_RESULTADO.md,"MDE errado 2.5-5.7x; janela de inverno herdada sem interrogacao"

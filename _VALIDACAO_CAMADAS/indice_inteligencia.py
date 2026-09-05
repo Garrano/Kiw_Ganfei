@@ -38,6 +38,14 @@ from estatuto import estatuto, citavel, _corpus, _triagem, _factos, D, _ler
 ARVORES = ("_VALIDACAO_CAMADAS", "_VALIDADE_GESTAO", "ganfei_s2")
 IGNORA = ("__pycache__", ".git", "_bak", "cache", "lidar", "ortos", "tiles",
           "Kiw_Ganfei", "node_modules", "_superseded")
+# o aparelho de verificacao nao e inteligencia SOBRE O CASO: mede o processo,
+# nao o pomar. Aparecia na lista de trabalho e teria mandado atacar-se a si.
+APARELHO = ("estatuto.py", "indice_inteligencia.py", "certificar.py",
+            "triagem_de_fontes.py", "proveniencia.py", "guarda.py",
+            "registo_de_factos.py", "ja_existe.py", "sincronizar.py",
+            "fuga.py", "gancho_arranque.py", "gancho_certificar.py")
+# um ficheiro que se declara falhado no proprio nome nao e trabalho pendente
+MORTO_NO_NOME = ("_TENTATIVA_FALHADA", "_bak", "_old", "_superseded", "_rascunho")
 # emite inteligencia: escreve resultado e nao e prancha
 ESCREVE = re.compile(r"json\.dump|to_csv|writerows|writerow|savetxt|guardar\s*\(")
 FIGURA = re.compile(r"(?i)^(p\d+_|f\d+_|carta_|fig|plot_|.*_figura|.*figuras)")
@@ -78,6 +86,21 @@ def instrumento(t):
     return " · ".join(m) or "—"
 
 
+def auditorias():
+    """As passagens de adversario ja feitas, com veredicto.
+
+    Sem isto, cada sessao volta a atacar o que ja foi atacado, ou pior: nao
+    ataca porque «ha um relatorio algures». O registo diz o que, quando, e com
+    que resultado — e o «o_que_sobreviveu» e a coluna que evita a volta.
+    """
+    import csv as _csv
+    p = os.path.join(AQUI, "AUDITORIAS.csv")
+    if not os.path.exists(p):
+        return []
+    with io.open(p, encoding="utf-8") as f:
+        return [r for r in _csv.DictReader(f) if r.get("id")]
+
+
 def main():
     cert, adv = _corpus()
     CL, FA = _triagem(), _factos()
@@ -90,6 +113,8 @@ def main():
             dn[:] = [x for x in dn if not any(i in x.lower() for i in IGNORA)]
             for f in sorted(fn):
                 if not f.endswith(".py") or FIGURA.match(f):
+                    continue
+                if f in APARELHO or any(x in f for x in MORTO_NO_NOME):
                     continue
                 cam = os.path.join(dp, f)
                 t = _ler(cam)
@@ -122,6 +147,18 @@ def main():
           % sum(1 for l in vivos if l["nomeado"]))
     print()
 
+    A = auditorias()
+    if A:
+        print("## Auditorias já feitas — não repetir sem razão nova escrita")
+        print()
+        print("| id | data | alvo | veredicto | o que sobreviveu |")
+        print("|---|---|---|---|---|")
+        for r in A:
+            print("| %s | %s | %s | **%s** | %s |"
+                  % (r["id"], r["data"], r["alvo"], r["veredicto"],
+                     r["o_que_sobreviveu"]))
+        print()
+
     print("## Por estação — e é aqui que a assimetria aparece")
     print()
     print("| estação | guiões vivos | citáveis | fracção |")
@@ -153,7 +190,7 @@ def main():
     print("|---|---|---|---|")
     for l in sorted(cit, key=lambda x: x["cod"]):
         print("| `%s` | %s | %s | %s |"
-              % (l["f"], l["cod"] or "—", l["est"], l["ins"]))
+              % (l["rel"], l["cod"] or "—", l["est"], l["ins"]))
     print()
 
     print("## Os NÃO citáveis que emitem resultado — por estação")
@@ -167,7 +204,7 @@ def main():
         print("| guião | o que falta | instrumento |")
         print("|---|---|---|")
         for l in sorted(g, key=lambda x: x["f"])[:40]:
-            print("| `%s` | %s | %s |" % (l["f"], l["razao"], l["ins"]))
+            print("| `%s` | %s | %s |" % (l["rel"], l["razao"], l["ins"]))
         if len(g) > 40:
             print("| … e mais %d | | |" % (len(g) - 40))
         print()

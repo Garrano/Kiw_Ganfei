@@ -1,0 +1,25 @@
+{
+ "o_que_faz": "SAR do ano inteiro, potencia linear, com chuva",
+ "correcoes": [
+  "ano inteiro em vez de inverno",
+  "10*log10(mean(potencia)) em vez de mean(dB)",
+  "sd espacial em dB e n_validas por unidade e cena",
+  "desduplicacao por (data, orbita)"
+ ],
+ "unidades": {
+  "referencia": 110,
+  "oeste": 248,
+  "este": 255,
+  "zona0": 202,
+  "nu2021": 167,
+  "resto": 2411,
+  "pomar": 3031
+ },
+ "n_cenas_catalogo": 1013,
+ "n_escritas": 0,
+ "_produtor": {
+  "script": "sar_ano_inteiro.py",
+  "quando": "2026-09-06 00:27",
+  "commit": null
+ }
+}

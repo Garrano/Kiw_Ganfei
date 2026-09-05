@@ -7,10 +7,10 @@ de factos até ele. Menção em prosa não conta.
 
 | classe | n | o que fazer |
 |---|---|---|
-| CORRENTE | 156 | consulta-se |
-| RETIRADO | 4 | **não se consulta** |
+| CORRENTE | 163 | consulta-se |
+| RETIRADO | 6 | **não se consulta** |
 | SUBSTITUIDO | 3 | **não se consulta** — usa o sucessor |
-| NAO_ALCANCADO | 1155 | nada o liga a um facto vivo; perguntar antes de usar |
+| NAO_ALCANCADO | 1166 | nada o liga a um facto vivo; perguntar antes de usar |
 
 ## Afirmações derrubadas — ficheiro vivo, linha morta
 
@@ -48,10 +48,16 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - **quem:** P5_RETRACCAO_DO_REPLANTADO.md, 31-08-2026
 - **efeito:** §1, §4 e §5 mantêm-se. O documento NÃO leva cartucho total — marcar a mais apagava prova boa. Sem cartucho, a verificação 3 contava-o entre os vivos: apanhado pelo Controlo 3 em 04-09
 
+## ⚠ Retirado e consultado ao mesmo tempo
+
+- `_VALIDACAO_CAMADAS/fuga.py` — traz o cartucho «⚠ RETIRADO»
+
 ## Retirados
 
+- `_VALIDACAO_CAMADAS/PRE_REGISTO_VAO_ADENDA.md` — traz o cartucho «⚠ RETIRADO»
 - `_VALIDACAO_CAMADAS/REG01_LANDSAT_REPLICACAO.md` — traz o cartucho «⚠ RETIRADO»
 - `_VALIDACAO_CAMADAS/REG01_RESULTADO.md` — traz o cartucho «⚠ RETIRADO»
+- `_VALIDACAO_CAMADAS/fuga.py` — traz o cartucho «⚠ RETIRADO»
 - `ganfei_s2/figuras/base/escala_do_desenho.py` — traz o cartucho «⚠ RETIRADO»
 - `ganfei_s2/figuras/base/georref_por_bloco.py` — traz o cartucho «⚠ RETIRADO»
 
@@ -69,6 +75,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas.json`  ← g19_parcelario.py
 - `_MULTIVERSO/SAIDA_H2_patologista/ifap_parcelas_largo.json`
 - `_VALIDACAO_CAMADAS/A2_CONTROLO3_ADVERSARIO.md`
+- `_VALIDACAO_CAMADAS/C3_ADVERSARIO_2026-09-05.md`
 - `_VALIDACAO_CAMADAS/C8_CONTROLO3_ADVERSARIO.md`
 - `_VALIDACAO_CAMADAS/C9_CONTROLO3_ADVERSARIO.md`
 - `_VALIDACAO_CAMADAS/CAMADA_0_CERTIFICADO.md`
@@ -76,6 +83,7 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `_VALIDACAO_CAMADAS/CAMADA_2_ADENDA_LIDAR.md`
 - `_VALIDACAO_CAMADAS/CAMADA_4_CERTIFICADO_R2.md`
 - `_VALIDACAO_CAMADAS/CONTROLOS.md`
+- `_VALIDACAO_CAMADAS/INDICE_INTELIGENCIA.md`
 - `_VALIDACAO_CAMADAS/LISTA_FINAL_2026-08-31.md`
 - `_VALIDACAO_CAMADAS/P3_ORIENTAL_REPLANTADO.md`
 - `_VALIDACAO_CAMADAS/P5_RETRACCAO_DO_REPLANTADO.md`
@@ -114,10 +122,15 @@ O nível que a triagem por ficheiro não alcança. Declarado à mão.
 - `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g08_pomar.py`  ← sar_invernos.py → masks.json
 - `_VALIDACAO_CAMADAS/SAIDA_MASCARAS/g18_final.py`  ← degrau_vs_recta_pergola.py → masks_geograficas.json
 - `_VALIDACAO_CAMADAS/TRIAGEM_DE_FONTES.md`  ← triagem_de_fontes.py
+- `_VALIDACAO_CAMADAS/afirmacoes.csv`  ← estatuto.py
 - `_VALIDACAO_CAMADAS/b1_serie_verdadeira.py`  ← lobulo_oeste_degrau.py → b1_serie_verdadeira.json
 - `_VALIDACAO_CAMADAS/certificar.py`
+- `_VALIDACAO_CAMADAS/estatuto.py`
+- `_VALIDACAO_CAMADAS/estatuto_base.json`  ← estatuto.py
 - `_VALIDACAO_CAMADAS/guarda.py`
+- `_VALIDACAO_CAMADAS/indice_inteligencia.py`
 - `_VALIDACAO_CAMADAS/linhas_para_valvulas.py`  ← valvulas_1a5_o_troco_que_falta.py → valvulas_por_linha.json
+- `_VALIDACAO_CAMADAS/pendentes.csv`  ← estatuto.py
 - `_VALIDACAO_CAMADAS/proveniencia.py`
 - `_VALIDACAO_CAMADAS/proveniencia_base.json`  ← proveniencia.py
 - `_VALIDACAO_CAMADAS/registo_de_factos.py`
@@ -449,6 +462,8 @@ Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
 - `_VALIDACAO_CAMADAS/ANTES_DE_COMECAR.md`
 - `_VALIDACAO_CAMADAS/B1_CONTROLO3_ADVERSARIO.md`
 - `_VALIDACAO_CAMADAS/C4_ADENDA_RAZAO_2026-09-03.md`
+- `_VALIDACAO_CAMADAS/C4_ADVERSARIO_P2_2026-09-05.md`
+- `_VALIDACAO_CAMADAS/C4_P8_RESULTADO.md`
 - `_VALIDACAO_CAMADAS/CAMADA_0_ADENDA_CONTROLO.md`
 - `_VALIDACAO_CAMADAS/CAMADA_0_ADVERSARIO.md`
 - `_VALIDACAO_CAMADAS/CAMADA_0_PROMPT.md`
@@ -484,6 +499,8 @@ Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
 - `_VALIDACAO_CAMADAS/MODELO_PROMPT.md`
 - `_VALIDACAO_CAMADAS/P1_P2_RESULTADOS.md`
 - `_VALIDACAO_CAMADAS/PEDIDO_DE_DOCUMENTOS.md`
+- `_VALIDACAO_CAMADAS/PRE_REGISTO_SAR_2025_26.md`
+- `_VALIDACAO_CAMADAS/PRE_REGISTO_VAO.md`
 - `_VALIDACAO_CAMADAS/PROTOCOLO.md`
 - `_VALIDACAO_CAMADAS/REDERIVACAO_MASCARAS.md`
 - `_VALIDACAO_CAMADAS/REFERENCIAS_MULTIVERSO.md`
@@ -1140,6 +1157,10 @@ Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
 - `_VALIDADE_GESTAO/p2_onze_cenas.py`
 - `_VALIDADE_GESTAO/p5_onde_esta_o_pico.json`
 - `_VALIDADE_GESTAO/p5_onde_esta_o_pico.py`
+- `_VALIDADE_GESTAO/p8_reagregado.json`
+- `_VALIDADE_GESTAO/p8_reagregar.py`
+- `_VALIDADE_GESTAO/p8_vao.json`
+- `_VALIDADE_GESTAO/p8_vao.py`
 - `_VALIDADE_GESTAO/paisagem.json`
 - `_VALIDADE_GESTAO/paisagem.py`
 - `_VALIDADE_GESTAO/paisagem_resultado.json`
@@ -1157,6 +1178,9 @@ Nada os liga por consumo a um facto vivo. **Não é um veredicto sobre eles.**
 - `_VALIDADE_GESTAO/refazer_c2_este.py`
 - `_VALIDADE_GESTAO/reg01_landsat_r3.json`
 - `_VALIDADE_GESTAO/reg01_landsat_r3.py`
+- `_VALIDADE_GESTAO/sar_ano_inteiro.csv`
+- `_VALIDADE_GESTAO/sar_ano_inteiro.json`
+- `_VALIDADE_GESTAO/sar_ano_inteiro.py`
 - `_VALIDADE_GESTAO/sem_pergola.npy`
 - `_VALIDADE_GESTAO/serie_separada.json`
 - `_VALIDADE_GESTAO/serie_separada.py`
