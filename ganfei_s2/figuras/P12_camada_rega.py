@@ -345,7 +345,9 @@ b = Base()
 
 # ── 1 · o papel vegetal ─────────────────────────────────────────────────────
 fig, ax, axl = b.figura(larg=16.0, legenda=True)
-ytop = cartela_institucional(fig)
+# O papel vegetal NÃO leva cartela institucional: é uma camada para sobrepor,
+# e um logótipo repetido por cima do da carta-base fica a dobrar.
+ytop = 0.924
 axl.set_visible(False)
 desenha(ax, b, transparente=True)
 b.moldura(ax)
@@ -359,6 +361,7 @@ plt.close(fig)
 
 # ── 2 · a mesma, legível sozinha ────────────────────────────────────────────
 fig, ax, axl = b.figura(larg=16.0, legenda=True)
+ytop = cartela_institucional(fig)
 b.terreno(ax, curvas=False, escoamento=False)
 desenha(ax, b, transparente=False)
 b.toponimos(ax)
