@@ -1,0 +1,35 @@
+{
+ "azimute_fileiras": 70.3,
+ "mascaras": {
+  "zona0": {
+   "ha": 2.02,
+   "ao_longo_m": 195.69678112470632,
+   "atravessa_m": 138.4748791628428,
+   "razao": 1.4132294774893581,
+   "eixo_graus": 82.23952886216398,
+   "desvio_graus": 11.939528862163982,
+   "papel": "MANCHA de declínio (foco oriental)"
+  },
+  "saudavel": {
+   "ha": 1.1,
+   "ao_longo_m": 1321.5418959209637,
+   "atravessa_m": 273.5802584644819,
+   "razao": 4.830545534748573,
+   "eixo_graus": 68.24829067109975,
+   "desvio_graus": 2.0517093289002446,
+   "papel": "CONTROLO: referência, desenhada ao longo das fileiras"
+  },
+  "nu2021": {
+   "ha": 1.67,
+   "ao_longo_m": 366.10455185061795,
+   "atravessa_m": 179.67504776372536,
+   "razao": 2.0375926229447807,
+   "eixo_graus": 65.75547098886122,
+   "desvio_graus": 4.544529011138778,
+   "papel": "solo nu 2021, para comparar"
+  }
+ },
+ "veredicto": "a mancha não tem forma de sector de rega",
+ "n": 1,
+ "ressalva": "só a zona0 tem máscara geográfica; a manchaW é derivada do sinal e está retirada"
+}
