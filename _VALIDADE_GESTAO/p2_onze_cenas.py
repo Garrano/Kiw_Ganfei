@@ -1,5 +1,34 @@
 # -*- coding: utf-8 -*-
-"""P2 — as onze cenas que ninguém olhou. Um acontecimento ou dois?
+"""P2 — CORRIGIDO pelo Controlo 4 de 05-09-2026. NAO responde a pergunta.
+
+⚠ Quatro numeros deste cabecalho sao falsos, e o desenho nao podia decidir.
+   Ver `_VALIDACAO_CAMADAS/C4_ADVERSARIO_P2_2026-09-05.md`.
+
+   · «onze cenas» -> **oito**. A linha 76 e um CONJUNTO DE DATAS e tres cenas
+     partilham data com outra; o `break` guarda uma por data.
+   · «treze pontos» -> **dez**, e dez era o maximo possivel.
+   · «sete em Agosto e quatro em Julho» -> cinco datas e tres datas.
+   · «a plataforma de cada cena vai impressa» -> em branco nas DUAS ancoras,
+     que sao justamente as duas S2C que a ressalva existe para tornar auditaveis.
+   · «o mesmo processamento das nove da serie» -> caminho diferente: sem
+     mascara de nuvem por pixel. Correlacao nuvem/contraste +0,86 e +0,99.
+
+   E o essencial: o filtro `182 <= doy <= 244` da linha 76 PROIBE, por
+   construcao, qualquer observacao dentro do vao. Nenhum resultado possivel
+   desta corrida podia seleccionar um ramo da tabela de decisao. O vao passou
+   de 347 para 310 dias — encurtou 10,7 %.
+
+   As 49 cenas limpas dentro do vao estao inventariadas em
+   `t2_cenas_descartadas.json`, que este guiao ja abre.
+
+   O degrau Ago-2025 -> Jul-2026 e real e nao se explica por plataforma,
+   fenologia nem estimador. **Quantos acontecimentos o produziram continua por
+   estabelecer.**
+
+O texto original segue, para o registo.
+------------------------------------------------------------------------
+
+P2 — as onze cenas que ninguém olhou. Um acontecimento ou dois?
 
 A lacuna, e quem a nomeou
 -------------------------
