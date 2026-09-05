@@ -142,6 +142,19 @@ georreferenciação. Mas chega sempre **depois de publicar**, e por isso o custo
 sempre uma retirada. A cláusula é a da literatura das equipas vermelhas: o
 adversário lê o critério **antes**.
 
+### C10 · Só entra o que passou pelas DUAS · **executável**
+Nenhum número entra num relatório sem **certificação E auditoria independente**.
+Não uma ou outra: a certificação diz que o procedimento se aguenta, o adversário
+diz que alguém que não o escreveu tentou parti-lo. `estatuto.py <ficheiro>`
+responde CITÁVEL ou não; `estatuto.py --afirmacoes` verifica cada linha do
+registo de afirmações; ambos correm na `certificar.py` a cada turno.
+*Testemunho tem outra barra — exige quem e quando, não certificado. Uma regra
+que trava testemunho válido acaba desligada, e foi assim que o `c2 = True`
+entrou.*
+*Medido a 05-09: dos guiões escritos depois do encerramento de 31-08, 88 dentro
+do aparelho e **29 fora** — incluindo os dois que atacam as maiores condições
+abertas. O aparelho parou e o trabalho continuou.*
+
 ### S1 · Procurar é um comando, e vem antes de criar · **executável**
 `python ja_existe.py <termos>` varre as quatro árvores — os 1 282 ficheiros,
 não só os correntes — e devolve cada acerto **com o seu estado**: a classe da

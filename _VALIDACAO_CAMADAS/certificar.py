@@ -377,6 +377,39 @@ if os.path.exists(FUGA):
         diz("  C3 fuga          %s casos bloqueiam sozinhos · %s positivos "
             "passam" % (m.group(1), m.group(3)))
 
+# ── 11 · C10: só entra no relatório o que passou pelas DUAS
+#
+#   A 05-09 mediu-se: 88 guiões pós-encerramento dentro do aparelho e 29 fora,
+#   e entre os 29 estavam os dois que atacam as maiores condições abertas. Um
+#   resultado sem estatuto não é falso — é de estatuto desconhecido, que para
+#   efeitos de citação dá no mesmo. Isto corre a cada turno pelo gancho Stop.
+EST = os.path.join(AQUI, "estatuto.py")
+if os.path.exists(EST):
+    rc, out, err = corre([EST, "--afirmacoes"], "afirmacoes")
+    m = re.search(r"afirmacoes com fonte citavel: (\d+)", out)
+    nao = [l.strip() for l in out.splitlines() if "NAO CITAVEL" in l]
+    if not m:
+        FALHAS.append("C10/estatuto: %s" % ((out + err).strip()[-200:]))
+    elif nao:
+        FALHAS.append("C10: %d afirmação(ões) com fonte NÃO CITÁVEL — %s"
+                      % (len(nao), nao[0][:110]))
+    else:
+        pend = [l.strip() for l in out.splitlines() if "PRETENDIDA" in l]
+        diz("  C10 afirmações   %s afirmadas, todas com fonte citável%s"
+            % (m.group(1),
+               " · %d pretendidas por desbloquear" % len(pend) if pend else ""))
+        for l in pend:
+            AVISOS.append("C10 pretendida: %s — desbloqueia quando a fonte for "
+                          "certificada e atacada" % l.replace("PRETENDIDA", "").strip())
+    rc, out, err = corre([EST, "--tudo"], "estatuto")
+    m = re.search(r"NAO sao citaveis: (\d+)", out)
+    if rc != 0 and "SUBIU" in out:
+        FALHAS.append("C10: entrou resultado novo sem estatuto — %s"
+                      % re.search(r"\*\*\*(.+?)\*\*\*", out).group(1).strip())
+    elif m:
+        diz("  C10 roquete      %s guiões emitem resultado sem estatuto — "
+            "não subiu" % m.group(1))
+
 # ── modo completo: volta a correr o rastreio
 if COMPLETO:
     diz()

@@ -1,0 +1,8 @@
+id,estado,afirmacao,fonte,tipo,quem,quando
+AF-01,afirmada,"Houve pelo menos um acontecimento entre Agosto de 2025 e Julho de 2026 que atingiu duas posicoes do pomar e nao o resto dele",serie_oriental_pergola.py,medicao,,
+AF-02,afirmada,"O radar distingue o disco ocidental — outra fisica, mesmo acontecimento",c1_09_sar.py,medicao,,
+AF-03,afirmada,"O degrau bate a recta com o ponto de quebra contabilizado: dAICc -6,6 a -7,6 nos focos e +6,4 no controlo",degrau_vs_recta_pergola.py,medicao,,
+AF-04,afirmada,"O sinal e a ordenacao sobrevivem a 43 corridas aninhadas",multiverso_degrau.py,inferencia,,
+AF-05,afirmada,"Nao foi esquecimento: ninguem encomendou ensaio de PSA porque a sintomatologia nao era compativel. Decisao clinica.",C4_ADENDA_RAZAO_2026-09-03.md,testemunho,gestor da exploracao,2026-09-01
+AF-06,pretendida,"O foco oriental e copado em declinio e nao copado arrancado e re-armado",p1_pergola_oriental_2025.py,inferencia,,
+AF-07,pretendida,"Houve UM acontecimento e nao dois",p2_onze_cenas.py,inferencia,,
