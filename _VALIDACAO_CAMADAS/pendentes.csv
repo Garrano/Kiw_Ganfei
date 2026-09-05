@@ -1,0 +1,3 @@
+ficheiro,desde,razao,o_que_falta
+p8_reagregar.py,2026-09-05,"reagregacao do p8 com a geometria do controlo corrigida; resultado descrito em C4_P8_RESULTADO.md","portao + adversario sobre o resultado"
+sar_ano_inteiro.py,2026-09-06,"SAR do ano inteiro em potencia linear com teste de encharcamento; corrida ainda nao completa","correr ate ao fim, depois portao + adversario"

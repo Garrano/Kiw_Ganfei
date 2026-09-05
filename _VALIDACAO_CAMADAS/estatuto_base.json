@@ -1,9 +1,9 @@
 {
- "n": 125,
- "nota": "linha de base do roquete C10: esta contagem NAO pode subir. Desce a medida que os guioes forem certificados e atacados.",
+ "n": 122,
+ "nota": "roquete C10: so desce.",
  "_produtor": {
   "script": "estatuto.py",
-  "quando": "2026-09-05 17:52",
+  "quando": "2026-09-06 00:23",
   "commit": null
  }
 }

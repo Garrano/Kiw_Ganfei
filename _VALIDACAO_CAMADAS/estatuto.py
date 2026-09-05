@@ -213,7 +213,14 @@ def varrer():
                 ok, _ = citavel(e)
                 if not ok:
                     fora.append(rel)
-    return sorted(fora)
+    P = pendentes()
+    # o aparelho de verificacao nao e inteligencia sobre o caso
+    APARELHO = ("estatuto.py", "indice_inteligencia.py", "certificar.py",
+                "triagem_de_fontes.py", "proveniencia.py", "guarda.py",
+                "registo_de_factos.py", "ja_existe.py", "sincronizar.py")
+    return sorted(r for r in fora
+                  if os.path.basename(r) not in P
+                  and os.path.basename(r) not in APARELHO)
 
 
 def _um(alvo):
@@ -262,6 +269,27 @@ def _um(alvo):
 
 
 AFIRM = os.path.join(AQUI, "afirmacoes.csv")
+PEND = os.path.join(AQUI, "pendentes.csv")
+
+
+def pendentes():
+    """Guioes declarados EM CURSO — nome, data e razao escritas.
+
+    O roquete tem de poder subir sem ser silenciado, senao a clausula acaba
+    desligada — que e o padrao que este processo ja apanhou seis vezes. Mas
+    tambem nao pode subir em silencio. A saida e declarar: um guiao novo sem
+    estatuto entra aqui com data e razao, e sai quando for certificado e
+    atacado. Declarar e um acto com nome; baixar a linha de base nao e.
+    """
+    import csv as _csv
+    if not os.path.exists(PEND):
+        return {}
+    d = {}
+    with io.open(PEND, encoding="utf-8") as f:
+        for r in _csv.DictReader(f):
+            if r.get("ficheiro"):
+                d[r["ficheiro"].strip()] = r
+    return d
 
 
 def afirmacoes():

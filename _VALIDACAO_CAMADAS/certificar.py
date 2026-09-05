@@ -407,8 +407,40 @@ if os.path.exists(EST):
         FALHAS.append("C10: entrou resultado novo sem estatuto — %s"
                       % re.search(r"\*\*\*(.+?)\*\*\*", out).group(1).strip())
     elif m:
+        try:
+            from estatuto import pendentes as _pend
+            npd = len(_pend())
+        except Exception:
+            npd = 0
         diz("  C10 roquete      %s guiões emitem resultado sem estatuto — "
-            "não subiu" % m.group(1))
+            "não subiu%s" % (m.group(1),
+                             " · %d declarados pendentes" % npd if npd else ""))
+        for f, r in (_pend().items() if npd else []):
+            AVISOS.append("C10 pendente: %s desde %s — falta %s"
+                          % (f, r.get("desde", "?"), r.get("o_que_falta", "?")))
+
+# ── 12 · o índice da inteligência, regenerado a cada turno
+#
+#   Um índice escrito à mão envelhece e ninguém o corrige. Este é gerado, e a
+#   fracção citável por estação é a medida que interessa: a 06-09 a metade que
+#   carrega o relatório — Primavera/Verão — estava em 26 de 79.
+IDX = os.path.join(AQUI, "indice_inteligencia.py")
+if os.path.exists(IDX):
+    rc, out, err = corre([IDX], "indice")
+    if rc == 0 and "citáveis" in out:
+        io.open(os.path.join(AQUI, "INDICE_INTELIGENCIA.md"), "w",
+                encoding="utf-8").write(out)
+        m = re.search(r"citáveis[^|]*\| \*\*(\d+)", out)
+        v = re.search(r"vivos \(não retirados\) \| \*\*(\d+)", out)
+        pv = re.search(r"\*\*Primavera/Verão\*\* \| (\d+) \| (\d+)", out)
+        if m and v:
+            diz("  índice           %s de %s guiões citáveis%s"
+                % (m.group(1), v.group(1),
+                   " · Primavera/Verão %s de %s" % (pv.group(2), pv.group(1))
+                   if pv else ""))
+    else:
+        AVISOS.append("o índice da inteligência não regenerou: %s"
+                      % (err.strip()[-120:] or "?"))
 
 # ── modo completo: volta a correr o rastreio
 if COMPLETO:
