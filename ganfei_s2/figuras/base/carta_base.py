@@ -575,3 +575,26 @@ class Base(object):
                          va="bottom", color=TINTA3, annotation_clip=False,
                          **MARGINALIA)
         return axl
+
+
+# ── nota de fontes ──────────────────────────────────────────────────────────
+# Registo cartografico normal: de onde vem cada camada. Vai em Palatino italico
+# a 6,4 pt, alinhado a esquerda por baixo da moldura, na mesma familia da
+# marginalia — e o registo tipografico das notas de carta, e distingue-se do
+# corpo sem competir com ele.
+#
+# NAO leva metodo, nem ressalva, nem nada do nosso processo: quem le a carta
+# quer saber de que instrumento saiu a imagem, nao como a tratamos.
+FONTES_ESTILO = dict(family="Palatino Linotype", fontsize=6.4, style="italic",
+                     color="#8A8378")
+
+
+def fontes(fig, linhas, x=0.035, y=0.019):
+    """A nota de fontes. `linhas` e uma lista de cadeias, uma por linha."""
+    if isinstance(linhas, str):
+        linhas = [linhas]
+    fig.text(x, y, "FONTES", family="Palatino Linotype", fontsize=6.4,
+             style="italic", weight="bold", color="#5C574F",
+             va="bottom", ha="left")
+    fig.text(x + 0.036, y, "   ·   ".join(linhas), va="bottom", ha="left",
+             **FONTES_ESTILO)

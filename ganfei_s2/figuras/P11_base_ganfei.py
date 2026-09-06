@@ -41,10 +41,10 @@ matplotlib.use("Agg")
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "base"))
-from carta_base import cartela_institucional, Base, PAPEL, TINTA, TINTA2, TINTA3, virg   # noqa: E402
+from carta_base import cartela_institucional, fontes, Base, PAPEL, TINTA, TINTA2, TINTA3, virg   # noqa: E402
 
 b = Base()
-fig, ax, axl = b.figura(larg=16.0)
+fig, ax, axl = b.figura(larg=16.0, rodape=0.72)
 ytop = cartela_institucional(fig)
 
 b.terreno(ax)
@@ -86,6 +86,9 @@ b.legenda(
          "Método e ressalvas em FIGURAS_ABSTRACTS.md.")
 
 fora = os.path.join(AQUI, "P11_base_ganfei.png")
+fontes(fig, ["modelo de terreno LiDAR 50 cm, DGT",
+             "parcelário IFAP 2025, cultura kiwi"], y=0.012)
+
 fig.savefig(fora, dpi=200)
 fig.savefig(fora.replace(".png", ".pdf"))
 print("escrita %s" % fora)

@@ -38,8 +38,8 @@ from matplotlib.patches import Patch
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "base"))
-from carta_base import (cartela_institucional, Base, PAPEL, TINTA, TINTA2,  # noqa
-                        TINTA3, virg)
+from carta_base import (cartela_institucional, fontes, Base, PAPEL, TINTA,  # noqa
+                        TINTA2, TINTA3, virg)
 
 S2 = os.path.join(AQUI, "..")
 VG = r"C:/Users/Jackster2/Downloads/_VALIDADE_GESTAO"
@@ -57,7 +57,7 @@ NUNCA = SEM & NU           # nunca teve nesta decada
 COR_PERDA, COR_NUNCA = "#C4342B", "#8A8378"
 
 b = Base()
-fig, ax, axl = b.figura(larg=16.0)
+fig, ax, axl = b.figura(larg=16.0, rodape=0.72)
 ytop = cartela_institucional(fig)
 
 b.terreno(ax)
@@ -100,34 +100,34 @@ REP.append(("fora da partição", (PERDA & (sec == 0)).sum() / 100.0,
 
 b.moldura(ax)
 
-fig.text(0.035, ytop, "GANFEI · ONDE O COPADO DESAPARECEU", fontsize=21,
+fig.text(0.035, ytop, "ONDE DESAPARECERAM AS PLANTAS", fontsize=23,
          weight="bold", color=TINTA, va="top", ha="left")
-fig.text(0.035, ytop - 0.30 / fig.get_figheight(),
-         "Emparcelamento de Ganfei, Valença — altimetria aérea, voo de 06-07-2025",
+fig.text(0.035, ytop - 0.31 / fig.get_figheight(),
+         "Emparcelamento de Ganfei, Valença",
          fontsize=10.5, color=TINTA2, va="top", ha="left")
 fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight(),
-         "%s ha perderam copado  ·  %s ha nunca o tiveram"
+         "%s ha perderam as plantas  ·  %s ha nunca as tiveram"
          % (virg(PERDA.sum() / 100.0, 2), virg(NUNCA.sum() / 100.0, 2)),
          fontsize=10.5, color=TINTA2, va="top", ha="right")
 fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight() - 0.026,
-         "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
-         fontsize=8.2, color=TINTA3, va="top", ha="right")
+         "entre Julho de 2024 e Julho de 2025",
+         fontsize=8.6, color=TINTA3, va="top", ha="right")
 
 # ── legenda ─────────────────────────────────────────────────────────────────
 axl.set_xlim(0, 1); axl.set_ylim(0, 1); axl.axis("off")
 axl.text(0.02, 0.975, "A PERGUNTA", fontsize=9.0, weight="bold", color=TINTA,
          va="top", ha="left", transform=axl.transAxes)
 axl.text(0.02, 0.938,
-         "O que aconteceu nas manchas\na vermelho? Arranque,\nmortalidade, replantação, obra?",
-         fontsize=8.2, color=TINTA, va="top", ha="left",
+         "O que aconteceu nas manchas\na vermelho?",
+         fontsize=9.2, color=TINTA, va="top", ha="left",
          transform=axl.transAxes, linespacing=1.55)
 
-y0 = 0.845
+y0 = 0.855
 for cor, alfa, tit, sub in (
-        (COR_PERDA, 0.90, "%s ha  ·  perderam copado" % virg(PERDA.sum() / 100.0, 2),
-         "tinham copado em Jul-2024, ao\nnível do pomar; nenhum em\nJul-2025"),
-        (COR_NUNCA, 0.62, "%s ha  ·  nunca o tiveram" % virg(NUNCA.sum() / 100.0, 2),
-         "sem copado em toda a década —\nnão são perda, e por isso vão\nseparados")):
+        (COR_PERDA, 0.90, "%s ha  ·  perderam as plantas" % virg(PERDA.sum() / 100.0, 2),
+         "tinham plantas em 2024.\nEm 2025, nenhuma."),
+        (COR_NUNCA, 0.62, "%s ha  ·  nunca as tiveram" % virg(NUNCA.sum() / 100.0, 2),
+         "sem plantas em toda a década.")):
     axl.add_patch(plt.Rectangle((0.03, y0 - 0.030), 0.075, 0.034,
                                 transform=axl.transAxes, facecolor=cor,
                                 alpha=alfa, edgecolor="none", zorder=3))
@@ -149,15 +149,10 @@ axl.text(0.02, 0.508, "\n".join(_l),
          fontsize=6.8, color=TINTA, va="top", ha="left", family="monospace",
          transform=axl.transAxes, linespacing=1.62)
 
-axl.text(0.02, 0.275, "COMO", fontsize=9.0, weight="bold", color=TINTA,
-         va="top", ha="left", transform=axl.transAxes)
-axl.text(0.02, 0.240,
-         "Altimetria aérea — a superfície\nmenos o terreno. Mede geometria,\n"
-         "não cor.\n\n"
-         "Ressalva: mede FOLHA, não\nestrutura. Mostra onde o copado\n"
-         "desapareceu; não diz se a\npérgola ficou de pé. É por isso\nque perguntamos.",
-         fontsize=7.4, color=TINTA3, va="top", ha="left", style="italic",
-         transform=axl.transAxes, linespacing=1.55)
+fontes(fig, ["altura das plantas: LiDAR DGT, voo de 06-07-2025",
+             "modelo de terreno LiDAR 50 cm, DGT",
+             "parcelário IFAP 2025",
+             "comparação 2024/2025: Sentinel-2"], y=0.012)
 
 out = os.path.join(AQUI, "P14_perda_de_copado.png")
 fig.savefig(out, dpi=200, facecolor=PAPEL)

@@ -1,17 +1,26 @@
 # -*- coding: utf-8 -*-
-"""P13 — mapa C do email: qual dos dois e a Zona 0?
+"""P13 — mapa C: onde e a Zona 0?
 
-Esta prancha NAO responde a pergunta. Faz a pergunta.
+A PERGUNTA E FEITA POR FORMA, NAO POR FRASE.
 
-O gestor disse a 06-09-2026 que a Zona 0 sao as valvulas 8, 9 e 10 — B2 mais
-Erica Novo. Nos temos duas manchas de quebra separadas por ~500 m, e um ficheiro
-interno com o nome trocado: a mascara chamada `zona0_bits` tem o centroide a
-516 m do foco POENTE e a 26 m do NASCENTE (IX-18).
+A prancha nao traz nenhuma pergunta escrita no corpo. Traz:
 
-Por isso os dois discos aqui saem com rotulos **neutros e geograficos** —
-POENTE e NASCENTE — e a legenda pergunta. Rotular um deles de «Zona 0» seria
-por na boca do gestor a resposta que lhe estamos a pedir, e a CLAUSULAS ja
-regista que a designacao dos focos foi invertida por quatro auditorias.
+  · dois discos identicos — mesmo raio, mesma espessura, mesmo tracejado, e
+    tracejado porque uma linha interrompida le-se como provisoria, ao contrario
+    de uma linha cheia, que le como estabelecida;
+  · uma etiqueta A e B, neutra e geografica, sem juizo;
+  · e ao lado de cada uma, uma **caixa vazia**. Uma caixa vazia junto de um
+    rotulo e a interrogacao mais legivel que a cartografia tem: nao precisa de
+    lingua nenhuma, e a pessoa sabe o que fazer com ela sem instrucoes.
+
+O titulo faz o resto. Um titulo interrogativo e do registo da peca — nao e uma
+nota de rodape a explicar o nosso trabalho.
+
+O QUE NAO ESTA AQUI, DE PROPOSITO
+---------------------------------
+Nada do nosso processo. Nem metodo, nem ressalva, nem a razao interna por que
+perguntamos. Quem le a carta decide olhando para o terreno, e o resto vive no
+email e no registo.
 """
 import os
 import sys
@@ -19,20 +28,19 @@ import sys
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle
+from matplotlib.patches import Circle, FancyBboxPatch
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "base"))
-from carta_base import (cartela_institucional, Base, PAPEL, TINTA, TINTA2,  # noqa
-                        TINTA3, virg)
+from carta_base import (cartela_institucional, fontes, Base, PAPEL, TINTA,  # noqa
+                        TINTA2, TINTA3)
 
-# as coordenadas certificadas, do c1_00_comum.py
 POENTE = (530485.0, 4655053.0)
 NASCENTE = (530977.0, 4655117.0)
 RAIO = 90.0
 
 b = Base()
-fig, ax, axl = b.figura(larg=16.0)
+fig, ax, axl = b.figura(larg=16.0, rodape=0.72)
 ytop = cartela_institucional(fig)
 
 b.terreno(ax)
@@ -41,71 +49,79 @@ b.sectores(ax)
 b.rotulos(ax)
 b.toponimos(ax)
 
-# ── os dois discos, com peso identico ───────────────────────────────────────
-for (x, y), letra in ((POENTE, "A"), (NASCENTE, "B")):
-    ax.add_patch(Circle((x, y), RAIO, facecolor="none", edgecolor=TINTA,
-                        lw=2.2, ls=(0, (6, 3)), zorder=6))
-    ax.add_patch(Circle((x, y), RAIO, facecolor="#FFFFFF", alpha=0.16,
-                        edgecolor="none", zorder=5))
-    ax.text(x, y + RAIO + 26, letra, fontsize=17, weight="bold", color=TINTA,
-            ha="center", va="bottom", zorder=8,
-            path_effects=None)
-    ax.plot([x], [y], marker="+", ms=11, mew=1.6, color=TINTA, zorder=8)
 
+def marcador(x, y, letra):
+    """Disco tracejado + etiqueta + caixa vazia. A caixa e a pergunta."""
+    ax.add_patch(Circle((x, y), RAIO, facecolor="#FFFFFF", alpha=0.14,
+                        edgecolor="none", zorder=5))
+    ax.add_patch(Circle((x, y), RAIO, facecolor="none", edgecolor=TINTA,
+                        lw=2.4, ls=(0, (7, 4)), zorder=6))
+    ax.plot([x], [y], marker="+", ms=12, mew=1.7, color=TINTA, zorder=8)
+
+    # a etiqueta e a caixa, juntas, acima do disco
+    yb = y + RAIO + 22
+    ax.add_patch(FancyBboxPatch((x - 78, yb), 156, 62,
+                                boxstyle="round,pad=0,rounding_size=8",
+                                transform=ax.transData, facecolor=PAPEL,
+                                edgecolor=TINTA3, lw=0.8, alpha=0.96, zorder=8))
+    ax.text(x - 40, yb + 31, letra, fontsize=20, weight="bold", color=TINTA,
+            ha="center", va="center", zorder=9)
+    # a caixa vazia — o unico elemento interrogativo da prancha
+    ax.add_patch(plt.Rectangle((x + 6, yb + 12), 38, 38, transform=ax.transData,
+                               facecolor="#FFFFFF", edgecolor=TINTA, lw=2.0,
+                               zorder=9))
+
+
+marcador(*POENTE, letra="A")
+marcador(*NASCENTE, letra="B")
+
+# a distancia entre os dois, que e o facto que torna a escolha necessaria
 ax.annotate("", xy=NASCENTE, xytext=POENTE,
-            arrowprops=dict(arrowstyle="<->", color=TINTA3, lw=1.0,
-                            shrinkA=RAIO + 4, shrinkB=RAIO + 4), zorder=4)
+            arrowprops=dict(arrowstyle="<->", color=TINTA2, lw=1.2,
+                            shrinkA=RAIO + 5, shrinkB=RAIO + 5), zorder=7)
 mx, my = (POENTE[0] + NASCENTE[0]) / 2, (POENTE[1] + NASCENTE[1]) / 2
-ax.text(mx, my - 30, "≈ 500 m", fontsize=8.6, color=TINTA2, style="italic",
+ax.text(mx, my - 34, "500 m", fontsize=9.5, color=TINTA, weight="bold",
         ha="center", va="top", zorder=9,
-        bbox=dict(boxstyle="round,pad=0.22", fc="#FBFAF7", ec="none", alpha=0.88))
+        bbox=dict(boxstyle="round,pad=0.28", fc=PAPEL, ec=TINTA3, lw=0.7,
+                  alpha=0.97))
 
 b.moldura(ax)
 
-fig.text(0.035, ytop, "GANFEI · QUAL DOS DOIS É A ZONA 0?", fontsize=21,
-         weight="bold", color=TINTA, va="top", ha="left")
-fig.text(0.035, ytop - 0.30 / fig.get_figheight(),
-         "Emparcelamento de Ganfei, Valença — pedido de confirmação ao gestor",
+# ── cabeçalho: o título faz a pergunta ──────────────────────────────────────
+fig.text(0.035, ytop, "ONDE É A ZONA 0?", fontsize=23, weight="bold",
+         color=TINTA, va="top", ha="left")
+fig.text(0.035, ytop - 0.31 / fig.get_figheight(),
+         "Emparcelamento de Ganfei, Valença",
          fontsize=10.5, color=TINTA2, va="top", ha="left")
-fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight(),
-         "duas manchas de quebra  ·  discos de 90 m  ·  separadas ≈ 500 m",
-         fontsize=10.5, color=TINTA2, va="top", ha="right")
-fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight() - 0.026,
-         "ETRS89 / UTM 29N (EPSG:32629)  ·  quadrícula 250 m",
-         fontsize=8.2, color=TINTA3, va="top", ha="right")
 
-# ── a legenda E a pergunta ──────────────────────────────────────────────────
+# ── legenda: mínima. Repete os dois marcadores e não diz mais nada ──────────
 axl.set_xlim(0, 1); axl.set_ylim(0, 1); axl.axis("off")
-axl.text(0.02, 0.975, "A PERGUNTA", fontsize=9.0, weight="bold", color=TINTA,
-         va="top", ha="left", transform=axl.transAxes)
-axl.text(0.02, 0.935,
-         "Disse-nos que a Zona 0 são as\nválvulas 8, 9 e 10 — B2 mais\nErica Novo.\n\n"
-         "Vemos duas manchas de quebra,\nseparadas por cerca de meio\nquilómetro.\n\n"
-         "Qual delas é a Zona 0, «onde\ntudo começou»?",
-         fontsize=8.0, color=TINTA, va="top", ha="left",
-         transform=axl.transAxes, linespacing=1.55)
-
-axl.text(0.02, 0.545, "BASTA RISCAR", fontsize=9.0, weight="bold", color=TINTA,
-         va="top", ha="left", transform=axl.transAxes)
-for i, (l, txt) in enumerate((("A", "a poente"), ("B", "a nascente"))):
-    y = 0.495 - i * 0.075
-    axl.add_patch(plt.Rectangle((0.03, y - 0.030), 0.055, 0.048,
-                                transform=axl.transAxes, facecolor="none",
-                                edgecolor=TINTA, lw=1.2, zorder=3))
-    axl.text(0.0575, y - 0.006, l, fontsize=10.5, weight="bold", color=TINTA,
+# um quadrado em fracção de eixo só sai quadrado se se corrigir pelo rácio da
+# caixa do eixo — senão a legenda desmente o desenho, que é a pior coisa que
+# uma legenda pode fazer.
+# Para um rectangulo sair QUADRADO: largura_frac * W == altura_frac * H, logo
+# altura_frac = largura_frac * W / H. A versao anterior multiplicava por H/W em
+# vez de dividir, e as caixas sairam barras a atravessar a legenda inteira.
+_bb = axl.get_window_extent()
+_r = _bb.width / _bb.height          # <1 numa coluna alta e estreita
+LADO = 0.052                      # lado do quadrado, em fracção de largura
+for i, (l, onde) in enumerate((("A", "poente"), ("B", "nascente"))):
+    y = 0.945 - i * 0.105
+    axl.text(0.045, y, l, fontsize=18, weight="bold", color=TINTA,
              ha="center", va="center", transform=axl.transAxes, zorder=4)
-    axl.text(0.11, y - 0.006, txt, fontsize=8.2, color=TINTA2, ha="left",
-             va="center", transform=axl.transAxes)
+    axl.add_patch(plt.Rectangle((0.10, y - LADO * _r / 2), LADO, LADO * _r,
+                                transform=axl.transAxes, facecolor="#FFFFFF",
+                                edgecolor=TINTA, lw=2.0, zorder=4))
+    axl.text(0.185, y, onde, fontsize=9.5, color=TINTA2,
+             ha="left", va="center", transform=axl.transAxes, zorder=4)
 
-axl.text(0.02, 0.30,
-         "Perguntamos porque temos um\nficheiro interno com o nome\ntrocado, e queremos corrigi-lo\n"
-         "antes de escrever seja o que for.\n\nOs dois discos têm o mesmo raio\ne o mesmo peso de desenho:\n"
-         "nenhum está assinalado como\nresposta.",
-         fontsize=7.4, color=TINTA3, va="top", ha="left", style="italic",
-         transform=axl.transAxes, linespacing=1.55)
+axl.text(0.045, 0.775, "Assinale uma.", fontsize=9.5, color=TINTA2,
+         va="top", ha="left", transform=axl.transAxes)
 
-# o rodape institucional saiu: colidia com os rotulos de coordenada do eixo, e
-# a cartela do topo ja identifica a origem. Uma carta nao repete a assinatura.
+fontes(fig, ["modelo de terreno LiDAR 50 cm, DGT",
+             "parcelário IFAP 2025",
+             "manchas: Sentinel-2, infravermelho próximo e vermelho"],
+       y=0.012)
 
 out = os.path.join(AQUI, "P13_qual_e_a_zona0.png")
 fig.savefig(out, dpi=200, facecolor=PAPEL)

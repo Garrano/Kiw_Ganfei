@@ -76,7 +76,7 @@ import matplotlib.patheffects as pe
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "base"))
-from carta_base import (Base, cartela_institucional, COR, PAPEL, TINTA, TINTA2, TINTA3, virg,  # noqa
+from carta_base import (Base, cartela_institucional, fontes, COR, PAPEL, TINTA, TINTA2, TINTA3, virg,  # noqa
                         _halo)
 
 CONDUTA = "#1B6E8C"
@@ -348,7 +348,7 @@ def legenda(axl, b):
 b = Base()
 
 # ── 1 · o papel vegetal ─────────────────────────────────────────────────────
-fig, ax, axl = b.figura(larg=16.0, legenda=True)
+fig, ax, axl = b.figura(larg=16.0, legenda=True, rodape=0.72)
 # O papel vegetal NÃO leva cartela institucional: é uma camada para sobrepor,
 # e um logótipo repetido por cima do da carta-base fica a dobrar.
 ytop = 0.924
@@ -364,7 +364,7 @@ print("escrita %s  (transparente, registada com a P11)" % os.path.basename(fora)
 plt.close(fig)
 
 # ── 2 · a mesma, legível sozinha ────────────────────────────────────────────
-fig, ax, axl = b.figura(larg=16.0, legenda=True)
+fig, ax, axl = b.figura(larg=16.0, legenda=True, rodape=0.72)
 ytop = cartela_institucional(fig)
 b.terreno(ax, curvas=False, escoamento=False)
 desenha(ax, b, transparente=False)
@@ -382,6 +382,10 @@ fig.text(0.955, ytop - (21 - 10.5) * 0.70 / 72 / fig.get_figheight() - 0.026, "E
          fontsize=8.2, color=TINTA3, va="top", ha="right")
 legenda(axl, b)
 fora2 = os.path.join(AQUI, "P12_camada_rega_isolada.png")
+fontes(fig, ["esquema de rega da exploração, escala 1:3500",
+             "modelo de terreno LiDAR 50 cm, DGT",
+             "parcelário IFAP 2025"], y=0.012)
+
 fig.savefig(fora2, dpi=200)
 print("escrita %s  (com legenda)" % os.path.basename(fora2))
 plt.close(fig)
