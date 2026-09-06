@@ -235,3 +235,208 @@ Nada disto toca no que o adversário ainda tem por atacar: as fronteiras das
 estações, a janela de 30 dias do P2, a regra «mesmo sentido nas duas órbitas»,
 a validade do teste de encharcamento, e o nulo conhecido que ele há-de propor.
 **Continua por ler.**
+
+---
+
+# 8 · VERSÃO 2 — as nove correcções do adversário, aplicadas antes de ler
+
+O adversário respondeu **antes da corrida** e não revelou nenhum foco. As nove
+prescrições dele são o que se segue.
+
+## 8.1 · O achado que reorganiza o desenho: as unidades sobrepõem-se
+
+Matriz completa, verificada por mim célula a célula sobre as máscaras em disco:
+
+```
+             referencia  oeste   este  zona0 nu2021  resto
+referencia          110     12      6      5      0      0
+oeste                12    248      0      0      0      0
+este                  6      0    255    176    101      0
+zona0                 5      0    176    202     91      0
+nu2021                0      0    101     91    167     63
+resto                 0      0      0      0     63   2411
+```
+
+- **`zona0` ∩ `este` = 176 = 87,1 % da `zona0`.** A «primária» e a «secundária»
+  do §1 são a mesma unidade. Lê-las às duas e vê-las concordar **não é
+  corroboração — é aritmética.**
+- **`zona0` ∩ `nu2021` = 91 = 45,0 %.** O segundo controlo negativo está metade
+  dentro da unidade primária. Forma A.
+- **`zona0` ∩ `referencia` = 5.** Não declarado no §2, que só declarava as 18
+  dos discos.
+- **`oeste` ∩ `nu2021` = 0.** É a **única** comparação limpa para o P4.
+
+**Consequências, e substituem o §1:**
+
+| | |
+|---|---|
+| `zona0` continua **primária** | mas **45 % dela é chão lavrado de 2021**, sem copado em ano nenhum. O P3 fica diluído por construção, e diz-se. |
+| `este` **deixa de ser leitura** | é 87 % a mesma coisa. Reporta-se uma vez. |
+| `nu2021` **deixa de ser nulo** para `zona0` e `este` | só vale contra o `oeste`, onde a partilha é zero |
+| `resto` continua o controlo | zero partilha com qualquer foco |
+
+## 8.2 · A polarização — a omissão mais barata de fechar, e a segunda mais grave
+
+Nem o §2 nem P1-P4 diziam VV ou VH. Medido: **em VH o Verão tem MDE 0,50-0,55,
+igual ao Inverno** — a ressalva inteira do P3 desaparecia se o leitor escolhesse
+VH. É a forma que matou o segundo critério do registo: limiar por declarar, e
+qualquer ramo seleccionável depois.
+
+E a armadilha, para não se escolher VH pela potência. Tecto físico do sinal de
+copado — amplitude sazonal do kiwi vivo menos a do chão nu, 2015-2024:
+
+```
+VV: orb125 +1,016 dB (p=0,0001)   orb147 +2,047 dB (p<0,0001)
+VH: orb125 -0,137 dB (p=0,48)     orb147 +0,047 dB (p=0,87)
+```
+
+**Em VH o copado não contribui nada para a amplitude sazonal aqui.** O dobro da
+potência e zero sensibilidade à grandeza que o P3 quer medir.
+
+> **DECLARADO: a leitura é em VV.** Menos potência, mas é a única polarização que
+> responde ao copado neste sítio. O VH corre como diagnóstico, nunca como leitura.
+
+## 8.3 · As duas órbitas não são réplicas — e o MDE do P1 estava subestimado 1,36×
+
+```
+correlacao entre orbitas, contraste de controlo, anomalias: r = +0,901
+  a concordancia de sinal remove 1,7x de falso positivo, nao ~30x
+  poder REAL do veredicto «VE» com efeito = MDE:  46,9 %  (declarado 80 %)
+  MDE VERDADEIRO do P1 = 1,36 x o declarado
+     Inverno orb147: 0,40 -> 0,54     Inverno orb125: 0,52 -> 0,70
+```
+
+E o argumento físico, independente da estatística: o tecto de copado é +1,02 dB
+numa órbita e +2,05 na outra. **Duas medições cujas sensibilidades diferem a
+dobrar não são réplicas uma da outra.**
+
+> **DECLARADO:** a leitura primária passa à **média das duas órbitas**, com o MDE
+> recalculado sobre a média. A discordância de sentido fica como **bandeira de
+> diagnóstico**, não como condição de veredicto.
+
+## 8.4 · P3 — a célula DECLÍNIO era fisicamente inalcançável, e faltava a linha «subiu»
+
+Tecto de copado em VV/orb125: **+1,016 dB**. Limiar que a minha ressalva exigia:
+**0,98 dB**. A perda **total** do copado consumiria 96 % do limiar; com a
+conjunção das órbitas o limiar subia a ~1,33 dB e **excedia o tecto**. A célula
+DECLÍNIO não podia ser seleccionada por defeito nenhum da natureza. Forma B.
+
+> **DECLARADO:** a ressalva do P3 reescreve-se em **unidades do tecto**, não do
+> MDE. Uma queda de Verão conta como «cai» se exceder **metade do tecto** —
+> 0,51 dB em orb125, 1,02 em orb147.
+
+A tabela ganha as linhas que faltavam:
+
+| Verão | Inverno | leitura |
+|---|---|---|
+| cai | não cai | **DECLÍNIO** |
+| cai | cai | **ARRANQUE** ou remoção de estrutura |
+| não cai | cai | não é copado — solo ou instalação |
+| **sobe** | qualquer | **INDETERMINADO** — nenhuma hipótese o previa |
+| não cai | não cai | **SEM SINAL** |
+
+## 8.5 · A condição de modo comum — o buraco que matou o desenho irmão
+
+```
+sd entre anos do NIVEL da referencia (INV orb147) = 0,324 dB
+sd entre anos do CONTRASTE                        = 0,122 dB
+   -> o desenho descarta 62 % do movimento anual
+amplitude do NIVEL da referencia entre anos de base: 0,91 dB
+```
+
+Deslocamentos comuns de ~0,9 dB são **rotina** nesta série. Nesse regime «o foco
+caiu» e «a referência subiu e o foco não» produzem **o mesmo Δ**, e nenhuma das
+quatro perguntas os separa.
+
+> **DECLARADO:** publica-se, ao lado de cada Δ, o **nível absoluto** de
+> `referencia` e de `resto` no ano de tratamento contra a distribuição dos anos
+> de base. **Um deslocamento de modo comum ≥ 0,5 dB obriga a rotular o resultado
+> como «modo comum não separável».**
+
+## 8.6 · P2 — a janela de 30 dias admitia 45 % de concordâncias vazias
+
+```
+P(|t125 - t147| <= 30 d | datacoes ao acaso) = 0,449
+   janela 12 d -> 0,195      janela 6 d -> 0,104
+```
+
+E o número que a sustentava estava errado: «~23 cenas de inverno, revisita ~6
+dias» vinha do ficheiro com as 600 duplicadas. **Em S1A são 9-10 cenas e a
+mediana é 12 dias.** O P2 contradizia o §7.3 dentro do mesmo documento.
+
+> **DECLARADO: a janela do P2 é de 12 dias** — uma revisita — e a taxa de falsa
+> concordância que ela admite, **19,5 %**, publica-se ao lado da datação.
+
+## 8.7 · P4 — a verificação de sanidade estava ao contrário
+
+Medido: o chão nu **fica mais brilhante** com chuva, `b = +0,012 / +0,013 dB/mm`,
+`p < 0,0001` nas duas órbitas — resposta dieléctrica, **positiva**. O
+encharcamento por reflexão especular faz o oposto: **mais escuro**, coeficiente
+**negativo**.
+
+A minha regra comparava **módulos de coeficientes de sinais opostos**: um foco
+encharcado teria coeficiente negativo e grande em módulo, «responderia mais», e a
+regra disparava NÃO DECIDE **exactamente no caso que o teste existe para apanhar**.
+
+> **DECLARADO, e substitui o P4:**
+> - **sanidade de SINAL, não de magnitude:** o `nu2021` deve ter coeficiente
+>   **positivo e significativo** — já verificado, b = +0,012/+0,013, p < 0,0001;
+> - **o discriminador é o SINAL do coeficiente do foco**, e são três previsões
+>   distintas: encharcamento → **negativo**; humidade de solo sem água parada →
+>   **positivo**; perda de copado → **nulo**;
+> - **regressor principal `chuva_30d_mm`**, que existe no ficheiro e eu não usava.
+>   `chuva_7d_mm` secundário. **`dias_desde_chuva5` sai** — 55 % das cenas em
+>   {0,1,2} e 5,5 % censuradas no tecto de 31;
+> - **agregação ao ano**, não regressão sobre cenas: a autocorrelação lag-1 é
+>   +0,49 e +0,59, e o n efectivo é 3 a 4 vezes menor do que o aparente;
+> - **corre contra o `oeste`**, a única unidade com partilha zero com o `nu2021`.
+
+## 8.8 · O ano hidrológico, que eu nunca defini
+
+Para o Inverno é indiferente; para o Verão do P3 é decisivo — 7 cenas ou 2,
+consoante a convenção.
+
+> **DECLARADO: o ano hidrológico começa a 1 de Setembro.** O Verão emparelhado
+> com o Inverno de 2025-26 é **Jun-Ago de 2026**, com 3 e 2 cenas S1A contra 7-8
+> nos anos de base. **A cobertura é fraca e o P3 no Verão sai com essa ressalva.**
+
+## 8.9 · O nulo conhecido — e o meu era impossível
+
+Eu sugerira «metades disjuntas do `resto`, do tamanho de cada foco». Medido:
+**cabe exactamente UMA unidade disjunta de 90 m** no campo elegível. Um nulo
+puramente espacial à escala do foco é impossível nesta exploração.
+
+> **DECLARADO, e corre ANTES das quatro perguntas:** placebo temporal cruzado com
+> colocação espacial — os 55 discos de 90 m inteiramente contidos no campo
+> elegível, cruzados com 10 anos-placebo (cada ano de base tomado à vez como
+> «tratamento» contra os nove restantes). **550 ensaios de verdade conhecida**,
+> mas com **resolução independente ~40** — o menor p alcançável é ~1/41 ≈ 0,024,
+> e é assim que se reporta, não como 550.
+>
+> A metade temporal **já correu**, sobre o controlo, e é o resultado mais forte
+> deste documento: **VV — 0/10 falsos positivos nas quatro estações.** Sob verdade
+> conhecida de «não houve», a regra do P1 não dispara uma vez.
+
+## 8.10 · O que continua sem cobertura, e vai dito na leitura
+
+- **O portão autoriza SAR confirmado por SAR.** A lista `INDICES` do `guarda.py`
+  é puramente óptica; duas órbitas correlacionadas a **r = +0,90** passam como
+  «instrumento independente». É a falha que o Controlo 3 apanhou no B1, na
+  modalidade que o remendo não cobriu. **A conjunção das órbitas declara-se como
+  diagnóstico, nunca como confirmação independente.**
+- **Nenhuma condição do portão vê sobreposição de unidades.** A C3 continua em
+  prosa, e era ela que teria apanhado o `nu2021` a 45 % dentro da `zona0`.
+
+## 8.11 · O que ele atacou e aguentou
+
+- a conclusão «Inverno e Primavera têm 2-3× mais potência» é **robusta às sete
+  divisões de estação** testadas — não é artefacto de fronteira;
+- a ressalva de contaminação do §2 está **certa em direcção e magnitude**: a
+  atenuação é 10 % no oeste e 5 % no este, e é conservadora;
+- **o portão do §4 não pode ser disparado pelo próprio efeito** — a extinção
+  total da `zona0` desloca o controlo em ≤ 0,20 dB, metade do MDE de inverno;
+- a composição ascendente/descendente é **1:1 com a órbita e constante** nos onze
+  anos: a restrição ao S1A não introduz confundimento de geometria;
+- o custo em potência dessa restrição é **~2 %** no SE do ano de tratamento;
+- o `nu2021` **não revegetou**: o coeficiente de chuva mantém-se positivo e
+  significativo em todos os anos de base.
