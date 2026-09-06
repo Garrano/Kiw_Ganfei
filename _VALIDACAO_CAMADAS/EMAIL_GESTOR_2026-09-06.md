@@ -7,8 +7,8 @@
 |---|---|---|
 | A | `P11_base_ganfei.png` | os cinco sectores com os nomes da exploração |
 | B | `P12_camada_rega.png` | as válvulas por sector — a tabela que nos enviou, no terreno |
-| C | *(a produzir)* mapa dos dois focos com a Zona 0 assinalada | qual dos dois é a Zona 0 |
-| D | *(a produzir)* mapa dos 2,20 ha que perderam copado entre Jul-2024 e Jul-2025 | o que aconteceu ali |
+| C | `P13_qual_e_a_zona0.png` | qual dos dois focos é a Zona 0 |
+| D | `P14_perda_de_copado.png` | os 2,20 ha que perderam copado, e onde |
 
 ---
 
@@ -65,7 +65,24 @@ tinham copado em Julho de 2024 e não tinham nenhum em Julho de 2025**.
 Não são o mesmo que as áreas que já estavam sem plantação — essas separámo-las, e
 são outras 1,57 ha que nunca tiveram copado nesta década.
 
-**No mapa D estão assinalados.** Arranque, mortalidade, replantação, obra?
+**No mapa D estão assinalados**, e repartidos por sector:
+
+| sector | perdeu copado | nunca teve |
+|---|---|---|
+| **B3** | **1,02 ha** | 0,91 ha |
+| B2 | 0,33 ha | — |
+| **B4** | **0,19 ha** | — |
+| Erica Novo | 0,01 ha | — |
+| fora da partição | 0,65 ha | 0,66 ha |
+
+Arranque, mortalidade, replantação, obra?
+
+**Duas coisas nesta tabela que gostávamos de perceber:**
+
+- o **B4** aparece com 0,19 ha, e não estava na lista de sectores com problema
+  que nos indicou (B2 e B3). É a mesma causa, ou outra coisa?
+- **0,65 ha ficam fora dos cinco sectores** que temos delimitados — provavelmente
+  porque a nossa partição não cobre tudo. Há mais algum talhão nessa zona?
 
 ## 4 · Duas perguntas de uma linha
 
