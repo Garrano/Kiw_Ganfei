@@ -1,125 +1,146 @@
-# SAR — a leitura. O radar não decide, e sabe-se porquê e com que limite.
+# SAR — o instrumento é compatível com a perda TOTAL do copado e com nada, e não os distingue
 
-**06-09-2026.** Lido contra `CRITERIO_SAR_v3.md` + `CRITERIO_SAR_v3_ADENDA.md`,
-autorizado por adversário independente antes da corrida (AUD-14).
-Produzido por `sar_v3.py` → `sar_v3.json`.
+**06-09-2026 · revisto no mesmo dia depois da auditoria independente (AUD-15).**
+Lido contra `CRITERIO_SAR_v3.md` + adenda, autorizado por adversário antes da
+corrida (AUD-14). Produzido por `sar_v3.py` → `sar_v3.json`.
 
-**Estatuto: NÃO TESTÁVEL, por falta de potência. Autorizado pelo portão nessa
-forma, e só nessa.** Falta a auditoria independente do resultado — até lá,
-não citável.
+**Estatuto: NÃO TESTÁVEL por falta de potência.** Autorizado pelo portão nessa
+forma e só nessa; certificação e auditoria independente **ambas feitas**.
+
+> ## O que a auditoria mudou, e mudou para melhor
+>
+> A primeira versão desta página dizia «nenhuma célula distingue» e parava aí.
+> O adversário reproduziu **os doze Δ, os doze MDE, o portão e o modo comum ao
+> último dígito publicado — zero discrepâncias** — confirmou que o nulo é real e
+> não fabricado, e depois mostrou que **eu tinha subestimado o próprio achado**
+> e que o tecto que usei estava na escala errada.
+>
+> Corrigiu também quatro defeitos no meu código e três frases minhas.
 
 ---
 
-## 1 · As doze células. Nenhuma distingue.
+## 1 · O que o instrumento consegue, e é isto que governa tudo
 
-Contraste `zona0 − comparador`, VV, S1A, Nov-Fev, ano hidrológico a 1 de
-Setembro. Δ = ano de tratamento menos média dos anos de base.
+Eu comparei o MDE com uma **amplitude sazonal** (Verão menos Inverno). Está
+errado: a pergunta lê-se **no inverno**, e o que interessa é quanto vale o
+copado *nessa janela*. Isso mede-se directamente — `zona0 − nu2021`, contraste
+de inverno contra chão nu, média dos anos de base:
 
-**Base n = 10** (com o meio-inverno de 2015-16):
+| | tecto de inverno | |
+|---|---|---|
+| orb 125 | **+0,484 dB** | é tudo o que a unidade vale em copado |
+| orb 147 | **+0,994 dB** | |
 
-| comparador | órb | Δ | MDE | distingue |
+E contra ele, os MDE:
+
+| célula | MDE | tecto | |
+|---|---|---|---|
+| orb125 `zona0−resto` | 1,244 | 0,484 | **2,57×** |
+| orb125 `zona0−referencia` | 0,986 | 0,484 | **2,04×** |
+| orb125 `zona0−nu2021` | 0,817 | 0,484 | **1,69×** |
+| orb147 `zona0−resto` | 1,612 | 0,994 | **1,62×** |
+| orb147 `zona0−referencia` | 1,578 | 0,994 | **1,59×** |
+| orb147 `zona0−nu2021` | 1,544 | 0,994 | **1,55×** |
+
+> **O MDE excede o tecto de copado de inverno em TODAS as seis células, nas duas
+> órbitas, por 1,55 a 2,57 vezes.** Não é «no limite do detectável» numa órbita,
+> como escrevi. **Nesta unidade e nesta janela, a perda total do copado é
+> indistinguível de zero, em toda a parte.**
+
+## 2 · E o que a unidade fez, que eu não tinha escrito
+
+| | base | tratamento S1A | **S1C** | deslocamento |
 |---|---|---|---|---|
-| `resto` | 125 | **−0,771** | 1,24 | não |
-| `resto` | 147 | −0,133 | 1,61 | não |
-| `resto` | média | −0,452 | 1,26 | não |
-| `referencia` | 125 | **−0,518** | 0,99 | não |
-| `referencia` | 147 | **+0,097** | 1,58 | não |
-| `referencia` | média | −0,211 | 1,12 | não |
+| orb125 `zona0−nu2021` | +0,484 | **−0,017** | +0,086 | **−0,501 = −104 % do tecto** |
+| orb147 `zona0−nu2021` | +0,994 | **−0,058** | +0,078 | **−1,052 = −106 % do tecto** |
 
-**Base n = 9** (sem o meio-inverno): Δ de −0,761 a +0,178, MDE de 0,99 a 1,52.
-**Nenhuma célula distingue em nenhuma das duas bases.**
+**No inverno de 2025-26 a `zona0` está ao nível do chão nu**, nas duas órbitas,
+e o Sentinel-1C — que o critério exclui, e que é por isso uma verificação
+parcialmente independente do ano de tratamento — concorda a menos de 0,26 dB.
 
-Pela regra de veredicto da adenda §1, a frase é:
+**E está abaixo do MDE (0,817 e 1,544). Não é distinguível de zero.**
 
-> **Em todas as doze células o deslocamento fica abaixo da resolução deste
-> instrumento nesta unidade.**
+> **A leitura honesta é esta: o instrumento é compatível com a perda total do
+> copado e é compatível com não ter havido nada, e não sabe qual das duas.**
+>
+> É muito mais útil ao leitor do que «nada se viu», e é o mesmo dado.
 
-E **não** «não houve acontecimento». O posto não vai publicado em nenhuma
-célula, porque a adenda §1 proíbe acompanhar um Δ abaixo do MDE com ele.
+## 3 · As doze células, e nenhuma distingue
 
-**As órbitas discordam em sinal** no comparador `referencia`: −0,518 na 125 e
-+0,097 na 147. Publica-se sem síntese, que é o que o §1 manda.
+Δ de −0,771 a +0,178, MDE de 0,99 a 1,61, nas duas bases. **Nenhuma célula
+distingue.** As órbitas discordam em sinal no comparador `referencia`: −0,518 na
+125 e +0,097 na 147 — publicado sem síntese, como o §1 manda. O posto não vai
+publicado em célula nenhuma.
 
-## 2 · O rótulo de modo comum **disparou**, e é o achado que governa a leitura
+Detalhe que o adversário mandou registar e é honesto: em orb125 o Δ é **−0,52 a
+−0,77 — a mesma direcção do declínio óptico**, a 40-60 % do MDE; em orb147 é
+**+0,10/+0,18, a direcção oposta**. Duas órbitas, dois sinais, nenhum a chegar à
+resolução.
 
-| órbita | anomalia `referencia` | anomalia `resto` | **comum** | |
+## 4 · O modo comum disparou — nas duas bases, e não «o pomar inteiro»
+
+| órbita | base | `referencia` | `resto` | **comum** |
 |---|---|---|---|---|
-| 125 | +0,638 | +0,891 | **+0,764** | dispara |
-| 147 | +0,659 | +0,889 | **+0,774** | dispara |
+| 125 | n=10 | +0,638 | +0,891 | **+0,764** |
+| 125 | n=9 | +0,498 | +0,776 | **+0,637** |
+| 147 | n=10 | +0,659 | +0,889 | **+0,774** |
+| 147 | n=9 | +0,596 | +0,832 | **+0,714** |
 
-Limiar 0,5 dB. **O pomar inteiro subiu cerca de 0,77 dB no inverno de
-2025-26** — as duas unidades de controlo, nas duas órbitas, na mesma direcção e
-na mesma ordem de grandeza.
+**A frase correcta é «as duas unidades de controlo subiram 0,64 a 0,77 dB»** —
+não «o pomar inteiro», que era uma afirmação sobre um conjunto que a estatística
+não cobre. E é falsa para uma órbita: em orb125 a `zona0` subiu **+0,12** contra
++0,76 dos controlos.
 
-> **O resultado está rotulado «modo comum não separável» e não se lê como
-> acontecimento na `zona0`.** O que este inverno tem de diferente é do ano, não
-> da unidade — e o inverno é o **2.º mais chuvoso dos onze**.
+O resultado fica rotulado **«modo comum não separável»** e não se lê como
+acontecimento na `zona0`.
 
-O portão de abortar **passou** (+0,253 / +0,230 contra MDE de 0,53 / 0,41), o
-que significa que o *contraste* de controlo se aguenta. É o **nível** que se
-moveu, nas três unidades juntas. As duas coisas são compatíveis e é por isso que
-o critério exigia as duas.
+**A explicação pela chuva é hipótese, não leitura.** O inverno é o 2.º mais
+chuvoso dos onze, e a associação chuva/nível existe nos anos de base — mas na
+órbita 147 **deixa de ser significativa (p = 0,127)** quando se retira o ano
+cuja chuva é **zero por ausência** (IX-06), e nessa órbita o ano de tratamento
+fica **2,5 desvios acima do que a sua própria chuva prevê**. O §6 da versão
+anterior chamava-lhe «evidência directa para o P4»; é um grau a mais.
 
-## 3 · E o instrumento não tinha potência para a pergunta
-
-Isto vale independentemente do resultado, e estava escrito antes:
+## 5 · Quatro defeitos no meu código, apanhados pela auditoria
 
 | | |
 |---|---|
-| MDE desta unidade | **0,99 a 1,61 dB** |
-| tecto físico do sinal de copado, 2015-24 | +1,02 (orb125) · +2,05 (orb147) |
-| tecto no período em que o `nu2021` **é mesmo** chão nu (2021-24) | **+0,72** (orb125) · +1,57 (147) |
+| **D1** | **o portão de abortar não podia abortar** — a variável era escrita e nunca lida. Forma B, dentro do elemento retomado para fechar essa forma. Corrigido: agora levanta `SystemExit` |
+| **D2** | o portão e o modo comum corriam **numa base só**, quando a adenda manda as duas. E o modo comum é a única estatística sobre **níveis**, onde um meio-inverno sem Nov nem Dez não se cancela. Corrigido — e é a razão de o número passar a ser um intervalo |
+| **D3** | **o posto ia suprimido no ecrã e escrito no JSON.** A porta que a adenda fechou em prosa estava aberta no artefacto durável. Corrigido |
+| **D4** | os **níveis absolutos** que o §5 mandava publicar não estavam em lado nenhum. Corrigido |
 
-**Na órbita 125 o MDE excede o tecto.** Ou seja: mesmo a perda **total** do
-copado na `zona0` seria indistinguível de zero nessa órbita. Um resultado nulo
-aqui não é informação sobre o pomar — é informação sobre o instrumento.
-
-A causa é a unidade: a `zona0` tem 202 células e o seu contraste é 2 a 4× mais
-ruidoso que o do controlo. *(O mecanismo que dei ao §0 do v3 — contagem de
-células — está errado e registado como IX-10: a `referencia` tem 110 células,
-menos, e é o contraste menos ruidoso. A causa verdadeira fica por estabelecer.)*
-
-## 4 · O portão
+## 6 · O portão
 
 ```
-A · «o radar nao distingue», como veredicto positivo   -> BLOQUEADO
-      · sem instrumento independente e sem nao_testavel()
-B · o mesmo, NAO TESTAVEL com a razao de potencia escrita  -> AUTORIZADO
+«o radar nao distingue», como veredicto positivo   -> BLOQUEADO
+o mesmo, NAO TESTAVEL com a razao de potencia      -> AUTORIZADO
 ```
 
-O portão está certo nas duas. Um nulo sem potência declarada não é veredicto.
+**A condição 2 continua aberta.** E o adversário nota que o portão **não vê
+potência**: nada nele compara Δ com um MDE nem vê que o MDE excede o tecto. A
+esta conclusão chegou-se por fora do aparelho.
 
-**E a condição 2 continua aberta.** Este era o instrumento que a devia fechar, e
-não a fecha — não por os dados faltarem, mas por a unidade ser pequena de mais
-para o ruído do radar. Fica NÃO TESTÁVEL **com limite superior medido**, que é
-diferente e melhor do que NÃO TESTÁVEL por ausência de instrumento.
+## 7 · O que isto NÃO diz
 
-## 5 · O que isto NÃO diz
+- **não confirma nem contradiz o óptico.** Escrevi «não contradiz», e é vácuo:
+  o critério pré-registou **bilateral**, portanto um nulo não pode contradizer
+  coisa nenhuma. A frase certa é **«o SAR não tem potência para confirmar nem
+  para contradizer»**;
+- **não fecha declínio contra arranque** — o P3 corre a seguir;
+- **não testa o encharcamento;**
+- **não fecha a rota do SAR.** Fecha-a **para esta unidade**. O adversário
+  encontrou, na mesma janela e com a mesma maquinaria, uma unidade em que o
+  desenho **distingue nas seis células** — mas encontrou-a **depois** de ver este
+  nulo, e por isso **não conta**: entra como candidata a pré-registo próprio, com
+  a ficha de fuga da C3 preenchida antes, e não como resultado.
 
-- **não contradiz o óptico.** O NDVI mede um contraste que caiu 0,16 (≈ 5,7 σ
-  na sua própria escala); o SAR diz que, na sua escala, o deslocamento fica
-  abaixo de 1 dB. **Dois instrumentos com sensibilidades diferentes, e nenhum
-  conflito** — o radar simplesmente não chega lá;
-- **não fecha declínio contra arranque.** O P3 continua por correr;
-- **não testa o encharcamento.** O P4 continua por correr — e o §2 acabou de o
-  tornar mais interessante, não menos: o inverno é o 2.º mais chuvoso dos onze e
-  o pomar inteiro subiu 0,77 dB, que é o que a chuva faz;
-- **não estima magnitude ocidental.**
+## 8 · Correcções de números
 
-## 6 · O que se ganhou, e é real
-
-1. **Um limite superior medido** onde antes havia ausência de instrumento.
-2. **A subida de modo comum de 0,77 dB**, que nenhuma leitura anterior tinha
-   visto porque nenhuma publicava níveis absolutos — e que é evidência directa
-   para o P4.
-3. **A série de ano inteiro, 1613 cenas de 2016 a 2026 em potência linear**, que
-   não existia e que serve o P3 e o P4 sem descarregar mais nada.
-4. **A previsão do v1 §8 cumpriu-se textualmente:** *«se não for, o facto
-   continua NÃO TESTÁVEL — mas passa a sê-lo com um limite superior medido em
-   vez de por ausência de instrumento.»*
-
-## 7 · O que falta antes de isto ser citável
-
-**A auditoria independente do resultado.** Pela C10, certificação e adversário,
-não uma ou outra. O portão está feito; o adversário está por fazer, e até lá
-esta página não entra em relatório nenhum.
+- **«1613 cenas» era o ficheiro que o IX-01 proíbe.** A série entregue tem
+  **1013**. Eu tinha creditado o produto com o tamanho do ficheiro corrompido —
+  o IX-01 a vazar de volta para jusante.
+- **O tecto «+1,02 / +2,05» não tem produtor.** Não há guião em disco que o
+  calcule; o adversário teve de o reconstruir por força bruta para descobrir que
+  era uma amplitude sazonal. É a cláusula S2 — *um número sem produtor é boato
+  com casas decimais* — e era a base inteira do argumento de potência.

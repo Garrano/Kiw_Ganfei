@@ -106,35 +106,55 @@ print("cenas S1A no ficheiro: %d   (acerto .upper(), IX-09)" % len(A))
 
 # ── o portão de abortar, ANTES de tudo ──────────────────────────────────────
 print()
-print("PORTAO DE ABORTAR — o controlo contra o seu proprio MDE, so na base")
+print("PORTAO DE ABORTAR — o controlo contra o seu proprio MDE, nas DUAS bases")
+# D2: a adenda §2 manda "mesma formula e mesmo n para as seis celulas E para o
+# controlo", e a §4 manda publicar as duas bases. A versao anterior fixava n=10
+# aqui e no modo comum — e o modo comum e a UNICA estatistica calculada sobre
+# NIVEIS, onde um meio-inverno sem Nov nem Dez nao se cancela.
 portao, abortar = {}, False
-for orb in ("125", "147", "media"):
+for orb, bmin in [(o, b) for o in ("125", "147", "media") for b in (2015, 2016)]:
     s = serie("resto_vv_db", "referencia_vv_db", orb)
-    base = np.array([s[h] for h in sorted(s) if h < TRAT])
+    base = np.array([s[h] for h in sorted(s) if h < TRAT and h >= bmin])
     d = s[TRAT] - base.mean()
     m = mde(base.std(ddof=1), len(base))
     ok = abs(d) < m
     abortar = abortar or not ok
-    portao[orb] = dict(delta=round(float(d), 4), mde=round(m, 4), passa=bool(ok))
-    print("   orb%-6s  D=%+.3f   MDE=%.2f   %s" %
-          (orb, d, m, "passa" if ok else "*** ABORTA ***"))
+    portao["%s_n%d" % (orb, len(base))] = dict(
+        delta=round(float(d), 4), mde=round(m, 4), n_base=len(base), passa=bool(ok))
+    print("   orb%-6s n=%2d  D=%+.3f   MDE=%.2f   %s" %
+          (orb, len(base), d, m, "passa" if ok else "*** ABORTA ***"))
+
+if abortar:
+    # D1, apanhado pelo adversario do resultado: a versao anterior punha
+    # `abortar = True` e NUNCA a lia. Forma B — um teste que nao podia falhar,
+    # dentro do elemento retomado para fechar exactamente essa forma.
+    guardar({"abortado": True, "portao": portao,
+             "razao": "o contraste de controlo excede o seu proprio MDE no ano "
+                      "de tratamento: o que se ve e o ano, nao a unidade"},
+            os.path.join(VG, "sar_v3.json"))
+    raise SystemExit("*** LEITURA ABORTADA pelo portao do §5. Nada foi lido. ***")
 
 # ── modo comum ──────────────────────────────────────────────────────────────
 print()
 print("MODO COMUM — media das anomalias de NIVEL de referencia e resto (a zona0 sai)")
 modo = {}
-for orb in ("125", "147"):
-    an = []
+for orb, bmin in [(o, b) for o in ("125", "147") for b in (2015, 2016)]:
+    an, niv = [], {}
     for u in ("referencia", "resto"):
         s = serie("%s_vv_db" % u, None, orb)
-        base = np.array([s[h] for h in sorted(s) if h < TRAT])
+        base = np.array([s[h] for h in sorted(s) if h < TRAT and h >= bmin])
         an.append(s[TRAT] - base.mean())
+        # D4: a §5 mandava publicar os NIVEIS ABSOLUTOS e nao estavam em lado nenhum
+        niv[u] = dict(tratamento=round(s[TRAT], 3),
+                      media_base=round(float(base.mean()), 3), n_base=len(base))
     mc = float(np.mean(an))
-    modo[orb] = dict(anomalia_referencia=round(an[0], 3),
-                     anomalia_resto=round(an[1], 3), comum=round(mc, 3),
-                     dispara=bool(abs(mc) >= LIM_MODO_COMUM))
-    print("   orb%-4s  referencia %+.3f   resto %+.3f   COMUM %+.3f   %s" %
-          (orb, an[0], an[1], mc,
+    k = "%s_n%d" % (orb, niv["resto"]["n_base"])
+    modo[k] = dict(anomalia_referencia=round(an[0], 3),
+                   anomalia_resto=round(an[1], 3), comum=round(mc, 3),
+                   niveis_absolutos=niv,
+                   dispara=bool(abs(mc) >= LIM_MODO_COMUM))
+    print("   orb%-4s n=%2d  referencia %+.3f   resto %+.3f   COMUM %+.3f   %s" %
+          (orb, niv["resto"]["n_base"], an[0], an[1], mc,
            "*** DISPARA (>= 0,5) ***" if abs(mc) >= LIM_MODO_COMUM else "abaixo de 0,5"))
 
 # ── as seis células, nas duas bases ─────────────────────────────────────────
@@ -153,6 +173,12 @@ for base_min, rot in ((2015, "n=10 (com o meio-inverno de 2015-16)"),
             if not c:
                 continue
             c["base"] = rot
+            # D3: a adenda §1 proibe o posto ao lado de um |D| < MDE, e a versao
+            # anterior suprimia-o no ecra e escrevia-o no JSON — que e o
+            # artefacto duravel. A porta fechada em prosa ficava aberta no ficheiro.
+            if not c["distingue"]:
+                c["posto"] = None
+                c["posto_suprimido"] = "adenda §1: |D| < MDE"
             saida["celulas"].append(c)
             # a proibicao da adenda §1: o posto NAO acompanha um |D| < MDE
             po = ("%d de %d" % (c["posto"], c["de"])) if c["distingue"] else "—"

@@ -2,33 +2,114 @@
  "criterio": "CRITERIO_SAR_v3.md + CRITERIO_SAR_v3_ADENDA.md",
  "limiar_modo_comum_ASSERIDO": 0.5,
  "portao": {
-  "125": {
+  "125_n10": {
    "delta": 0.253,
    "mde": 0.5295,
+   "n_base": 10,
    "passa": true
   },
-  "147": {
+  "125_n9": {
+   "delta": 0.2779,
+   "mde": 0.4987,
+   "n_base": 9,
+   "passa": true
+  },
+  "147_n10": {
    "delta": 0.2303,
    "mde": 0.4102,
+   "n_base": 10,
    "passa": true
   },
-  "media": {
+  "147_n9": {
+   "delta": 0.2361,
+   "mde": 0.4417,
+   "n_base": 9,
+   "passa": true
+  },
+  "media_n10": {
    "delta": 0.2416,
    "mde": 0.4487,
+   "n_base": 10,
+   "passa": true
+  },
+  "media_n9": {
+   "delta": 0.257,
+   "mde": 0.4549,
+   "n_base": 9,
    "passa": true
   }
  },
  "modo_comum": {
-  "125": {
+  "125_n10": {
    "anomalia_referencia": 0.638,
    "anomalia_resto": 0.891,
    "comum": 0.764,
+   "niveis_absolutos": {
+    "referencia": {
+     "tratamento": -5.09,
+     "media_base": -5.728,
+     "n_base": 10
+    },
+    "resto": {
+     "tratamento": -5.023,
+     "media_base": -5.914,
+     "n_base": 10
+    }
+   },
    "dispara": true
   },
-  "147": {
+  "125_n9": {
+   "anomalia_referencia": 0.498,
+   "anomalia_resto": 0.776,
+   "comum": 0.637,
+   "niveis_absolutos": {
+    "referencia": {
+     "tratamento": -5.09,
+     "media_base": -5.588,
+     "n_base": 9
+    },
+    "resto": {
+     "tratamento": -5.023,
+     "media_base": -5.799,
+     "n_base": 9
+    }
+   },
+   "dispara": true
+  },
+  "147_n10": {
    "anomalia_referencia": 0.659,
    "anomalia_resto": 0.889,
    "comum": 0.774,
+   "niveis_absolutos": {
+    "referencia": {
+     "tratamento": -5.117,
+     "media_base": -5.776,
+     "n_base": 10
+    },
+    "resto": {
+     "tratamento": -5.197,
+     "media_base": -6.087,
+     "n_base": 10
+    }
+   },
+   "dispara": true
+  },
+  "147_n9": {
+   "anomalia_referencia": 0.596,
+   "anomalia_resto": 0.832,
+   "comum": 0.714,
+   "niveis_absolutos": {
+    "referencia": {
+     "tratamento": -5.117,
+     "media_base": -5.713,
+     "n_base": 9
+    },
+    "resto": {
+     "tratamento": -5.197,
+     "media_base": -6.029,
+     "n_base": 9
+    }
+   },
    "dispara": true
   }
  },
@@ -43,9 +124,10 @@
    "delta": -0.7712,
    "mde": 1.2438,
    "distingue": false,
-   "posto": 1,
+   "posto": null,
    "de": 11,
-   "base": "n=10 (com o meio-inverno de 2015-16)"
+   "base": "n=10 (com o meio-inverno de 2015-16)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "resto",
@@ -57,9 +139,10 @@
    "delta": -0.1334,
    "mde": 1.6117,
    "distingue": false,
-   "posto": 5,
+   "posto": null,
    "de": 11,
-   "base": "n=10 (com o meio-inverno de 2015-16)"
+   "base": "n=10 (com o meio-inverno de 2015-16)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "resto",
@@ -71,9 +154,10 @@
    "delta": -0.4523,
    "mde": 1.2648,
    "distingue": false,
-   "posto": 2,
+   "posto": null,
    "de": 11,
-   "base": "n=10 (com o meio-inverno de 2015-16)"
+   "base": "n=10 (com o meio-inverno de 2015-16)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "referencia",
@@ -85,9 +169,10 @@
    "delta": -0.5183,
    "mde": 0.9859,
    "distingue": false,
-   "posto": 1,
+   "posto": null,
    "de": 11,
-   "base": "n=10 (com o meio-inverno de 2015-16)"
+   "base": "n=10 (com o meio-inverno de 2015-16)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "referencia",
@@ -99,9 +184,10 @@
    "delta": 0.0969,
    "mde": 1.5779,
    "distingue": false,
-   "posto": 8,
+   "posto": null,
    "de": 11,
-   "base": "n=10 (com o meio-inverno de 2015-16)"
+   "base": "n=10 (com o meio-inverno de 2015-16)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "referencia",
@@ -113,9 +199,10 @@
    "delta": -0.2107,
    "mde": 1.1244,
    "distingue": false,
-   "posto": 5,
+   "posto": null,
    "de": 11,
-   "base": "n=10 (com o meio-inverno de 2015-16)"
+   "base": "n=10 (com o meio-inverno de 2015-16)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "resto",
@@ -127,9 +214,10 @@
    "delta": -0.7608,
    "mde": 1.3493,
    "distingue": false,
-   "posto": 1,
+   "posto": null,
    "de": 10,
-   "base": "n=9 (sem o meio-inverno)"
+   "base": "n=9 (sem o meio-inverno)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "resto",
@@ -141,9 +229,10 @@
    "delta": -0.0577,
    "mde": 1.5204,
    "distingue": false,
-   "posto": 5,
+   "posto": null,
    "de": 10,
-   "base": "n=9 (sem o meio-inverno)"
+   "base": "n=9 (sem o meio-inverno)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "resto",
@@ -155,9 +244,10 @@
    "delta": -0.4093,
    "mde": 1.2839,
    "distingue": false,
-   "posto": 2,
+   "posto": null,
    "de": 10,
-   "base": "n=9 (sem o meio-inverno)"
+   "base": "n=9 (sem o meio-inverno)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "referencia",
@@ -169,9 +259,10 @@
    "delta": -0.4828,
    "mde": 0.9922,
    "distingue": false,
-   "posto": 1,
+   "posto": null,
    "de": 10,
-   "base": "n=9 (sem o meio-inverno)"
+   "base": "n=9 (sem o meio-inverno)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "referencia",
@@ -183,9 +274,10 @@
    "delta": 0.1783,
    "mde": 1.4355,
    "distingue": false,
-   "posto": 8,
+   "posto": null,
    "de": 10,
-   "base": "n=9 (sem o meio-inverno)"
+   "base": "n=9 (sem o meio-inverno)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   },
   {
    "comparador": "referencia",
@@ -197,14 +289,15 @@
    "delta": -0.1522,
    "mde": 1.02,
    "distingue": false,
-   "posto": 5,
+   "posto": null,
    "de": 10,
-   "base": "n=9 (sem o meio-inverno)"
+   "base": "n=9 (sem o meio-inverno)",
+   "posto_suprimido": "adenda §1: |D| < MDE"
   }
  ],
  "_produtor": {
   "script": "sar_v3.py",
-  "quando": "2026-09-06 11:49",
+  "quando": "2026-09-06 12:01",
   "commit": null
  }
 }
