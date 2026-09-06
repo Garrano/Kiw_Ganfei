@@ -1,3 +1,6 @@
 ficheiro,desde,razao,o_que_falta
 p8_reagregar.py,2026-09-05,"reagregacao do p8 com a geometria do controlo corrigida; resultado em C4_P8_RESULTADO.md","portao + adversario sobre o resultado"
 sar_ano_inteiro.py,2026-09-06,"CORREU: 1613 cenas 2016-2026, doze meses, potencia linear, com chuva. Serie de ano inteiro que nao existia","portao + adversario ANTES de qualquer leitura"
+sar_v3.py,2026-09-06,"a leitura do SAR contra o v3+adenda; resultado NULO nas doze celulas e o rotulo de modo comum disparou a +0,77 dB. Portao feito: NAO TESTAVEL por falta de potencia, autorizado","adversario do resultado -- lancado (AUD-15)"
+altura_copado.py,2026-09-06,"LiDAR MDS-MDT, altura de copado por celula; o unico instrumento de GEOMETRIA do caso","portao + adversario (AUD-17, em curso)"
+piso_inverno.py,2026-09-06,"piso optico de inverno, dez invernos e seis unidades; verifica de forma independente a leitura do analista B","portao + adversario (AUD-17, em curso)"
