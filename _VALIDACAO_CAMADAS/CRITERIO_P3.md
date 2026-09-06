@@ -1,3 +1,38 @@
+> # ⚠ REFUTADO em 06-09-2026, ANTES de correr
+>
+> O adversario reproduziu todos os numeros do §2 e do §3 a tres decimais — a
+> aritmetica esta certa. E depois mostrou que **a premissa fisica esta errada na
+> metade que carrega o teste**, e que a celula «com potencia» nao tem potencia.
+>
+> **1 · O fosso nao mede estrutura.** `resto − nu2021` em VH orb147 mexe-se
+> **0,887 dB DENTRO da estacao sem folha** — Nov +1,890, Jan +2,645, Mar +1,758 —
+> com a estrutura constante. E 90 % do MDE da celula primaria. Uma grandeza que
+> varia isso enquanto a estrutura nao muda **nao esta a medir a estrutura**: esta
+> a medir cobertura do solo (erva de inverno contra lavra humedecida).
+>
+> **2 · O tecto estava ao dobro.** Eu usei `resto − nu2021` (+2,302). O que a
+> unidade pode percorrer mede-se directamente e ja inclui a diluicao dos 45 %:
+> **`zona0 − nu2021` = +1,164 dB (orb147) e +0,725 (orb125)**. O racio de 2,3×
+> passa a **1,12× medido**, e o bootstrap da **P(racio < 1) = 0,17**.
+>
+> **3 · A celula falha o meu proprio criterio de admissao.** O §3 admite uma
+> celula se o tecto exceder o MDE por mais do que a incerteza do tecto. Em bruto:
+> 1,31 contra sd 0,733 = 1,8 sd, admitida. Corrigido: **0,17 contra 0,541 = 0,32
+> sd**. Falha.
+>
+> **4 · E o veredicto ja esta decidido antes de correr.** O rotulo de modo comum
+> dispara em VH orb147 a **+0,841 dB** — 72 % de todo o alcance corrigido. Pelo
+> §5, o resultado sai rotulado «modo comum nao separavel» faca o que fizer.
+>
+> **Correr isto produzia uma linha predeterminada e nao interpretavel.**
+>
+> E ha uma armadilha de redaccao que ele apanhou e que eu nao tinha visto: com
+> 33 % de potencia a 50 % de remocao, o teste cai quase sempre na linha 2 — que
+> tem a palavra **DECLINIO** em maiusculas. **Um teste cuja saida quase certa e
+> uma celula que nomeia a hipotese e a forma B com a polaridade invertida.**
+>
+> **Estatuto: REFUTADO. Nao correr.** Ver AUD-16.
+
 # CRITÉRIO P3 — declínio ou arranque, nas mesmas cenas de inverno
 
 **06-09-2026, antes de correr. Vai a adversário e espera-se pela resposta.**
