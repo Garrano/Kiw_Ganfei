@@ -442,6 +442,23 @@ if os.path.exists(IDX):
         AVISOS.append("o índice da inteligência não regenerou: %s"
                       % (err.strip()[-120:] or "?"))
 
+# ── 13 · o registo do que se sabe estar inexacto
+#
+#   Um ficheiro errado que ninguem marcou volta a ser lido. Isto nao os apaga —
+#   nomeia-os, com a gravidade e a accao, e a cadeia repete-os a cada turno.
+INX = os.path.join(AQUI, "INEXACTOS.csv")
+if os.path.exists(INX):
+    import csv as _csv
+    _r = [x for x in _csv.DictReader(io.open(INX, encoding="utf-8")) if x.get("id")]
+    _bl = [x for x in _r if x.get("gravidade") == "BLOQUEANTE"]
+    diz("  inexactos        %d registados · %d bloqueantes" % (len(_r), len(_bl)))
+    for x in _bl:
+        FALHAS.append("INEXACTO BLOQUEANTE %s: %s — %s"
+                      % (x["id"], x["ficheiro"], x["accao"]))
+    for x in [y for y in _r if y.get("gravidade") == "ALTA"]:
+        AVISOS.append("inexacto %s: %s — %s"
+                      % (x["id"], x["ficheiro"], x["accao"]))
+
 # ── modo completo: volta a correr o rastreio
 if COMPLETO:
     diz()
