@@ -7,3 +7,10 @@ AF-05,afirmada,"Nao foi esquecimento: ninguem encomendou ensaio de PSA porque a 
 AF-06,pretendida,"O foco oriental e copado em declinio e nao copado arrancado e re-armado",p1_pergola_oriental_2025.py,inferencia,,
 AF-07,pretendida,"Houve UM acontecimento e nao dois",p2_onze_cenas.py,inferencia,,
 AF-08,pretendida,"O radar confirma o acontecimento de 2025-26 e fecha a condicao 2 do portao",sar_v3.py,inferencia,,
+AF-09,afirmada,"A Zona 0 da exploracao sao as valvulas 8, 9 e 10 -- B2 mais Erica Novo -- e corresponde ao foco OCIDENTAL. A mascara chamada zona0 esta no foco ORIENTAL, a 516 m",TESTEMUNHO_GESTOR_2026-09-06.md,testemunho,gestor da exploracao,2026-09-06
+AF-10,afirmada,"As valvulas 2,3,4 e 5 do B1 foram cortadas a base e reenxertadas duas vezes: summerkiwi cortado em 2016 e enxertado com enza gold ate ~2020, cortado outra vez e enxertado com erica. O B1 nao tem linha de base",TESTEMUNHO_GESTOR_2026-09-06.md,testemunho,gestor da exploracao,2026-09-06
+AF-11,afirmada,"A deteccao de Phytophthora sojae de 2023 nunca foi confirmada por laboratorio de diagnostico -- existe so na metagenomica Becrop",TESTEMUNHO_GESTOR_2026-09-06.md,testemunho,gestor da exploracao,2026-09-06
+AF-12,afirmada,"Houve aplicacao de tricodermas e humus liquido entre a amostragem de 25-08-2023 e a de 04-02-2024, e e a causa declarada da melhoria entre os dois relatorios Becrop",TESTEMUNHO_GESTOR_2026-09-06.md,testemunho,gestor da exploracao,2026-09-06
+AF-13,afirmada,"O problema esta em B2 e B3. A analise Becrop e da valvula 27 = B3C3",TESTEMUNHO_GESTOR_2026-09-06.md,testemunho,gestor da exploracao,2026-09-06
+AF-14,afirmada,"Houve plantacoes na exploracao entre 2008 e 2025",TESTEMUNHO_GESTOR_2026-09-06.md,testemunho,gestor da exploracao,2026-09-06
+AF-15,pretendida,"O talhao do nu2021 -- a ancora baixa de todo o caso -- e plantacao nova e nao chao lavrado",TESTEMUNHO_GESTOR_2026-09-06.md,testemunho,,
