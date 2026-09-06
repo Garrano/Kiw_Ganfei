@@ -1,3 +1,35 @@
+> # ⚠ REFUTADA em 06-09-2026, antes de ler. E a conjectura tambem.
+>
+> O adversario passou os tres defeitos bloqueantes da v2 pela pergunta «a
+> simplificacao radical teria evitado isto?» — e a resposta e **nao, tres em
+> tres**. Recorrem todos nesta hipotese, na mesma especie:
+>
+> · o §8.3/§8.4 nao tinha limiar para a serie que mandava ler -> **esta nao diz
+>   se o posto e por orbita ou sobre a media** (vale ate 4 posicoes);
+> · o §8.7 citava evidencia do estimador que abolia -> **o «rank 61 de 2421» e
+>   do `este` e foi atribuido a `zona0`** (IX-07);
+> · o §8.7 nao declarava nivel ou contraste -> **«posto empirico entre os onze
+>   anos» nao diz de que** (IX-03(c) literal, no documento escrito para o fechar).
+>
+> **A minha conjectura estava errada.** O defeito nao e a elaboracao: e a
+> especificacao incompleta, e essa e independente do tamanho do desenho. E ao
+> simplificar perdi proteccoes que funcionavam — o portao de abortar, o rotulo
+> de modo comum, e a escala do MDE.
+>
+> **A parte verdadeira, e e a regra que fica:** as constantes **derivadas de uma
+> medicao** aguentaram todas — o VV pelo tecto de copado, o S1A pela cobertura da
+> constelacao. As **asseridas** partiram todas, na v1, na v2 e aqui. A regra util
+> nao e «menos constantes» — e **nenhuma constante sem a medicao que a fixa, e
+> nenhuma escolha por escrever**.
+>
+> E o proprio posto nao e valido: ACF(1) de **+0,23 e +0,43** no controlo quebram
+> a permutabilidade dos onze anos, e sobre o **controlo** — onde ninguem alega
+> acontecimento — a regra do posto atinge o extremo em **31 de 72** especificacoes
+> defensaveis. O comparador `resto` esta ele proprio no **posto 11 de 11** no ano
+> a testar, a +0,253 e +0,230 dB da media da base.
+>
+> **Estatuto: REFUTADA. Nao ler contra isto.** Ver AUD-13 e IX-06/IX-07.
+
 # HIPÓTESE — uma leitura mínima do SAR. **Não é um critério aprovado.**
 
 > ## ⚠ ISTO É UMA HIPÓTESE, E ESTÁ REGISTADA COMO TAL
