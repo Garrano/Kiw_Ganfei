@@ -6,3 +6,4 @@ AF-04,afirmada,"O sinal e a ordenacao sobrevivem a 43 corridas aninhadas",multiv
 AF-05,afirmada,"Nao foi esquecimento: ninguem encomendou ensaio de PSA porque a sintomatologia nao era compativel. Decisao clinica.",C4_ADENDA_RAZAO_2026-09-03.md,testemunho,gestor da exploracao,2026-09-01
 AF-06,pretendida,"O foco oriental e copado em declinio e nao copado arrancado e re-armado",p1_pergola_oriental_2025.py,inferencia,,
 AF-07,pretendida,"Houve UM acontecimento e nao dois",p2_onze_cenas.py,inferencia,,
+AF-08,pretendida,"O radar confirma o acontecimento de 2025-26 e fecha a condicao 2 do portao",sar_v3.py,inferencia,,

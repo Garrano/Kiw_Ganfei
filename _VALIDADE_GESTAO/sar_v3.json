@@ -1,0 +1,210 @@
+{
+ "criterio": "CRITERIO_SAR_v3.md + CRITERIO_SAR_v3_ADENDA.md",
+ "limiar_modo_comum_ASSERIDO": 0.5,
+ "portao": {
+  "125": {
+   "delta": 0.253,
+   "mde": 0.5295,
+   "passa": true
+  },
+  "147": {
+   "delta": 0.2303,
+   "mde": 0.4102,
+   "passa": true
+  },
+  "media": {
+   "delta": 0.2416,
+   "mde": 0.4487,
+   "passa": true
+  }
+ },
+ "modo_comum": {
+  "125": {
+   "anomalia_referencia": 0.638,
+   "anomalia_resto": 0.891,
+   "comum": 0.764,
+   "dispara": true
+  },
+  "147": {
+   "anomalia_referencia": 0.659,
+   "anomalia_resto": 0.889,
+   "comum": 0.774,
+   "dispara": true
+  }
+ },
+ "celulas": [
+  {
+   "comparador": "resto",
+   "orbita": "125",
+   "n_base": 10,
+   "contraste_trat": -1.5957,
+   "media_base": -0.8245,
+   "sd_base": 0.3693,
+   "delta": -0.7712,
+   "mde": 1.2438,
+   "distingue": false,
+   "posto": 1,
+   "de": 11,
+   "base": "n=10 (com o meio-inverno de 2015-16)"
+  },
+  {
+   "comparador": "resto",
+   "orbita": "147",
+   "n_base": 10,
+   "contraste_trat": -1.1623,
+   "media_base": -1.0289,
+   "sd_base": 0.4786,
+   "delta": -0.1334,
+   "mde": 1.6117,
+   "distingue": false,
+   "posto": 5,
+   "de": 11,
+   "base": "n=10 (com o meio-inverno de 2015-16)"
+  },
+  {
+   "comparador": "resto",
+   "orbita": "media",
+   "n_base": 10,
+   "contraste_trat": -1.379,
+   "media_base": -0.9267,
+   "sd_base": 0.3756,
+   "delta": -0.4523,
+   "mde": 1.2648,
+   "distingue": false,
+   "posto": 2,
+   "de": 11,
+   "base": "n=10 (com o meio-inverno de 2015-16)"
+  },
+  {
+   "comparador": "referencia",
+   "orbita": "125",
+   "n_base": 10,
+   "contraste_trat": -1.5288,
+   "media_base": -1.0105,
+   "sd_base": 0.2928,
+   "delta": -0.5183,
+   "mde": 0.9859,
+   "distingue": false,
+   "posto": 1,
+   "de": 11,
+   "base": "n=10 (com o meio-inverno de 2015-16)"
+  },
+  {
+   "comparador": "referencia",
+   "orbita": "147",
+   "n_base": 10,
+   "contraste_trat": -1.2422,
+   "media_base": -1.339,
+   "sd_base": 0.4685,
+   "delta": 0.0969,
+   "mde": 1.5779,
+   "distingue": false,
+   "posto": 8,
+   "de": 11,
+   "base": "n=10 (com o meio-inverno de 2015-16)"
+  },
+  {
+   "comparador": "referencia",
+   "orbita": "media",
+   "n_base": 10,
+   "contraste_trat": -1.3855,
+   "media_base": -1.1748,
+   "sd_base": 0.3339,
+   "delta": -0.2107,
+   "mde": 1.1244,
+   "distingue": false,
+   "posto": 5,
+   "de": 11,
+   "base": "n=10 (com o meio-inverno de 2015-16)"
+  },
+  {
+   "comparador": "resto",
+   "orbita": "125",
+   "n_base": 9,
+   "contraste_trat": -1.5957,
+   "media_base": -0.835,
+   "sd_base": 0.3902,
+   "delta": -0.7608,
+   "mde": 1.3493,
+   "distingue": false,
+   "posto": 1,
+   "de": 10,
+   "base": "n=9 (sem o meio-inverno)"
+  },
+  {
+   "comparador": "resto",
+   "orbita": "147",
+   "n_base": 9,
+   "contraste_trat": -1.1623,
+   "media_base": -1.1045,
+   "sd_base": 0.4396,
+   "delta": -0.0577,
+   "mde": 1.5204,
+   "distingue": false,
+   "posto": 5,
+   "de": 10,
+   "base": "n=9 (sem o meio-inverno)"
+  },
+  {
+   "comparador": "resto",
+   "orbita": "media",
+   "n_base": 9,
+   "contraste_trat": -1.379,
+   "media_base": -0.9698,
+   "sd_base": 0.3712,
+   "delta": -0.4093,
+   "mde": 1.2839,
+   "distingue": false,
+   "posto": 2,
+   "de": 10,
+   "base": "n=9 (sem o meio-inverno)"
+  },
+  {
+   "comparador": "referencia",
+   "orbita": "125",
+   "n_base": 9,
+   "contraste_trat": -1.5288,
+   "media_base": -1.0459,
+   "sd_base": 0.2869,
+   "delta": -0.4828,
+   "mde": 0.9922,
+   "distingue": false,
+   "posto": 1,
+   "de": 10,
+   "base": "n=9 (sem o meio-inverno)"
+  },
+  {
+   "comparador": "referencia",
+   "orbita": "147",
+   "n_base": 9,
+   "contraste_trat": -1.2422,
+   "media_base": -1.4205,
+   "sd_base": 0.4151,
+   "delta": 0.1783,
+   "mde": 1.4355,
+   "distingue": false,
+   "posto": 8,
+   "de": 10,
+   "base": "n=9 (sem o meio-inverno)"
+  },
+  {
+   "comparador": "referencia",
+   "orbita": "media",
+   "n_base": 9,
+   "contraste_trat": -1.3855,
+   "media_base": -1.2332,
+   "sd_base": 0.2949,
+   "delta": -0.1522,
+   "mde": 1.02,
+   "distingue": false,
+   "posto": 5,
+   "de": 10,
+   "base": "n=9 (sem o meio-inverno)"
+  }
+ ],
+ "_produtor": {
+  "script": "sar_v3.py",
+  "quando": "2026-09-06 11:49",
+  "commit": null
+ }
+}
