@@ -204,6 +204,75 @@ erro em vez de o conter.*
 
 ---
 
+### S4 · Uma decisão fechada não se reabre por cálculo próprio · **executável**
+Métodos abandonados, instrumentos declarados sem poder e questões encerradas por
+testemunho vivem em `DECISOES_FECHADAS.csv`, com a coluna **`nao_reabrir_sem`** a
+dizer o que seria preciso para os mexer. A `certificar.py` lista-as ao fim de
+cada turno.
+
+**A C8 indexa hipóteses; esta indexa decisões, e é a outra metade da forma H.**
+A diferença importa: uma hipótese fechada tem um resultado, e reabri-la produz
+um resultado igual. Uma decisão fechada tem um *custo já pago* — cinco
+tentativas de georreferenciamento, por exemplo — e reabri-la produz o mesmo
+falhanço com mais horas em cima.
+
+*O que a força:* a 06-09 reabri o georreferenciamento das válvulas, abandonado
+ao fim de cinco tentativas e fechado por testemunho ao nível da letra do sector.
+Encontrei uma discrepância de 400 m entre as coordenadas que **nós** atribuímos
+e a tabela do gestor, e transformei-a na pergunta 1 de um email — sem reparar
+que as coordenadas eram o lado fraco, que a decisão de as abandonar já estava
+tomada, e que nenhuma pergunta viva dependia delas.
+
+*A pergunta que trava isto, e é de uma linha:* **o que é que esta pergunta
+desbloqueia?** Se a resposta não muda nada a jusante, a discrepância regista-se
+e não se pergunta. Uma pergunta a um terceiro tem um custo que a nossa
+curiosidade não paga.
+
+### C11 · Uma carta enuncia; não interroga · **executável**
+Nenhuma prancha que sai desta casa faz uma pergunta escrita, e nenhuma fala do
+nosso trabalho. **A pergunta vive no corpo do email; a carta serve-a tornando-a
+mais clara** — é esse o papel dela, e não funciona sozinha. Quando a prancha tem
+mesmo de colher uma resposta, o dispositivo é **forma, não frase**: uma caixa
+vazia junto de um rótulo lê-se sem língua nenhuma e sem instruções.
+
+Quatro condições, e a `cartas.py` verifica-as sobre o **texto desenhado** — lido
+por `ast`, só o que entra em `.text()` e `.annotate()`, para que um comentário
+possa explicar a regra sem a violar:
+
+1. **Nenhuma interrogação desenhada** — nem no título, nem na legenda.
+2. **Título nominal, no registo institucional da família**: `GANFEI · <sintagma>`.
+   Um título é uma designação, não uma fala.
+3. **Nada do nosso processo na prancha** — método, ressalva, estatuto,
+   vocabulário interno. Quem recebe a carta não tem de saber como trabalhamos
+   para a ler. Notas, quando precisas, em língua corrente e curtas.
+4. **FONTES declaradas** em estilo próprio — satélite, espectro, altimetria,
+   parcelário. É o que separa uma carta de uma figura.
+
+*Porquê executável, e não prosa:* foi-me dito por escrito que as perguntas
+pertencem ao corpo do email. Corrigi uma prancha — **e a seguir voltei a pôr um
+título interrogativo e um bloco de pergunta literal na prancha seguinte.** A
+mesma falta, depois de me ser dita. Uma regra que só vive em prosa cumpre-se
+quando dá jeito, e esta não deu.
+
+*E tem bateria própria, por C2:* `cartas.py --auto-teste` — cinco casos em que
+cada condição é a única razão de reprovação, mais um controlo positivo. A
+`certificar.py` corre a bateria **antes** da verificação, e falha se ela perder
+poder.
+
+*O falso positivo que ensinou o critério:* a primeira versão reprovou a P12 por
+causa de `N?` em itálico. Isso não é uma pergunta ao leitor — é o **rótulo
+interrogado**, a convenção com que a cartografia geológica e a arqueológica
+qualificam um atributo como inferido há um século. Uma frase que **fecha** em
+`?` interroga; um `?` colado a um rótulo curto qualifica. **Eu é que estava
+errado, não a prancha** — e uma cláusula que trava trabalho válido acaba
+desligada, que é a mesma razão por que o testemunho tem outra barra na C10.
+
+*O que a C11 não vê:* o PNG. Corpo pequeno demais, sobreposição, rótulo cortado
+— nada disso é apanhado. **A prancha continua a ter de ser olhada depois de
+gerada.**
+
+---
+
 ## 4 · Onde isto deixa o processo
 
 | forma | fechada por | estado |
@@ -218,6 +287,7 @@ erro em vez de o conter.*
 | H · repetir o que existe | C8, **S1** | **executável** |
 | — · número sem origem rastreável | **S2** | **executável** |
 | E · cabeçalho de ficheiro não alcançado | **S3** | prosa |
+| — · a peça que sai fala de nós em vez do terreno | **C11** | **executável** |
 
 **A forma G continua aberta, e é honesto dizê-lo.** Não conheço maneira
 mecânica de apanhar uma leitura minha errada — a ponta lida 600 px ao lado, os

@@ -78,8 +78,8 @@ degrau».
 **Sinal de alarme:** a frase e a prova usam o mesmo sensor.
 **Antídoto:** condição 2. *Um NDVI não se confirma com outro NDVI.*
 
-### B · A unidade não era o que o nome dizia *(quatro)*
-A designação dos dois focos invertida · a AOI do outro lado do rio, aceite porque
+### B · A unidade não era o que o nome dizia *(cinco)*
+A designação dos dois focos invertida, e **cinco vezes** · a AOI do outro lado do rio, aceite porque
 a pasta se chamava `sentinel_b1` · a distância de «1,06 km», que media uma
 entidade inexistente · «blocos vizinhos 2 a 4× piores», desmatados em 2024.
 **O caso mais caro desta família, e ainda vivo: HÁ DOIS «B1».**
@@ -92,6 +92,27 @@ entidade inexistente · «blocos vizinhos 2 a 4× piores», desmatados em 2024.
 Retirar a AOI **não retira o sector**. Confundi os dois e, durante toda a série de peças, chamei ao sector «o bloco sudoeste» e nunca o desenhei — enquanto a P01 dizia «44 hectares declarados» e mostrava um mapa de 30,3. **A diferença era exactamente o B1.** Foi preciso o gestor dizê-lo duas vezes.
 
 E a razão de fundo não era distracção: **a AOI de 2 × 1 km exclui o B1 por construção**, e toda a figura desenhada em células de máscara herda essa cegueira sem o dizer. Uma janela é uma escolha; quando uma frase abrange mais do que a janela, a frase e o desenho deixam de bater certo.
+
+> **A ORIGEM É O FOCO NASCENTE. Fixado por testemunho em 06-09-2026, e não se
+> volta a derivar.**
+>
+> `FOCO_ESTE` (E530977 N4655117), sector B3, e é onde a máscara `zona0` está —
+> a 26 m do centróide. **Não é o foco poente.**
+>
+> A designação destes dois focos já se inverteu **cinco vezes**. A quinta foi
+> minha, a 06-09, e vale a pena saber como: ninguém me disse «a origem é
+> ocidental». **Deduzi-o** — o gestor deu a tabela válvula→sector, as válvulas
+> 8, 9 e 10 são B2, e B2 *nas coordenadas que nós próprios atribuímos às
+> válvulas* fica a poente. Uma inferência sobre um georreferenciamento que já
+> tinha morrido cinco vezes, escrita debaixo do cabeçalho de um documento de
+> testemunho — o que lhe emprestou um estatuto que ela não tinha. **Um ficheiro
+> chamado `TESTEMUNHO_*` não santifica o que se escreve lá dentro:** só as
+> frases que são mesmo de quem esteve lá são de tipo 1.
+>
+> Fica de pé, e é pergunta de email e não de cálculo: as válvulas que o gestor
+> chama Zona 0 caem a 35, 98 e 171 m do foco **poente**, e a 487, 400 e 325 m da
+> origem. Meio quilómetro. Ou as coordenadas são nossas e estão erradas, ou a
+> tabela dele está. Ver `TESTEMUNHO_ANALISTA_2026-09-06.md` e `IX-18`.
 
 **Sinal de alarme:** o nome do ficheiro, da pasta ou da coluna está a fazer
 trabalho de prova. Ou: a área que o texto afirma não é a área que o mapa mostra.
@@ -204,6 +225,13 @@ Custaram horas, e nenhuma é interessante.
 - **Heredocs comem barras invertidas.** Um `\n` dentro de uma cadeia Python
   escrita por heredoc chega como quebra de linha real e parte o ficheiro.
   **Usar as ferramentas Write/Edit, ou `chr(10)`.** Nunca escapes.
+  > **Esta entrada já cá estava, e a 06-09 parti dois ficheiros com ela — a
+  > `P13` e a `cartas.py` — em menos de uma hora.** A prosa não pegou, e a regra
+  > passa a ser categórica, sem excepção de conveniência: **um ficheiro `.py`
+  > escreve-se com `Write`.** Não com heredoc, não com `python -c`, não com
+  > `sed`. Se a alteração é pequena de mais para justificar reescrever o
+  > ficheiro, é pequena de mais para justificar arriscar corrompê-lo: `Edit`.
+  > Heredoc só para o que nunca leva escapes — correr, ler, listar.
 - **Ao fugir das barras invertidas, não escrever em ASCII.** Uma peça saiu com
   «Ha 91 maneiras», «chao», «ja era baixo» — reintroduzindo o defeito que a
   sequência começou por corrigir.
@@ -216,6 +244,31 @@ Custaram horas, e nenhuma é interessante.
 - **Contar o que a saída diz, não o que se espera.** Um multiverso imprimiu
   «utilizáveis: 1 de 4» e o veredicto por baixo dizia «não inverte em nenhuma
   reconstrução».
+
+---
+
+## 7-A · AS DECISÕES JÁ FECHADAS — `DECISOES_FECHADAS.csv`
+
+**Ler antes de propor trabalho.** A `certificar.py` lista-as ao fim de cada
+turno, e por isso não há desculpa para não as ter visto.
+
+A `HIPOTESES_FECHADAS.md` indexa **hipóteses** já testadas. Isto indexa a outra
+metade: **decisões** — métodos abandonados, instrumentos declarados sem poder,
+questões encerradas por testemunho. É a mesma forma H, e a 06-09 custou meia
+sessão: **reabri o georreferenciamento das válvulas**, que tinha sido abandonado
+ao fim de cinco tentativas e fechado por testemunho ao nível da letra do sector,
+e transformei-o em pergunta 1 de um email ao gestor. Ninguém mo pediu; ninguém o
+tinha reaberto.
+
+**O sinal de alarme é este:** estou a construir uma peça, ou a redigir uma
+pergunta, sobre uma discrepância que descobri sozinho. Antes de a escrever —
+*isto já foi decidido?* E logo a seguir: *o que é que esta pergunta desbloqueia?*
+Se a resposta não muda nada a jusante, a discrepância **regista-se e não se
+pergunta**.
+
+**Uma decisão fechada só se reabre pelo que a coluna `nao_reabrir_sem` diz.**
+Nunca por um cálculo nosso a discordar dela — foi exactamente assim que a
+designação dos focos se inverteu pela quinta vez.
 
 ---
 

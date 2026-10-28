@@ -1,9 +1,9 @@
 {
- "n": 122,
+ "n": 120,
  "nota": "roquete C10: so desce.",
  "_produtor": {
   "script": "estatuto.py",
-  "quando": "2026-09-06 00:23",
+  "quando": "2026-09-06 12:18",
   "commit": null
  }
 }

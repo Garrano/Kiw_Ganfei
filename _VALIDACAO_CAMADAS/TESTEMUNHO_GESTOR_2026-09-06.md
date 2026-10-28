@@ -24,7 +24,29 @@ Total 449 275 m². **Isto fecha, por testemunho, a lista de letras de sector por
 válvula que estava aberta desde 04-09** — e fecha-a sem o georreferenciamento
 que morreu em cinco tentativas.
 
-## 2 · A máscara chamada `zona0` NÃO é a Zona 0. **Retirada de nome.**
+## 2 · ~~A máscara chamada `zona0` NÃO é a Zona 0~~ — **SECÇÃO RETIRADA**
+
+> **RETIRADA em 06-09-2026, no mesmo dia em que foi escrita.** O analista fixou
+> a origem por testemunho — *«its B the eastern most part»* — e a origem é o
+> **foco NASCENTE**, que é exactamente onde a máscara `zona0` está (26 m do
+> centróide). **A máscara sempre esteve certa. A inversão foi minha.**
+>
+> Como aconteceu, e é a forma G pela quinta vez: eu não recebi «a origem é
+> ocidental» de ninguém. **Inferi-a** da tabela de válvulas do gestor — 8, 9,
+> 10 → B2 → e B2, *nas coordenadas que nós próprios atribuímos às válvulas*,
+> fica a poente. Isso não é testemunho: é uma inferência minha sobre um
+> georreferenciamento que já tinha morrido cinco vezes, e escrevi-a debaixo do
+> cabeçalho de um testemunho, o que lhe deu um estatuto que ela não tinha.
+>
+> **O que sobrevive desta secção:** a discrepância, que é real e continua
+> aberta. As válvulas que o gestor chama Zona 0 caem a 35, 98 e 171 m do foco
+> **poente** e a 487, 400 e 325 m da origem. Ou a posição que atribuímos às
+> válvulas está trocada, ou a tabela dele. **É pergunta de email, não de
+> cálculo** — e é agora a pergunta 1.
+>
+> O texto abaixo fica como estava, por não se apagar o que se retirou.
+
+
 
 > **Gestor: «zone 0 = valves 8, 9, 10».** E, sobre as análises de solo de 2025:
 > *«de uma zona a qual nós chamamos de Zona 0, onde tudo começou, ou seja, no

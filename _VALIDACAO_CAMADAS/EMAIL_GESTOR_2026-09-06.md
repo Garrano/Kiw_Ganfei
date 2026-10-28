@@ -1,14 +1,26 @@
 # Email ao gestor — 06-09-2026
 
-**Assunto:** Ganfei — quatro perguntas curtas, e três mapas para confirmar
+**Assunto:** Ganfei — cinco perguntas curtas, e um mapa
 
-**Anexos previstos:**
-| # | ficheiro | o que valida |
-|---|---|---|
-| A | `P11_base_ganfei.png` | os cinco sectores com os nomes da exploração |
-| B | `P12_camada_rega.png` | as válvulas por sector — a tabela que nos enviou, no terreno |
-| C | `P13_qual_e_a_zona0.png` | qual dos dois focos é a Zona 0 |
-| D | `P14_perda_de_copado.png` | os 2,20 ha que perderam copado, e onde |
+**Anexo:** `P14_perda_de_copado.png` — serve as perguntas 2 a 4 e a confirmação.
+
+> **Nota de trabalho, não vai no email.** Este texto tinha quatro perguntas e
+> quatro mapas. Ficou em três e um, e o que saiu vale mais do que o que ficou:
+>
+> · **a pergunta do B4 (0,19 ha)** — são **15 fragmentos** de ~130 m², uma a duas
+>   células cada. Serrilhado de bordo, não fenómeno.
+> · **a pergunta dos 0,65 ha «fora da partição»** — são **23 manchas** dispersas,
+>   a maior 0,12 ha, todas coladas às bordas do B3 e do B4 a 30-90 m das válvulas
+>   15, 16 e 17. Não há talhão nenhum ali: é a **nossa** fronteira mal traçada, e
+>   perguntá-lo era pedir-lhe que explicasse um defeito nosso.
+> · **a `P15`** — a prancha inteira dizia «isto é o B3», que a `P11` já rotula e a
+>   `P14` já detalha.
+> · **as perguntas 1 e 2 eram a mesma pergunta**, partida em duas por mim.
+> · **a `P11` como anexo separado** — e há uma segunda razão, apontada pelo
+>   analista: **a P11 nunca desenhou as válvulas**, só listava os intervalos por
+>   sector no texto da legenda. Não podia servir a frase «entre as válvulas 13 e
+>   14». Depois de as pôr na `P14`, o que lhe restava de próprio eram as áreas
+>   por sector, que cabem numa linha de texto.
 
 ---
 
@@ -19,97 +31,99 @@ semanas e que nós não conseguíamos resolver por cálculo — em particular a
 correspondência entre válvulas e sectores, e a história de enxertia do B1, que
 explica um comportamento na série de imagens que nos andava a fazer confusão.
 
-Ficaram-nos **quatro perguntas**, todas curtas. Junto três mapas para
-confirmação, porque em dois casos a resposta é mais fácil a apontar do que a
-escrever.
+Ficaram-nos **cinco perguntas** — as duas primeiras são de uma linha, e são as
+mais urgentes. Junto um mapa, que traz os sectores com os nomes que a exploração
+usa, as válvulas de 6 a 17, e as áreas de que falamos abaixo.
 
 ---
 
-## 1 · Qual dos dois talhões é a Zona 0? *(mapa C)*
+## 1 · A raiz que foi guardada da planta arrancada — ainda existe?
 
-Disse-nos que a **Zona 0 são as válvulas 8, 9 e 10** — B2 mais Erica Novo.
+Na visita de 4 de Agosto foi arrancada uma planta e guardou-se material de raiz,
+com suspeita de **podridão branca (*Rosellinia*)**. Precisamos de saber:
 
-Nas imagens de satélite vemos **duas** manchas de quebra, separadas por cerca de
-meio quilómetro: uma a **poente**, outra a **nascente**. Precisamos de confirmar
-qual delas é a Zona 0 «onde tudo começou».
+**Essa amostra de raiz ainda existe? Onde está guardada, e desde quando? Chegou
+a ser enviada para análise?**
 
-**No mapa C assinalámos as duas.** Bastava dizer-nos qual é, ou riscar a que não
-é.
+*(É a pergunta mais barata e mais decisiva que temos. O diagnóstico de
+*Rosellinia* assenta, neste momento, na observação a olho de **uma** planta — e
+a literatura é clara em que a identificação visual desta podridão falha com
+frequência, porque os sintomas se confundem com os de outras podridões de raiz e
+com stress do solo. Uma análise de ADN a essa raiz confirma ou exclui numa
+semana. E é material biológico: degrada-se enquanto espera.)*
 
-*(Porque perguntamos: temos um ficheiro interno com o nome trocado, e queremos
-corrigi-lo antes de escrever seja o que for.)*
+## 2 · Qual das duas manchas apareceu primeiro?
 
-## 2 · O talhão a nascente foi arrancado?
+O Senhor escreveu-nos que a **Zona 0 são as válvulas 8, 9 e 10**. Nas imagens de
+satélite vemos **duas** manchas de quebra, a cerca de meio quilómetro uma da
+outra: uma junto às **válvulas 8 a 10** (B2 e Erica Novo), outra no **B3**, junto
+às **válvulas 13 e 14**.
 
-É a pergunta mais importante que temos, e nenhum dos instrumentos que usámos a
-consegue responder.
+**Qual delas foi a primeira a aparecer, e em que ano?**
 
-Nas imagens, o talhão a **nascente** aparece **sem copado** desde meados de 2025.
-O que não conseguimos distinguir é entre:
+*(Perguntamos porque é onde tem de ir a primeira colheita de amostras: o sítio
+onde começou é o que diz qual é a causa. As duas manchas são reais e ambas estão
+nos sectores que o Senhor indicou; o que não sabemos é a ordem.)*
 
-- **as plantas morreram ou foram arrancadas**, mas a estrutura (postes e arames)
-  ficou de pé; ou
-- **a instalação foi retirada** — postes incluídos.
+## 3 · Estes 2,20 ha — foram arrancados, ou morreram? *(a vermelho no mapa)*
 
-**Foi arrancado? Quando? Ficou alguma coisa de pé? Replantou-se?**
-
-*(Tentámos responder a isto com LiDAR, com radar e com ortofotos. O LiDAR mede
-folha, não estrutura; o radar não tem resolução para esta parcela. A resposta
-tem de vir de quem lá esteve.)*
-
-## 3 · Estes 2,20 ha — o que aconteceu? *(mapa D)*
+É a pergunta que mais pesa no relatório, e nenhum instrumento nosso a responde.
 
 Medimos, por altimetria aérea cruzada com imagem de satélite, que **2,20 hectares
-tinham copado em Julho de 2024 e não tinham nenhum em Julho de 2025**.
+tinham copado em Julho de 2024 e não tinham nenhum em Julho de 2025**. Estão
+assinalados a vermelho, e ficam sobretudo no **B3**:
 
-Não são o mesmo que as áreas que já estavam sem plantação — essas separámo-las, e
-são outras 1,57 ha que nunca tiveram copado nesta década.
+| sector | perdeu copado |
+|---|---|
+| **B3** | **1,02 ha** |
+| **B2** | **0,33 ha** |
+| Erica Novo | 0,01 ha |
 
-**No mapa D estão assinalados**, e repartidos por sector:
+**O que precisamos de saber é o que aconteceu nesses talhões: as plantas
+morreram, ou foram arrancadas? E se foram arrancadas, quando, e replantou-se
+alguma coisa?**
 
-| sector | perdeu copado | nunca teve |
-|---|---|---|
-| **B3** | **1,02 ha** | 0,91 ha |
-| B2 | 0,33 ha | — |
-| **B4** | **0,19 ha** | — |
-| Erica Novo | 0,01 ha | — |
-| fora da partição | 0,65 ha | 0,66 ha |
+*(Porque não conseguimos responder sozinhos: nas imagens de satélite, uma planta
+morta e uma planta arrancada dão exactamente o mesmo — o verde desaparece nos
+dois casos. O que as separaria seriam as fiadas de postes e arames, que ficam de
+pé se só a planta se perdeu; tentámos lê-las na fotografia aérea de Inverno, e o
+terreno lavrado engana o método, porque os regos também aparecem em linhas.)*
 
-Arranque, mortalidade, replantação, obra?
+**E é a diferença que mais pesa no que lhe vamos escrever.** Se parte destes
+2,20 ha foi arrancada por decisão vossa, então não é doença a avançar — e nós
+estaríamos a contá-la como se fosse.
 
-**Duas coisas nesta tabela que gostávamos de perceber:**
+## 4 · A parcela dentro do B3, entre as válvulas 13 e 14 *(a cinzento no mapa)*
 
-- o **B4** aparece com 0,19 ha, e não estava na lista de sectores com problema
-  que nos indicou (B2 e B3). É a mesma causa, ou outra coisa?
-- **0,65 ha ficam fora dos cinco sectores** que temos delimitados — provavelmente
-  porque a nossa partição não cobre tudo. Há mais algum talhão nessa zona?
+Há **1,57 ha** que nas nossas imagens nunca tiveram copado nesta década. A maior
+parte é **uma parcela de 1,04 ha dentro do B3, entre as válvulas 13 e 14**, que
+aparece lavrada em 2021.
 
-## 4 · Duas perguntas de uma linha
+**Essa parcela chegou a ser plantada? Em que ano?**
 
-**a)** A parcela que nas nossas imagens aparece **lavrada em 2021** — chegou a ser
-**plantada**? Em que ano?
+*(Perguntamos porque a usámos como termo de comparação de «terreno sem
+plantação». Nas imagens de 2025 já se vêem fiadas instaladas. Se foi plantada, o
+termo de comparação não serve e temos de o substituir — e isso mexe em várias
+contas que já fizemos.)*
 
-*(Perguntamos porque a usámos como referência de «solo sem plantação», e nas
-imagens de 2025 aparecem fiadas instaladas. Se foi plantada, a referência não
-serve e temos de a substituir.)*
+## 5 · Os tricodermas e o húmus líquido
 
-**b)** A aplicação de **tricodermas e húmus líquido** que referiu foi só no sector
-da análise Becrop (**B3C3, válvula 27**), ou também noutros sectores? Em que
-datas, aproximadamente?
+A aplicação que referiu foi só no sector da análise Becrop (**B3C3, válvula 27**),
+ou também noutros? Em que datas, aproximadamente?
 
-*(É uma intervenção no meio do período que estamos a analisar, e se abrangeu os
-talhões afectados temos de a levar em conta antes de atribuir qualquer melhoria
+*(É uma intervenção no meio do período que estamos a analisar. Se abrangeu os
+talhões afectados, temos de a levar em conta antes de atribuir qualquer melhoria
 ou agravamento a outra causa.)*
 
 ---
 
-## E dois mapas para confirmar, se puder *(anexos A e B)*
+## E uma confirmação, se puder
 
-Não são perguntas — é só confirmação de que não trocámos nada:
-
-- **Mapa A** — os cinco sectores com os nomes que a exploração usa.
-- **Mapa B** — as válvulas dentro de cada sector, a partir da tabela que nos
-  enviou. Se alguma estiver fora do sítio, basta assinalar.
+Não é pergunta — é só para termos a certeza de que não trocámos nada. As áreas
+que atribuímos a cada sector são: **B1 12,6 ha · B2 11,4 ha · Erica Novo 5,5 ha ·
+B3 9,3 ha · B4 3,8 ha**, num total de 42,6 ha. Os limites e as válvulas estão
+desenhados no mapa. **Se algum nome, limite ou válvula estiver fora do sítio,
+basta assinalar por cima.**
 
 ---
 

@@ -47,8 +47,31 @@ import unicodedata
 
 D = r"C:/Users/Jackster2/Downloads"
 AQUI = os.path.dirname(os.path.abspath(__file__))
-ARVORES = ["_VALIDACAO_CAMADAS", "_VALIDADE_GESTAO", "ganfei_s2", "_MULTIVERSO"]
-EXT = (".py", ".md", ".json", ".csv")
+ARVORES = ["_VALIDACAO_CAMADAS", "_VALIDADE_GESTAO", "ganfei_s2", "_MULTIVERSO",
+           "_esquema_rega", "Rings"]
+# Os ficheiros SOLTOS na raiz das transferencias entram tambem, mas sem descer:
+# e onde estava o `Esquema de rega retificado.pdf`, a fonte que eu media mal.
+# Pos "." nas arvores primeiro e isso varreu tudo tres vezes — 428 acertos
+# repetidos para «parcelas». Uma busca ruidosa nao se le, e uma busca que nao se
+# le e igual a nao ter busca.
+RAIZ_SOLTOS = True
+# 06-09-2026 — ALARGADO, e a razao e concreta.
+#
+# A lista era (".py", ".md", ".json", ".csv"). Nesse dia falhei tres vezes o que
+# esta ferramenta existe para travar, e as TRES estavam em extensoes que ela nao
+# varria:
+#     parcelas_ent.wkt          a geometria de referencia de que eu precisava
+#     Esquema de rega ....pdf   a fonte que eu andava a medir mal
+#     _esquema_rega/*.png       recortes do scan, ja feitos a 04-09
+#
+# A ferramenta correu-me pelos dedos por causa de uma tupla. **A inteligencia
+# anterior deste caso vive em dados, nao em codigo** — e era exactamente essa a
+# metade que nao se procurava.
+EXT = (".py", ".md", ".json", ".csv",
+       ".wkt", ".geojson", ".gpkg", ".shp",         # vector
+       ".pdf", ".xlsx", ".txt",                     # documento
+       ".npy", ".npz", ".tif", ".tiff",             # raster e matriz
+       ".png", ".jpg", ".jpeg", ".svg")             # imagem e prancha
 IGNORA = ("__pycache__", "cache", ".git", "lidar", "ortos", "tiles", "Kiw_Ganfei")
 CRITERIO = re.compile(r"(?i)falsifica|hip[oó]tese fixa|crit[eé]rio.{0,40}antes|"
                       r"pr[eé]-registad|escrito antes de correr")
@@ -87,6 +110,41 @@ def main(termos):
         return 2
     alvos = [sem_acento(t) for t in termos]
 
+    # REGISTA A BUSCA. É isto que a torna um portão e não um conselho: a
+    # `certificar.py` falha se houver guião tocado num dia sem busca nenhuma.
+    # A ferramenta já existia a 04-09 e não impediu a repetição de 06-09,
+    # porque estava disponível e nada a obrigava a correr.
+    import csv as _csv
+    import time as _time
+    _b = os.path.join(AQUI, "BUSCAS.csv")
+    _novo = not os.path.exists(_b)
+    with io.open(_b, "a", encoding="utf-8", newline="") as _f:
+        _w = _csv.writer(_f)
+        if _novo:
+            _w.writerow(["quando", "termos"])
+        _w.writerow([_time.strftime("%Y-%m-%d %H:%M"), " ".join(termos)])
+
+    # os registos que dizem «isto já foi decidido» ou «este ficheiro está mau»
+    for _tit, _fic, _campos in (
+            ("DECISÕES JÁ FECHADAS", "DECISOES_FECHADAS.csv",
+             ("decisao", "porque", "nao_reabrir_sem")),
+            ("INEXACTIDÕES REGISTADAS", "INEXACTOS.csv",
+             ("ficheiro", "o_que_esta_errado", "accao"))):
+        _p = os.path.join(AQUI, _fic)
+        if not os.path.exists(_p):
+            continue
+        _hits = [r for r in _csv.DictReader(io.open(_p, encoding="utf-8"))
+                 if any(t in sem_acento(" ".join((r.get(c) or "")
+                                                 for c in _campos))
+                        for t in alvos)]
+        if _hits:
+            print()
+            print("== %s (%d)" % (_tit, len(_hits)))
+            for r in _hits:
+                print("   %-8s %s" % (r.get("id", "?"),
+                                      (r.get(_campos[0]) or "")[:88]))
+                print("            -> %s" % (r.get(_campos[-1]) or "")[:140])
+
     CL = {}
     p = os.path.join(AQUI, "triagem_de_fontes.json")
     if os.path.exists(p):
@@ -94,17 +152,25 @@ def main(termos):
     fech = ler(os.path.join(AQUI, "HIPOTESES_FECHADAS.md"), 200000)
 
     acertos = []
-    for a in ARVORES:
-        raiz = os.path.join(D, a)
+    vistos = set()
+    percursos = [(os.path.join(D, a), True) for a in ARVORES]
+    if RAIZ_SOLTOS:
+        percursos.append((D, False))
+    for raiz, desce in percursos:
         if not os.path.isdir(raiz):
             continue
         for dp, dn, fn in os.walk(raiz):
+            if not desce:
+                dn[:] = []
             dn[:] = [x for x in dn if not any(i in x.lower() for i in IGNORA)]
             for f in fn:
                 if not f.lower().endswith(EXT):
                     continue
                 cam = os.path.join(dp, f)
                 rel = os.path.relpath(cam, D).replace("\\", "/")
+                if rel in vistos:
+                    continue
+                vistos.add(rel)
                 txt = ler(cam)
                 alvo = sem_acento(rel + "\n" + txt)
                 n = sum(alvo.count(t) for t in alvos)

@@ -459,6 +459,93 @@ if os.path.exists(INX):
         AVISOS.append("inexacto %s: %s — %s"
                       % (x["id"], x["ficheiro"], x["accao"]))
 
+# ── 14 · C11: as pranchas. Uma carta enuncia; nao interroga.
+#
+#   Escrito a 06-09 depois de eu por um titulo interrogativo e um bloco de
+#   pergunta literal numa prancha DEPOIS de me ser dito que nao. Em prosa nao
+#   pegou; e por isso um comando. O auto-teste corre primeiro: uma bateria sem
+#   poder para apanhar a falta e a forma B, e nao vale nada.
+CARTAS = os.path.join(AQUI, "cartas.py")
+if os.path.exists(CARTAS):
+    rc, out, err = corre([CARTAS, "--auto-teste"], "cartas-bateria")
+    if rc != 0:
+        FALHAS.append("a bateria da cartas.py nao tem poder: %s"
+                      % (out or err).strip()[-200:])
+    elif "bloqueiam sozinhas" not in out:
+        FALHAS.append("a cartas.py ja nao corre a bateria de ISOLAMENTO")
+    else:
+        rc, out, err = corre([CARTAS], "cartas")
+        if rc != 0:
+            for l in out.splitlines():
+                if l.strip().startswith("FALHA"):
+                    FALHAS.append("C11 " + l.strip()[6:])
+            if not any(f.startswith("C11") for f in FALHAS):
+                FALHAS.append("a cartas.py falhou: %s" % err.strip()[-200:])
+        else:
+            _n = re.search(r"CARTAS: (\d+) pranchas", out)
+            diz("  cartas           %s pranchas · nenhuma interroga, todas no "
+                "registo, todas com FONTES" % (_n.group(1) if _n else "?"))
+
+# ── 15 · S4: as decisoes ja fechadas
+#
+#   A triagem e cega ao negativo por construcao, e a 04-09 isso custou a
+#   repeticao de um estudo de onze cenas. A C8 indexa HIPOTESES fechadas. Isto
+#   indexa DECISOES fechadas — metodos abandonados, instrumentos declarados sem
+#   poder, questoes encerradas por testemunho — que e a outra metade da forma H
+#   e a que custou tempo a 06-09: reabri o georreferenciamento das valvulas,
+#   abandonado ao fim de cinco tentativas, e transformei-o em pergunta de email.
+DEC = os.path.join(AQUI, "DECISOES_FECHADAS.csv")
+if os.path.exists(DEC):
+    import csv as _csv2
+    _d = [x for x in _csv2.DictReader(io.open(DEC, encoding="utf-8"))
+          if x.get("id")]
+    diz("  decisões         %d fechadas — ver DECISOES_FECHADAS.csv antes de "
+        "propor trabalho" % len(_d))
+    for x in _d:
+        diz("      %-7s %s" % (x["id"], x["decisao"][:88]))
+
+# ── 16 · S1: procurar vem ANTES de criar
+#
+#   Numa so sessao, tres vezes: comecei a produzir sobre um assunto que ja
+#   tinha trabalho em disco, e foi o UTILIZADOR a dizer-mo de cada vez. O
+#   valvulas_v4/v6, a pasta _esquema_rega/ com os recortes ja feitos, e o
+#   parcelas_ent.wkt -- que era a geometria de referencia de que eu precisava
+#   enquanto comparava contra a errada. Uma sessao anterior tinha ate ja lido a
+#   anotacao "1,77 ha" que o adversario de hoje apresentou como achado novo.
+#
+#   A S1 dizia isto em prosa desde o inicio e nao disparou uma unica vez.
+#   Passa a bloquear: codigo novo num dia sem busca nenhuma nao certifica.
+BUSCAS = os.path.join(AQUI, "BUSCAS.csv")
+_hoje = time.strftime("%Y-%m-%d")
+_novos = []
+for _d in (AQUI, VG, FIG):
+    if not os.path.isdir(_d):
+        continue
+    for _f in os.listdir(_d):
+        if not _f.endswith(".py"):
+            continue
+        _p = os.path.join(_d, _f)
+        try:
+            if time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(_p))) == _hoje:
+                _novos.append(_f)
+        except OSError:
+            pass
+_buscas_hoje = 0
+if os.path.exists(BUSCAS):
+    import csv as _csv3
+    _buscas_hoje = sum(
+        1 for _r in _csv3.DictReader(io.open(BUSCAS, encoding="utf-8"))
+        if (_r.get("quando") or "").startswith(_hoje))
+if _novos and not _buscas_hoje:
+    FALHAS.append("S1: %d guiao(oes) tocado(s) hoje (%s) e NENHUMA busca "
+                  "registada. Correr `python ja_existe.py <termos>` antes de "
+                  "escrever codigo -- e o que trava repetir trabalho que ja "
+                  "esta em disco"
+                  % (len(_novos), ", ".join(sorted(_novos)[:4])))
+else:
+    diz("  buscas           %d hoje · %d guiões tocados — S1 satisfeita"
+        % (_buscas_hoje, len(_novos)))
+
 # ── modo completo: volta a correr o rastreio
 if COMPLETO:
     diz()
